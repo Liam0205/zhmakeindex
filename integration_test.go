@@ -5,6 +5,7 @@ import (
 	"os/exec"
 	"path/filepath"
 	"runtime"
+	"strings"
 	"testing"
 )
 
@@ -20,6 +21,10 @@ func buildBinary(t *testing.T) string {
 		t.Fatalf("build failed: %v", err)
 	}
 	return bin
+}
+
+func normalizeLineEndings(s string) string {
+	return strings.ReplaceAll(s, "\r\n", "\n")
 }
 
 func TestIntegration(t *testing.T) {
@@ -51,7 +56,7 @@ func TestIntegration(t *testing.T) {
 				if err != nil {
 					t.Fatalf("read output: %v", err)
 				}
-				if string(got) != string(golden) {
+				if normalizeLineEndings(string(got)) != normalizeLineEndings(string(golden)) {
 					t.Errorf("output mismatch for %s\n--- golden len=%d\n+++ got len=%d", name, len(golden), len(got))
 				}
 			})
@@ -92,7 +97,7 @@ func TestIntegrationWithStyle(t *testing.T) {
 			if err != nil {
 				t.Fatalf("read output: %v", err)
 			}
-			if string(got) != string(golden) {
+			if normalizeLineEndings(string(got)) != normalizeLineEndings(string(golden)) {
 				t.Errorf("output mismatch for %s\n--- golden len=%d\n+++ got len=%d", tt.name, len(golden), len(got))
 			}
 		})
