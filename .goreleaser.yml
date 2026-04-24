@@ -26,6 +26,20 @@ archives:
 checksum:
   name_template: 'checksums.txt'
 
+brews:
+  - repository:
+      owner: Liam0205
+      name: homebrew-zhmakeindex
+      token: "{{ .Env.TAP_GITHUB_TOKEN }}"
+    directory: Formula
+    homepage: "https://github.com/Liam0205/zhmakeindex"
+    description: "Chinese-aware makeindex replacement for LaTeX"
+    license: "LPPL-1.3c"
+    install: |
+      bin.install "zhmakeindex"
+    test: |
+      assert_match "zhmakeindex", shell_output("#{bin}/zhmakeindex 2>&1", 0)
+
 changelog:
   sort: asc
   filters:
