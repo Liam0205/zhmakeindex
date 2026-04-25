@@ -133,6 +133,11 @@ func TestNumFormatFormatNum(t *testing.T) {
 		{name: "roman lower", format: NUM_ROMAN_LOWER, num: 4, want: "iv"},
 		{name: "alpha lower", format: NUM_ALPH_LOWER, num: 1, want: "a"},
 		{name: "alpha upper", format: NUM_ALPH_UPPER, num: 1, want: "A"},
+		{name: "alpha lower z", format: NUM_ALPH_LOWER, num: 26, want: "z"},
+		{name: "alpha upper Z", format: NUM_ALPH_UPPER, num: 26, want: "Z"},
+		{name: "alpha lower out of range zero", format: NUM_ALPH_LOWER, num: 0, want: "?"},
+		{name: "alpha lower out of range 27", format: NUM_ALPH_LOWER, num: 27, want: "?"},
+		{name: "alpha upper out of range neg", format: NUM_ALPH_UPPER, num: -1, want: "?"},
 		{name: "unknown", format: NUM_UNKNOWN, num: 0, want: "?"},
 	}
 

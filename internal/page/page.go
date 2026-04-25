@@ -225,8 +225,14 @@ func (numfmt NumFormat) FormatNum(num int) string {
 	case NUM_ARABIC:
 		return fmt.Sprint(num)
 	case NUM_ALPH_LOWER:
+		if num < 1 || num > 26 {
+			return "?"
+		}
 		return string(rune('a' + num - 1))
 	case NUM_ALPH_UPPER:
+		if num < 1 || num > 26 {
+			return "?"
+		}
 		return string(rune('A' + num - 1))
 	case NUM_ROMAN_LOWER:
 		return RomanNumString(num, false)
