@@ -416,7 +416,7 @@ const MAX_RADICAL = 214
 
 // 读取 CJKRadicals.txt 获取康熙字典部首表
 func read_radicals() [MAX_RADICAL + 1]Radical {
-	resp, err := http.Get("http://www.unicode.org/Public/UCD/latest/ucd/CJKRadicals.txt")
+	resp, err := http.Get("https://www.unicode.org/Public/UCD/latest/ucd/CJKRadicals.txt")
 	if err != nil {
 		log.Fatalln(err)
 	}
