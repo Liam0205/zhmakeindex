@@ -36,7 +36,7 @@
 
 - `internal/page/page_test.go`
   - 页码解析、格式化、比较、差值
-  - 覆盖字母页码 `FormatNum` 的 round-trip 与 off-by-one 回归
+  - 覆盖字母页码 `FormatNum` 的 round-trip、off-by-one 回归，以及越界时返回 `?` 的边界检查
 - `internal/style/style_test.go`
   - tokenizer、反引号 token、`unquote`、`parseInt`、默认样式
 - `sorter_test.go`
@@ -66,6 +66,8 @@
 - 2 组样式文件输出基线
 
 这使回归验证不只检查内部函数结果，也检查最终 `.ind` 产物是否保持稳定。
+
+最近几轮 bug 修复还补强了“异常输入不应 panic”的测试关注点：页码系统需要覆盖空 `Numbers`、字母页码越界等边界条件；排序系统则需要覆盖空 `Level` 条目在排序编排和分组阶段都能安全退化。
 
 ## 3. CI 流程
 
@@ -168,5 +170,6 @@ GoReleaser 通过 `ldflags` 注入：
 
 - CI 使用的 Go 版本矩阵目前为 1.21 到 1.23，而 `go.mod` 中声明的 Go 版本需与实际支持策略单独核对。
 - Release 流程已自动生成跨平台发行包，但未自动回写 Homebrew formula。
+- `CJK/maketables.go` 的上游数据下载依赖现已要求使用 HTTPS；若后续更新生成逻辑或数据源地址，应优先维持这一传输层约束。
 - golden 测试覆盖了多个典型输入和排序策略，但其覆盖范围仍以示例集为边界，不代表所有真实索引输入组合。
 - 历史本地脚本仍保留在仓库中，因此文档上应将其视为补充入口，而不是唯一发布路径。

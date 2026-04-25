@@ -23,6 +23,8 @@
 
 这个接口把“通用排序框架”和“具体中文规则”分离开了。
 
+需要注意的是，三个 collator 的 `Group(entry *IndexEntry)` 现在都显式把空 `entry.Level` 视为符号组返回 `0`，而不是继续读取 `entry.Level[0].Key`。这与排序编排层跳过空层级条目的防护一起，构成了排序子系统对异常输入的双层边界保护。
+
 ### 1.2 `IndexSorter` 的职责
 
 `IndexSorter` 只是一个持有 `IndexCollator` 的壳层，负责把命令行参数映射到具体策略；页码排序基础设施则与数据类型、比较工具一起归属 `internal/index` 包。
@@ -104,6 +106,8 @@
 
 如果条目首字符是汉字，且在 `CJK.Readings` 中有读音，则会取其标准化拼音串的首字母，把该条目并入对应的字母组。
 
+如果 `entry.Level` 为空，则 `Group()` 直接返回 `0`，把该条目视为符号组而不是继续解引用首层 key。
+
 #### 比较规则
 
 `RuneCmp(a, b)` 的优先级是：
@@ -129,6 +133,8 @@
 - 从 1 到 `MAX_STROKE` 的笔画数组
 
 若汉字在 `CJK.Strokes` 中存在条目，则按笔顺串长度确定组号。组标题由 `stroke_prefix + 笔画数 + stroke_suffix` 形成。
+
+如果 `entry.Level` 为空，则 `Group()` 直接返回 `0`，把该条目归入符号组，避免在排序分组阶段访问空切片的首元素。
 
 #### 比较规则
 
@@ -162,6 +168,8 @@
 - `radical_simplified_flag`
 - `radical_simplified_prefix`
 - `radical_simplified_suffix`
+
+如果 `entry.Level` 为空，则 `Group()` 直接返回 `0`，把异常条目回退到符号组，而不是访问缺失的首层 key。
 
 当某部首有简化写法且样式允许显示时，标题会以“正体部首 + 简化提示”的形式生成。
 

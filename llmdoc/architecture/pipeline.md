@@ -258,6 +258,11 @@
   - 由 `index.NewPageSorter(style, strict, disableRange)` 显式传入
   - 打开后停止把连续普通页自动并成区间，但仍会去重并保留显式区间
 
+近期修复补充了两个需要保持的防御性约束：
+
+- `internal/page/page.go` 中 `Page.Diff()` 在两个 `Page` 的 `Numbers` 均为空时，不再因为 `Compatible()` 返回 true 且 `depth == 0` 而访问 `Numbers[-1]`；现在会直接返回 `0`，把“两个空页码对象无差值”视为稳定结果。
+- `sorter.go` 在把 `IndexEntry` 降维为 `IndexItem` 之前，会跳过 `len(entry.Level) == 0` 的异常条目，避免访问 `entry.Level[len(entry.Level)-1]` 时越界；这说明排序编排层现在显式承担“空层级条目不进入输出层”的防线。
+
 ### 5.4 输出层数据结构
 
 排序整理后的结构为：

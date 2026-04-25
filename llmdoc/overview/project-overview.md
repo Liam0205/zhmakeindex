@@ -104,7 +104,7 @@ zhmakeindex 是一个用 Go 实现的 `makeindex` 替代品，面向中文 LaTeX
 仓库已建立覆盖核心子系统的 Go 测试体系：
 
 - `main_test.go`：`stripExt`、`checkEncoding`
-- `internal/page/page_test.go`：页码解析、格式化、比较、差值；覆盖字母页码 `FormatNum` 的 round-trip 与 off-by-one 回归
+- `internal/page/page_test.go`：页码解析、格式化、比较、差值；覆盖字母页码 `FormatNum` 的 round-trip、off-by-one 回归，以及字母页码越界时返回 `?` 的边界保护
 - `internal/reader/reader_test.go`：行号读取器
 - `internal/style/style_test.go`：样式 tokenizer、反引号 token、`unquote`、`parseInt`、默认样式
 - `sorter_test.go`：`IsNumRune`、`DecimalStrcmp`、`Strcmp`、`getStringType`
