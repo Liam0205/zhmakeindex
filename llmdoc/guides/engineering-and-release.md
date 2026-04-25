@@ -39,11 +39,13 @@
 - `style_test.go`
   - tokenizer、反引号 token、`unquote`、`parseInt`、默认样式
 - `sorter_test.go`
-  - `IsNumRune`、`DecimalStrcmp`、`Strcmp`、`getStringType`
+  - `IsNumRune`、`DecimalStrcmp`、`Strcmp`、`getStringType` 等 `internal/index` 比较工具函数
+- `internal/index/pagesorter_test.go`
+  - `PageSorter` 优先级初始化
 - `input_test.go`
   - `ScanIndexEntry`、`CompareIndexEntry`、`skipspaces`
-- `collator_test.go`
-  - 三种中文排序策略的 `RuneCmp`、`IsLetter`、`Group`
+- `internal/collator/collator_test.go`
+  - 三种中文排序策略的 `RuneCmp`、`IsLetter`、`Group`、`InitGroups`、`IsLetter` 一致性
 
 ### 2.3 端到端 golden 测试
 

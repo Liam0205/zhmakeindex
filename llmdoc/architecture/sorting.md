@@ -10,7 +10,7 @@
 
 ### 1.1 `IndexCollator` 接口
 
-`sorter.go` 用 `IndexCollator` 抽象出所有与排序策略相关的变化点：
+`internal/index/types.go` 用 `IndexCollator` 抽象出所有与排序策略相关的变化点：
 
 - `InitGroups(style *OutputStyle) []IndexGroup`
   - 初始化分组名称与分组数量
@@ -25,7 +25,7 @@
 
 ### 1.2 `IndexSorter` 的职责
 
-`IndexSorter` 只是一个持有 `IndexCollator` 的壳层，负责把命令行参数映射到具体策略：
+`IndexSorter` 只是一个持有 `IndexCollator` 的壳层，负责把命令行参数映射到具体策略；页码排序基础设施则与数据类型、比较工具一起归属 `internal/index` 包。
 
 - `pinyin` / `reading` → `ReadingIndexCollator`
 - `bihua` / `stroke` → `StrokeIndexCollator`
@@ -39,13 +39,13 @@
 4. 计算每个条目的分组
 5. 组装成 `OutputIndex`
 
-因此，排序系统的变化点只应放在 collator 中；排序流水线本身不因具体中文策略而分叉。
+因此，排序系统的变化点只应放在 collator 中；而页码排序、区间构造与页码切片比较等基础设施集中在 `internal/index/pagesorter.go`，排序流水线本身不因具体中文策略而分叉。
 
 ## 2. 统一字符串比较算法
 
 ### 2.1 `Strcmp` 的层次
 
-索引项比较最终会下沉到 `IndexEntrySlice.Strcmp(a, b string)`。它不是简单字典序，而是一个分层比较器：
+索引项比较最终会下沉到 `internal/index/sort.go` 中 `IndexEntrySlice.Strcmp(a, b string)`。它不是简单字典序，而是一个分层比较器：
 
 1. 先调用 `getStringType()` 把字符串分成几类：
    - 空串 `EMPTY_STR`
@@ -60,7 +60,7 @@
 
 ### 2.2 多级索引比较
 
-`IndexEntrySlice.Less()` 的比较顺序为：
+`internal/index/sort.go` 中 `IndexEntrySlice.Less()` 的比较顺序为：
 
 1. 逐层比较 `level[i].key`
 2. 若 `key` 相同，再比较 `level[i].text`
@@ -291,7 +291,7 @@
 - 条目如何比较
 - 条目落在哪个分组
 
-页码如何排序、区间如何合并并不属于 `IndexCollator` 的职责，而是由 `PageSorter` 统一处理。也就是说：
+页码如何排序、区间如何合并并不属于 `IndexCollator` 的职责，而是由 `internal/index/pagesorter.go` 中的 `PageSorter` 统一处理。也就是说：
 
 - 条目排序与页码排序是两个平行子系统
 - 两者只在 `SortIndex()` 中汇合
@@ -303,10 +303,11 @@
 
 当任务涉及排序问题时，可按下面路径定位：
 
-- 排序总流程与 `Strcmp`：`sorter.go`
-- 拼音策略：`reading_collator.go`
-- 笔画策略：`stroke_collator.go`
-- 部首策略：`radical_collator.go`
+- 排序总流程与 `Strcmp`：`sorter.go`、`internal/index/sort.go`
+- 页码排序与区间归并：`internal/index/pagesorter.go`、`internal/index/pagerange.go`、`internal/page/page.go`
+- 拼音策略：`internal/collator/reading.go`
+- 笔画策略：`internal/collator/stroke.go`
+- 部首策略：`internal/collator/radical.go`
 - 运行期数据表：`CJK/readings.go`、`CJK/strokes.go`、`CJK/radicalstrokes.go`
 - 数据生成器：`CJK/maketables.go`
 

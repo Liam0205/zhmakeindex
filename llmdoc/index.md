@@ -23,7 +23,7 @@
 
 - CLI 与编码初始化：`main.go`
 - 输入解析：`input.go`、`internal/reader/reader.go`
-- 排序与页码处理：`sorter.go`、`reading_collator.go`、`stroke_collator.go`、`radical_collator.go`、`internal/page/page.go`
+- 排序与页码处理：`sorter.go`、`internal/index/pagesorter.go`、`internal/index/types.go`、`internal/index/sort.go`、`internal/index/util.go`、`internal/index/pagerange.go`、`internal/collator/reading.go`、`internal/collator/stroke.go`、`internal/collator/radical.go`、`internal/page/page.go`
 - 样式系统：`internal/style/style.go`
 - 输出渲染：`output.go`
 - TeX 样式查找：`kpathsea/kpathsea.go`

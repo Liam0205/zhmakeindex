@@ -64,8 +64,9 @@ zhmakeindex 是一个用 Go 实现的 `makeindex` 替代品，面向中文 LaTeX
 - `internal/style/style.go`：样式文件解析，分别构造 `InputStyle` 与 `OutputStyle`
 - `input.go`：`.idx` 解析、语法错误恢复、索引条目归并
 - `internal/reader/reader.go`：带行号的 rune 级读取器
-- `sorter.go`：整体排序、分组与页码整理入口
-- `reading_collator.go` / `stroke_collator.go` / `radical_collator.go`：三种中文排序策略
+- `sorter.go`：排序流程编排与 `IndexSorter` 入口，页码排序逻辑已拆到 `internal/index/pagesorter.go`
+- `internal/index/*.go`：共享索引数据类型、排序辅助、比较工具函数、页码区间类型与 `PageSorter`
+- `internal/collator/reading.go` / `internal/collator/stroke.go` / `internal/collator/radical.go`：三种中文排序策略
 - `internal/page/page.go`：页码解析、比较、格式化
 - `output.go`：按样式渲染 `.ind`
 - `kpathsea/kpathsea.go`：通过 `kpsewhich` 查找样式文件
@@ -107,8 +108,9 @@ zhmakeindex 是一个用 Go 实现的 `makeindex` 替代品，面向中文 LaTeX
 - `internal/reader/reader_test.go`：行号读取器
 - `internal/style/style_test.go`：样式 tokenizer、反引号 token、`unquote`、`parseInt`、默认样式
 - `sorter_test.go`：`IsNumRune`、`DecimalStrcmp`、`Strcmp`、`getStringType`
+- `internal/index/pagesorter_test.go`：`NewPageSorter` 页码优先级初始化
 - `input_test.go`：`ScanIndexEntry`、`CompareIndexEntry`、`skipspaces`
-- `collator_test.go`：三种中文排序策略的 `RuneCmp`、`IsLetter`、`Group`
+- `internal/collator/collator_test.go`：三种中文排序策略的 `RuneCmp`、`IsLetter`、`Group`
 - `integration_test.go`：端到端 golden file 测试，覆盖 5 组示例输入 × 3 种排序方式，以及样式文件测试
 - `testdata/*.golden`：17 个 golden files，作为稳定输出基线
 

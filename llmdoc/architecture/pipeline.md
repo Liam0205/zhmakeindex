@@ -212,9 +212,8 @@
 
 真正的业务转换都在 `SortIndex()` 内完成。
 
-### 5.1 总体顺序
-
-`SortIndex()` 的固定顺序是：
+- `sorter.go` 只保留 `IndexSorter` 编排层，把条目排序、分组初始化和页码整理装配起来。
+- 页码排序与区间归并的具体实现位于 `internal/index/pagesorter.go`，与 `internal/index/pagerange.go`、`internal/page/page.go` 共同构成页码处理子系统。
 
 1. `InitGroups()` 初始化所有可能的输出组
 2. 对整个 `InputIndex` 做条目排序
@@ -224,7 +223,7 @@
 
 ### 5.2 条目排序
 
-`IndexEntrySlice.Less()` 会：
+`internal/index/sort.go` 中的 `IndexEntrySlice.Less()` 会：
 
 1. 逐层比较 `key`
 2. 若 `key` 相同，再比较 `text`
@@ -242,7 +241,7 @@
 
 ### 5.3 页码整理
 
-条目排序后，`PageSorter` 对每个 `IndexEntry.pagelist` 进一步处理：
+条目排序后，位于 `internal/index/pagesorter.go` 的 `PageSorter` 对每个 `IndexEntry.pagelist` 进一步处理：
 
 1. 按严格或宽松规则对页码排序
 2. 用栈匹配显式区间头尾
@@ -252,9 +251,11 @@
 区间处理遵守两个主要开关：
 
 - `strict`
+  - 由 `index.NewPageSorter(style, strict, disableRange)` 显式传入
   - 严格模式先按 `encap` 分离，再比较页码
   - 宽松模式优先按页码比较，`encap` 放到后面
 - `disable_range`
+  - 由 `index.NewPageSorter(style, strict, disableRange)` 显式传入
   - 打开后停止把连续普通页自动并成区间，但仍会去重并保留显式区间
 
 ### 5.4 输出层数据结构
@@ -263,22 +264,28 @@
 
 #### `OutputIndex`
 
-- `groups []IndexGroup`
+- `groups []index.IndexGroup`
 - `style *OutputStyle`
 - `option *OutputOptions`
 
 #### `IndexGroup`
+
+定义位置：`internal/index/types.go`
 
 - `name string`
 - `items []IndexItem`
 
 #### `IndexItem`
 
+定义位置：`internal/index/types.go`
+
 - `level int`
 - `text string`
 - `page []PageRange`
 
 #### `PageRange`
+
+定义位置：`internal/index/pagerange.go`
 
 - `begin *Page`
 - `end *Page`
@@ -354,8 +361,8 @@
 - 启动与编码：`main.go`
 - 样式加载：`internal/style/style.go`
 - 输入读取与错误恢复：`input.go`、`internal/reader/reader.go`
-- 条目排序与页码归并：`sorter.go`、`internal/page/page.go`
-- 中文排序策略：`reading_collator.go`、`stroke_collator.go`、`radical_collator.go`
+- 条目排序与页码归并：`sorter.go`、`internal/index/pagesorter.go`、`internal/index/types.go`、`internal/index/sort.go`、`internal/index/pagerange.go`、`internal/page/page.go`
+- 中文排序策略：`internal/collator/reading.go`、`internal/collator/stroke.go`、`internal/collator/radical.go`
 - 输出渲染：`output.go`
 - 样式文件查找：`kpathsea/kpathsea.go`
 
