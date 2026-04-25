@@ -131,8 +131,8 @@ func TestNumFormatFormatNum(t *testing.T) {
 	}{
 		{name: "arabic", format: NUM_ARABIC, num: 42, want: "42"},
 		{name: "roman lower", format: NUM_ROMAN_LOWER, num: 4, want: "iv"},
-		{name: "alpha lower", format: NUM_ALPH_LOWER, num: 1, want: "b"},
-		{name: "alpha upper", format: NUM_ALPH_UPPER, num: 1, want: "B"},
+		{name: "alpha lower", format: NUM_ALPH_LOWER, num: 1, want: "a"},
+		{name: "alpha upper", format: NUM_ALPH_UPPER, num: 1, want: "A"},
 		{name: "unknown", format: NUM_UNKNOWN, num: 0, want: "?"},
 	}
 
@@ -141,6 +141,32 @@ func TestNumFormatFormatNum(t *testing.T) {
 			got := tt.format.FormatNum(tt.num)
 			if got != tt.want {
 				t.Fatalf("%v.FormatNum(%d) = %q, want %q", tt.format, tt.num, got, tt.want)
+			}
+		})
+	}
+}
+
+func TestAlphaPageRoundTrip(t *testing.T) {
+	tests := []struct {
+		name  string
+		token string
+	}{
+		{"lower a", "a"},
+		{"lower z", "z"},
+		{"upper A", "A"},
+		{"upper Z", "Z"},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			pn, err := ScanNumber([]rune(tt.token))
+			if err != nil {
+				t.Fatalf("ScanNumber(%q) error: %v", tt.token, err)
+			}
+			got := pn.Format.FormatNum(pn.Num)
+			if got != tt.token {
+				t.Fatalf("round-trip: ScanNumber(%q) → FormatNum(%d) = %q, want %q",
+					tt.token, pn.Num, got, tt.token)
 			}
 		})
 	}

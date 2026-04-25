@@ -222,9 +222,9 @@ func (numfmt NumFormat) FormatNum(num int) string {
 	case NUM_ARABIC:
 		return fmt.Sprint(num)
 	case NUM_ALPH_LOWER:
-		return string(rune('a' + num))
+		return string(rune('a' + num - 1))
 	case NUM_ALPH_UPPER:
-		return string(rune('A' + num))
+		return string(rune('A' + num - 1))
 	case NUM_ROMAN_LOWER:
 		return RomanNumString(num, false)
 	case NUM_ROMAN_UPPER:
