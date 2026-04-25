@@ -305,6 +305,8 @@
 - 两者只在 `SortIndex()` 中汇合
 - 更换拼音/笔画/部首策略不会改变页码处理规则
 
+`PageSorter.Merge()` 近期还修正了 `-r`（`disable_range`）模式下的一个语义边界：关闭自动连续页合并后，仍然需要按“页码值 + encap”去重，而不能按 `Page` 指针身份去重。现在的实现使用 `prev.Begin.Encap == r.Begin.Encap && prev.Begin.Cmp(r.Begin, sorter.precedence) == 0` 判定两个普通页是否为同一页，因此即便两个页码对象来自不同分配、只要语义上表示同一页，也不会在 `-r` 模式下重复输出。
+
 这种解耦是整个排序架构能保持稳定的原因之一。
 
 ## 8. 检索提示
