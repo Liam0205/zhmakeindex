@@ -44,6 +44,9 @@ func (sorter *IndexSorter) SortIndex(input *index.InputIndex, style *style.Outpu
 
 	pagesorter := index.NewPageSorter(style, option.strict, option.disable_range)
 	for _, entry := range *input {
+		if len(entry.Level) == 0 {
+			continue
+		}
 		pageranges := pagesorter.Sort(entry)
 		pageranges = pagesorter.Merge(pageranges)
 		item := index.IndexItem{

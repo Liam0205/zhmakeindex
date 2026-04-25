@@ -37,6 +37,9 @@ func (_ StrokeIndexCollator) InitGroups(style *style.OutputStyle) []index.IndexG
 }
 
 func (_ StrokeIndexCollator) Group(entry *index.IndexEntry) int {
+	if len(entry.Level) == 0 {
+		return 0
+	}
 	first, _ := utf8.DecodeRuneInString(entry.Level[0].Key)
 	first = unicode.ToLower(first)
 	switch {

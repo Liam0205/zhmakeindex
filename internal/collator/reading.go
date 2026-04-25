@@ -32,6 +32,9 @@ func (_ ReadingIndexCollator) InitGroups(style *style.OutputStyle) []index.Index
 }
 
 func (_ ReadingIndexCollator) Group(entry *index.IndexEntry) int {
+	if len(entry.Level) == 0 {
+		return 0
+	}
 	first, _ := utf8.DecodeRuneInString(entry.Level[0].Key)
 	first = unicode.ToLower(first)
 	switch {

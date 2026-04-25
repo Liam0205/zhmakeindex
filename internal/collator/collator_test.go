@@ -151,3 +151,25 @@ func TestCollatorIsLetterConsistency(t *testing.T) {
 		}
 	}
 }
+
+func TestCollatorGroupEmptyLevel(t *testing.T) {
+	collators := []struct {
+		name string
+		c    index.IndexCollator
+	}{
+		{name: "reading", c: ReadingIndexCollator{}},
+		{name: "stroke", c: StrokeIndexCollator{}},
+		{name: "radical", c: RadicalIndexCollator{}},
+	}
+
+	emptyEntry := &index.IndexEntry{Level: nil}
+
+	for _, collator := range collators {
+		t.Run(collator.name, func(t *testing.T) {
+			got := collator.c.Group(emptyEntry)
+			if got != 0 {
+				t.Fatalf("%s.Group(emptyLevel) = %d, want 0", collator.name, got)
+			}
+		})
+	}
+}
