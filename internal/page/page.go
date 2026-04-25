@@ -77,6 +77,9 @@ func (p *Page) Diff(other *Page) int {
 		return -1
 	}
 	depth := len(p.Numbers)
+	if depth == 0 {
+		return 0
+	}
 	for i := 0; i < depth-1; i++ {
 		if p.Numbers[i].Num != other.Numbers[i].Num {
 			return MaxInt

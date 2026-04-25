@@ -251,6 +251,12 @@ func TestPageDiff(t *testing.T) {
 			other: &Page{Numbers: []PageNumber{{Format: NUM_ARABIC, Num: 6}, {Format: NUM_ROMAN_LOWER, Num: 2}, {Format: NUM_ARABIC, Num: 1}}},
 			want:  MaxInt,
 		},
+		{
+			name:  "both empty numbers returns zero",
+			page:  &Page{},
+			other: &Page{},
+			want:  0,
+		},
 	}
 
 	for _, tt := range tests {
