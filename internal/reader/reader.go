@@ -1,11 +1,10 @@
-package main
+package reader
 
 import (
 	"bufio"
 	"io"
 )
 
-// 用于逐字符读取的辅助 Reader，提供行号支持
 type NumberdReader struct {
 	reader   *bufio.Reader
 	line     int

@@ -6,12 +6,15 @@ import (
 	"strconv"
 	"unicode"
 	"unicode/utf8"
+
+	"github.com/leo-liu/zhmakeindex/internal/page"
+	"github.com/leo-liu/zhmakeindex/internal/style"
 )
 
 // 对应不同的分类排序方式
 type IndexCollator interface {
 	// 初始化分组
-	InitGroups(style *OutputStyle) []IndexGroup
+	InitGroups(style *style.OutputStyle) []IndexGroup
 	// 给索引项分组
 	Group(entry *IndexEntry) int
 	// 单个字符比较
@@ -45,7 +48,7 @@ func NewIndexSorter(method string) *IndexSorter {
 	return nil
 }
 
-func (sorter *IndexSorter) SortIndex(input *InputIndex, style *OutputStyle, option *OutputOptions) *OutputIndex {
+func (sorter *IndexSorter) SortIndex(input *InputIndex, style *style.OutputStyle, option *OutputOptions) *OutputIndex {
 	out := new(OutputIndex)
 	// 分组
 	out.groups = sorter.InitGroups(style)
@@ -181,34 +184,34 @@ func (s IndexEntrySlice) Less(i, j int) bool {
 
 // 页码排序器
 type PageSorter struct {
-	precedence    map[NumFormat]int
+	precedence    map[page.NumFormat]int
 	strict        bool
 	disable_range bool
 }
 
-func NewPageSorter(style *OutputStyle, option *OutputOptions) *PageSorter {
+func NewPageSorter(style *style.OutputStyle, option *OutputOptions) *PageSorter {
 	var sorter PageSorter
-	sorter.precedence = make(map[NumFormat]int)
-	for i, r := range style.page_precedence {
+	sorter.precedence = make(map[page.NumFormat]int)
+	for i, r := range style.PagePrecedence {
 		switch r {
 		case 'r':
-			sorter.precedence[NUM_ROMAN_LOWER] = i
+			sorter.precedence[page.NUM_ROMAN_LOWER] = i
 		case 'n':
-			sorter.precedence[NUM_ARABIC] = i
+			sorter.precedence[page.NUM_ARABIC] = i
 		case 'a':
-			sorter.precedence[NUM_ALPH_LOWER] = i
+			sorter.precedence[page.NUM_ALPH_LOWER] = i
 		case 'R':
-			sorter.precedence[NUM_ROMAN_UPPER] = i
+			sorter.precedence[page.NUM_ROMAN_UPPER] = i
 		case 'A':
-			sorter.precedence[NUM_ALPH_UPPER] = i
+			sorter.precedence[page.NUM_ALPH_UPPER] = i
 		default:
 			log.Println("page_precedence 语法错误，采用默认值")
-			sorter.precedence = map[NumFormat]int{
-				NUM_ROMAN_LOWER: 0,
-				NUM_ARABIC:      1,
-				NUM_ALPH_LOWER:  2,
-				NUM_ROMAN_UPPER: 3,
-				NUM_ALPH_UPPER:  4,
+			sorter.precedence = map[page.NumFormat]int{
+				page.NUM_ROMAN_LOWER: 0,
+				page.NUM_ARABIC:      1,
+				page.NUM_ALPH_LOWER:  2,
+				page.NUM_ROMAN_UPPER: 3,
+				page.NUM_ALPH_UPPER:  4,
 			}
 		}
 	}
@@ -233,27 +236,27 @@ func (sorter *PageSorter) Sort(entry IndexEntry) []PageRange {
 	//debug.Println(pages)
 	// 使用一个栈来合并页码区间
 	// 这里的合并只将 1( 2 3 3) 合并为 1--3，不处理相邻区间，后者需要再做 Merge 操作
-	var stack []*Page
+	var stack []*page.Page
 	for i := 0; i < len(pages); i++ {
 		p := pages[i]
-		//debug.Printf("处理页码 %s{%s} %s\n", p.encap, p.NumString(), p.rangetype)
+		//debug.Printf("处理页码 %s{%s} %s\n", p.Encap, p.NumString(), p.Rangetype)
 		if len(stack) == 0 {
-			switch p.rangetype {
-			case PAGE_NORMAL:
+			switch p.Rangetype {
+			case page.PAGE_NORMAL:
 				// 输出独立页
 				out = append(out, PageRange{begin: p, end: p})
-			case PAGE_OPEN:
+			case page.PAGE_OPEN:
 				// 压栈
 				stack = append(stack, p)
-			case PAGE_CLOSE:
-				log.Printf("条目 %s 的页码区间有误，区间末尾 %s{%s} 没有匹配的区间头。\n", entry.input, p.encap, p)
+			case page.PAGE_CLOSE:
+				log.Printf("条目 %s 的页码区间有误，区间末尾 %s{%s} 没有匹配的区间头。\n", entry.input, p.Encap, p)
 				// 输出从空白到当前页的伪区间
 				out = append(out, PageRange{begin: p.Empty(), end: p})
 			}
 		} else {
 			front := stack[0]
 			top := stack[len(stack)-1]
-			if p.encap != front.encap {
+			if p.Encap != front.Encap {
 				if sorter.strict {
 					log.Printf("条目 %s 的页码区间可能有误，区间头 %s 没有对应的区间尾\n", entry.input, front)
 					// 输出从区间头到空白的伪区间，并清空栈
@@ -264,24 +267,24 @@ func (sorter *PageSorter) Sort(entry IndexEntry) []PageRange {
 					continue
 				} else {
 					// 只输出独立页面，与 Makeindex 行为类似
-					if p.rangetype == PAGE_NORMAL {
+					if p.Rangetype == page.PAGE_NORMAL {
 						out = append(out, PageRange{begin: p, end: p})
 					} else {
 						log.Printf("条目 %s 的页码区间 %s{%s--} 内 %s%s{%s} 命令格式不同，可能丢失信息",
-							entry.input, front.encap, front, p.rangetype, p.encap, p)
+							entry.input, front.Encap, front, p.Rangetype, p.Encap, p)
 					}
 				}
 			} else if !p.Compatible(top) {
 				// 标准 Makeindex 会尝试把区间断开，这里只给出警告
-				log.Printf("条目 %s 的页码区间 %s{%s -- %s} 跨过不同的数字格式\n", entry.input, top.encap, top, p)
+				log.Printf("条目 %s 的页码区间 %s{%s -- %s} 跨过不同的数字格式\n", entry.input, top.Encap, top, p)
 			}
-			switch p.rangetype {
-			case PAGE_NORMAL:
+			switch p.Rangetype {
+			case page.PAGE_NORMAL:
 				// 什么也不做
-			case PAGE_OPEN:
+			case page.PAGE_OPEN:
 				// 压栈
 				stack = append(stack, p)
-			case PAGE_CLOSE:
+			case page.PAGE_CLOSE:
 				// 栈中只有一个元素时输出正常区间，弹栈
 				if len(stack) == 1 {
 					out = append(out, PageRange{begin: front, end: p})
@@ -291,7 +294,7 @@ func (sorter *PageSorter) Sort(entry IndexEntry) []PageRange {
 		}
 	}
 	if len(stack) > 0 {
-		log.Printf("条目 %s 的页码区间有误，未找到与 %s{%s} 匹配的区间尾。\n", entry.input, stack[0].encap, stack[0])
+		log.Printf("条目 %s 的页码区间有误，未找到与 %s{%s} 匹配的区间尾。\n", entry.input, stack[0].Encap, stack[0])
 		// 输出从当前页到空白的伪区间
 		out = append(out, PageRange{begin: stack[0], end: stack[0].Empty()})
 	}
@@ -312,14 +315,14 @@ func (sorter *PageSorter) Merge(pages []PageRange) []PageRange {
 		// 合并重复页和区间
 		prev := out[len(out)-1]
 		if sorter.disable_range &&
-			(r.begin.rangetype == PAGE_NORMAL || prev.begin.rangetype == PAGE_NORMAL) {
+			(r.begin.Rangetype == page.PAGE_NORMAL || prev.begin.Rangetype == page.PAGE_NORMAL) {
 			// 合并（跳过）重复页
 			if prev.begin == r.begin {
 				continue
 			} else {
 				out = append(out, r)
 			}
-		} else if prev.begin.encap == r.begin.encap &&
+		} else if prev.begin.Encap == r.begin.Encap &&
 			r.begin.Compatible(prev.begin) &&
 			r.begin.Diff(prev.end) <= 1 {
 			// 合并区间，只用后一区间尾替换前一区间尾
@@ -330,10 +333,10 @@ func (sorter *PageSorter) Merge(pages []PageRange) []PageRange {
 	}
 	// 修正区间类型（似乎无用）
 	for i := range out {
-		if out[i].begin.encap == out[i].end.encap {
+		if out[i].begin.Encap == out[i].end.Encap {
 			if out[i].begin.Diff(out[i].end) == 0 {
-				out[i].begin.rangetype = PAGE_NORMAL
-				out[i].end.rangetype = PAGE_NORMAL
+				out[i].begin.Rangetype = page.PAGE_NORMAL
+				out[i].end.Rangetype = page.PAGE_NORMAL
 			}
 			// 保留首尾区间类型，可以输出时判断是否是合并得到的区间
 		}
@@ -343,7 +346,7 @@ func (sorter *PageSorter) Merge(pages []PageRange) []PageRange {
 }
 
 type PageSlice struct {
-	pages  []*Page
+	pages  []*page.Page
 	sorter *PageSorter
 }
 
@@ -363,15 +366,15 @@ type PageSliceStrict struct {
 // 不同 encap 严格分离
 func (p PageSliceStrict) Less(i, j int) bool {
 	a, b := p.pages[i], p.pages[j]
-	if a.encap < b.encap {
+	if a.Encap < b.Encap {
 		return true
-	} else if a.encap > b.encap {
+	} else if a.Encap > b.Encap {
 		return false
 	}
 	if cmp := a.Cmp(b, p.sorter.precedence); cmp != 0 {
 		return cmp < 0
 	}
-	if a.rangetype < b.rangetype {
+	if a.Rangetype < b.Rangetype {
 		return true
 	} else {
 		return false
@@ -389,12 +392,12 @@ func (p PageSliceLoose) Less(i, j int) bool {
 	if cmp := a.Cmp(b, p.sorter.precedence); cmp != 0 {
 		return cmp < 0
 	}
-	if a.rangetype < b.rangetype {
+	if a.Rangetype < b.Rangetype {
 		return true
-	} else if a.rangetype > b.rangetype {
+	} else if a.Rangetype > b.Rangetype {
 		return false
 	}
-	if a.encap < b.encap {
+	if a.Encap < b.Encap {
 		return true
 	} else {
 		return false

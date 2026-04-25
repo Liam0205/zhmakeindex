@@ -6,31 +6,32 @@ import (
 	"unicode/utf8"
 
 	"github.com/leo-liu/zhmakeindex/CJK"
+	"github.com/leo-liu/zhmakeindex/internal/style"
 )
 
 // 汉字按笔画排序，汉字按笔画分组排在英文字母组后面
 type StrokeIndexCollator struct{}
 
-func (_ StrokeIndexCollator) InitGroups(style *OutputStyle) []IndexGroup {
+func (_ StrokeIndexCollator) InitGroups(style *style.OutputStyle) []IndexGroup {
 	// 分组：符号、数字、字母 A..Z、笔划 1..MAX_STROKE
 	groups := make([]IndexGroup, 2+26+CJK.MAX_STROKE)
-	if style.headings_flag > 0 {
-		groups[0].name = style.symhead_positive
-		groups[1].name = style.numhead_positive
+	if style.HeadingsFlag > 0 {
+		groups[0].name = style.SymheadPositive
+		groups[1].name = style.NumheadPositive
 		for alph, i := 'A', 2; alph <= 'Z'; alph++ {
 			groups[i].name = string(alph)
 			i++
 		}
-	} else if style.headings_flag < 0 {
-		groups[0].name = style.symhead_negative
-		groups[1].name = style.numhead_negative
+	} else if style.HeadingsFlag < 0 {
+		groups[0].name = style.SymheadNegative
+		groups[1].name = style.NumheadNegative
 		for alph, i := 'a', 2; alph <= 'z'; alph++ {
 			groups[i].name = string(alph)
 			i++
 		}
 	}
 	for stroke, i := 1, 2+26; stroke <= CJK.MAX_STROKE; stroke++ {
-		groups[i].name = style.stroke_prefix + strconv.Itoa(stroke) + style.stroke_suffix
+		groups[i].name = style.StrokePrefix + strconv.Itoa(stroke) + style.StrokeSuffix
 		i++
 	}
 	return groups

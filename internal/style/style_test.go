@@ -1,4 +1,4 @@
-package main
+package style
 
 import (
 	"strings"
@@ -55,51 +55,51 @@ func TestScanStyleTokensBacktick(t *testing.T) {
 }
 
 func TestUnquote(t *testing.T) {
-	if got := unquote(`"hello"`); got != "hello" {
-		t.Fatalf("unquote(\"\\\"hello\\\"\") = %q, want %q", got, "hello")
+	if got := Unquote(`"hello"`); got != "hello" {
+		t.Fatalf("Unquote(\"\\\"hello\\\"\") = %q, want %q", got, "hello")
 	}
-	if got := unquote("`hello`"); got != "hello" {
-		t.Fatalf("unquote(%q) = %q, want %q", "`hello`", got, "hello")
+	if got := Unquote("`hello`"); got != "hello" {
+		t.Fatalf("Unquote(%q) = %q, want %q", "`hello`", got, "hello")
 	}
 }
 
 func TestParseInt(t *testing.T) {
-	if got := parseInt("42"); got != 42 {
-		t.Fatalf("parseInt(%q) = %d, want %d", "42", got, 42)
+	if got := ParseInt("42"); got != 42 {
+		t.Fatalf("ParseInt(%q) = %d, want %d", "42", got, 42)
 	}
-	if got := parseInt("0"); got != 0 {
-		t.Fatalf("parseInt(%q) = %d, want %d", "0", got, 0)
+	if got := ParseInt("0"); got != 0 {
+		t.Fatalf("ParseInt(%q) = %d, want %d", "0", got, 0)
 	}
 }
 
 func TestNewInputStyle(t *testing.T) {
-	style := NewInputStyle()
-	if style.keyword != "\\indexentry" {
-		t.Fatalf("keyword = %q, want %q", style.keyword, "\\indexentry")
+	s := NewInputStyle()
+	if s.Keyword != "\\indexentry" {
+		t.Fatalf("Keyword = %q, want %q", s.Keyword, "\\indexentry")
 	}
-	if style.arg_open != '{' {
-		t.Fatalf("arg_open = %q, want %q", style.arg_open, '{')
+	if s.ArgOpen != '{' {
+		t.Fatalf("ArgOpen = %q, want %q", s.ArgOpen, '{')
 	}
-	if style.level != '!' {
-		t.Fatalf("level = %q, want %q", style.level, '!')
+	if s.Level != '!' {
+		t.Fatalf("Level = %q, want %q", s.Level, '!')
 	}
-	if style.comment != '%' {
-		t.Fatalf("comment = %q, want %q", style.comment, '%')
+	if s.Comment != '%' {
+		t.Fatalf("Comment = %q, want %q", s.Comment, '%')
 	}
 }
 
 func TestNewOutputStyle(t *testing.T) {
-	style := NewOutputStyle()
-	if !strings.Contains(style.preamble, "\\begin{theindex}") {
-		t.Fatalf("preamble = %q, want to contain %q", style.preamble, "\\begin{theindex}")
+	s := NewOutputStyle()
+	if !strings.Contains(s.Preamble, "\\begin{theindex}") {
+		t.Fatalf("Preamble = %q, want to contain %q", s.Preamble, "\\begin{theindex}")
 	}
-	if style.delim_r != "--" {
-		t.Fatalf("delim_r = %q, want %q", style.delim_r, "--")
+	if s.DelimR != "--" {
+		t.Fatalf("DelimR = %q, want %q", s.DelimR, "--")
 	}
-	if style.page_precedence != "rnaRA" {
-		t.Fatalf("page_precedence = %q, want %q", style.page_precedence, "rnaRA")
+	if s.PagePrecedence != "rnaRA" {
+		t.Fatalf("PagePrecedence = %q, want %q", s.PagePrecedence, "rnaRA")
 	}
-	if style.headings_flag != 0 {
-		t.Fatalf("headings_flag = %d, want %d", style.headings_flag, 0)
+	if s.HeadingsFlag != 0 {
+		t.Fatalf("HeadingsFlag = %d, want %d", s.HeadingsFlag, 0)
 	}
 }

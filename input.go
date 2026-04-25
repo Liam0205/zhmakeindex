@@ -1,7 +1,6 @@
 package main
 
 import (
-	"errors"
 	"io"
 	"log"
 	"os"
@@ -11,16 +10,19 @@ import (
 
 	"golang.org/x/text/transform"
 
+	"github.com/leo-liu/zhmakeindex/internal/page"
+	"github.com/leo-liu/zhmakeindex/internal/reader"
+	"github.com/leo-liu/zhmakeindex/internal/style"
 	"github.com/yasushi-saito/rbtree"
 )
 
 type InputIndex []IndexEntry
 
-func NewInputIndex(option *InputOptions, style *InputStyle) *InputIndex {
+func NewInputIndex(option *InputOptions, instyle *style.InputStyle) *InputIndex {
 	inset := rbtree.NewTree(CompareIndexEntry)
 
 	if option.stdin {
-		readIdxFile(inset, os.Stdin, option, style)
+		readIdxFile(inset, os.Stdin, option, instyle)
 	} else {
 		for _, idxname := range option.input {
 			// 文件不存在且无后缀时，加上默认后缀 .idx 再试
@@ -31,7 +33,7 @@ func NewInputIndex(option *InputOptions, style *InputStyle) *InputIndex {
 			if err != nil {
 				log.Fatalln(err.Error())
 			}
-			readIdxFile(inset, idxfile, option, style)
+			readIdxFile(inset, idxfile, option, instyle)
 			idxfile.Close()
 		}
 	}
@@ -44,16 +46,16 @@ func NewInputIndex(option *InputOptions, style *InputStyle) *InputIndex {
 	return &in
 }
 
-func readIdxFile(inset *rbtree.Tree, idxfile *os.File, option *InputOptions, style *InputStyle) {
+func readIdxFile(inset *rbtree.Tree, idxfile *os.File, option *InputOptions, instyle *style.InputStyle) {
 	log.Printf("读取输入文件 %s ……\n", idxfile.Name())
 	accepted, rejected := 0, 0
 
-	idxreader := NewNumberdReader(transform.NewReader(idxfile, option.decoder))
+	idxreader := reader.NewNumberdReader(transform.NewReader(idxfile, option.decoder))
 	for {
-		entry, err := ScanIndexEntry(idxreader, option, style)
+		entry, err := ScanIndexEntry(idxreader, option, instyle)
 		if err == io.EOF {
 			break
-		} else if err == ScanSyntaxError {
+		} else if err == page.ScanSyntaxError {
 			rejected++
 			log.Printf("%s:%d: %s\n", idxfile.Name(), idxreader.Line(), err.Error())
 			// 跳过一行
@@ -90,43 +92,39 @@ func readIdxFile(inset *rbtree.Tree, idxfile *os.File, option *InputOptions, sty
 }
 
 // 跳过空白符和行注释
-func skipspaces(reader *NumberdReader, style *InputStyle) error {
+func skipspaces(rd *reader.NumberdReader, st *style.InputStyle) error {
 	for {
-		r, _, err := reader.ReadRune()
+		r, _, err := rd.ReadRune()
 		if err != nil {
 			return err
-		} else if r == style.comment { // 注释以 style.comment 开头，直至行末
-			reader.SkipLine()
+		} else if r == st.Comment {
+			rd.SkipLine()
 		} else if !unicode.IsSpace(r) {
-			reader.UnreadRune()
+			rd.UnreadRune()
 			break
 		}
 	}
 	return nil
 }
 
-func ScanIndexEntry(reader *NumberdReader, option *InputOptions, style *InputStyle) (*IndexEntry, error) {
+func ScanIndexEntry(rd *reader.NumberdReader, option *InputOptions, st *style.InputStyle) (*IndexEntry, error) {
 	var entry IndexEntry
-	page := new(Page)
-	// 跳过空白符
-	if err := skipspaces(reader, style); err != nil {
+	pg := new(page.Page)
+	if err := skipspaces(rd, st); err != nil {
 		return nil, err
 	}
-	// 跳过 keyword
-	for _, r := range style.keyword {
-		new_r, _, err := reader.ReadRune()
+	for _, r := range st.Keyword {
+		new_r, _, err := rd.ReadRune()
 		if err != nil {
 			return nil, err
 		}
 		if new_r != r {
-			return nil, ScanSyntaxError
+			return nil, page.ScanSyntaxError
 		}
 	}
-	// 跳过空白符
-	if err := skipspaces(reader, style); err != nil {
+	if err := skipspaces(rd, st); err != nil {
 		return nil, err
 	}
-	// 自动机状态
 	const (
 		SCAN_OPEN = iota
 		SCAN_KEY
@@ -135,28 +133,26 @@ func ScanIndexEntry(reader *NumberdReader, option *InputOptions, style *InputSty
 		SCAN_PAGE
 		SCAN_PAGERANGE
 	)
-	// 从 arg_open 开始扫描到 arg_close，处理索引项
 	state := SCAN_OPEN
 	quoted := false
 	escaped := false
 	arg_depth := 0
 	var token []rune
 	var entry_input []rune
-	page.rangetype = PAGE_NORMAL
+	pg.Rangetype = page.PAGE_NORMAL
 L_scan_kv:
 	for {
-		r, _, err := reader.ReadRune()
+		r, _, err := rd.ReadRune()
 		entry_input = append(entry_input, r)
 		if err != nil {
 			return nil, err
 		}
-		//debug.Printf("字符 %2c, 状态 %d, quoted %5v, escaped %5v, arg_depth %d\n", r, state, quoted, escaped, arg_depth) //// DEBUG only
 		switch state {
 		case SCAN_OPEN:
-			if !quoted && r == style.arg_open {
+			if !quoted && r == st.ArgOpen {
 				state = SCAN_KEY
 			} else {
-				return nil, ScanSyntaxError
+				return nil, page.ScanSyntaxError
 			}
 		case SCAN_KEY:
 			push_keyval := func(next int) {
@@ -172,10 +168,10 @@ L_scan_kv:
 				token = append(token, r)
 				quoted = false
 				break
-			} else if r == style.arg_open && !escaped {
+			} else if r == st.ArgOpen && !escaped {
 				token = append(token, r)
 				arg_depth++
-			} else if r == style.arg_close && !escaped {
+			} else if r == st.ArgClose && !escaped {
 				if arg_depth == 0 {
 					push_keyval(0)
 					break L_scan_kv
@@ -183,18 +179,18 @@ L_scan_kv:
 					token = append(token, r)
 					arg_depth--
 				}
-			} else if r == style.actual {
+			} else if r == st.Actual {
 				push_keyval(SCAN_VALUE)
-			} else if r == style.encap {
+			} else if r == st.Encap {
 				push_keyval(SCAN_PAGERANGE)
-			} else if r == style.level {
+			} else if r == st.Level {
 				push_keyval(SCAN_KEY)
-			} else if r == style.quote && !escaped {
+			} else if r == st.Quote && !escaped {
 				quoted = true
 			} else {
 				token = append(token, r)
 			}
-			if r == style.escape {
+			if r == st.Escape {
 				escaped = true
 			} else {
 				escaped = false
@@ -206,15 +202,14 @@ L_scan_kv:
 				token = nil
 				state = next
 			}
-			// 暂不对 actual 特殊处理
 			if quoted {
 				token = append(token, r)
 				quoted = false
 				break
-			} else if r == style.arg_open && !escaped {
+			} else if r == st.ArgOpen && !escaped {
 				token = append(token, r)
 				arg_depth++
-			} else if r == style.arg_close && !escaped {
+			} else if r == st.ArgClose && !escaped {
 				if arg_depth == 0 {
 					set_value(0)
 					break L_scan_kv
@@ -222,16 +217,16 @@ L_scan_kv:
 					token = append(token, r)
 					arg_depth--
 				}
-			} else if r == style.encap {
+			} else if r == st.Encap {
 				set_value(SCAN_PAGERANGE)
-			} else if r == style.level {
+			} else if r == st.Level {
 				set_value(SCAN_KEY)
-			} else if r == style.quote && !escaped {
+			} else if r == st.Quote && !escaped {
 				quoted = true
 			} else {
 				token = append(token, r)
 			}
-			if r == style.escape {
+			if r == st.Escape {
 				escaped = true
 			} else {
 				escaped = false
@@ -241,47 +236,45 @@ L_scan_kv:
 				token = append(token, r)
 				quoted = false
 				break
-			} else if r == style.arg_open || r == style.arg_close || r == style.actual || r == style.encap || r == style.level {
-				// 注意 encap 符号后不能直接加 arg_open、arg_close 等符号
-				return nil, ScanSyntaxError
-			} else if r == style.range_open {
-				page.rangetype = PAGE_OPEN
-			} else if r == style.range_close {
-				page.rangetype = PAGE_CLOSE
-			} else if r == style.quote { // 之前是 encap，无须考虑被 escape 转义
+			} else if r == st.ArgOpen || r == st.ArgClose || r == st.Actual || r == st.Encap || r == st.Level {
+				return nil, page.ScanSyntaxError
+			} else if r == st.RangeOpen {
+				pg.Rangetype = page.PAGE_OPEN
+			} else if r == st.RangeClose {
+				pg.Rangetype = page.PAGE_CLOSE
+			} else if r == st.Quote {
 				quoted = true
 			} else {
 				token = append(token, r)
 			}
 			state = SCAN_COMMAND
-			if r == style.escape {
+			if r == st.Escape {
 				escaped = true
 			} else {
 				escaped = false
 			}
 		case SCAN_COMMAND:
-			// 不对 encap、actual、level 特殊处理
 			if quoted {
 				token = append(token, r)
 				quoted = false
 				break
-			} else if r == style.arg_open && !escaped {
+			} else if r == st.ArgOpen && !escaped {
 				token = append(token, r)
 				arg_depth++
-			} else if r == style.arg_close && !escaped {
+			} else if r == st.ArgClose && !escaped {
 				if arg_depth == 0 {
-					page.encap = string(token)
+					pg.Encap = string(token)
 					break L_scan_kv
 				} else {
 					token = append(token, r)
 					arg_depth--
 				}
-			} else if r == style.quote && !escaped {
+			} else if r == st.Quote && !escaped {
 				quoted = true
 			} else {
 				token = append(token, r)
 			}
-			if r == style.escape {
+			if r == st.Escape {
 				escaped = true
 			} else {
 				escaped = false
@@ -291,56 +284,49 @@ L_scan_kv:
 		}
 	}
 	entry.input = string(entry_input)
-	// 跳过空白符
-	if err := skipspaces(reader, style); err != nil {
+	if err := skipspaces(rd, st); err != nil {
 		return nil, err
 	}
-	// 从 arg_open 开始扫描到 arg_close，处理页码
 	state = SCAN_OPEN
 	token = nil
 L_scan_page:
 	for {
-		r, _, err := reader.ReadRune()
+		r, _, err := rd.ReadRune()
 		if err != nil {
 			return nil, err
 		}
-		// debug.Printf("字符 %c, 状态 %d\n", r, state) //// DEBUG only
 		switch state {
 		case SCAN_OPEN:
-			if r == style.arg_open {
+			if r == st.ArgOpen {
 				state = SCAN_PAGE
 			} else {
-				return nil, ScanSyntaxError
+				return nil, page.ScanSyntaxError
 			}
 		case SCAN_PAGE:
-			if r == style.arg_close {
-				page.numbers, err = scanPage(token, style.page_compositor)
+			if r == st.ArgClose {
+				pg.Numbers, err = page.ScanPage(token, st.PageCompositor)
 				if err != nil {
 					return nil, err
 				}
 				break L_scan_page
-			} else if r == style.arg_open {
-				return nil, ScanSyntaxError
+			} else if r == st.ArgOpen {
+				return nil, page.ScanSyntaxError
 			} else {
 				token = append(token, r)
 			}
 		default:
 			panic("扫描状态错误")
 		}
-		// 未实现对 style.page_compositor 的处理
 	}
-	page.compositor = style.page_compositor
-	entry.pagelist = append(entry.pagelist, page)
-	// debug.Println(entry) //// DEBUG only
+	pg.Compositor = st.PageCompositor
+	entry.pagelist = append(entry.pagelist, pg)
 	return &entry, nil
 }
-
-var ScanSyntaxError = errors.New("索引项语法错误")
 
 type IndexEntry struct {
 	input    string
 	level    []IndexEntryLevel
-	pagelist []*Page
+	pagelist []*page.Page
 }
 
 // 实现 rbtree.CompareFunc
@@ -372,28 +358,4 @@ func CompareIndexEntry(a, b rbtree.Item) int {
 type IndexEntryLevel struct {
 	key  string
 	text string
-}
-
-type RangeType int
-
-const (
-	PAGE_UNKNOWN RangeType = iota
-	PAGE_OPEN
-	PAGE_NORMAL
-	PAGE_CLOSE
-)
-
-func (rt RangeType) String() string {
-	switch rt {
-	case PAGE_UNKNOWN:
-		return "?"
-	case PAGE_OPEN:
-		return "("
-	case PAGE_NORMAL:
-		return "."
-	case PAGE_CLOSE:
-		return ")"
-	default:
-		panic("区间格式错误")
-	}
 }

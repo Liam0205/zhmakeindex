@@ -1,6 +1,11 @@
 package main
 
-import "testing"
+import (
+	"testing"
+
+	"github.com/leo-liu/zhmakeindex/internal/page"
+	"github.com/leo-liu/zhmakeindex/internal/style"
+)
 
 func TestIsNumRune(t *testing.T) {
 	tests := []struct {
@@ -143,16 +148,16 @@ func TestIndexEntrySliceStrcmp(t *testing.T) {
 func TestNewPageSorterPrecedence(t *testing.T) {
 	tests := []struct {
 		name    string
-		style   *OutputStyle
+		style   *style.OutputStyle
 		option  *OutputOptions
-		format  NumFormat
+		format  page.NumFormat
 		wantPos int
 	}{
 		{
 			name:    "default roman lower precedence first",
-			style:   NewOutputStyle(),
+			style:   style.NewOutputStyle(),
 			option:  &OutputOptions{},
-			format:  NUM_ROMAN_LOWER,
+			format:  page.NUM_ROMAN_LOWER,
 			wantPos: 0,
 		},
 	}

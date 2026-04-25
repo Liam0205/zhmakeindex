@@ -1,6 +1,10 @@
 package main
 
-import "testing"
+import (
+	"testing"
+
+	"github.com/leo-liu/zhmakeindex/internal/style"
+)
 
 func TestReadingCollatorIsLetter(t *testing.T) {
 	collator := ReadingIndexCollator{}
@@ -61,7 +65,7 @@ func TestReadingCollatorGroup(t *testing.T) {
 
 func TestReadingCollatorInitGroups(t *testing.T) {
 	collator := ReadingIndexCollator{}
-	style := NewOutputStyle()
+	style := style.NewOutputStyle()
 
 	groups := collator.InitGroups(style)
 	if len(groups) != 28 {

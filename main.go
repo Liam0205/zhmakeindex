@@ -16,6 +16,8 @@ import (
 	"golang.org/x/text/encoding/traditionalchinese"
 	"golang.org/x/text/encoding/unicode"
 	"golang.org/x/text/transform"
+
+	"github.com/leo-liu/zhmakeindex/internal/style"
 )
 
 var (
@@ -54,7 +56,7 @@ func main() {
 	if option.style != "" {
 		log.Printf("正在读取格式文件 %s……", option.style)
 	}
-	instyle, outstyle := NewStyles(&option.StyleOptions)
+	instyle, outstyle := style.LoadStyles(option.style, option.style_decoder)
 
 	in := NewInputIndex(&option.InputOptions, instyle)
 	log.Printf("合并后共 %d 项。\n", len(*in))

@@ -5,11 +5,14 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/leo-liu/zhmakeindex/internal/page"
+	"github.com/leo-liu/zhmakeindex/internal/reader"
+	"github.com/leo-liu/zhmakeindex/internal/style"
 	"github.com/yasushi-saito/rbtree"
 )
 
 func TestScanIndexEntry(t *testing.T) {
-	style := NewInputStyle()
+	style := style.NewInputStyle()
 	option := &InputOptions{}
 
 	tests := []struct {
@@ -17,17 +20,17 @@ func TestScanIndexEntry(t *testing.T) {
 		input     string
 		levels    []IndexEntryLevel
 		encap     string
-		rangetype RangeType
+		rangetype page.RangeType
 		pageNum   int
-		pageFmt   NumFormat
+		pageFmt   page.NumFormat
 	}{
 		{
 			name:      "simple entry",
 			input:     `\indexentry{foo}{1}`,
 			levels:    []IndexEntryLevel{{key: "foo", text: "foo"}},
-			rangetype: PAGE_NORMAL,
+			rangetype: page.PAGE_NORMAL,
 			pageNum:   1,
-			pageFmt:   NUM_ARABIC,
+			pageFmt:   page.NUM_ARABIC,
 		},
 		{
 			name:  "multi-level entry",
@@ -37,65 +40,65 @@ func TestScanIndexEntry(t *testing.T) {
 				{key: "B", text: "B"},
 				{key: "C", text: "C"},
 			},
-			rangetype: PAGE_NORMAL,
+			rangetype: page.PAGE_NORMAL,
 			pageNum:   5,
-			pageFmt:   NUM_ARABIC,
+			pageFmt:   page.NUM_ARABIC,
 		},
 		{
 			name:      "key@text syntax",
 			input:     `\indexentry{key@text}{2}`,
 			levels:    []IndexEntryLevel{{key: "key", text: "text"}},
-			rangetype: PAGE_NORMAL,
+			rangetype: page.PAGE_NORMAL,
 			pageNum:   2,
-			pageFmt:   NUM_ARABIC,
+			pageFmt:   page.NUM_ARABIC,
 		},
 		{
 			name:      "encap syntax",
 			input:     `\indexentry{foo|textbf}{3}`,
 			levels:    []IndexEntryLevel{{key: "foo", text: "foo"}},
 			encap:     "textbf",
-			rangetype: PAGE_NORMAL,
+			rangetype: page.PAGE_NORMAL,
 			pageNum:   3,
-			pageFmt:   NUM_ARABIC,
+			pageFmt:   page.NUM_ARABIC,
 		},
 		{
 			name:      "range open",
 			input:     `\indexentry{foo|(}{10}`,
 			levels:    []IndexEntryLevel{{key: "foo", text: "foo"}},
-			rangetype: PAGE_OPEN,
+			rangetype: page.PAGE_OPEN,
 			pageNum:   10,
-			pageFmt:   NUM_ARABIC,
+			pageFmt:   page.NUM_ARABIC,
 		},
 		{
 			name:      "range close",
 			input:     `\indexentry{foo|)}{15}`,
 			levels:    []IndexEntryLevel{{key: "foo", text: "foo"}},
-			rangetype: PAGE_CLOSE,
+			rangetype: page.PAGE_CLOSE,
 			pageNum:   15,
-			pageFmt:   NUM_ARABIC,
+			pageFmt:   page.NUM_ARABIC,
 		},
 		{
 			name:      "range open with encap",
 			input:     `\indexentry{foo|(textit}{7}`,
 			levels:    []IndexEntryLevel{{key: "foo", text: "foo"}},
 			encap:     "textit",
-			rangetype: PAGE_OPEN,
+			rangetype: page.PAGE_OPEN,
 			pageNum:   7,
-			pageFmt:   NUM_ARABIC,
+			pageFmt:   page.NUM_ARABIC,
 		},
 		{
 			name:      "roman numeral page",
 			input:     `\indexentry{bar}{xiv}`,
 			levels:    []IndexEntryLevel{{key: "bar", text: "bar"}},
-			rangetype: PAGE_NORMAL,
+			rangetype: page.PAGE_NORMAL,
 			pageNum:   14,
-			pageFmt:   NUM_ROMAN_LOWER,
+			pageFmt:   page.NUM_ROMAN_LOWER,
 		},
 	}
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			reader := NewNumberdReader(strings.NewReader(tt.input))
+			reader := reader.NewNumberdReader(strings.NewReader(tt.input))
 			entry, err := ScanIndexEntry(reader, option, style)
 			if err != nil {
 				t.Fatalf("unexpected error: %v", err)
@@ -114,30 +117,30 @@ func TestScanIndexEntry(t *testing.T) {
 			if len(entry.pagelist) != 1 {
 				t.Fatalf("expected 1 page, got %d", len(entry.pagelist))
 			}
-			page := entry.pagelist[0]
-			if page.encap != tt.encap {
-				t.Errorf("encap = %q, want %q", page.encap, tt.encap)
+			pg := entry.pagelist[0]
+			if pg.Encap != tt.encap {
+				t.Errorf("encap = %q, want %q", pg.Encap, tt.encap)
 			}
-			if page.rangetype != tt.rangetype {
-				t.Errorf("rangetype = %v, want %v", page.rangetype, tt.rangetype)
+			if pg.Rangetype != tt.rangetype {
+				t.Errorf("rangetype = %v, want %v", pg.Rangetype, tt.rangetype)
 			}
-			if len(page.numbers) < 1 {
+			if len(pg.Numbers) < 1 {
 				t.Fatal("no page numbers")
 			}
-			if page.numbers[0].num != tt.pageNum {
-				t.Errorf("page num = %d, want %d", page.numbers[0].num, tt.pageNum)
+			if pg.Numbers[0].Num != tt.pageNum {
+				t.Errorf("page num = %d, want %d", pg.Numbers[0].Num, tt.pageNum)
 			}
-			if page.numbers[0].format != tt.pageFmt {
-				t.Errorf("page format = %d, want %d", page.numbers[0].format, tt.pageFmt)
+			if pg.Numbers[0].Format != tt.pageFmt {
+				t.Errorf("page format = %d, want %d", pg.Numbers[0].Format, tt.pageFmt)
 			}
 		})
 	}
 }
 
 func TestScanIndexEntryEOF(t *testing.T) {
-	style := NewInputStyle()
+	style := style.NewInputStyle()
 	option := &InputOptions{}
-	reader := NewNumberdReader(strings.NewReader(""))
+	reader := reader.NewNumberdReader(strings.NewReader(""))
 	_, err := ScanIndexEntry(reader, option, style)
 	if err != io.EOF {
 		t.Errorf("expected io.EOF, got %v", err)
@@ -145,12 +148,12 @@ func TestScanIndexEntryEOF(t *testing.T) {
 }
 
 func TestScanIndexEntrySyntaxError(t *testing.T) {
-	style := NewInputStyle()
+	style := style.NewInputStyle()
 	option := &InputOptions{}
-	reader := NewNumberdReader(strings.NewReader("not an index entry"))
+	reader := reader.NewNumberdReader(strings.NewReader("not an index entry"))
 	_, err := ScanIndexEntry(reader, option, style)
-	if err != ScanSyntaxError {
-		t.Errorf("expected ScanSyntaxError, got %v", err)
+	if err != page.ScanSyntaxError {
+		t.Errorf("expected page.ScanSyntaxError, got %v", err)
 	}
 }
 
@@ -203,7 +206,7 @@ func TestCompareIndexEntry(t *testing.T) {
 }
 
 func TestSkipspaces(t *testing.T) {
-	style := NewInputStyle()
+	style := style.NewInputStyle()
 
 	tests := []struct {
 		name     string
@@ -229,7 +232,7 @@ func TestSkipspaces(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			reader := NewNumberdReader(strings.NewReader(tt.input))
+			reader := reader.NewNumberdReader(strings.NewReader(tt.input))
 			err := skipspaces(reader, style)
 			if err != nil {
 				t.Fatalf("unexpected error: %v", err)

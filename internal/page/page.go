@@ -1,63 +1,84 @@
-package main
+package page
 
 import (
+	"errors"
 	"fmt"
 	"strconv"
 	"strings"
 	"unicode"
 )
 
-// 最大的整数
+var ScanSyntaxError = errors.New("索引项语法错误")
+
 const MaxInt = int(^uint(0) >> 1)
 
-type Page struct {
-	numbers    []PageNumber
-	compositor string
-	encap      string
-	rangetype  RangeType
+type RangeType int
+
+const (
+	PAGE_UNKNOWN RangeType = iota
+	PAGE_OPEN
+	PAGE_NORMAL
+	PAGE_CLOSE
+)
+
+func (rt RangeType) String() string {
+	switch rt {
+	case PAGE_UNKNOWN:
+		return "?"
+	case PAGE_OPEN:
+		return "("
+	case PAGE_NORMAL:
+		return "."
+	case PAGE_CLOSE:
+		return ")"
+	default:
+		panic("区间格式错误")
+	}
 }
 
-// 按 p 生成一个与之输出类型相同的空页码
+type Page struct {
+	Numbers    []PageNumber
+	Compositor string
+	Encap      string
+	Rangetype  RangeType
+}
+
 func (p *Page) Empty() *Page {
 	return &Page{
-		numbers:    nil,
-		compositor: p.compositor,
-		encap:      p.encap,
-		rangetype:  PAGE_UNKNOWN,
+		Numbers:    nil,
+		Compositor: p.Compositor,
+		Encap:      p.Encap,
+		Rangetype:  PAGE_UNKNOWN,
 	}
 }
 
 func (p *Page) String() string {
 	var page_str []string
-	for _, pn := range p.numbers {
+	for _, pn := range p.Numbers {
 		page_str = append(page_str, pn.String())
 	}
-	return strings.Join(page_str, p.compositor)
+	return strings.Join(page_str, p.Compositor)
 }
 
-// 判断两个页码是否类型一致
-// 两个页码类型一致指它们有相同多个类型相同的数字构成
-func (page *Page) Compatible(other *Page) bool {
-	if len(page.numbers) != len(other.numbers) {
+func (p *Page) Compatible(other *Page) bool {
+	if len(p.Numbers) != len(other.Numbers) {
 		return false
 	}
-	for i := 0; i < len(page.numbers); i++ {
-		if page.numbers[i].format != other.numbers[i].format {
+	for i := 0; i < len(p.Numbers); i++ {
+		if p.Numbers[i].Format != other.Numbers[i].Format {
 			return false
 		}
 	}
 	return true
 }
 
-// 求两个页码 page 与 other 之差（绝对值）
-// 如果不一致，返回 -1；如果不是最后一段数字不同，返回 MaxInt
-func (page *Page) Diff(other *Page) int {
-	if !page.Compatible(other) {
+func (p *Page) Diff(other *Page) int {
+	if !p.Compatible(other) {
 		return -1
 	}
-	depth := len(page.numbers)
+	depth := len(p.Numbers)
 	for i := 0; i < depth-1; i++ {
-		if page.numbers[i].num != other.numbers[i].num {
+		if p.Numbers[i].Num != other.Numbers[i].Num {
 			return MaxInt
 		}
 	}
@@ -68,34 +89,31 @@ func (page *Page) Diff(other *Page) int {
 			return -x
 		}
 	}
-	return abs(page.numbers[depth-1].num - other.numbers[depth-1].num)
+	return abs(p.Numbers[depth-1].Num - other.Numbers[depth-1].Num)
 }
 
-// 按字典序比较两个页码数字串的大小，返回负、零、正值
-// 不同类型的序关系由参数 precedence 给出，不一致的页码仍有大小关系
-// 不比较页码的 encap、rangetype 信息
-func (page *Page) Cmp(other *Page, precedence map[NumFormat]int) int {
-	for i := 0; i < len(page.numbers) && i < len(other.numbers); i++ {
-		a, b := page.numbers[i], other.numbers[i]
-		if precedence[a.format] != precedence[b.format] {
-			return precedence[a.format] - precedence[b.format]
-		} else if a.num != b.num {
-			return a.num - b.num
+func (p *Page) Cmp(other *Page, precedence map[NumFormat]int) int {
+	for i := 0; i < len(p.Numbers) && i < len(other.Numbers); i++ {
+		a, b := p.Numbers[i], other.Numbers[i]
+		if precedence[a.Format] != precedence[b.Format] {
+			return precedence[a.Format] - precedence[b.Format]
+		} else if a.Num != b.Num {
+			return a.Num - b.Num
 		}
 	}
-	if len(page.numbers) != len(other.numbers) {
-		return len(page.numbers) - len(other.numbers)
+	if len(p.Numbers) != len(other.Numbers) {
+		return len(p.Numbers) - len(other.Numbers)
 	}
 	return 0
 }
 
 type PageNumber struct {
-	format NumFormat
-	num    int
+	Format NumFormat
+	Num    int
 }
 
 func (p PageNumber) String() string {
-	return p.format.Format(p.num)
+	return p.Format.FormatNum(p.Num)
 }
 
 type NumFormat int
@@ -109,12 +127,11 @@ const (
 	NUM_ALPH_UPPER
 )
 
-// 将字符串解析为一串页码数字
-func scanPage(token []rune, compositor string) ([]PageNumber, error) {
+func ScanPage(token []rune, compositor string) ([]PageNumber, error) {
 	numstr_list := strings.Split(string(token), compositor)
 	var nums []PageNumber
 	for _, numstr := range numstr_list {
-		pn, err := scanNumber([]rune(numstr))
+		pn, err := ScanNumber([]rune(numstr))
 		if err != nil {
 			return nil, err
 		}
@@ -123,26 +140,25 @@ func scanPage(token []rune, compositor string) ([]PageNumber, error) {
 	return nums, nil
 }
 
-// 读入数字，并粗略判断其格式
-func scanNumber(token []rune) (PageNumber, error) {
+func ScanNumber(token []rune) (PageNumber, error) {
 	if len(token) == 0 {
 		return PageNumber{}, ScanSyntaxError
 	}
 	if r := token[0]; unicode.IsDigit(r) {
 		num, err := scanArabic(token)
-		return PageNumber{format: NUM_ARABIC, num: num}, err
+		return PageNumber{Format: NUM_ARABIC, Num: num}, err
 	} else if romanLowerValue[r] != 0 {
 		num, err := scanRomanLower(token)
-		return PageNumber{format: NUM_ROMAN_LOWER, num: num}, err
+		return PageNumber{Format: NUM_ROMAN_LOWER, Num: num}, err
 	} else if romanUpperValue[r] != 0 {
 		num, err := scanRomanUpper(token)
-		return PageNumber{format: NUM_ROMAN_UPPER, num: num}, err
+		return PageNumber{Format: NUM_ROMAN_UPPER, Num: num}, err
 	} else if 'a' <= r && r <= 'z' {
 		num, err := scanAlphLower(token)
-		return PageNumber{format: NUM_ALPH_LOWER, num: num}, err
+		return PageNumber{Format: NUM_ALPH_LOWER, Num: num}, err
 	} else if 'A' <= r && r <= 'Z' {
 		num, err := scanAlphUpper(token)
-		return PageNumber{format: NUM_ALPH_UPPER, num: num}, err
+		return PageNumber{Format: NUM_ALPH_UPPER, Num: num}, err
 	}
 	return PageNumber{}, ScanSyntaxError
 }
@@ -199,8 +215,7 @@ func scanAlphUpper(token []rune) (int, error) {
 	return int(token[0]-'A') + 1, nil
 }
 
-// 按格式输出数字
-func (numfmt NumFormat) Format(num int) string {
+func (numfmt NumFormat) FormatNum(num int) string {
 	switch numfmt {
 	case NUM_UNKNOWN:
 		return "?"
@@ -211,15 +226,15 @@ func (numfmt NumFormat) Format(num int) string {
 	case NUM_ALPH_UPPER:
 		return string(rune('A' + num))
 	case NUM_ROMAN_LOWER:
-		return romanNumString(num, false)
+		return RomanNumString(num, false)
 	case NUM_ROMAN_UPPER:
-		return romanNumString(num, true)
+		return RomanNumString(num, true)
 	default:
 		panic("数字格式错误")
 	}
 }
 
-func romanNumString(num int, upper bool) string {
+func RomanNumString(num int, upper bool) string {
 	if num < 1 {
 		return ""
 	}
