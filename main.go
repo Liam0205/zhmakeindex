@@ -27,8 +27,6 @@ var (
 	Revision = "???"
 )
 
-var debug = log.New(os.Stderr, "DEBUG: ", log.Lshortfile)
-
 func init() {
 	log.SetFlags(0)
 	log.SetPrefix("")
