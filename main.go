@@ -46,8 +46,10 @@ func main() {
 			log.Fatal(err)
 		}
 		if err := pprof.StartCPUProfile(f); err != nil {
+			f.Close()
 			log.Fatal("无法启动 CPU 性能调试：", err)
 		}
+		defer f.Close()
 		defer pprof.StopCPUProfile()
 	}
 
