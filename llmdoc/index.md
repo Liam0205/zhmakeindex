@@ -22,9 +22,9 @@
 ## 代码入口提示
 
 - CLI 与编码初始化：`main.go`
-- 输入解析：`input.go`、`numberedreader.go`
-- 排序与页码处理：`sorter.go`、`reading_collator.go`、`stroke_collator.go`、`radical_collator.go`、`pagenumber.go`
-- 样式系统：`style.go`
+- 输入解析：`input.go`、`internal/reader/reader.go`
+- 排序与页码处理：`sorter.go`、`reading_collator.go`、`stroke_collator.go`、`radical_collator.go`、`internal/page/page.go`
+- 样式系统：`internal/style/style.go`
 - 输出渲染：`output.go`
 - TeX 样式查找：`kpathsea/kpathsea.go`
 - CJK 数据生成：`CJK/maketables.go`

@@ -7,7 +7,7 @@
 主入口链路对应 `main.go` 中的固定顺序：
 
 1. `option.parse()`
-2. `NewStyles(&option.StyleOptions)`
+2. `style.LoadStyles(option.style, option.style_decoder)`
 3. `NewInputIndex(&option.InputOptions, instyle)`
 4. `NewOutputIndex(in, &option.OutputOptions, outstyle)`
 5. `out.Output(&option.OutputOptions)`
@@ -58,7 +58,7 @@
 
 ## 2. 样式层：把 makeindex 契约拆为输入语法和输出模板
 
-`NewStyles()` 返回两个对象：
+`internal/style` 包中的 `style.LoadStyles()` 返回两个对象：
 
 - `InputStyle`
 - `OutputStyle`
@@ -95,9 +95,9 @@
 每个输入文件在真正解析前都会包成：
 
 1. `transform.NewReader(idxfile, option.decoder)`
-2. `NewNumberdReader(...)`
+2. `reader.NewNumberdReader(...)`
 
-`NumberdReader` 提供四个关键能力：
+`internal/reader` 包中的 `NumberdReader` 提供四个关键能力：
 
 - `ReadRune()`：逐 rune 读取并维护行号
 - `UnreadRune()`：支持回退一个 rune
@@ -127,13 +127,13 @@
 产出结果写入：
 
 - `entry.level []IndexEntryLevel`
-- `page.encap`
-- `page.rangetype`
+- `pg.Encap`
+- `pg.Rangetype`
 - `entry.input`（原始条目文本快照，用于日志）
 
 #### 第二段：解析页码参数
 
-从第二个 `{...}` 参数中读取页码文本，再调用 `scanPage()` 生成 `[]PageNumber`，最后挂回 `Page.numbers`。
+从第二个 `{...}` 参数中读取页码文本，再调用 `page.ScanPage()` 生成 `[]page.PageNumber`，最后挂回 `Page.Numbers`。
 
 ### 3.4 输入阶段核心数据结构
 
@@ -158,10 +158,10 @@
 
 页码不是字符串，而是结构化对象：
 
-- `numbers []PageNumber`
-- `compositor string`
-- `encap string`
-- `rangetype RangeType`
+- `Numbers []PageNumber`
+- `Compositor string`
+- `Encap string`
+- `Rangetype RangeType`
 
 这为后续页码排序、区间构造和输出格式化提供了足够语义。
 
@@ -352,9 +352,9 @@
 当需要沿数据流定位问题时，可按下列路径回看代码：
 
 - 启动与编码：`main.go`
-- 样式加载：`style.go`
-- 输入读取与错误恢复：`input.go`、`numberedreader.go`
-- 条目排序与页码归并：`sorter.go`、`pagenumber.go`
+- 样式加载：`internal/style/style.go`
+- 输入读取与错误恢复：`input.go`、`internal/reader/reader.go`
+- 条目排序与页码归并：`sorter.go`、`internal/page/page.go`
 - 中文排序策略：`reading_collator.go`、`stroke_collator.go`、`radical_collator.go`
 - 输出渲染：`output.go`
 - 样式文件查找：`kpathsea/kpathsea.go`
