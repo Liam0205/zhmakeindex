@@ -28,11 +28,11 @@ checksum:
 
 brews:
   - repository:
-      owner: leo-liu
+      owner: Liam0205
       name: homebrew-zhmakeindex
       token: "{{ .Env.TAP_GITHUB_TOKEN }}"
     directory: Formula
-    homepage: "https://github.com/leo-liu/zhmakeindex"
+    homepage: "https://github.com/Liam0205/zhmakeindex"
     description: "Chinese-aware makeindex replacement for LaTeX"
     license: "LPPL-1.3c"
     install: |
