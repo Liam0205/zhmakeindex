@@ -60,11 +60,15 @@ func (o *OutputIndex) Output(option *OutputOptions) {
 				fmt.Fprintf(writer, "%s%s", o.style.Item0, item.Text)
 				writePage(writer, 0, item.Page, o.style)
 			case 1:
-				if last := group.Items[i-1]; last.Level == 0 {
-					if last.Page != nil {
-						fmt.Fprint(writer, o.style.Item01)
+				if i > 0 {
+					if last := group.Items[i-1]; last.Level == 0 {
+						if last.Page != nil {
+							fmt.Fprint(writer, o.style.Item01)
+						} else {
+							fmt.Fprint(writer, o.style.ItemX1)
+						}
 					} else {
-						fmt.Fprint(writer, o.style.ItemX1)
+						fmt.Fprint(writer, o.style.Item1)
 					}
 				} else {
 					fmt.Fprint(writer, o.style.Item1)
@@ -72,11 +76,15 @@ func (o *OutputIndex) Output(option *OutputOptions) {
 				fmt.Fprint(writer, item.Text)
 				writePage(writer, 1, item.Page, o.style)
 			case 2:
-				if last := group.Items[i-1]; last.Level == 1 {
-					if last.Page != nil {
-						fmt.Fprint(writer, o.style.Item12)
+				if i > 0 {
+					if last := group.Items[i-1]; last.Level == 1 {
+						if last.Page != nil {
+							fmt.Fprint(writer, o.style.Item12)
+						} else {
+							fmt.Fprint(writer, o.style.ItemX2)
+						}
 					} else {
-						fmt.Fprint(writer, o.style.ItemX2)
+						fmt.Fprint(writer, o.style.Item2)
 					}
 				} else {
 					fmt.Fprint(writer, o.style.Item2)
