@@ -63,7 +63,7 @@ func readUnihan(localPath string) *zip.Reader {
 		}
 		defer resp.Body.Close()
 		if resp.StatusCode != http.StatusOK {
-			log.Fatalf("bad GET status for Unihan.zip: %d", resp.Status)
+			log.Fatalf("bad GET status for Unihan.zip: %s", resp.Status)
 		}
 		buffer, err = io.ReadAll(resp.Body)
 		if err != nil {
@@ -78,18 +78,17 @@ func readUnihan(localPath string) *zip.Reader {
 }
 
 func getUnihanFile(unihan *zip.Reader, file string) io.ReadCloser {
-	var unihan_file io.ReadCloser
-	var err error
 	for _, f := range unihan.File {
 		if f.Name == file {
-			unihan_file, err = f.Open()
+			unihan_file, err := f.Open()
 			if err != nil {
 				log.Fatalln(err)
 			}
-			break
+			return unihan_file
 		}
 	}
-	return unihan_file
+	log.Fatalf("Unihan.zip 中未找到文件 %s", file)
+	return nil
 }
 
 const MAX_CODEPOINT = 0x40000 // 覆盖 Unicode 第 0、1、2、3 平面
@@ -379,7 +378,7 @@ var radicals = [MAX_RADICAL + 1]Radical{`)
 			fmt.Fprintf(outfile, " (%c)\n", CJKRadical[i].Simplified)
 		}
 	}
-	fmt.Fprintln(outfile, "}\n")
+	fmt.Fprintf(outfile, "}\n\n")
 	fmt.Fprintln(outfile, `// RadicalStroke 为部首与除部首笔画数。
 // 前两个字节分别放部首和除部首笔画数，后面放字符本身的 UTF-8 编码，可直接排序。
 type RadicalStroke string
@@ -422,7 +421,7 @@ func read_radicals() [MAX_RADICAL + 1]Radical {
 		log.Fatalln(err)
 	}
 	if resp.StatusCode != http.StatusOK {
-		log.Fatalf("bad GET status for CJKRadicals.txt: %d", resp.Status)
+		log.Fatalf("bad GET status for CJKRadicals.txt: %s", resp.Status)
 	}
 	defer resp.Body.Close()
 
