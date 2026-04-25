@@ -287,6 +287,9 @@ func LoadStyles(stylePath string, decoder transform.Transformer) (*InputStyle, *
 }
 
 func Unquote(src string) string {
+	if src == "" {
+		return ""
+	}
 	if src[0] == '"' {
 		src = strings.Replace(src, "\n", "\\n", -1)
 	}

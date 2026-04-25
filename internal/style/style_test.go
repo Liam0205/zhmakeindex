@@ -63,6 +63,18 @@ func TestUnquote(t *testing.T) {
 	}
 }
 
+func TestUnquoteEmpty(t *testing.T) {
+	defer func() {
+		if r := recover(); r != nil {
+			t.Fatalf("Unquote(\"\") panicked: %v", r)
+		}
+	}()
+	got := Unquote("")
+	if got != "" {
+		t.Fatalf("Unquote(\"\") = %q, want %q", got, "")
+	}
+}
+
 func TestParseInt(t *testing.T) {
 	if got := ParseInt("42"); got != 42 {
 		t.Fatalf("ParseInt(%q) = %d, want %d", "42", got, 42)
