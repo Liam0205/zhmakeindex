@@ -1,8 +1,9 @@
-package main
+package collator
 
 import (
 	"testing"
 
+	"github.com/leo-liu/zhmakeindex/internal/index"
 	"github.com/leo-liu/zhmakeindex/internal/style"
 )
 
@@ -48,15 +49,15 @@ func TestReadingCollatorRuneCmp(t *testing.T) {
 func TestReadingCollatorGroup(t *testing.T) {
 	collator := ReadingIndexCollator{}
 
-	letterEntry := &IndexEntry{
-		level: []IndexEntryLevel{{key: "abc", text: "abc"}},
+	letterEntry := &index.IndexEntry{
+		Level: []index.IndexEntryLevel{{Key: "abc", Text: "abc"}},
 	}
 	if got := collator.Group(letterEntry); got != 2 {
 		t.Fatalf("Group(letterEntry) = %d, want 2", got)
 	}
 
-	numberEntry := &IndexEntry{
-		level: []IndexEntryLevel{{key: "123", text: "123"}},
+	numberEntry := &index.IndexEntry{
+		Level: []index.IndexEntryLevel{{Key: "123", Text: "123"}},
 	}
 	if got := collator.Group(numberEntry); got != 1 {
 		t.Fatalf("Group(numberEntry) = %d, want 1", got)
@@ -133,7 +134,7 @@ func TestRadicalCollatorRuneCmp(t *testing.T) {
 func TestCollatorIsLetterConsistency(t *testing.T) {
 	collators := []struct {
 		name string
-		c    IndexCollator
+		c    index.IndexCollator
 	}{
 		{name: "reading", c: ReadingIndexCollator{}},
 		{name: "stroke", c: StrokeIndexCollator{}},

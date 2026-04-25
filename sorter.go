@@ -3,44 +3,30 @@ package main
 import (
 	"log"
 	"sort"
-	"strconv"
-	"unicode"
-	"unicode/utf8"
 
+	"github.com/leo-liu/zhmakeindex/internal/collator"
+	"github.com/leo-liu/zhmakeindex/internal/index"
 	"github.com/leo-liu/zhmakeindex/internal/page"
 	"github.com/leo-liu/zhmakeindex/internal/style"
 )
 
-// 对应不同的分类排序方式
-type IndexCollator interface {
-	// 初始化分组
-	InitGroups(style *style.OutputStyle) []IndexGroup
-	// 给索引项分组
-	Group(entry *IndexEntry) int
-	// 单个字符比较
-	RuneCmp(a, b rune) int
-	// 判断是否字母或汉字
-	IsLetter(r rune) bool
-}
-
-// 排序器
 type IndexSorter struct {
-	IndexCollator
+	index.IndexCollator
 }
 
 func NewIndexSorter(method string) *IndexSorter {
 	switch method {
 	case "bihua", "stroke":
 		return &IndexSorter{
-			IndexCollator: StrokeIndexCollator{},
+			IndexCollator: collator.StrokeIndexCollator{},
 		}
 	case "pinyin", "reading":
 		return &IndexSorter{
-			IndexCollator: ReadingIndexCollator{},
+			IndexCollator: collator.ReadingIndexCollator{},
 		}
 	case "bushou", "radical":
 		return &IndexSorter{
-			IndexCollator: RadicalIndexCollator{},
+			IndexCollator: collator.RadicalIndexCollator{},
 		}
 	default:
 		log.Fatalln("未知排序方式")
@@ -48,141 +34,31 @@ func NewIndexSorter(method string) *IndexSorter {
 	return nil
 }
 
-func (sorter *IndexSorter) SortIndex(input *InputIndex, style *style.OutputStyle, option *OutputOptions) *OutputIndex {
+func (sorter *IndexSorter) SortIndex(input *index.InputIndex, style *style.OutputStyle, option *OutputOptions) *OutputIndex {
 	out := new(OutputIndex)
-	// 分组
 	out.groups = sorter.InitGroups(style)
 
-	// 先整体排序
-	sort.Sort(IndexEntrySlice{
-		entries:  *input,
-		colattor: sorter.IndexCollator,
+	sort.Sort(index.IndexEntrySlice{
+		Entries:  *input,
+		Colattor: sorter.IndexCollator,
 	})
 
-	// 再依次对页码排序，并分组添加
 	pagesorter := NewPageSorter(style, option)
 	for _, entry := range *input {
 		pageranges := pagesorter.Sort(entry)
 		pageranges = pagesorter.Merge(pageranges)
-		item := IndexItem{
-			level: len(entry.level) - 1,
-			text:  entry.level[len(entry.level)-1].text,
-			page:  pageranges,
+		item := index.IndexItem{
+			Level: len(entry.Level) - 1,
+			Text:  entry.Level[len(entry.Level)-1].Text,
+			Page:  pageranges,
 		}
 		group := sorter.Group(&entry)
-		out.groups[group].items = append(out.groups[group].items, item)
+		out.groups[group].Items = append(out.groups[group].Items, item)
 	}
 
 	return out
 }
 
-type IndexEntrySlice struct {
-	entries  []IndexEntry
-	colattor IndexCollator
-}
-
-func (s IndexEntrySlice) Len() int {
-	return len(s.entries)
-}
-
-func (s IndexEntrySlice) Swap(i, j int) {
-	s.entries[i], s.entries[j] = s.entries[j], s.entries[i]
-}
-
-// 比较两个串的大小
-func (s IndexEntrySlice) Strcmp(a, b string) int {
-	atype, btype := getStringType(s.colattor, a), getStringType(s.colattor, b)
-	if atype < btype {
-		return -1
-	} else if atype > btype {
-		return 1
-	}
-	// 特例：尝试按纯数字比较
-	if cmp := DecimalStrcmp(a, b); cmp != 0 {
-		return cmp
-	}
-	// 忽略大小写，按字典序比较
-	a_rune, b_rune := []rune(a), []rune(b)
-	for i := range a_rune {
-		if i >= len(b_rune) {
-			return 1
-		}
-		cmp := s.colattor.RuneCmp(a_rune[i], b_rune[i])
-		if cmp != 0 {
-			return cmp
-		}
-	}
-	if len(a_rune) < len(b_rune) {
-		return -1
-	}
-	// 不忽略大小写重新比较串，此时不必使用 colattor 特有的比较
-	if a < b {
-		return -1
-	} else if a > b {
-		return 1
-	} else {
-		return 0
-	}
-}
-
-// 串类型
-type stringType int
-
-// 用于比较的串类型，有前后次序
-const (
-	EMPTY_STR      stringType = iota // 空串
-	SYMBOL_STR                       // 符号开头
-	NUM_SYMBOL_STR                   // 数字开头
-	NUM_STR                          // 纯数字
-	LETTER_STR                       // 字母或汉字
-)
-
-// 取得串类型
-func getStringType(collator IndexCollator, s string) stringType {
-	if len(s) == 0 {
-		return EMPTY_STR
-	}
-	r, _ := utf8.DecodeRuneInString(s)
-	switch {
-	case IsNumRune(r):
-		if IsNumString(s) {
-			return NUM_STR
-		} else {
-			return NUM_SYMBOL_STR
-		}
-	case collator.IsLetter(r):
-		return LETTER_STR
-	default:
-		return SYMBOL_STR
-	}
-}
-
-func (s IndexEntrySlice) Less(i, j int) bool {
-	a, b := s.entries[i], s.entries[j]
-	for i := range a.level {
-		if i >= len(b.level) {
-			return false
-		}
-		keycmp := s.Strcmp(a.level[i].key, b.level[i].key)
-		if keycmp < 0 {
-			return true
-		} else if keycmp > 0 {
-			return false
-		}
-		textcmp := s.Strcmp(a.level[i].text, b.level[i].text)
-		if textcmp < 0 {
-			return true
-		} else if textcmp > 0 {
-			return false
-		}
-	}
-	if len(a.level) < len(b.level) {
-		return true
-	}
-	return false
-}
-
-// 页码排序器
 type PageSorter struct {
 	precedence    map[page.NumFormat]int
 	strict        bool
@@ -220,12 +96,9 @@ func NewPageSorter(style *style.OutputStyle, option *OutputOptions) *PageSorter 
 	return &sorter
 }
 
-// 处理输入的页码，生成页码区间组
-func (sorter *PageSorter) Sort(entry IndexEntry) []PageRange {
-	pages := entry.pagelist
-	//debug.Println(entry.input, pages)
-	var out []PageRange
-	// 合并前排序。传统 Makeindex 按原始输入的次序，在处理多个文件时可能不大好
+func (sorter *PageSorter) Sort(entry index.IndexEntry) []index.PageRange {
+	pages := entry.Pagelist
+	var out []index.PageRange
 	if sorter.strict {
 		sort.Sort(PageSliceStrict{
 			PageSlice{pages: pages, sorter: sorter}})
@@ -233,114 +106,89 @@ func (sorter *PageSorter) Sort(entry IndexEntry) []PageRange {
 		sort.Sort(PageSliceLoose{
 			PageSlice{pages: pages, sorter: sorter}})
 	}
-	//debug.Println(pages)
-	// 使用一个栈来合并页码区间
-	// 这里的合并只将 1( 2 3 3) 合并为 1--3，不处理相邻区间，后者需要再做 Merge 操作
 	var stack []*page.Page
 	for i := 0; i < len(pages); i++ {
 		p := pages[i]
-		//debug.Printf("处理页码 %s{%s} %s\n", p.Encap, p.NumString(), p.Rangetype)
 		if len(stack) == 0 {
 			switch p.Rangetype {
 			case page.PAGE_NORMAL:
-				// 输出独立页
-				out = append(out, PageRange{begin: p, end: p})
+				out = append(out, index.PageRange{Begin: p, End: p})
 			case page.PAGE_OPEN:
-				// 压栈
 				stack = append(stack, p)
 			case page.PAGE_CLOSE:
-				log.Printf("条目 %s 的页码区间有误，区间末尾 %s{%s} 没有匹配的区间头。\n", entry.input, p.Encap, p)
-				// 输出从空白到当前页的伪区间
-				out = append(out, PageRange{begin: p.Empty(), end: p})
+				log.Printf("条目 %s 的页码区间有误，区间末尾 %s{%s} 没有匹配的区间头。\n", entry.Input, p.Encap, p)
+				out = append(out, index.PageRange{Begin: p.Empty(), End: p})
 			}
 		} else {
 			front := stack[0]
 			top := stack[len(stack)-1]
 			if p.Encap != front.Encap {
 				if sorter.strict {
-					log.Printf("条目 %s 的页码区间可能有误，区间头 %s 没有对应的区间尾\n", entry.input, front)
-					// 输出从区间头到空白的伪区间，并清空栈
-					out = append(out, PageRange{begin: front, end: front.Empty()})
+					log.Printf("条目 %s 的页码区间可能有误，区间头 %s 没有对应的区间尾\n", entry.Input, front)
+					out = append(out, index.PageRange{Begin: front, End: front.Empty()})
 					stack = nil
-					// 退回重新处理此项
 					i--
 					continue
 				} else {
-					// 只输出独立页面，与 Makeindex 行为类似
 					if p.Rangetype == page.PAGE_NORMAL {
-						out = append(out, PageRange{begin: p, end: p})
+						out = append(out, index.PageRange{Begin: p, End: p})
 					} else {
 						log.Printf("条目 %s 的页码区间 %s{%s--} 内 %s%s{%s} 命令格式不同，可能丢失信息",
-							entry.input, front.Encap, front, p.Rangetype, p.Encap, p)
+							entry.Input, front.Encap, front, p.Rangetype, p.Encap, p)
 					}
 				}
 			} else if !p.Compatible(top) {
-				// 标准 Makeindex 会尝试把区间断开，这里只给出警告
-				log.Printf("条目 %s 的页码区间 %s{%s -- %s} 跨过不同的数字格式\n", entry.input, top.Encap, top, p)
+				log.Printf("条目 %s 的页码区间 %s{%s -- %s} 跨过不同的数字格式\n", entry.Input, top.Encap, top, p)
 			}
 			switch p.Rangetype {
 			case page.PAGE_NORMAL:
-				// 什么也不做
 			case page.PAGE_OPEN:
-				// 压栈
 				stack = append(stack, p)
 			case page.PAGE_CLOSE:
-				// 栈中只有一个元素时输出正常区间，弹栈
 				if len(stack) == 1 {
-					out = append(out, PageRange{begin: front, end: p})
+					out = append(out, index.PageRange{Begin: front, End: p})
 				}
 				stack = stack[:len(stack)-1]
 			}
 		}
 	}
 	if len(stack) > 0 {
-		log.Printf("条目 %s 的页码区间有误，未找到与 %s{%s} 匹配的区间尾。\n", entry.input, stack[0].Encap, stack[0])
-		// 输出从当前页到空白的伪区间
-		out = append(out, PageRange{begin: stack[0], end: stack[0].Empty()})
+		log.Printf("条目 %s 的页码区间有误，未找到与 %s{%s} 匹配的区间尾。\n", entry.Input, stack[0].Encap, stack[0])
+		out = append(out, index.PageRange{Begin: stack[0], End: stack[0].Empty()})
 	}
-	//	debug.Println(out)
 	return out
 }
 
-// 合并相邻的页码区间
-// 输入是 1 2--3 4--6 7，输出 1--7
-func (sorter *PageSorter) Merge(pages []PageRange) []PageRange {
-	var out []PageRange
+func (sorter *PageSorter) Merge(pages []index.PageRange) []index.PageRange {
+	var out []index.PageRange
 	for i, r := range pages {
-		// 跳过首项；按设置跳过单页页码
 		if i == 0 {
 			out = append(out, r)
 			continue
 		}
-		// 合并重复页和区间
 		prev := out[len(out)-1]
 		if sorter.disable_range &&
-			(r.begin.Rangetype == page.PAGE_NORMAL || prev.begin.Rangetype == page.PAGE_NORMAL) {
-			// 合并（跳过）重复页
-			if prev.begin == r.begin {
+			(r.Begin.Rangetype == page.PAGE_NORMAL || prev.Begin.Rangetype == page.PAGE_NORMAL) {
+			if prev.Begin == r.Begin {
 				continue
 			} else {
 				out = append(out, r)
 			}
-		} else if prev.begin.Encap == r.begin.Encap &&
-			r.begin.Compatible(prev.begin) &&
-			r.begin.Diff(prev.end) <= 1 {
-			// 合并区间，只用后一区间尾替换前一区间尾
-			out[len(out)-1].end = r.end
+		} else if prev.Begin.Encap == r.Begin.Encap &&
+			r.Begin.Compatible(prev.Begin) &&
+			r.Begin.Diff(prev.End) <= 1 {
+			out[len(out)-1].End = r.End
 		} else {
 			out = append(out, r)
 		}
 	}
-	// 修正区间类型（似乎无用）
 	for i := range out {
-		if out[i].begin.Encap == out[i].end.Encap {
-			if out[i].begin.Diff(out[i].end) == 0 {
-				out[i].begin.Rangetype = page.PAGE_NORMAL
-				out[i].end.Rangetype = page.PAGE_NORMAL
+		if out[i].Begin.Encap == out[i].End.Encap {
+			if out[i].Begin.Diff(out[i].End) == 0 {
+				out[i].Begin.Rangetype = page.PAGE_NORMAL
+				out[i].End.Rangetype = page.PAGE_NORMAL
 			}
-			// 保留首尾区间类型，可以输出时判断是否是合并得到的区间
 		}
-		// encap 不同是不匹配区间或不完全区间，不修正
 	}
 	return out
 }
@@ -362,8 +210,6 @@ type PageSliceStrict struct {
 	PageSlice
 }
 
-// 先按 encap 类型比较，然后按页码本身比较，然后是 rangetype，方便以后合并
-// 不同 encap 严格分离
 func (p PageSliceStrict) Less(i, j int) bool {
 	a, b := p.pages[i], p.pages[j]
 	if a.Encap < b.Encap {
@@ -385,8 +231,6 @@ type PageSliceLoose struct {
 	PageSlice
 }
 
-// 先按页码类型比较，然后按页码数值，然后 rangetype，最后是 encap 类型，方便以后合并
-// 允许不同 encap 合并，接近传统的 Makeindex 行为
 func (p PageSliceLoose) Less(i, j int) bool {
 	a, b := p.pages[i], p.pages[j]
 	if cmp := a.Cmp(b, p.sorter.precedence); cmp != 0 {
@@ -401,48 +245,5 @@ func (p PageSliceLoose) Less(i, j int) bool {
 		return true
 	} else {
 		return false
-	}
-}
-
-// 忽略大小写，按内码比较两个字符
-// 此过程被其他 collator 的 RuneCmp 调用
-func RuneCmpIgnoreCases(a, b rune) int {
-	la, lb := unicode.ToLower(a), unicode.ToLower(b)
-	return int(la - lb)
-}
-
-// 测试是否是数字，但把“〇”单独算做汉字
-func IsNumRune(r rune) bool {
-	return unicode.IsNumber(r) && r != '〇'
-}
-
-// 测试是否为数字串
-// 此过程被其他 collator 的 RuneCmp 调用
-func IsNumString(s string) bool {
-	for _, r := range s {
-		if !IsNumRune(r) {
-			return false
-		}
-	}
-	return true
-}
-
-// 按数字大小比较自然数串，如果不是自然数串视为相等
-func DecimalStrcmp(a, b string) int {
-	aint, err := strconv.ParseUint(a, 10, 64)
-	if err != nil {
-		return 0
-	}
-	bint, err := strconv.ParseUint(b, 10, 64)
-	if err != nil {
-		return 0
-	}
-	switch {
-	case aint < bint:
-		return -1
-	case aint > bint:
-		return 1
-	default:
-		return 0
 	}
 }

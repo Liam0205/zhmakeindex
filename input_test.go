@@ -5,6 +5,7 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/leo-liu/zhmakeindex/internal/index"
 	"github.com/leo-liu/zhmakeindex/internal/page"
 	"github.com/leo-liu/zhmakeindex/internal/reader"
 	"github.com/leo-liu/zhmakeindex/internal/style"
@@ -18,7 +19,7 @@ func TestScanIndexEntry(t *testing.T) {
 	tests := []struct {
 		name      string
 		input     string
-		levels    []IndexEntryLevel
+		levels    []index.IndexEntryLevel
 		encap     string
 		rangetype page.RangeType
 		pageNum   int
@@ -27,7 +28,7 @@ func TestScanIndexEntry(t *testing.T) {
 		{
 			name:      "simple entry",
 			input:     `\indexentry{foo}{1}`,
-			levels:    []IndexEntryLevel{{key: "foo", text: "foo"}},
+			levels:    []index.IndexEntryLevel{{Key: "foo", Text: "foo"}},
 			rangetype: page.PAGE_NORMAL,
 			pageNum:   1,
 			pageFmt:   page.NUM_ARABIC,
@@ -35,10 +36,10 @@ func TestScanIndexEntry(t *testing.T) {
 		{
 			name:  "multi-level entry",
 			input: `\indexentry{A!B!C}{5}`,
-			levels: []IndexEntryLevel{
-				{key: "A", text: "A"},
-				{key: "B", text: "B"},
-				{key: "C", text: "C"},
+			levels: []index.IndexEntryLevel{
+				{Key: "A", Text: "A"},
+				{Key: "B", Text: "B"},
+				{Key: "C", Text: "C"},
 			},
 			rangetype: page.PAGE_NORMAL,
 			pageNum:   5,
@@ -47,7 +48,7 @@ func TestScanIndexEntry(t *testing.T) {
 		{
 			name:      "key@text syntax",
 			input:     `\indexentry{key@text}{2}`,
-			levels:    []IndexEntryLevel{{key: "key", text: "text"}},
+			levels:    []index.IndexEntryLevel{{Key: "key", Text: "text"}},
 			rangetype: page.PAGE_NORMAL,
 			pageNum:   2,
 			pageFmt:   page.NUM_ARABIC,
@@ -55,7 +56,7 @@ func TestScanIndexEntry(t *testing.T) {
 		{
 			name:      "encap syntax",
 			input:     `\indexentry{foo|textbf}{3}`,
-			levels:    []IndexEntryLevel{{key: "foo", text: "foo"}},
+			levels:    []index.IndexEntryLevel{{Key: "foo", Text: "foo"}},
 			encap:     "textbf",
 			rangetype: page.PAGE_NORMAL,
 			pageNum:   3,
@@ -64,7 +65,7 @@ func TestScanIndexEntry(t *testing.T) {
 		{
 			name:      "range open",
 			input:     `\indexentry{foo|(}{10}`,
-			levels:    []IndexEntryLevel{{key: "foo", text: "foo"}},
+			levels:    []index.IndexEntryLevel{{Key: "foo", Text: "foo"}},
 			rangetype: page.PAGE_OPEN,
 			pageNum:   10,
 			pageFmt:   page.NUM_ARABIC,
@@ -72,7 +73,7 @@ func TestScanIndexEntry(t *testing.T) {
 		{
 			name:      "range close",
 			input:     `\indexentry{foo|)}{15}`,
-			levels:    []IndexEntryLevel{{key: "foo", text: "foo"}},
+			levels:    []index.IndexEntryLevel{{Key: "foo", Text: "foo"}},
 			rangetype: page.PAGE_CLOSE,
 			pageNum:   15,
 			pageFmt:   page.NUM_ARABIC,
@@ -80,7 +81,7 @@ func TestScanIndexEntry(t *testing.T) {
 		{
 			name:      "range open with encap",
 			input:     `\indexentry{foo|(textit}{7}`,
-			levels:    []IndexEntryLevel{{key: "foo", text: "foo"}},
+			levels:    []index.IndexEntryLevel{{Key: "foo", Text: "foo"}},
 			encap:     "textit",
 			rangetype: page.PAGE_OPEN,
 			pageNum:   7,
@@ -89,7 +90,7 @@ func TestScanIndexEntry(t *testing.T) {
 		{
 			name:      "roman numeral page",
 			input:     `\indexentry{bar}{xiv}`,
-			levels:    []IndexEntryLevel{{key: "bar", text: "bar"}},
+			levels:    []index.IndexEntryLevel{{Key: "bar", Text: "bar"}},
 			rangetype: page.PAGE_NORMAL,
 			pageNum:   14,
 			pageFmt:   page.NUM_ROMAN_LOWER,
@@ -103,21 +104,21 @@ func TestScanIndexEntry(t *testing.T) {
 			if err != nil {
 				t.Fatalf("unexpected error: %v", err)
 			}
-			if len(entry.level) != len(tt.levels) {
-				t.Fatalf("expected %d levels, got %d", len(tt.levels), len(entry.level))
+			if len(entry.Level) != len(tt.levels) {
+				t.Fatalf("expected %d levels, got %d", len(tt.levels), len(entry.Level))
 			}
 			for i, lv := range tt.levels {
-				if entry.level[i].key != lv.key {
-					t.Errorf("level[%d].key = %q, want %q", i, entry.level[i].key, lv.key)
+				if entry.Level[i].Key != lv.Key {
+					t.Errorf("level[%d].key = %q, want %q", i, entry.Level[i].Key, lv.Key)
 				}
-				if entry.level[i].text != lv.text {
-					t.Errorf("level[%d].text = %q, want %q", i, entry.level[i].text, lv.text)
+				if entry.Level[i].Text != lv.Text {
+					t.Errorf("level[%d].text = %q, want %q", i, entry.Level[i].Text, lv.Text)
 				}
 			}
-			if len(entry.pagelist) != 1 {
-				t.Fatalf("expected 1 page, got %d", len(entry.pagelist))
+			if len(entry.Pagelist) != 1 {
+				t.Fatalf("expected 1 page, got %d", len(entry.Pagelist))
 			}
-			pg := entry.pagelist[0]
+			pg := entry.Pagelist[0]
 			if pg.Encap != tt.encap {
 				t.Errorf("encap = %q, want %q", pg.Encap, tt.encap)
 			}
@@ -160,44 +161,44 @@ func TestScanIndexEntrySyntaxError(t *testing.T) {
 func TestCompareIndexEntry(t *testing.T) {
 	tests := []struct {
 		name string
-		a, b *IndexEntry
+		a, b *index.IndexEntry
 		want int
 	}{
 		{
 			name: "equal entries",
-			a:    &IndexEntry{level: []IndexEntryLevel{{key: "foo", text: "foo"}}},
-			b:    &IndexEntry{level: []IndexEntryLevel{{key: "foo", text: "foo"}}},
+			a:    &index.IndexEntry{Level: []index.IndexEntryLevel{{Key: "foo", Text: "foo"}}},
+			b:    &index.IndexEntry{Level: []index.IndexEntryLevel{{Key: "foo", Text: "foo"}}},
 			want: 0,
 		},
 		{
 			name: "a less than b by key",
-			a:    &IndexEntry{level: []IndexEntryLevel{{key: "abc", text: "abc"}}},
-			b:    &IndexEntry{level: []IndexEntryLevel{{key: "def", text: "def"}}},
+			a:    &index.IndexEntry{Level: []index.IndexEntryLevel{{Key: "abc", Text: "abc"}}},
+			b:    &index.IndexEntry{Level: []index.IndexEntryLevel{{Key: "def", Text: "def"}}},
 			want: -1,
 		},
 		{
 			name: "parent less than child",
-			a:    &IndexEntry{level: []IndexEntryLevel{{key: "A", text: "A"}}},
-			b:    &IndexEntry{level: []IndexEntryLevel{{key: "A", text: "A"}, {key: "B", text: "B"}}},
+			a:    &index.IndexEntry{Level: []index.IndexEntryLevel{{Key: "A", Text: "A"}}},
+			b:    &index.IndexEntry{Level: []index.IndexEntryLevel{{Key: "A", Text: "A"}, {Key: "B", Text: "B"}}},
 			want: -1,
 		},
 		{
 			name: "child greater than parent",
-			a:    &IndexEntry{level: []IndexEntryLevel{{key: "A", text: "A"}, {key: "B", text: "B"}}},
-			b:    &IndexEntry{level: []IndexEntryLevel{{key: "A", text: "A"}}},
+			a:    &index.IndexEntry{Level: []index.IndexEntryLevel{{Key: "A", Text: "A"}, {Key: "B", Text: "B"}}},
+			b:    &index.IndexEntry{Level: []index.IndexEntryLevel{{Key: "A", Text: "A"}}},
 			want: 1,
 		},
 		{
 			name: "same key different text",
-			a:    &IndexEntry{level: []IndexEntryLevel{{key: "foo", text: "aaa"}}},
-			b:    &IndexEntry{level: []IndexEntryLevel{{key: "foo", text: "zzz"}}},
+			a:    &index.IndexEntry{Level: []index.IndexEntryLevel{{Key: "foo", Text: "aaa"}}},
+			b:    &index.IndexEntry{Level: []index.IndexEntryLevel{{Key: "foo", Text: "zzz"}}},
 			want: -1,
 		},
 	}
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := CompareIndexEntry(rbtree.Item(tt.a), rbtree.Item(tt.b))
+			got := index.CompareIndexEntry(rbtree.Item(tt.a), rbtree.Item(tt.b))
 			if (tt.want < 0 && got >= 0) || (tt.want > 0 && got <= 0) || (tt.want == 0 && got != 0) {
 				t.Errorf("CompareIndexEntry() = %d, want sign of %d", got, tt.want)
 			}

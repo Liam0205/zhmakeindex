@@ -3,6 +3,8 @@ package main
 import (
 	"testing"
 
+	"github.com/leo-liu/zhmakeindex/internal/collator"
+	"github.com/leo-liu/zhmakeindex/internal/index"
 	"github.com/leo-liu/zhmakeindex/internal/page"
 	"github.com/leo-liu/zhmakeindex/internal/style"
 )
@@ -23,7 +25,7 @@ func TestIsNumRune(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := IsNumRune(tt.r); got != tt.want {
+			if got := index.IsNumRune(tt.r); got != tt.want {
 				t.Fatalf("IsNumRune(%q) = %v, want %v", tt.r, got, tt.want)
 			}
 		})
@@ -45,7 +47,7 @@ func TestIsNumString(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := IsNumString(tt.s); got != tt.want {
+			if got := index.IsNumString(tt.s); got != tt.want {
 				t.Fatalf("IsNumString(%q) = %v, want %v", tt.s, got, tt.want)
 			}
 		})
@@ -67,7 +69,7 @@ func TestDecimalStrcmp(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := DecimalStrcmp(tt.a, tt.b); got != tt.want {
+			if got := index.DecimalStrcmp(tt.a, tt.b); got != tt.want {
 				t.Fatalf("DecimalStrcmp(%q, %q) = %d, want %d", tt.a, tt.b, got, tt.want)
 			}
 		})
@@ -76,9 +78,9 @@ func TestDecimalStrcmp(t *testing.T) {
 
 func TestRuneCmpIgnoreCases(t *testing.T) {
 	tests := []struct {
-		name string
-		a    rune
-		b    rune
+		name  string
+		a     rune
+		b     rune
 		check func(int) bool
 	}{
 		{name: "same letter different case", a: 'a', b: 'A', check: func(got int) bool { return got == 0 }},
@@ -88,7 +90,7 @@ func TestRuneCmpIgnoreCases(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := RuneCmpIgnoreCases(tt.a, tt.b)
+			got := index.RuneCmpIgnoreCases(tt.a, tt.b)
 			if !tt.check(got) {
 				t.Fatalf("RuneCmpIgnoreCases(%q, %q) = %d", tt.a, tt.b, got)
 			}
@@ -97,31 +99,31 @@ func TestRuneCmpIgnoreCases(t *testing.T) {
 }
 
 func TestGetStringType(t *testing.T) {
-	collator := ReadingIndexCollator{}
+	collator := collator.ReadingIndexCollator{}
 	tests := []struct {
 		name string
 		s    string
-		want stringType
+		want index.StringType
 	}{
-		{name: "empty", s: "", want: EMPTY_STR},
-		{name: "symbol", s: "+", want: SYMBOL_STR},
-		{name: "numeric", s: "123", want: NUM_STR},
-		{name: "num symbol", s: "12abc", want: NUM_SYMBOL_STR},
-		{name: "letter", s: "hello", want: LETTER_STR},
-		{name: "cjk letter", s: "中文", want: LETTER_STR},
+		{name: "empty", s: "", want: index.EMPTY_STR},
+		{name: "symbol", s: "+", want: index.SYMBOL_STR},
+		{name: "numeric", s: "123", want: index.NUM_STR},
+		{name: "num symbol", s: "12abc", want: index.NUM_SYMBOL_STR},
+		{name: "letter", s: "hello", want: index.LETTER_STR},
+		{name: "cjk letter", s: "中文", want: index.LETTER_STR},
 	}
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := getStringType(collator, tt.s); got != tt.want {
-				t.Fatalf("getStringType(%q) = %v, want %v", tt.s, got, tt.want)
+			if got := index.GetStringType(collator, tt.s); got != tt.want {
+				t.Fatalf("GetStringType(%q) = %v, want %v", tt.s, got, tt.want)
 			}
 		})
 	}
 }
 
 func TestIndexEntrySliceStrcmp(t *testing.T) {
-	s := IndexEntrySlice{colattor: ReadingIndexCollator{}}
+	s := index.IndexEntrySlice{Colattor: collator.ReadingIndexCollator{}}
 	tests := []struct {
 		name  string
 		a     string

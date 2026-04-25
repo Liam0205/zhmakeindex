@@ -10,16 +10,15 @@ import (
 
 	"golang.org/x/text/transform"
 
+	"github.com/leo-liu/zhmakeindex/internal/index"
 	"github.com/leo-liu/zhmakeindex/internal/page"
 	"github.com/leo-liu/zhmakeindex/internal/reader"
 	"github.com/leo-liu/zhmakeindex/internal/style"
 	"github.com/yasushi-saito/rbtree"
 )
 
-type InputIndex []IndexEntry
-
-func NewInputIndex(option *InputOptions, instyle *style.InputStyle) *InputIndex {
-	inset := rbtree.NewTree(CompareIndexEntry)
+func NewInputIndex(option *InputOptions, instyle *style.InputStyle) *index.InputIndex {
+	inset := rbtree.NewTree(index.CompareIndexEntry)
 
 	if option.stdin {
 		readIdxFile(inset, os.Stdin, option, instyle)
@@ -38,9 +37,9 @@ func NewInputIndex(option *InputOptions, instyle *style.InputStyle) *InputIndex 
 		}
 	}
 
-	var in InputIndex
+	var in index.InputIndex
 	for iter := inset.Min(); !iter.Limit(); iter = iter.Next() {
-		pentry := iter.Item().(*IndexEntry)
+		pentry := iter.Item().(*index.IndexEntry)
 		in = append(in, *pentry)
 	}
 	return &in
@@ -69,15 +68,14 @@ func readIdxFile(inset *rbtree.Tree, idxfile *os.File, option *InputOptions, ins
 		} else {
 			accepted++
 			if old := inset.Get(entry); old != nil {
-				oldentry := old.(*IndexEntry)
-				oldentry.pagelist = append(oldentry.pagelist, entry.pagelist...)
+				oldentry := old.(*index.IndexEntry)
+				oldentry.Pagelist = append(oldentry.Pagelist, entry.Pagelist...)
 			} else {
-				// entry 不在集合 inset 中时，插入 entry 本身和所有祖先节点，祖先不含页码
-				for len(entry.level) > 0 {
+				for len(entry.Level) > 0 {
 					inset.Insert(entry)
-					parent := &IndexEntry{
-						level:    entry.level[:len(entry.level)-1],
-						pagelist: nil,
+					parent := &index.IndexEntry{
+						Level:    entry.Level[:len(entry.Level)-1],
+						Pagelist: nil,
 					}
 					if inset.Get(parent) != nil {
 						break
@@ -107,8 +105,8 @@ func skipspaces(rd *reader.NumberdReader, st *style.InputStyle) error {
 	return nil
 }
 
-func ScanIndexEntry(rd *reader.NumberdReader, option *InputOptions, st *style.InputStyle) (*IndexEntry, error) {
-	var entry IndexEntry
+func ScanIndexEntry(rd *reader.NumberdReader, option *InputOptions, st *style.InputStyle) (*index.IndexEntry, error) {
+	var entry index.IndexEntry
 	pg := new(page.Page)
 	if err := skipspaces(rd, st); err != nil {
 		return nil, err
@@ -160,7 +158,7 @@ L_scan_kv:
 				if option.compress {
 					str = strings.TrimSpace(str)
 				}
-				entry.level = append(entry.level, IndexEntryLevel{key: str, text: str})
+				entry.Level = append(entry.Level, index.IndexEntryLevel{Key: str, Text: str})
 				token = nil
 				state = next
 			}
@@ -198,7 +196,7 @@ L_scan_kv:
 		case SCAN_VALUE:
 			set_value := func(next int) {
 				str := string(token)
-				entry.level[len(entry.level)-1].text = str
+				entry.Level[len(entry.Level)-1].Text = str
 				token = nil
 				state = next
 			}
@@ -283,7 +281,7 @@ L_scan_kv:
 			panic("扫描状态错误")
 		}
 	}
-	entry.input = string(entry_input)
+	entry.Input = string(entry_input)
 	if err := skipspaces(rd, st); err != nil {
 		return nil, err
 	}
@@ -319,43 +317,6 @@ L_scan_page:
 		}
 	}
 	pg.Compositor = st.PageCompositor
-	entry.pagelist = append(entry.pagelist, pg)
+	entry.Pagelist = append(entry.Pagelist, pg)
 	return &entry, nil
-}
-
-type IndexEntry struct {
-	input    string
-	level    []IndexEntryLevel
-	pagelist []*page.Page
-}
-
-// 实现 rbtree.CompareFunc
-func CompareIndexEntry(a, b rbtree.Item) int {
-	x := a.(*IndexEntry)
-	y := b.(*IndexEntry)
-	for i := range x.level {
-		if i >= len(y.level) {
-			return 1
-		}
-		if x.level[i].key < y.level[i].key {
-			return -1
-		} else if x.level[i].key > y.level[i].key {
-			return 1
-		}
-		if x.level[i].text < y.level[i].text {
-			return -1
-		} else if x.level[i].text > y.level[i].text {
-			return 1
-		}
-	}
-	if len(x.level) < len(y.level) {
-		return -1
-	}
-	return 0
-}
-
-// 一条索引条目中的一级
-type IndexEntryLevel struct {
-	key  string
-	text string
 }
