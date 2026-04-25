@@ -29,14 +29,15 @@
 - `main_test.go`
   - 覆盖 `stripExt`
   - 覆盖 `checkEncoding`
-- `numberedreader_test.go`
+- `internal/reader/reader_test.go`
   - 覆盖带行号 rune 读取器行为
 
 ### 2.2 语义子系统测试
 
-- `pagenumber_test.go`
+- `internal/page/page_test.go`
   - 页码解析、格式化、比较、差值
-- `style_test.go`
+  - 覆盖字母页码 `FormatNum` 的 round-trip 与 off-by-one 回归
+- `internal/style/style_test.go`
   - tokenizer、反引号 token、`unquote`、`parseInt`、默认样式
 - `sorter_test.go`
   - `IsNumRune`、`DecimalStrcmp`、`Strcmp`、`getStringType` 等 `internal/index` 比较工具函数
@@ -44,6 +45,9 @@
   - `PageSorter` 优先级初始化
 - `input_test.go`
   - `ScanIndexEntry`、`CompareIndexEntry`、`skipspaces`
+- `output_test.go`
+  - `Output()` 渲染边界回归，包括组首 level 1/2 子条目时的分隔符选择
+  - 非 UTF-8 编码写出回归，覆盖 `transform.Writer.Close()` flush 与 GBK 输出
 - `internal/collator/collator_test.go`
   - 三种中文排序策略的 `RuneCmp`、`IsLetter`、`Group`、`InitGroups`、`IsLetter` 一致性
 

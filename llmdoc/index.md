@@ -28,7 +28,7 @@
 - 输出渲染：`output.go`
 - TeX 样式查找：`kpathsea/kpathsea.go`
 - CJK 数据生成：`CJK/maketables.go`
-- 测试总览：`*_test.go`、`integration_test.go`、`testdata/*.golden`
+- 测试总览：`*_test.go`、`output_test.go`、`integration_test.go`、`testdata/*.golden`
 - 工程自动化：`.github/workflows/ci.yml`、`.github/workflows/release.yml`、`.goreleaser.yml`
 
 ## 当前文档边界

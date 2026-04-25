@@ -49,7 +49,7 @@
 
 - 读 `.idx` 时，字节流先通过 `transform.NewReader(..., decoder)` 解码。
 - 读样式时，样式文件单独通过 `style_decoder` 解码。
-- 写 `.ind` 时，字符流通过 `transform.NewWriter(..., encoder)` 编码。
+- 写 `.ind` 时，字符流通过 `transform.NewWriter(..., encoder)` 编码，且输出阶段必须显式关闭该 writer 以 flush 编码器尾部状态。
 
 系统内部的解析、排序、分组和模板拼装统一工作在 Unicode rune 上。这是多编码支持成立的关键不变量：
 
@@ -301,9 +301,9 @@
 
 ### 6.1 输出目标与编码
 
-- 若未指定输出文件，则写到标准输出。
+- 若未指定输出文件，则写到标准输出；实现上会先用 `writeNopCloser` 包装 `os.Stdout`，让编码层可以统一走 `Close()` 而不误关标准输出。
 - 否则创建目标文件。
-- 最终 writer 用 `transform.NewWriter(writer, option.encoder)` 包装，负责编码回目标字节流。
+- 最终 writer 用 `transform.NewWriter(writer, option.encoder)` 包装，负责编码回目标字节流；渲染完成后统一关闭该 writer，以保证如 GBK 等非 UTF-8 编码的尾部缓冲被 flush。
 
 ### 6.2 文本拼装顺序
 
@@ -316,6 +316,7 @@
 3. 依次遍历组内条目
    - 按 `level` 选择 `item_0` / `item_1` / `item_2` 及其上下文相关变体
    - 输出 `item.text`
+   - 当组内首项本身就是 level 1/2 子条目时，不再访问前一项，而是回退到默认分隔符分支，避免在 `group.Items[i-1]` 上出现越界
    - 调用 `writePage()` 输出页码区间
 4. `style.postamble`
 
