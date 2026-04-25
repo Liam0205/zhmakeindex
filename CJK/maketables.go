@@ -10,7 +10,6 @@ import (
 	"flag"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -26,6 +25,7 @@ func init() {
 
 func main() {
 	outdir := flag.String("d", ".", "输出目录")
+	unihanPath := flag.String("unihan", "", "本地 Unihan.zip 路径（留空则从 unicode.org 下载）")
 	output_stroke := flag.Bool("stroke", true, "输出笔顺表")
 	output_reading := flag.Bool("reading", true, "输出读音表")
 	output_radical := flag.Bool("radical", true, "输出部首表")
@@ -34,7 +34,7 @@ func main() {
 	// 数据文件 Unihan.zip
 	var unihan *zip.Reader
 	if *output_stroke || *output_reading || *output_radical {
-		unihan = readUnihan()
+		unihan = readUnihan(*unihanPath)
 	}
 	if *output_stroke {
 		make_stroke_table(*outdir, unihan)
@@ -48,18 +48,27 @@ func main() {
 }
 
 // 读取 Unihan 数据文件
-func readUnihan() *zip.Reader {
-	resp, err := http.Get("http://www.unicode.org/Public/UCD/latest/ucd/Unihan.zip")
-	if err != nil {
-		log.Fatalln(err)
-	}
-	defer resp.Body.Close()
-	if resp.StatusCode != http.StatusOK {
-		log.Fatalf("bad GET status for Unihan.zip: %d", resp.Status)
-	}
-	buffer, err := ioutil.ReadAll(resp.Body)
-	if err != nil {
-		log.Fatalln(err)
+func readUnihan(localPath string) *zip.Reader {
+	var buffer []byte
+	var err error
+	if localPath != "" {
+		buffer, err = os.ReadFile(localPath)
+		if err != nil {
+			log.Fatalln(err)
+		}
+	} else {
+		resp, err := http.Get("https://www.unicode.org/Public/UCD/latest/ucd/Unihan.zip")
+		if err != nil {
+			log.Fatalln(err)
+		}
+		defer resp.Body.Close()
+		if resp.StatusCode != http.StatusOK {
+			log.Fatalf("bad GET status for Unihan.zip: %d", resp.Status)
+		}
+		buffer, err = io.ReadAll(resp.Body)
+		if err != nil {
+			log.Fatalln(err)
+		}
 	}
 	unihan, err := zip.NewReader(bytes.NewReader(buffer), int64(len(buffer)))
 	if err != nil {
@@ -124,7 +133,8 @@ func make_stroke_table(outdir string, unihan *zip.Reader) {
 		}
 	}
 	// 使用 Unihan 数据库，读取笔画数补全其他字符
-	unihan_file := getUnihanFile(unihan, "Unihan_DictionaryLikeData.txt")
+	// Unicode 13.0 起 kTotalStrokes 从 DictionaryLikeData 移至 IRGSources
+	unihan_file := getUnihanFile(unihan, "Unihan_IRGSources.txt")
 	defer unihan_file.Close()
 	scanner = bufio.NewScanner(unihan_file)
 	for scanner.Scan() {
@@ -132,7 +142,7 @@ func make_stroke_table(outdir string, unihan *zip.Reader) {
 			log.Fatalln(scanner.Err())
 		}
 		line := scanner.Text()
-		if strings.Contains(line, "Unicode version:") {
+		if strings.Contains(line, "Unicode version:") || strings.Contains(line, "Unicode Version") {
 			unicodeVersion = strings.TrimPrefix(line, "# ")
 		}
 		if strings.HasPrefix(line, "U+") && strings.Contains(line, "kTotalStrokes") {
@@ -166,7 +176,7 @@ func make_stroke_table(outdir string, unihan *zip.Reader) {
 	defer outfile.Close()
 	fmt.Fprintln(outfile, `// 这是由程序自动生成的文件，请不要直接编辑此文件
 // 笔顺来源：sunwb_strokeorder.txt
-// 笔画数来源：Unihan_DictionaryLikeData.txt`)
+// 笔画数来源：Unihan_IRGSources.txt`)
 	fmt.Fprintf(outfile, "// Unicode 版本：%s\n", unicodeVersion)
 	fmt.Fprintln(outfile, "\n"+`package CJK`)
 	fmt.Fprintln(outfile, "\n"+`// Strokes 从字符取得笔顺信息。
@@ -204,7 +214,7 @@ func make_reading_table(outdir string, unihan *zip.Reader) {
 			log.Fatalln(scanner.Err())
 		}
 		line := scanner.Text()
-		if strings.Contains(line, "Unicode version:") {
+		if strings.Contains(line, "Unicode version:") || strings.Contains(line, "Unicode Version") {
 			version = strings.TrimPrefix(line, "# ")
 		}
 		if strings.HasPrefix(line, "U+") {
@@ -469,7 +479,7 @@ func read_radical_strokes(unihan *zip.Reader) (version string, CJKRadicalStrokes
 			log.Fatalln(scanner.Err())
 		}
 		line := strings.TrimSpace(scanner.Text())
-		if strings.Contains(line, "Unicode version:") {
+		if strings.Contains(line, "Unicode version:") || strings.Contains(line, "Unicode Version") {
 			version = strings.TrimPrefix(line, "# ")
 		}
 		if strings.HasPrefix(line, "U+") {

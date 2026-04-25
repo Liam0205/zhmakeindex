@@ -1,6 +1,6 @@
 // 这是由程序自动生成的文件，请不要直接编辑此文件
 // 来源：Unihan_Readings.txt
-// Unicode version: 10.0.0
+// Unicode Version 17.0.0
 
 package CJK
 
@@ -99,6 +99,7 @@ var readings = map[rune]string{
 	0x3488: "han4", // 㒈
 	0x3489: "tang3", // 㒉
 	0x348a: "se4", // 㒊
+	0x348b: "si1", // 㒋
 	0x348c: "qiong2", // 㒌
 	0x348d: "lei2", // 㒍
 	0x348e: "sa4", // 㒎
@@ -172,6 +173,7 @@ var readings = map[rune]string{
 	0x34e9: "xuan1", // 㓩
 	0x34ea: "lang3", // 㓪
 	0x34ed: "she2", // 㓭
+	0x34ee: "diao1", // 㓮
 	0x34ef: "li2", // 㓯
 	0x34f0: "hua4", // 㓰
 	0x34f1: "tou2", // 㓱
@@ -800,6 +802,7 @@ var readings = map[rune]string{
 	0x37d3: "qi2", // 㟓
 	0x37d4: "han2", // 㟔
 	0x37d6: "long4", // 㟖
+	0x37d7: "bin1", // 㟗
 	0x37d8: "tiao2", // 㟘
 	0x37d9: "ze2", // 㟙
 	0x37da: "qi2", // 㟚
@@ -811,6 +814,7 @@ var readings = map[rune]string{
 	0x37e0: "gang3", // 㟠
 	0x37e2: "qi2", // 㟢
 	0x37e4: "lu4", // 㟤
+	0x37e5: "cen1", // 㟥
 	0x37e6: "yun4", // 㟦
 	0x37e7: "e4", // 㟧
 	0x37e8: "duan1", // 㟨
@@ -901,6 +905,7 @@ var readings = map[rune]string{
 	0x384a: "qia4", // 㡊
 	0x384b: "ye2", // 㡋
 	0x384c: "mao4", // 㡌
+	0x384e: "shan1", // 㡎
 	0x384f: "shu4", // 㡏
 	0x3851: "qiao1", // 㡑
 	0x3852: "zhun1", // 㡒
@@ -1039,6 +1044,7 @@ var readings = map[rune]string{
 	0x38f5: "ta4", // 㣵
 	0x38f6: "zhan1", // 㣶
 	0x38f7: "ning4", // 㣷
+	0x38fa: "xin1", // 㣺
 	0x38fb: "yi4", // 㣻
 	0x38fc: "ren3", // 㣼
 	0x38fd: "shu4", // 㣽
@@ -1085,6 +1091,7 @@ var readings = map[rune]string{
 	0x392a: "yuan4", // 㤪
 	0x392b: "de2", // 㤫
 	0x392c: "hui4", // 㤬
+	0x392d: "jiao1", // 㤭
 	0x392e: "guang4", // 㤮
 	0x392f: "jiong3", // 㤯
 	0x3930: "zuo4", // 㤰
@@ -1166,6 +1173,7 @@ var readings = map[rune]string{
 	0x3985: "die1", // 㦅
 	0x3986: "hu1", // 㦆
 	0x3987: "lu4", // 㦇
+	0x3988: "ai4", // 㦈
 	0x3989: "yi4", // 㦉
 	0x398a: "hua2", // 㦊
 	0x398b: "zha1", // 㦋
@@ -1244,6 +1252,7 @@ var readings = map[rune]string{
 	0x39d8: "zi4", // 㧘
 	0x39d9: "bi4", // 㧙
 	0x39da: "wa3", // 㧚
+	0x39db: "lan3", // 㧛
 	0x39dc: "lie4", // 㧜
 	0x39df: "kuai3", // 㧟
 	0x39e1: "hai4", // 㧡
@@ -1396,6 +1405,7 @@ var readings = map[rune]string{
 	0x3a82: "ku1", // 㪂
 	0x3a83: "he2", // 㪃
 	0x3a84: "fu2", // 㪄
+	0x3a85: "geng4", // 㪅
 	0x3a86: "di3", // 㪆
 	0x3a87: "xian4", // 㪇
 	0x3a88: "gui4", // 㪈
@@ -1500,7 +1510,7 @@ var readings = map[rune]string{
 	0x3b07: "huan4", // 㬇
 	0x3b08: "wen1", // 㬈
 	0x3b09: "nuan3", // 㬉
-	0x3b0a: "huan4", // 㬊
+	0x3b0a: "huan3", // 㬊
 	0x3b0b: "hou2", // 㬋
 	0x3b0c: "jing4", // 㬌
 	0x3b0d: "bo2", // 㬍
@@ -1650,6 +1660,7 @@ var readings = map[rune]string{
 	0x3bc0: "xuan4", // 㯀
 	0x3bc1: "pei2", // 㯁
 	0x3bc2: "dai4", // 㯂
+	0x3bc3: "qi1", // 㯃
 	0x3bc4: "zhi1", // 㯄
 	0x3bc5: "pi2", // 㯅
 	0x3bc6: "chan3", // 㯆
@@ -1699,6 +1710,7 @@ var readings = map[rune]string{
 	0x3bf9: "biao3", // 㯹
 	0x3bfa: "jian4", // 㯺
 	0x3bfb: "gun3", // 㯻
+	0x3bfd: "bin1", // 㯽
 	0x3bfe: "zao1", // 㯾
 	0x3bff: "lie4", // 㯿
 	0x3c00: "li2", // 㰀
@@ -1939,7 +1951,7 @@ var readings = map[rune]string{
 	0x3d11: "su4", // 㴑
 	0x3d12: "yi4", // 㴒
 	0x3d13: "shai1", // 㴓
-	0x3d14: "xi1", // 㴔
+	0x3d14: "ji2", // 㴔
 	0x3d15: "ji2", // 㴕
 	0x3d16: "luo4", // 㴖
 	0x3d17: "you1", // 㴗
@@ -2000,7 +2012,7 @@ var readings = map[rune]string{
 	0x3d62: "lei2", // 㵢
 	0x3d63: "ke3", // 㵣
 	0x3d64: "sha4", // 㵤
-	0x3d65: "bi4", // 㵥
+	0x3d65: "mi4", // 㵥
 	0x3d66: "sui2", // 㵦
 	0x3d67: "ge2", // 㵧
 	0x3d68: "pi4", // 㵨
@@ -2124,6 +2136,7 @@ var readings = map[rune]string{
 	0x3e03: "dian3", // 㸃
 	0x3e04: "ji4", // 㸄
 	0x3e05: "jie2", // 㸅
+	0x3e06: "kao4", // 㸆
 	0x3e07: "zuan3", // 㸇
 	0x3e09: "xie4", // 㸉
 	0x3e0a: "lai4", // 㸊
@@ -2334,6 +2347,7 @@ var readings = map[rune]string{
 	0x3efe: "yong1", // 㻾
 	0x3eff: "shu3", // 㻿
 	0x3f02: "e2", // 㼂
+	0x3f06: "ying2", // 㼆
 	0x3f07: "qiong2", // 㼇
 	0x3f08: "luo2", // 㼈
 	0x3f09: "zhen4", // 㼉
@@ -2805,6 +2819,7 @@ var readings = map[rune]string{
 	0x4100: "huo4", // 䄀
 	0x4101: "yi4", // 䄁
 	0x4102: "liu4", // 䄂
+	0x4103: "yang1", // 䄃
 	0x4104: "yin1", // 䄄
 	0x4105: "juan4", // 䄅
 	0x4106: "huo2", // 䄆
@@ -2997,6 +3012,7 @@ var readings = map[rune]string{
 	0x41d7: "zhong1", // 䇗
 	0x41d8: "hu4", // 䇘
 	0x41d9: "yin3", // 䇙
+	0x41da: "pu1", // 䇚
 	0x41db: "zhi3", // 䇛
 	0x41dc: "qian3", // 䇜
 	0x41de: "gan1", // 䇞
@@ -3489,7 +3505,7 @@ var readings = map[rune]string{
 	0x43ef: "zhi4", // 䏯
 	0x43f0: "run4", // 䏰
 	0x43f1: "ju2", // 䏱
-	0x43f2: "die2", // 䏲
+	0x43f2: "ti1", // 䏲
 	0x43f3: "zhe4", // 䏳
 	0x43f4: "shao4", // 䏴
 	0x43f5: "meng3", // 䏵
@@ -3718,6 +3734,7 @@ var readings = map[rune]string{
 	0x44e7: "ci4", // 䓧
 	0x44e8: "ying1", // 䓨
 	0x44eb: "qi2", // 䓫
+	0x44ec: "zhuo2", // 䓬
 	0x44ed: "cha4", // 䓭
 	0x44ee: "mao4", // 䓮
 	0x44ef: "du2", // 䓯
@@ -4067,6 +4084,7 @@ var readings = map[rune]string{
 	0x4670: "li2", // 䙰
 	0x4671: "du2", // 䙱
 	0x4673: "biao1", // 䙳
+	0x4674: "qian1", // 䙴
 	0x4675: "xi1", // 䙵
 	0x4677: "de2", // 䙷
 	0x4678: "de2", // 䙸
@@ -4154,6 +4172,7 @@ var readings = map[rune]string{
 	0x46d0: "ci2", // 䛐
 	0x46d1: "mi4", // 䛑
 	0x46d2: "bian4", // 䛒
+	0x46d3: "jian1", // 䛓
 	0x46d4: "na2", // 䛔
 	0x46d5: "yu4", // 䛕
 	0x46d6: "e4", // 䛖
@@ -4740,7 +4759,7 @@ var readings = map[rune]string{
 	0x494e: "chun2", // 䥎
 	0x494f: "yu3", // 䥏
 	0x4950: "mou2", // 䥐
-	0x4951: "wan4", // 䥑
+	0x4951: "mai4", // 䥑
 	0x4952: "jiang4", // 䥒
 	0x4953: "qi1", // 䥓
 	0x4954: "su4", // 䥔
@@ -4806,7 +4825,7 @@ var readings = map[rune]string{
 	0x499c: "wu2", // 䦜
 	0x499d: "huo1", // 䦝
 	0x499e: "run4", // 䦞
-	0x499f: "wen3", // 䦟
+	0x499f: "chuai4", // 䦟
 	0x49a0: "du1", // 䦠
 	0x49a1: "huan2", // 䦡
 	0x49a2: "kuo4", // 䦢
@@ -5238,7 +5257,7 @@ var readings = map[rune]string{
 	0x4b75: "fan2", // 䭵
 	0x4b76: "qi2", // 䭶
 	0x4b77: "mao2", // 䭷
-	0x4b78: "bao3", // 䭸
+	0x4b78: "fu4", // 䭸
 	0x4b79: "ang2", // 䭹
 	0x4b7a: "ang3", // 䭺
 	0x4b7b: "fu4", // 䭻
@@ -5384,6 +5403,7 @@ var readings = map[rune]string{
 	0x4c14: "pan2", // 䰔
 	0x4c15: "lu2", // 䰕
 	0x4c16: "zuan3", // 䰖
+	0x4c17: "jiu1", // 䰗
 	0x4c18: "liu2", // 䰘
 	0x4c19: "yi3", // 䰙
 	0x4c1a: "wen2", // 䰚
@@ -5478,6 +5498,7 @@ var readings = map[rune]string{
 	0x4c7a: "hai2", // 䱺
 	0x4c7b: "hua2", // 䱻
 	0x4c7c: "zhan3", // 䱼
+	0x4c7d: "chang1", // 䱽
 	0x4c7e: "lou2", // 䱾
 	0x4c7f: "chan4", // 䱿
 	0x4c80: "zhi4", // 䲀
@@ -5507,6 +5528,7 @@ var readings = map[rune]string{
 	0x4c9a: "lai4", // 䲚
 	0x4c9b: "meng2", // 䲛
 	0x4c9c: "ye4", // 䲜
+	0x4c9d: "chang1", // 䲝
 	0x4c9e: "li4", // 䲞
 	0x4c9f: "yin4", // 䲟
 	0x4ca0: "chun1", // 䲠
@@ -5771,6 +5793,8 @@ var readings = map[rune]string{
 	0x4db2: "nan2", // 䶲
 	0x4db3: "yue4", // 䶳
 	0x4db5: "chi2", // 䶵
+	0x4db7: "jiao4", // 䶷
+	0x4db9: "zuo3", // 䶹
 	0x4e00: "yi1", // 一
 	0x4e01: "ding1", // 丁
 	0x4e02: "kao3", // 丂
@@ -5897,7 +5921,7 @@ var readings = map[rune]string{
 	0x4e7b: "yu2", // 乻
 	0x4e7c: "cui5", // 乼
 	0x4e7d: "zhe3", // 乽
-	0x4e7e: "gan1", // 乾
+	0x4e7e: "qian2", // 乾
 	0x4e7f: "zhi4", // 乿
 	0x4e80: "gui1", // 亀
 	0x4e81: "gan1", // 亁
@@ -5956,7 +5980,7 @@ var readings = map[rune]string{
 	0x4eb6: "dan3", // 亶
 	0x4eb7: "lian2", // 亷
 	0x4eb8: "duo3", // 亸
-	0x4eb9: "men2", // 亹
+	0x4eb9: "wei3", // 亹
 	0x4eba: "ren2", // 人
 	0x4ebb: "ren2", // 亻
 	0x4ebc: "ji2", // 亼
@@ -6062,7 +6086,7 @@ var readings = map[rune]string{
 	0x4f20: "chuan2", // 传
 	0x4f21: "che1", // 伡
 	0x4f22: "ya2", // 伢
-	0x4f23: "xian4", // 伣
+	0x4f23: "qian4", // 伣
 	0x4f24: "shang1", // 伤
 	0x4f25: "chang1", // 伥
 	0x4f26: "lun2", // 伦
@@ -6077,7 +6101,7 @@ var readings = map[rune]string{
 	0x4f2f: "bo2", // 伯
 	0x4f30: "gu1", // 估
 	0x4f31: "ni3", // 伱
-	0x4f32: "ni4", // 伲
+	0x4f32: "ni2", // 伲
 	0x4f33: "xie4", // 伳
 	0x4f34: "ban4", // 伴
 	0x4f35: "xu4", // 伵
@@ -6087,7 +6111,7 @@ var readings = map[rune]string{
 	0x4f39: "qu1", // 伹
 	0x4f3a: "ci4", // 伺
 	0x4f3b: "beng1", // 伻
-	0x4f3c: "shi4", // 似
+	0x4f3c: "si4", // 似
 	0x4f3d: "jia1", // 伽
 	0x4f3e: "pi1", // 伾
 	0x4f3f: "yi4", // 伿
@@ -6143,7 +6167,7 @@ var readings = map[rune]string{
 	0x4f71: "fa3", // 佱
 	0x4f72: "ming3", // 佲
 	0x4f73: "jia1", // 佳
-	0x4f74: "er4", // 佴
+	0x4f74: "nai4", // 佴
 	0x4f75: "bing4", // 併
 	0x4f76: "ji2", // 佶
 	0x4f77: "hen3", // 佷
@@ -6320,7 +6344,7 @@ var readings = map[rune]string{
 	0x5022: "jie2", // 倢
 	0x5023: "fang3", // 倣
 	0x5024: "zhi2", // 値
-	0x5025: "kong1", // 倥
+	0x5025: "kong3", // 倥
 	0x5026: "juan4", // 倦
 	0x5027: "zong1", // 倧
 	0x5028: "ju4", // 倨
@@ -6411,7 +6435,7 @@ var readings = map[rune]string{
 	0x507d: "wei3", // 偽
 	0x507e: "fen4", // 偾
 	0x507f: "chang2", // 偿
-	0x5080: "gui1", // 傀
+	0x5080: "kui3", // 傀
 	0x5081: "sou3", // 傁
 	0x5082: "zhi4", // 傂
 	0x5083: "su4", // 傃
@@ -6837,7 +6861,7 @@ var readings = map[rune]string{
 	0x5229: "li4", // 利
 	0x522a: "shan1", // 刪
 	0x522b: "bie2", // 别
-	0x522c: "chan3", // 刬
+	0x522c: "chan4", // 刬
 	0x522d: "jing3", // 刭
 	0x522e: "gua1", // 刮
 	0x522f: "geng1", // 刯
@@ -6868,8 +6892,8 @@ var readings = map[rune]string{
 	0x5248: "yuan1", // 剈
 	0x5249: "cuo4", // 剉
 	0x524a: "xue1", // 削
-	0x524b: "ke4", // 剋
-	0x524c: "la2", // 剌
+	0x524b: "kei1", // 剋
+	0x524c: "la4", // 剌
 	0x524d: "qian2", // 前
 	0x524e: "sha1", // 剎
 	0x524f: "chuang4", // 剏
@@ -6925,7 +6949,7 @@ var readings = map[rune]string{
 	0x5281: "qiao1", // 劁
 	0x5282: "jue2", // 劂
 	0x5283: "hua4", // 劃
-	0x5284: "zha1", // 劄
+	0x5284: "zha2", // 劄
 	0x5285: "zhuo2", // 劅
 	0x5286: "lian2", // 劆
 	0x5287: "ju4", // 劇
@@ -7132,7 +7156,7 @@ var readings = map[rune]string{
 	0x5350: "wan4", // 卐
 	0x5351: "bei1", // 卑
 	0x5352: "zu2", // 卒
-	0x5353: "zhuo1", // 卓
+	0x5353: "zhuo2", // 卓
 	0x5354: "xie2", // 協
 	0x5355: "dan1", // 单
 	0x5356: "mai4", // 卖
@@ -7199,7 +7223,7 @@ var readings = map[rune]string{
 	0x5393: "ya2", // 厓
 	0x5394: "zhi4", // 厔
 	0x5395: "ce4", // 厕
-	0x5396: "pang2", // 厖
+	0x5396: "mang2", // 厖
 	0x5397: "ti2", // 厗
 	0x5398: "li2", // 厘
 	0x5399: "she4", // 厙
@@ -7267,7 +7291,7 @@ var readings = map[rune]string{
 	0x53d7: "shou4", // 受
 	0x53d8: "bian4", // 变
 	0x53d9: "xu4", // 叙
-	0x53da: "jia3", // 叚
+	0x53da: "xia2", // 叚
 	0x53db: "pan4", // 叛
 	0x53dc: "sou3", // 叜
 	0x53dd: "ji2", // 叝
@@ -7327,7 +7351,7 @@ var readings = map[rune]string{
 	0x5413: "xia4", // 吓
 	0x5414: "ye3", // 吔
 	0x5415: "lv3", // 吕
-	0x5416: "ya1", // 吖
+	0x5416: "a1", // 吖
 	0x5417: "ma5", // 吗
 	0x5418: "ou3", // 吘
 	0x5419: "huo1", // 吙
@@ -7376,7 +7400,7 @@ var readings = map[rune]string{
 	0x5444: "ge2", // 呄
 	0x5445: "mei2", // 呅
 	0x5446: "dai1", // 呆
-	0x5447: "qi3", // 呇
+	0x5447: "men4", // 呇
 	0x5448: "cheng2", // 呈
 	0x5449: "wu2", // 呉
 	0x544a: "gao4", // 告
@@ -7387,7 +7411,7 @@ var readings = map[rune]string{
 	0x544f: "sheng1", // 呏
 	0x5450: "na4", // 呐
 	0x5451: "tun1", // 呑
-	0x5452: "wu3", // 呒
+	0x5452: "ḿ5", // 呒
 	0x5453: "yi4", // 呓
 	0x5454: "dai1", // 呔
 	0x5455: "ou3", // 呕
@@ -7424,7 +7448,7 @@ var readings = map[rune]string{
 	0x5474: "xu3", // 呴
 	0x5475: "he1", // 呵
 	0x5476: "nao2", // 呶
-	0x5477: "ga1", // 呷
+	0x5477: "xia1", // 呷
 	0x5478: "pei1", // 呸
 	0x5479: "yi4", // 呹
 	0x547a: "xiao1", // 呺
@@ -7440,7 +7464,7 @@ var readings = map[rune]string{
 	0x5484: "duo1", // 咄
 	0x5485: "pou3", // 咅
 	0x5486: "pao2", // 咆
-	0x5487: "bie2", // 咇
+	0x5487: "bi4", // 咇
 	0x5488: "fu2", // 咈
 	0x5489: "yang1", // 咉
 	0x548a: "he2", // 咊
@@ -7515,7 +7539,7 @@ var readings = map[rune]string{
 	0x54cf: "gen2", // 哏
 	0x54d0: "kuang1", // 哐
 	0x54d1: "ya3", // 哑
-	0x54d2: "da2", // 哒
+	0x54d2: "da1", // 哒
 	0x54d3: "xiao1", // 哓
 	0x54d4: "bi4", // 哔
 	0x54d5: "hui4", // 哕
@@ -7543,7 +7567,7 @@ var readings = map[rune]string{
 	0x54eb: "zu2", // 哫
 	0x54ec: "he2", // 哬
 	0x54ed: "ku1", // 哭
-	0x54ee: "xiao1", // 哮
+	0x54ee: "xiao4", // 哮
 	0x54ef: "xian4", // 哯
 	0x54f0: "lao2", // 哰
 	0x54f1: "bo1", // 哱
@@ -7588,9 +7612,9 @@ var readings = map[rune]string{
 	0x5518: "qi3", // 唘
 	0x5519: "di2", // 唙
 	0x551a: "qin4", // 唚
-	0x551b: "ma4", // 唛
+	0x551b: "mai4", // 唛
 	0x551c: "mo4", // 唜
-	0x551d: "gong4", // 唝
+	0x551d: "hong3", // 唝
 	0x551e: "dou3", // 唞
 	0x551f: "qu4", // 唟
 	0x5520: "lao2", // 唠
@@ -7662,7 +7686,7 @@ var readings = map[rune]string{
 	0x5562: "liang3", // 啢
 	0x5563: "xian2", // 啣
 	0x5564: "pi2", // 啤
-	0x5565: "sha4", // 啥
+	0x5565: "sha2", // 啥
 	0x5566: "la5", // 啦
 	0x5567: "ze2", // 啧
 	0x5568: "ying1", // 啨
@@ -7678,7 +7702,7 @@ var readings = map[rune]string{
 	0x5572: "di1", // 啲
 	0x5573: "quan2", // 啳
 	0x5574: "chan3", // 啴
-	0x5575: "bo1", // 啵
+	0x5575: "bo5", // 啵
 	0x5576: "ding4", // 啶
 	0x5577: "lang1", // 啷
 	0x5578: "xiao4", // 啸
@@ -7757,7 +7781,7 @@ var readings = map[rune]string{
 	0x55c1: "ti2", // 嗁
 	0x55c2: "yao2", // 嗂
 	0x55c3: "he4", // 嗃
-	0x55c4: "a2", // 嗄
+	0x55c4: "sha4", // 嗄
 	0x55c5: "xiu4", // 嗅
 	0x55c6: "qiang1", // 嗆
 	0x55c7: "se4", // 嗇
@@ -7791,7 +7815,7 @@ var readings = map[rune]string{
 	0x55e3: "si4", // 嗣
 	0x55e4: "chi1", // 嗤
 	0x55e5: "hao2", // 嗥
-	0x55e6: "suo5", // 嗦
+	0x55e6: "suo1", // 嗦
 	0x55e8: "hai1", // 嗨
 	0x55e9: "suo3", // 嗩
 	0x55ea: "qin2", // 嗪
@@ -7799,11 +7823,11 @@ var readings = map[rune]string{
 	0x55ec: "he1", // 嗬
 	0x55ed: "zhi2", // 嗭
 	0x55ee: "sai4", // 嗮
-	0x55ef: "n2", // 嗯
+	0x55ef: "ng4", // 嗯
 	0x55f0: "ge3", // 嗰
 	0x55f1: "na2", // 嗱
-	0x55f2: "die1", // 嗲
-	0x55f3: "ai1", // 嗳
+	0x55f2: "dia3", // 嗲
+	0x55f3: "ai3", // 嗳
 	0x55f4: "qiang1", // 嗴
 	0x55f5: "tong1", // 嗵
 	0x55f6: "bi4", // 嗶
@@ -7860,7 +7884,7 @@ var readings = map[rune]string{
 	0x5629: "hua1", // 嘩
 	0x562a: "mai3", // 嘪
 	0x562b: "ran2", // 嘫
-	0x562c: "chuai4", // 嘬
+	0x562c: "zuo1", // 嘬
 	0x562d: "peng1", // 嘭
 	0x562e: "lao2", // 嘮
 	0x562f: "xiao4", // 嘯
@@ -7929,7 +7953,7 @@ var readings = map[rune]string{
 	0x566e: "yuan4", // 噮
 	0x566f: "ai1", // 噯
 	0x5670: "yong1", // 噰
-	0x5671: "jue2", // 噱
+	0x5671: "xue2", // 噱
 	0x5672: "kuai4", // 噲
 	0x5673: "yu3", // 噳
 	0x5674: "pen1", // 噴
@@ -8084,7 +8108,7 @@ var readings = map[rune]string{
 	0x5709: "yu3", // 圉
 	0x570a: "qing1", // 圊
 	0x570b: "guo2", // 國
-	0x570c: "chuan2", // 圌
+	0x570c: "chui2", // 圌
 	0x570d: "wei2", // 圍
 	0x570e: "yuan2", // 圎
 	0x570f: "quan1", // 圏
@@ -8115,7 +8139,7 @@ var readings = map[rune]string{
 	0x5728: "zai4", // 在
 	0x5729: "wei2", // 圩
 	0x572a: "ge1", // 圪
-	0x572b: "yu4", // 圫
+	0x572b: "tuo1", // 圫
 	0x572c: "wu1", // 圬
 	0x572d: "gui1", // 圭
 	0x572e: "pi3", // 圮
@@ -8195,7 +8219,7 @@ var readings = map[rune]string{
 	0x5778: "gou4", // 坸
 	0x5779: "xue4", // 坹
 	0x577a: "ba2", // 坺
-	0x577b: "chi2", // 坻
+	0x577b: "di3", // 坻
 	0x577c: "che4", // 坼
 	0x577d: "ling2", // 坽
 	0x577e: "zhu4", // 坾
@@ -8253,12 +8277,12 @@ var readings = map[rune]string{
 	0x57b2: "kai3", // 垲
 	0x57b3: "hang2", // 垳
 	0x57b4: "nao3", // 垴
-	0x57b5: "an3", // 垵
+	0x57b5: "an1", // 垵
 	0x57b6: "xing1", // 垶
 	0x57b7: "xian4", // 垷
 	0x57b8: "yuan4", // 垸
 	0x57b9: "bang1", // 垹
-	0x57ba: "fu1", // 垺
+	0x57ba: "fu2", // 垺
 	0x57bb: "ba4", // 垻
 	0x57bc: "yi4", // 垼
 	0x57bd: "yin4", // 垽
@@ -8307,7 +8331,7 @@ var readings = map[rune]string{
 	0x57e8: "lun3", // 埨
 	0x57e9: "zheng1", // 埩
 	0x57ea: "kong1", // 埪
-	0x57eb: "chong3", // 埫
+	0x57eb: "tang3", // 埫
 	0x57ec: "dong1", // 埬
 	0x57ed: "dai4", // 埭
 	0x57ee: "tan4", // 埮
@@ -8368,7 +8392,7 @@ var readings = map[rune]string{
 	0x5825: "mao2", // 堥
 	0x5826: "jie1", // 堦
 	0x5827: "ruan2", // 堧
-	0x5828: "ye4", // 堨
+	0x5828: "e4", // 堨
 	0x5829: "geng4", // 堩
 	0x582a: "kan1", // 堪
 	0x582b: "zong1", // 堫
@@ -8378,7 +8402,7 @@ var readings = map[rune]string{
 	0x582f: "yao2", // 堯
 	0x5830: "yan4", // 堰
 	0x5831: "bao4", // 報
-	0x5832: "ci2", // 堲
+	0x5832: "ji2", // 堲
 	0x5833: "mei2", // 堳
 	0x5834: "chang3", // 場
 	0x5835: "du3", // 堵
@@ -8751,7 +8775,7 @@ var readings = map[rune]string{
 	0x59a4: "yu2", // 妤
 	0x59a5: "tuo3", // 妥
 	0x59a6: "feng1", // 妦
-	0x59a7: "wan4", // 妧
+	0x59a7: "yuan2", // 妧
 	0x59a8: "fang2", // 妨
 	0x59a9: "wu3", // 妩
 	0x59aa: "yu4", // 妪
@@ -8911,7 +8935,7 @@ var readings = map[rune]string{
 	0x5a44: "pou3", // 婄
 	0x5a45: "ju2", // 婅
 	0x5a46: "po2", // 婆
-	0x5a47: "cai1", // 婇
+	0x5a47: "cai3", // 婇
 	0x5a48: "ling2", // 婈
 	0x5a49: "wan3", // 婉
 	0x5a4a: "biao3", // 婊
@@ -8940,8 +8964,8 @@ var readings = map[rune]string{
 	0x5a61: "lai2", // 婡
 	0x5a62: "bi4", // 婢
 	0x5a63: "yin1", // 婣
-	0x5a64: "chou1", // 婤
-	0x5a65: "nao4", // 婥
+	0x5a64: "zhou1", // 婤
+	0x5a65: "chuo4", // 婥
 	0x5a66: "fu4", // 婦
 	0x5a67: "jing4", // 婧
 	0x5a68: "lun2", // 婨
@@ -8964,7 +8988,7 @@ var readings = map[rune]string{
 	0x5a79: "yao3", // 婹
 	0x5a7a: "wu4", // 婺
 	0x5a7b: "nan4", // 婻
-	0x5a7c: "chuo4", // 婼
+	0x5a7c: "ruo4", // 婼
 	0x5a7d: "jia3", // 婽
 	0x5a7e: "tou1", // 婾
 	0x5a7f: "xu4", // 婿
@@ -9151,7 +9175,7 @@ var readings = map[rune]string{
 	0x5b34: "ying2", // 嬴
 	0x5b35: "mian2", // 嬵
 	0x5b36: "bi2", // 嬶
-	0x5b37: "ma1", // 嬷
+	0x5b37: "mo2", // 嬷
 	0x5b38: "shen3", // 嬸
 	0x5b39: "xing4", // 嬹
 	0x5b3a: "ni4", // 嬺
@@ -9165,7 +9189,7 @@ var readings = map[rune]string{
 	0x5b42: "jiao3", // 孂
 	0x5b43: "niang2", // 孃
 	0x5b44: "lan3", // 孄
-	0x5b45: "qian1", // 孅
+	0x5b45: "xian1", // 孅
 	0x5b46: "ying1", // 孆
 	0x5b47: "shuang1", // 孇
 	0x5b48: "hui4", // 孈
@@ -9176,7 +9200,7 @@ var readings = map[rune]string{
 	0x5b4d: "yan2", // 孍
 	0x5b4e: "zhu2", // 孎
 	0x5b4f: "lan3", // 孏
-	0x5b50: "zi5", // 子
+	0x5b50: "zi3", // 子
 	0x5b51: "jie2", // 孑
 	0x5b52: "jue2", // 孒
 	0x5b53: "jue2", // 孓
@@ -9209,7 +9233,7 @@ var readings = map[rune]string{
 	0x5b6e: "cong2", // 孮
 	0x5b6f: "qian1", // 孯
 	0x5b70: "shu2", // 孰
-	0x5b71: "can4", // 孱
+	0x5b71: "chan2", // 孱
 	0x5b72: "ya1", // 孲
 	0x5b73: "zi1", // 孳
 	0x5b74: "ni3", // 孴
@@ -9386,7 +9410,7 @@ var readings = map[rune]string{
 	0x5c1f: "xian3", // 尟
 	0x5c20: "xian3", // 尠
 	0x5c21: "kun5", // 尡
-	0x5c22: "you2", // 尢
+	0x5c22: "wang1", // 尢
 	0x5c23: "wang1", // 尣
 	0x5c24: "you2", // 尤
 	0x5c25: "liao4", // 尥
@@ -9571,7 +9595,7 @@ var readings = map[rune]string{
 	0x5cd8: "huan2", // 峘
 	0x5cd9: "zhi4", // 峙
 	0x5cda: "mi4", // 峚
-	0x5cdb: "li3", // 峛
+	0x5cdb: "lie4", // 峛
 	0x5cdc: "ji4", // 峜
 	0x5cdd: "tong2", // 峝
 	0x5cde: "wei2", // 峞
@@ -9607,7 +9631,7 @@ var readings = map[rune]string{
 	0x5cfc: "gao4", // 峼
 	0x5cfd: "xia2", // 峽
 	0x5cfe: "yin2", // 峾
-	0x5cff: "yu3", // 峿
+	0x5cff: "wu2", // 峿
 	0x5d00: "lang4", // 崀
 	0x5d01: "kan4", // 崁
 	0x5d02: "lao2", // 崂
@@ -9670,7 +9694,7 @@ var readings = map[rune]string{
 	0x5d3b: "zhi4", // 崻
 	0x5d3c: "shi4", // 崼
 	0x5d3d: "zai3", // 崽
-	0x5d3e: "yao3", // 崾
+	0x5d3e: "yao4", // 崾
 	0x5d3f: "e4", // 崿
 	0x5d40: "zhu4", // 嵀
 	0x5d41: "kan1", // 嵁
@@ -9774,7 +9798,7 @@ var readings = map[rune]string{
 	0x5da3: "jiao1", // 嶣
 	0x5da4: "yao2", // 嶤
 	0x5da5: "jue2", // 嶥
-	0x5da6: "zhan1", // 嶦
+	0x5da6: "shan4", // 嶦
 	0x5da7: "yi4", // 嶧
 	0x5da8: "xue2", // 嶨
 	0x5da9: "nao2", // 嶩
@@ -9903,7 +9927,7 @@ var readings = map[rune]string{
 	0x5e24: "ru2", // 帤
 	0x5e25: "shuai4", // 帥
 	0x5e26: "dai4", // 带
-	0x5e27: "zheng4", // 帧
+	0x5e27: "zhen1", // 帧
 	0x5e28: "shui4", // 帨
 	0x5e29: "qiao4", // 帩
 	0x5e2a: "zhen1", // 帪
@@ -10062,7 +10086,7 @@ var readings = map[rune]string{
 	0x5ec3: "fei4", // 廃
 	0x5ec4: "jiu4", // 廄
 	0x5ec5: "e4", // 廅
-	0x5ec6: "gui1", // 廆
+	0x5ec6: "wei3", // 廆
 	0x5ec7: "liu4", // 廇
 	0x5ec8: "sha4", // 廈
 	0x5ec9: "lian2", // 廉
@@ -10231,7 +10255,7 @@ var readings = map[rune]string{
 	0x5f6c: "bin1", // 彬
 	0x5f6d: "peng2", // 彭
 	0x5f6e: "yong3", // 彮
-	0x5f6f: "piao3", // 彯
+	0x5f6f: "piao1", // 彯
 	0x5f70: "zhang1", // 彰
 	0x5f71: "ying3", // 影
 	0x5f72: "chi1", // 彲
@@ -10239,7 +10263,7 @@ var readings = map[rune]string{
 	0x5f74: "zhuo2", // 彴
 	0x5f75: "tuo3", // 彵
 	0x5f76: "ji2", // 彶
-	0x5f77: "fang3", // 彷
+	0x5f77: "pang2", // 彷
 	0x5f78: "zhong1", // 彸
 	0x5f79: "yi4", // 役
 	0x5f7a: "wang2", // 彺
@@ -10301,14 +10325,14 @@ var readings = map[rune]string{
 	0x5fb2: "ti2", // 徲
 	0x5fb3: "de2", // 徳
 	0x5fb4: "zheng1", // 徴
-	0x5fb5: "zheng1", // 徵
+	0x5fb5: "zhi3", // 徵
 	0x5fb6: "bie2", // 徶
 	0x5fb7: "de2", // 德
 	0x5fb8: "chong1", // 徸
 	0x5fb9: "che4", // 徹
 	0x5fba: "jiao3", // 徺
 	0x5fbb: "hui4", // 徻
-	0x5fbc: "jiao3", // 徼
+	0x5fbc: "jiao4", // 徼
 	0x5fbd: "hui1", // 徽
 	0x5fbe: "mei2", // 徾
 	0x5fbf: "long4", // 徿
@@ -10559,7 +10583,7 @@ var readings = map[rune]string{
 	0x60b4: "cui4", // 悴
 	0x60b5: "chang4", // 悵
 	0x60b6: "men4", // 悶
-	0x60b7: "san4", // 悷
+	0x60b7: "li4", // 悷
 	0x60b8: "ji4", // 悸
 	0x60b9: "guan4", // 悹
 	0x60ba: "guan4", // 悺
@@ -10785,7 +10809,7 @@ var readings = map[rune]string{
 	0x6196: "yin4", // 憖
 	0x6197: "yin4", // 憗
 	0x6198: "xi3", // 憘
-	0x6199: "xi1", // 憙
+	0x6199: "xi3", // 憙
 	0x619a: "dan4", // 憚
 	0x619b: "tan2", // 憛
 	0x619c: "duo4", // 憜
@@ -10982,7 +11006,7 @@ var readings = map[rune]string{
 	0x625b: "kang2", // 扛
 	0x625c: "yu1", // 扜
 	0x625d: "ku1", // 扝
-	0x625e: "gan3", // 扞
+	0x625e: "han4", // 扞
 	0x625f: "shen1", // 扟
 	0x6260: "cha1", // 扠
 	0x6261: "tuo1", // 扡
@@ -11103,7 +11127,7 @@ var readings = map[rune]string{
 	0x62d4: "ba2", // 拔
 	0x62d5: "tuo1", // 拕
 	0x62d6: "tuo1", // 拖
-	0x62d7: "ao3", // 拗
+	0x62d7: "ao4", // 拗
 	0x62d8: "ju1", // 拘
 	0x62d9: "zhuo1", // 拙
 	0x62da: "pan4", // 拚
@@ -11141,7 +11165,7 @@ var readings = map[rune]string{
 	0x62fa: "ce4", // 拺
 	0x62fb: "hui1", // 拻
 	0x62fc: "pin1", // 拼
-	0x62fd: "zhuai1", // 拽
+	0x62fd: "zhuai4", // 拽
 	0x62fe: "shi2", // 拾
 	0x62ff: "na2", // 拿
 	0x6300: "bai1", // 挀
@@ -11302,7 +11326,7 @@ var readings = map[rune]string{
 	0x639b: "gua4", // 掛
 	0x639c: "yi4", // 掜
 	0x639d: "huo4", // 掝
-	0x639e: "shan4", // 掞
+	0x639e: "yan4", // 掞
 	0x639f: "zheng3", // 掟
 	0x63a0: "lve4", // 掠
 	0x63a1: "cai3", // 採
@@ -11330,7 +11354,7 @@ var readings = map[rune]string{
 	0x63b7: "zhi4", // 掷
 	0x63b8: "dan3", // 掸
 	0x63b9: "meng5", // 掹
-	0x63ba: "can4", // 掺
+	0x63ba: "chan1", // 掺
 	0x63bb: "sao1", // 掻
 	0x63bc: "guan4", // 掼
 	0x63bd: "peng4", // 掽
@@ -11482,7 +11506,7 @@ var readings = map[rune]string{
 	0x644f: "chong1", // 摏
 	0x6450: "chuang1", // 摐
 	0x6451: "guai1", // 摑
-	0x6452: "bing3", // 摒
+	0x6452: "bing4", // 摒
 	0x6453: "feng2", // 摓
 	0x6454: "shuai1", // 摔
 	0x6455: "di4", // 摕
@@ -11525,7 +11549,7 @@ var readings = map[rune]string{
 	0x647a: "zhe2", // 摺
 	0x647b: "can4", // 摻
 	0x647c: "keng1", // 摼
-	0x647d: "biao1", // 摽
+	0x647d: "biao4", // 摽
 	0x647e: "jiang4", // 摾
 	0x647f: "yao2", // 摿
 	0x6480: "gou4", // 撀
@@ -11616,7 +11640,7 @@ var readings = map[rune]string{
 	0x64d5: "xie2", // 擕
 	0x64d6: "ka1", // 擖
 	0x64d7: "pi3", // 擗
-	0x64d8: "bai1", // 擘
+	0x64d8: "bo4", // 擘
 	0x64d9: "ao4", // 擙
 	0x64da: "ju4", // 據
 	0x64db: "ye4", // 擛
@@ -11909,7 +11933,7 @@ var readings = map[rune]string{
 	0x65fa: "wang4", // 旺
 	0x65fb: "min2", // 旻
 	0x65fc: "min2", // 旼
-	0x65fd: "tun4", // 旽
+	0x65fd: "tun1", // 旽
 	0x65fe: "chun1", // 旾
 	0x65ff: "wu3", // 旿
 	0x6600: "yun2", // 昀
@@ -12103,7 +12127,7 @@ var readings = map[rune]string{
 	0x66bc: "pie1", // 暼
 	0x66bd: "lin2", // 暽
 	0x66be: "tun1", // 暾
-	0x66bf: "xi3", // 暿
+	0x66bf: "xi1", // 暿
 	0x66c0: "yi4", // 曀
 	0x66c1: "ji4", // 曁
 	0x66c2: "huang4", // 曂
@@ -12264,9 +12288,9 @@ var readings = map[rune]string{
 	0x675d: "li2", // 杝
 	0x675e: "qi3", // 杞
 	0x675f: "shu4", // 束
-	0x6760: "gang1", // 杠
+	0x6760: "gang4", // 杠
 	0x6761: "tiao2", // 条
-	0x6762: "jiang5", // 杢
+	0x6762: "jie2", // 杢
 	0x6763: "mian2", // 杣
 	0x6764: "wan4", // 杤
 	0x6765: "lai2", // 来
@@ -12328,7 +12352,7 @@ var readings = map[rune]string{
 	0x679d: "zhi1", // 枝
 	0x679e: "cong1", // 枞
 	0x679f: "yun4", // 枟
-	0x67a0: "zui5", // 枠
+	0x67a0: "hua4", // 枠
 	0x67a1: "sheng1", // 枡
 	0x67a2: "shu1", // 枢
 	0x67a3: "zao3", // 枣
@@ -12361,7 +12385,7 @@ var readings = map[rune]string{
 	0x67be: "shi4", // 枾
 	0x67bf: "nie4", // 枿
 	0x67c0: "bi3", // 柀
-	0x67c1: "duo4", // 柁
+	0x67c1: "tuo2", // 柁
 	0x67c2: "yi2", // 柂
 	0x67c3: "ling2", // 柃
 	0x67c4: "bing3", // 柄
@@ -12415,7 +12439,7 @@ var readings = map[rune]string{
 	0x67f4: "chai2", // 柴
 	0x67f5: "shan1", // 柵
 	0x67f6: "si4", // 柶
-	0x67f7: "chu4", // 柷
+	0x67f7: "zhu4", // 柷
 	0x67f8: "pei1", // 柸
 	0x67f9: "shi4", // 柹
 	0x67fa: "guai3", // 柺
@@ -12494,7 +12518,7 @@ var readings = map[rune]string{
 	0x6843: "tao2", // 桃
 	0x6844: "guang1", // 桄
 	0x6845: "wei2", // 桅
-	0x6846: "kuang1", // 框
+	0x6846: "kuang4", // 框
 	0x6847: "ru2", // 桇
 	0x6848: "an4", // 案
 	0x6849: "an1", // 桉
@@ -12508,7 +12532,7 @@ var readings = map[rune]string{
 	0x6851: "sang1", // 桑
 	0x6852: "sang1", // 桒
 	0x6853: "huan2", // 桓
-	0x6854: "ju2", // 桔
+	0x6854: "jie2", // 桔
 	0x6855: "jiu4", // 桕
 	0x6856: "xue4", // 桖
 	0x6857: "duo4", // 桗
@@ -12586,7 +12610,7 @@ var readings = map[rune]string{
 	0x68a0: "lv3", // 梠
 	0x68a1: "hun2", // 梡
 	0x68a2: "shao1", // 梢
-	0x68a3: "cen2", // 梣
+	0x68a3: "chen2", // 梣
 	0x68a4: "fen2", // 梤
 	0x68a5: "song1", // 梥
 	0x68a6: "meng4", // 梦
@@ -12634,7 +12658,7 @@ var readings = map[rune]string{
 	0x68d0: "fei3", // 棐
 	0x68d1: "pai2", // 棑
 	0x68d2: "bang4", // 棒
-	0x68d3: "bang4", // 棓
+	0x68d3: "bei4", // 棓
 	0x68d4: "hun1", // 棔
 	0x68d5: "zong1", // 棕
 	0x68d6: "cheng2", // 棖
@@ -12693,7 +12717,7 @@ var readings = map[rune]string{
 	0x690b: "liang2", // 椋
 	0x690c: "qiang1", // 椌
 	0x690d: "zhi2", // 植
-	0x690e: "chui2", // 椎
+	0x690e: "zhui1", // 椎
 	0x690f: "ya1", // 椏
 	0x6910: "ju1", // 椐
 	0x6911: "bei1", // 椑
@@ -12785,7 +12809,7 @@ var readings = map[rune]string{
 	0x6967: "yang3", // 楧
 	0x6968: "zhen1", // 楨
 	0x6969: "pian2", // 楩
-	0x696a: "ye4", // 楪
+	0x696a: "die2", // 楪
 	0x696b: "ji2", // 楫
 	0x696c: "jie2", // 楬
 	0x696d: "ye4", // 業
@@ -12916,7 +12940,7 @@ var readings = map[rune]string{
 	0x69ea: "gai4", // 槪
 	0x69eb: "tuan2", // 槫
 	0x69ec: "hua4", // 槬
-	0x69ed: "qi1", // 槭
+	0x69ed: "qi4", // 槭
 	0x69ee: "sen1", // 槮
 	0x69ef: "cui1", // 槯
 	0x69f0: "peng2", // 槰
@@ -12946,7 +12970,7 @@ var readings = map[rune]string{
 	0x6a08: "qing2", // 樈
 	0x6a09: "shuang3", // 樉
 	0x6a0a: "fan2", // 樊
-	0x6a0b: "tong3", // 樋
+	0x6a0b: "tong1", // 樋
 	0x6a0c: "guan4", // 樌
 	0x6a0d: "ze2", // 樍
 	0x6a0e: "su4", // 樎
@@ -13016,7 +13040,7 @@ var readings = map[rune]string{
 	0x6a4e: "fan2", // 橎
 	0x6a4f: "zhan3", // 橏
 	0x6a50: "tuo2", // 橐
-	0x6a51: "lao3", // 橑
+	0x6a51: "liao2", // 橑
 	0x6a52: "yun2", // 橒
 	0x6a53: "shun4", // 橓
 	0x6a54: "dun1", // 橔
@@ -13153,7 +13177,7 @@ var readings = map[rune]string{
 	0x6ad7: "mie4", // 櫗
 	0x6ad8: "hui4", // 櫘
 	0x6ad9: "ou1", // 櫙
-	0x6ada: "lu2", // 櫚
+	0x6ada: "lv2", // 櫚
 	0x6adb: "zhi4", // 櫛
 	0x6adc: "gao1", // 櫜
 	0x6add: "du2", // 櫝
@@ -13247,10 +13271,10 @@ var readings = map[rune]string{
 	0x6b35: "kuan3", // 欵
 	0x6b36: "shuo4", // 欶
 	0x6b37: "xi1", // 欷
-	0x6b38: "ai1", // 欸
-	0x6b39: "yi1", // 欹
+	0x6b38: "ai3", // 欸
+	0x6b39: "qi1", // 欹
 	0x6b3a: "qi1", // 欺
-	0x6b3b: "chua1", // 欻
+	0x6b3b: "xu1", // 欻
 	0x6b3c: "chi3", // 欼
 	0x6b3d: "qin1", // 欽
 	0x6b3e: "kuan3", // 款
@@ -13509,8 +13533,8 @@ var readings = map[rune]string{
 	0x6c3b: "le4", // 氻
 	0x6c3c: "ni4", // 氼
 	0x6c3d: "tun3", // 氽
-	0x6c3e: "fan4", // 氾
-	0x6c3f: "gui3", // 氿
+	0x6c3e: "fan2", // 氾
+	0x6c3f: "jiu3", // 氿
 	0x6c40: "ting1", // 汀
 	0x6c41: "zhi1", // 汁
 	0x6c42: "qiu2", // 求
@@ -13583,7 +13607,7 @@ var readings = map[rune]string{
 	0x6c85: "yuan2", // 沅
 	0x6c86: "hang4", // 沆
 	0x6c87: "yan3", // 沇
-	0x6c88: "chen2", // 沈
+	0x6c88: "shen3", // 沈
 	0x6c89: "chen2", // 沉
 	0x6c8a: "dan4", // 沊
 	0x6c8b: "you2", // 沋
@@ -13611,7 +13635,7 @@ var readings = map[rune]string{
 	0x6ca1: "mei2", // 没
 	0x6ca2: "ze2", // 沢
 	0x6ca3: "feng1", // 沣
-	0x6ca4: "ou1", // 沤
+	0x6ca4: "ou4", // 沤
 	0x6ca5: "li4", // 沥
 	0x6ca6: "lun2", // 沦
 	0x6ca7: "cang1", // 沧
@@ -13722,7 +13746,7 @@ var readings = map[rune]string{
 	0x6d10: "xing2", // 洐
 	0x6d11: "fu2", // 洑
 	0x6d12: "sa3", // 洒
-	0x6d13: "se4", // 洓
+	0x6d13: "qi4", // 洓
 	0x6d14: "zhi3", // 洔
 	0x6d15: "yin4", // 洕
 	0x6d16: "wu2", // 洖
@@ -13923,7 +13947,7 @@ var readings = map[rune]string{
 	0x6dd9: "cong2", // 淙
 	0x6dda: "lei4", // 淚
 	0x6ddb: "zhe4", // 淛
-	0x6ddc: "ping2", // 淜
+	0x6ddc: "peng2", // 淜
 	0x6ddd: "fei2", // 淝
 	0x6dde: "song1", // 淞
 	0x6ddf: "tian3", // 淟
@@ -14113,7 +14137,7 @@ var readings = map[rune]string{
 	0x6e97: "cheng2", // 溗
 	0x6e98: "ke4", // 溘
 	0x6e99: "tai4", // 溙
-	0x6e9a: "ta3", // 溚
+	0x6e9a: "da2", // 溚
 	0x6e9b: "wa1", // 溛
 	0x6e9c: "liu1", // 溜
 	0x6e9d: "gou1", // 溝
@@ -14144,7 +14168,7 @@ var readings = map[rune]string{
 	0x6eb6: "rong2", // 溶
 	0x6eb7: "hun4", // 溷
 	0x6eb8: "su4", // 溸
-	0x6eb9: "suo4", // 溹
+	0x6eb9: "suo3", // 溹
 	0x6eba: "ni4", // 溺
 	0x6ebb: "ta1", // 溻
 	0x6ebc: "shi1", // 溼
@@ -14267,7 +14291,7 @@ var readings = map[rune]string{
 	0x6f31: "shu4", // 漱
 	0x6f32: "zhang3", // 漲
 	0x6f33: "zhang1", // 漳
-	0x6f34: "zhuang4", // 漴
+	0x6f34: "chong2", // 漴
 	0x6f35: "xu4", // 漵
 	0x6f36: "huan4", // 漶
 	0x6f37: "huo3", // 漷
@@ -14317,7 +14341,7 @@ var readings = map[rune]string{
 	0x6f63: "min3", // 潣
 	0x6f64: "run4", // 潤
 	0x6f65: "su4", // 潥
-	0x6f66: "lao3", // 潦
+	0x6f66: "liao2", // 潦
 	0x6f67: "zhen1", // 潧
 	0x6f68: "cong2", // 潨
 	0x6f69: "yi4", // 潩
@@ -14357,7 +14381,7 @@ var readings = map[rune]string{
 	0x6f8b: "hong4", // 澋
 	0x6f8c: "si1", // 澌
 	0x6f8d: "shu4", // 澍
-	0x6f8e: "peng1", // 澎
+	0x6f8e: "peng2", // 澎
 	0x6f8f: "han2", // 澏
 	0x6f90: "yun2", // 澐
 	0x6f91: "liu4", // 澑
@@ -14619,7 +14643,7 @@ var readings = map[rune]string{
 	0x7091: "mu4", // 炑
 	0x7092: "chao3", // 炒
 	0x7093: "liao4", // 炓
-	0x7094: "gui4", // 炔
+	0x7094: "que1", // 炔
 	0x7095: "kang4", // 炕
 	0x7096: "dun4", // 炖
 	0x7097: "guang1", // 炗
@@ -14750,7 +14774,7 @@ var readings = map[rune]string{
 	0x7115: "huan4", // 焕
 	0x7116: "men4", // 焖
 	0x7117: "ju2", // 焗
-	0x7118: "dao4", // 焘
+	0x7118: "tao1", // 焘
 	0x7119: "bei4", // 焙
 	0x711a: "fen2", // 焚
 	0x711b: "lin4", // 焛
@@ -15072,7 +15096,7 @@ var readings = map[rune]string{
 	0x7257: "you3", // 牗
 	0x7258: "du2", // 牘
 	0x7259: "ya2", // 牙
-	0x725a: "cheng1", // 牚
+	0x725a: "cheng4", // 牚
 	0x725b: "niu2", // 牛
 	0x725c: "niu2", // 牜
 	0x725d: "pin4", // 牝
@@ -15166,7 +15190,7 @@ var readings = map[rune]string{
 	0x72b5: "ge1", // 犵
 	0x72b6: "zhuang4", // 状
 	0x72b7: "guang3", // 犷
-	0x72b8: "ma4", // 犸
+	0x72b8: "ma3", // 犸
 	0x72b9: "you2", // 犹
 	0x72ba: "kang4", // 犺
 	0x72bb: "bo2", // 犻
@@ -15392,7 +15416,7 @@ var readings = map[rune]string{
 	0x7397: "yu2", // 玗
 	0x7398: "qi3", // 玘
 	0x7399: "yu2", // 玙
-	0x739a: "chang4", // 玚
+	0x739a: "yang2", // 玚
 	0x739b: "ma3", // 玛
 	0x739c: "hong2", // 玜
 	0x739d: "wu3", // 玝
@@ -15452,7 +15476,7 @@ var readings = map[rune]string{
 	0x73d3: "jiao4", // 珓
 	0x73d4: "jian4", // 珔
 	0x73d5: "li4", // 珕
-	0x73d6: "guang4", // 珖
+	0x73d6: "guang1", // 珖
 	0x73d7: "xian1", // 珗
 	0x73d8: "zhou1", // 珘
 	0x73d9: "gong3", // 珙
@@ -15471,7 +15495,7 @@ var readings = map[rune]string{
 	0x73e6: "xiang4", // 珦
 	0x73e7: "yao2", // 珧
 	0x73e8: "xia2", // 珨
-	0x73e9: "hang2", // 珩
+	0x73e9: "heng2", // 珩
 	0x73ea: "gui1", // 珪
 	0x73eb: "chong1", // 珫
 	0x73ec: "xu4", // 珬
@@ -15480,7 +15504,7 @@ var readings = map[rune]string{
 	0x73ef: "lao3", // 珯
 	0x73f0: "dang1", // 珰
 	0x73f1: "ying1", // 珱
-	0x73f2: "hui1", // 珲
+	0x73f2: "hun2", // 珲
 	0x73f3: "wen2", // 珳
 	0x73f4: "e2", // 珴
 	0x73f5: "cheng2", // 珵
@@ -15607,7 +15631,7 @@ var readings = map[rune]string{
 	0x746e: "li4", // 瑮
 	0x746f: "lang2", // 瑯
 	0x7470: "gui1", // 瑰
-	0x7471: "zhen4", // 瑱
+	0x7471: "tian4", // 瑱
 	0x7472: "qiang1", // 瑲
 	0x7473: "cuo1", // 瑳
 	0x7474: "jue2", // 瑴
@@ -15771,7 +15795,7 @@ var readings = map[rune]string{
 	0x7517: "yan3", // 甗
 	0x7518: "gan1", // 甘
 	0x7519: "dai4", // 甙
-	0x751a: "shen2", // 甚
+	0x751a: "shen4", // 甚
 	0x751b: "tian2", // 甛
 	0x751c: "tian2", // 甜
 	0x751d: "han2", // 甝
@@ -15801,9 +15825,9 @@ var readings = map[rune]string{
 	0x7535: "dian4", // 电
 	0x7536: "fu2", // 甶
 	0x7537: "nan2", // 男
-	0x7538: "dian1", // 甸
+	0x7538: "dian4", // 甸
 	0x7539: "ping1", // 甹
-	0x753a: "ting1", // 町
+	0x753a: "ting3", // 町
 	0x753b: "hua4", // 画
 	0x753c: "ting3", // 甼
 	0x753d: "zhen4", // 甽
@@ -16128,7 +16152,7 @@ var readings = map[rune]string{
 	0x767c: "fa1", // 發
 	0x767d: "bai2", // 白
 	0x767e: "bai3", // 百
-	0x767f: "qie2", // 癿
+	0x767f: "bie2", // 癿
 	0x7680: "ji2", // 皀
 	0x7681: "zao4", // 皁
 	0x7682: "zao4", // 皂
@@ -16261,7 +16285,7 @@ var readings = map[rune]string{
 	0x7701: "sheng3", // 省
 	0x7702: "shi4", // 眂
 	0x7703: "yun2", // 眃
-	0x7704: "mian3", // 眄
+	0x7704: "mian4", // 眄
 	0x7705: "pan1", // 眅
 	0x7706: "fang3", // 眆
 	0x7707: "miao3", // 眇
@@ -16404,7 +16428,7 @@ var readings = map[rune]string{
 	0x7790: "mo4", // 瞐
 	0x7791: "ming2", // 瞑
 	0x7792: "man2", // 瞒
-	0x7793: "shui4", // 瞓
+	0x7793: "fen4", // 瞓
 	0x7794: "ze2", // 瞔
 	0x7795: "zhang4", // 瞕
 	0x7796: "yi4", // 瞖
@@ -16418,7 +16442,7 @@ var readings = map[rune]string{
 	0x779e: "man2", // 瞞
 	0x779f: "piao3", // 瞟
 	0x77a0: "cheng1", // 瞠
-	0x77a1: "gui3", // 瞡
+	0x77a1: "gui1", // 瞡
 	0x77a2: "meng2", // 瞢
 	0x77a3: "wan4", // 瞣
 	0x77a4: "run2", // 瞤
@@ -16430,7 +16454,7 @@ var readings = map[rune]string{
 	0x77aa: "deng4", // 瞪
 	0x77ab: "shen3", // 瞫
 	0x77ac: "shun4", // 瞬
-	0x77ad: "liao3", // 瞭
+	0x77ad: "liao4", // 瞭
 	0x77ae: "che4", // 瞮
 	0x77af: "xian2", // 瞯
 	0x77b0: "kan4", // 瞰
@@ -16522,7 +16546,7 @@ var readings = map[rune]string{
 	0x7806: "fu1", // 砆
 	0x7807: "min2", // 砇
 	0x7808: "e3", // 砈
-	0x7809: "huo4", // 砉
+	0x7809: "hua1", // 砉
 	0x780a: "kang1", // 砊
 	0x780b: "zhi3", // 砋
 	0x780c: "qi4", // 砌
@@ -16542,7 +16566,7 @@ var readings = map[rune]string{
 	0x781a: "yan4", // 砚
 	0x781b: "jin1", // 砛
 	0x781c: "feng1", // 砜
-	0x781d: "fa2", // 砝
+	0x781d: "fa3", // 砝
 	0x781e: "mo4", // 砞
 	0x781f: "zha3", // 砟
 	0x7820: "ju1", // 砠
@@ -16587,10 +16611,10 @@ var readings = map[rune]string{
 	0x7847: "nao2", // 硇
 	0x7848: "qia4", // 硈
 	0x7849: "lu4", // 硉
-	0x784a: "wei3", // 硊
+	0x784a: "hui4", // 硊
 	0x784b: "ai4", // 硋
 	0x784c: "ge4", // 硌
-	0x784d: "xian4", // 硍
+	0x784d: "yin2", // 硍
 	0x784e: "xing2", // 硎
 	0x784f: "yan2", // 硏
 	0x7850: "dong4", // 硐
@@ -16602,7 +16626,7 @@ var readings = map[rune]string{
 	0x7856: "xia2", // 硖
 	0x7857: "qiao1", // 硗
 	0x7858: "qing5", // 硘
-	0x7859: "wei2", // 硙
+	0x7859: "wei4", // 硙
 	0x785a: "qiao2", // 硚
 	0x785b: "yi4", // 硛
 	0x785c: "keng1", // 硜
@@ -16649,7 +16673,7 @@ var readings = map[rune]string{
 	0x7885: "jun1", // 碅
 	0x7886: "bo1", // 碆
 	0x7887: "ding4", // 碇
-	0x7888: "min2", // 碈
+	0x7888: "hun1", // 碈
 	0x7889: "diao1", // 碉
 	0x788a: "jian1", // 碊
 	0x788b: "he4", // 碋
@@ -16674,7 +16698,7 @@ var readings = map[rune]string{
 	0x789e: "yan2", // 碞
 	0x789f: "die2", // 碟
 	0x78a0: "ding4", // 碠
-	0x78a1: "du2", // 碡
+	0x78a1: "zhou2", // 碡
 	0x78a2: "tuo2", // 碢
 	0x78a3: "jie2", // 碣
 	0x78a4: "ying1", // 碤
@@ -17117,7 +17141,7 @@ var readings = map[rune]string{
 	0x7a59: "pu2", // 穙
 	0x7a5a: "jiao1", // 穚
 	0x7a5b: "zhuo1", // 穛
-	0x7a5c: "zhong3", // 穜
+	0x7a5c: "tong2", // 穜
 	0x7a5d: "zui5", // 穝
 	0x7a5e: "lv3", // 穞
 	0x7a5f: "sui4", // 穟
@@ -17193,7 +17217,7 @@ var readings = map[rune]string{
 	0x7aa5: "kui1", // 窥
 	0x7aa6: "dou4", // 窦
 	0x7aa7: "zhuo5", // 窧
-	0x7aa8: "xun1", // 窨
+	0x7aa8: "yin4", // 窨
 	0x7aa9: "wo1", // 窩
 	0x7aaa: "wa1", // 窪
 	0x7aab: "ya4", // 窫
@@ -17338,7 +17362,7 @@ var readings = map[rune]string{
 	0x7b36: "shi3", // 笶
 	0x7b37: "mao3", // 笷
 	0x7b38: "po3", // 笸
-	0x7b39: "ti5", // 笹
+	0x7b39: "ti4", // 笹
 	0x7b3a: "jian1", // 笺
 	0x7b3b: "qiong2", // 笻
 	0x7b3c: "long2", // 笼
@@ -17406,7 +17430,7 @@ var readings = map[rune]string{
 	0x7b7a: "kuang1", // 筺
 	0x7b7b: "gang4", // 筻
 	0x7b7c: "yun2", // 筼
-	0x7b7d: "o5", // 筽
+	0x7b7d: "ou1", // 筽
 	0x7b7e: "qian1", // 签
 	0x7b7f: "xiao3", // 筿
 	0x7b80: "jian3", // 简
@@ -17560,7 +17584,7 @@ var readings = map[rune]string{
 	0x7c14: "suo1", // 簔
 	0x7c15: "le4", // 簕
 	0x7c16: "duan4", // 簖
-	0x7c17: "liang5", // 簗
+	0x7c17: "zhu4", // 簗
 	0x7c18: "xiao1", // 簘
 	0x7c19: "bo2", // 簙
 	0x7c1a: "mi4", // 簚
@@ -17967,7 +17991,7 @@ var readings = map[rune]string{
 	0x7dab: "xian4", // 綫
 	0x7dac: "shou4", // 綬
 	0x7dad: "wei2", // 維
-	0x7dae: "qi3", // 綮
+	0x7dae: "qing4", // 綮
 	0x7daf: "tao2", // 綯
 	0x7db0: "wan3", // 綰
 	0x7db1: "gang1", // 綱
@@ -18214,7 +18238,7 @@ var readings = map[rune]string{
 	0x7ea2: "hong2", // 红
 	0x7ea3: "zhou4", // 纣
 	0x7ea4: "xian1", // 纤
-	0x7ea5: "ge1", // 纥
+	0x7ea5: "he2", // 纥
 	0x7ea6: "yue1", // 约
 	0x7ea7: "ji2", // 级
 	0x7ea8: "wan2", // 纨
@@ -18282,7 +18306,7 @@ var readings = map[rune]string{
 	0x7ee6: "tao1", // 绦
 	0x7ee7: "ji4", // 继
 	0x7ee8: "ti2", // 绨
-	0x7ee9: "ji1", // 绩
+	0x7ee9: "ji4", // 绩
 	0x7eea: "xu4", // 绪
 	0x7eeb: "ling2", // 绫
 	0x7eec: "ying1", // 绬
@@ -18315,7 +18339,7 @@ var readings = map[rune]string{
 	0x7f07: "ti2", // 缇
 	0x7f08: "miao3", // 缈
 	0x7f09: "ji1", // 缉
-	0x7f0a: "yun1", // 缊
+	0x7f0a: "yun4", // 缊
 	0x7f0b: "hui4", // 缋
 	0x7f0c: "si1", // 缌
 	0x7f0d: "duo3", // 缍
@@ -18392,7 +18416,7 @@ var readings = map[rune]string{
 	0x7f54: "wang3", // 罔
 	0x7f55: "han3", // 罕
 	0x7f56: "luo2", // 罖
-	0x7f57: "luo1", // 罗
+	0x7f57: "luo2", // 罗
 	0x7f58: "fu2", // 罘
 	0x7f59: "shen1", // 罙
 	0x7f5a: "fa2", // 罚
@@ -18643,7 +18667,7 @@ var readings = map[rune]string{
 	0x804f: "er2", // 聏
 	0x8050: "ya4", // 聐
 	0x8051: "tie1", // 聑
-	0x8052: "gua1", // 聒
+	0x8052: "guo1", // 聒
 	0x8053: "xu4", // 聓
 	0x8054: "lian2", // 联
 	0x8055: "hao4", // 聕
@@ -18700,7 +18724,7 @@ var readings = map[rune]string{
 	0x8088: "zhao4", // 肈
 	0x8089: "rou4", // 肉
 	0x808a: "yi4", // 肊
-	0x808b: "le1", // 肋
+	0x808b: "lei4", // 肋
 	0x808c: "ji1", // 肌
 	0x808d: "qiu2", // 肍
 	0x808e: "ken3", // 肎
@@ -18827,7 +18851,7 @@ var readings = map[rune]string{
 	0x8107: "xie2", // 脇
 	0x8108: "mai4", // 脈
 	0x8109: "mai4", // 脉
-	0x810a: "ji2", // 脊
+	0x810a: "ji3", // 脊
 	0x810b: "xie2", // 脋
 	0x810c: "nin5", // 脌
 	0x810d: "kuai4", // 脍
@@ -18880,7 +18904,7 @@ var readings = map[rune]string{
 	0x813c: "liang3", // 脼
 	0x813d: "shui2", // 脽
 	0x813e: "pi2", // 脾
-	0x813f: "biao1", // 脿
+	0x813f: "biao3", // 脿
 	0x8140: "lun2", // 腀
 	0x8141: "pian2", // 腁
 	0x8142: "lei3", // 腂
@@ -18909,7 +18933,7 @@ var readings = map[rune]string{
 	0x8159: "zong1", // 腙
 	0x815a: "ding4", // 腚
 	0x815b: "wo4", // 腛
-	0x815c: "mei3", // 腜
+	0x815c: "mei2", // 腜
 	0x815d: "ni2", // 腝
 	0x815e: "zhuan4", // 腞
 	0x815f: "chi4", // 腟
@@ -18925,7 +18949,7 @@ var readings = map[rune]string{
 	0x8169: "nan3", // 腩
 	0x816a: "yun4", // 腪
 	0x816b: "zhong3", // 腫
-	0x816c: "rou4", // 腬
+	0x816c: "rou2", // 腬
 	0x816d: "e4", // 腭
 	0x816e: "sai1", // 腮
 	0x816f: "tu2", // 腯
@@ -18963,7 +18987,7 @@ var readings = map[rune]string{
 	0x818f: "gao1", // 膏
 	0x8190: "lv3", // 膐
 	0x8191: "bin4", // 膑
-	0x8192: "ou2", // 膒
+	0x8192: "ou1", // 膒
 	0x8193: "chang2", // 膓
 	0x8194: "lu4", // 膔
 	0x8195: "guo2", // 膕
@@ -19215,7 +19239,7 @@ var readings = map[rune]string{
 	0x828b: "yu4", // 芋
 	0x828c: "yu4", // 芌
 	0x828d: "shao2", // 芍
-	0x828e: "qiong1", // 芎
+	0x828e: "xiong1", // 芎
 	0x828f: "du4", // 芏
 	0x8290: "hu4", // 芐
 	0x8291: "qi3", // 芑
@@ -19225,7 +19249,7 @@ var readings = map[rune]string{
 	0x8295: "sui1", // 芕
 	0x8296: "zhi4", // 芖
 	0x8297: "xiang1", // 芗
-	0x8298: "pi2", // 芘
+	0x8298: "bi3", // 芘
 	0x8299: "fu2", // 芙
 	0x829a: "tun2", // 芚
 	0x829b: "wei3", // 芛
@@ -19340,7 +19364,7 @@ var readings = map[rune]string{
 	0x8308: "ci2", // 茈
 	0x8309: "mo4", // 茉
 	0x830a: "zi1", // 茊
-	0x830b: "zhi3", // 茋
+	0x830b: "di3", // 茋
 	0x830c: "chi2", // 茌
 	0x830d: "ji4", // 茍
 	0x830e: "jing1", // 茎
@@ -19385,7 +19409,7 @@ var readings = map[rune]string{
 	0x8335: "yin1", // 茵
 	0x8336: "cha2", // 茶
 	0x8337: "fa2", // 茷
-	0x8338: "rong1", // 茸
+	0x8338: "rong2", // 茸
 	0x8339: "ru2", // 茹
 	0x833a: "chong1", // 茺
 	0x833b: "mang3", // 茻
@@ -19552,7 +19576,7 @@ var readings = map[rune]string{
 	0x83dc: "cai4", // 菜
 	0x83dd: "ba2", // 菝
 	0x83de: "li2", // 菞
-	0x83df: "tu2", // 菟
+	0x83df: "tu4", // 菟
 	0x83e0: "bo1", // 菠
 	0x83e1: "han4", // 菡
 	0x83e2: "bao4", // 菢
@@ -19578,7 +19602,7 @@ var readings = map[rune]string{
 	0x83f6: "beng3", // 菶
 	0x83f7: "zhou3", // 菷
 	0x83f8: "yan1", // 菸
-	0x83f9: "ju1", // 菹
+	0x83f9: "zu1", // 菹
 	0x83fa: "jian1", // 菺
 	0x83fb: "lin3", // 菻
 	0x83fc: "tan3", // 菼
@@ -19599,7 +19623,7 @@ var readings = map[rune]string{
 	0x840b: "qi1", // 萋
 	0x840c: "meng2", // 萌
 	0x840d: "ping2", // 萍
-	0x840e: "wei1", // 萎
+	0x840e: "wei3", // 萎
 	0x840f: "dan4", // 萏
 	0x8410: "sha4", // 萐
 	0x8411: "huan2", // 萑
@@ -19636,13 +19660,13 @@ var readings = map[rune]string{
 	0x8430: "lian4", // 萰
 	0x8431: "xuan1", // 萱
 	0x8432: "xuan1", // 萲
-	0x8433: "nan3", // 萳
+	0x8433: "nan2", // 萳
 	0x8434: "ce4", // 萴
 	0x8435: "wo1", // 萵
 	0x8436: "chun3", // 萶
 	0x8437: "xiao1", // 萷
 	0x8438: "yu2", // 萸
-	0x8439: "bian3", // 萹
+	0x8439: "bian1", // 萹
 	0x843a: "mao4", // 萺
 	0x843b: "an1", // 萻
 	0x843c: "e4", // 萼
@@ -19672,7 +19696,7 @@ var readings = map[rune]string{
 	0x8454: "hou2", // 葔
 	0x8455: "yan4", // 葕
 	0x8456: "tu1", // 葖
-	0x8457: "zhe5", // 著
+	0x8457: "zhu4", // 著
 	0x8458: "zi1", // 葘
 	0x8459: "xiang1", // 葙
 	0x845a: "ren4", // 葚
@@ -19697,7 +19721,7 @@ var readings = map[rune]string{
 	0x846d: "jia1", // 葭
 	0x846e: "duan4", // 葮
 	0x846f: "yao4", // 葯
-	0x8470: "sui1", // 葰
+	0x8470: "jun4", // 葰
 	0x8471: "cong1", // 葱
 	0x8472: "quan2", // 葲
 	0x8473: "wei1", // 葳
@@ -19730,7 +19754,7 @@ var readings = map[rune]string{
 	0x848e: "pai4", // 蒎
 	0x848f: "you5", // 蒏
 	0x8490: "sou1", // 蒐
-	0x8491: "yin4", // 蒑
+	0x8491: "yin1", // 蒑
 	0x8492: "shi1", // 蒒
 	0x8493: "chun2", // 蒓
 	0x8494: "shi2", // 蒔
@@ -19784,7 +19808,7 @@ var readings = map[rune]string{
 	0x84c4: "xu4", // 蓄
 	0x84c5: "liu2", // 蓅
 	0x84c6: "xi2", // 蓆
-	0x84c7: "gu3", // 蓇
+	0x84c7: "gu1", // 蓇
 	0x84c8: "lang2", // 蓈
 	0x84c9: "rong2", // 蓉
 	0x84ca: "weng3", // 蓊
@@ -19849,7 +19873,7 @@ var readings = map[rune]string{
 	0x8505: "yan2", // 蔅
 	0x8506: "ling2", // 蔆
 	0x8507: "ji4", // 蔇
-	0x8508: "biao1", // 蔈
+	0x8508: "piao4", // 蔈
 	0x8509: "gun3", // 蔉
 	0x850a: "han3", // 蔊
 	0x850b: "di2", // 蔋
@@ -19908,7 +19932,7 @@ var readings = map[rune]string{
 	0x8540: "ji2", // 蕀
 	0x8541: "qian2", // 蕁
 	0x8542: "sheng4", // 蕂
-	0x8543: "fan1", // 蕃
+	0x8543: "bo1", // 蕃
 	0x8544: "meng2", // 蕄
 	0x8545: "ou3", // 蕅
 	0x8546: "chan3", // 蕆
@@ -19970,7 +19994,7 @@ var readings = map[rune]string{
 	0x857e: "lei3", // 蕾
 	0x857f: "xuan1", // 蕿
 	0x8580: "yun4", // 薀
-	0x8581: "yu4", // 薁
+	0x8581: "ao4", // 薁
 	0x8582: "xi2", // 薂
 	0x8583: "hao4", // 薃
 	0x8584: "bao2", // 薄
@@ -20071,7 +20095,7 @@ var readings = map[rune]string{
 	0x85e3: "bei1", // 藣
 	0x85e4: "teng2", // 藤
 	0x85e5: "yao4", // 藥
-	0x85e6: "mo4", // 藦
+	0x85e6: "mo2", // 藦
 	0x85e7: "huan4", // 藧
 	0x85e8: "biao1", // 藨
 	0x85e9: "fan1", // 藩
@@ -20219,7 +20243,7 @@ var readings = map[rune]string{
 	0x8677: "han2", // 虷
 	0x8678: "zi3", // 虸
 	0x8679: "hong2", // 虹
-	0x867a: "hui1", // 虺
+	0x867a: "hui3", // 虺
 	0x867b: "meng2", // 虻
 	0x867c: "ge4", // 虼
 	0x867d: "sui1", // 虽
@@ -20516,7 +20540,7 @@ var readings = map[rune]string{
 	0x87a0: "yi4", // 螠
 	0x87a1: "wen2", // 螡
 	0x87a2: "ying2", // 螢
-	0x87a3: "te4", // 螣
+	0x87a3: "teng2", // 螣
 	0x87a4: "zhong1", // 螤
 	0x87a5: "cang1", // 螥
 	0x87a6: "sao1", // 螦
@@ -20792,7 +20816,7 @@ var readings = map[rune]string{
 	0x88b4: "ku4", // 袴
 	0x88b5: "ren4", // 袵
 	0x88b6: "jiang4", // 袶
-	0x88b7: "jia2", // 袷
+	0x88b7: "qia1", // 袷
 	0x88b8: "jian4", // 袸
 	0x88b9: "bo2", // 袹
 	0x88ba: "jie2", // 袺
@@ -21130,7 +21154,7 @@ var readings = map[rune]string{
 	0x8a06: "jiao4", // 訆
 	0x8a07: "hong1", // 訇
 	0x8a08: "ji4", // 計
-	0x8a09: "fan1", // 訉
+	0x8a09: "fan4", // 訉
 	0x8a0a: "xun4", // 訊
 	0x8a0b: "diao4", // 訋
 	0x8a0c: "hong4", // 訌
@@ -21183,7 +21207,7 @@ var readings = map[rune]string{
 	0x8a3b: "zhu4", // 註
 	0x8a3c: "zheng4", // 証
 	0x8a3d: "gou4", // 訽
-	0x8a3e: "zi1", // 訾
+	0x8a3e: "zi3", // 訾
 	0x8a3f: "zi3", // 訿
 	0x8a40: "zhan1", // 詀
 	0x8a41: "gu3", // 詁
@@ -21534,7 +21558,7 @@ var readings = map[rune]string{
 	0x8b9a: "zan4", // 讚
 	0x8b9b: "yi4", // 讛
 	0x8b9c: "dang3", // 讜
-	0x8b9d: "zhan2", // 讝
+	0x8b9d: "zhan1", // 讝
 	0x8b9e: "yan4", // 讞
 	0x8b9f: "du2", // 讟
 	0x8ba0: "yan2", // 讠
@@ -21566,7 +21590,7 @@ var readings = map[rune]string{
 	0x8bba: "lun4", // 论
 	0x8bbb: "xiong1", // 讻
 	0x8bbc: "song4", // 讼
-	0x8bbd: "feng4", // 讽
+	0x8bbd: "feng3", // 讽
 	0x8bbe: "she4", // 设
 	0x8bbf: "fang3", // 访
 	0x8bc0: "jue2", // 诀
@@ -21575,7 +21599,7 @@ var readings = map[rune]string{
 	0x8bc3: "he1", // 诃
 	0x8bc4: "ping2", // 评
 	0x8bc5: "zu3", // 诅
-	0x8bc6: "shi4", // 识
+	0x8bc6: "shi2", // 识
 	0x8bc7: "xiong4", // 诇
 	0x8bc8: "zha4", // 诈
 	0x8bc9: "su4", // 诉
@@ -21593,7 +21617,7 @@ var readings = map[rune]string{
 	0x8bd5: "shi4", // 试
 	0x8bd6: "gua4", // 诖
 	0x8bd7: "shi1", // 诗
-	0x8bd8: "ji2", // 诘
+	0x8bd8: "jie2", // 诘
 	0x8bd9: "hui1", // 诙
 	0x8bda: "cheng2", // 诚
 	0x8bdb: "zhu1", // 诛
@@ -21605,7 +21629,7 @@ var readings = map[rune]string{
 	0x8be1: "gui3", // 诡
 	0x8be2: "xun2", // 询
 	0x8be3: "yi4", // 诣
-	0x8be4: "zheng1", // 诤
+	0x8be4: "zheng4", // 诤
 	0x8be5: "gai1", // 该
 	0x8be6: "xiang2", // 详
 	0x8be7: "cha4", // 诧
@@ -21662,7 +21686,7 @@ var readings = map[rune]string{
 	0x8c1a: "yan4", // 谚
 	0x8c1b: "di4", // 谛
 	0x8c1c: "mi2", // 谜
-	0x8c1d: "pian2", // 谝
+	0x8c1d: "pian3", // 谝
 	0x8c1e: "xu1", // 谞
 	0x8c1f: "mo2", // 谟
 	0x8c20: "dang3", // 谠
@@ -21674,7 +21698,7 @@ var readings = map[rune]string{
 	0x8c26: "qian1", // 谦
 	0x8c27: "mi4", // 谧
 	0x8c28: "jin3", // 谨
-	0x8c29: "man2", // 谩
+	0x8c29: "man4", // 谩
 	0x8c2a: "zhe2", // 谪
 	0x8c2b: "jian3", // 谫
 	0x8c2c: "miu4", // 谬
@@ -21706,7 +21730,7 @@ var readings = map[rune]string{
 	0x8c46: "dou4", // 豆
 	0x8c47: "jiang1", // 豇
 	0x8c48: "qi3", // 豈
-	0x8c49: "shi4", // 豉
+	0x8c49: "chi3", // 豉
 	0x8c4a: "li3", // 豊
 	0x8c4b: "deng1", // 豋
 	0x8c4c: "wan1", // 豌
@@ -22085,7 +22109,7 @@ var readings = map[rune]string{
 	0x8dc1: "ba4", // 跁
 	0x8dc2: "qi2", // 跂
 	0x8dc3: "yue4", // 跃
-	0x8dc4: "qiang1", // 跄
+	0x8dc4: "qiang4", // 跄
 	0x8dc5: "tuo4", // 跅
 	0x8dc6: "tai2", // 跆
 	0x8dc7: "yi4", // 跇
@@ -22135,7 +22159,7 @@ var readings = map[rune]string{
 	0x8df3: "tiao4", // 跳
 	0x8df4: "cai3", // 跴
 	0x8df5: "jian4", // 践
-	0x8df6: "da2", // 跶
+	0x8df6: "da5", // 跶
 	0x8df7: "qiao1", // 跷
 	0x8df8: "bi4", // 跸
 	0x8df9: "xian1", // 跹
@@ -22154,7 +22178,7 @@ var readings = map[rune]string{
 	0x8e06: "cun1", // 踆
 	0x8e07: "mu3", // 踇
 	0x8e08: "shu1", // 踈
-	0x8e09: "liang2", // 踉
+	0x8e09: "liang4", // 踉
 	0x8e0a: "yong3", // 踊
 	0x8e0b: "jiao3", // 踋
 	0x8e0c: "chou2", // 踌
@@ -22227,7 +22251,7 @@ var readings = map[rune]string{
 	0x8e4f: "ti2", // 蹏
 	0x8e50: "ji2", // 蹐
 	0x8e51: "nie4", // 蹑
-	0x8e52: "man2", // 蹒
+	0x8e52: "pan2", // 蹒
 	0x8e53: "liu1", // 蹓
 	0x8e54: "zan4", // 蹔
 	0x8e55: "bi4", // 蹕
@@ -22406,7 +22430,7 @@ var readings = map[rune]string{
 	0x8f02: "ju2", // 輂
 	0x8f03: "jiao4", // 較
 	0x8f04: "guang1", // 輄
-	0x8f05: "he2", // 輅
+	0x8f05: "lu4", // 輅
 	0x8f06: "kai3", // 輆
 	0x8f07: "quan2", // 輇
 	0x8f08: "zhou1", // 輈
@@ -22552,7 +22576,7 @@ var readings = map[rune]string{
 	0x8f94: "pei4", // 辔
 	0x8f95: "yuan2", // 辕
 	0x8f96: "xia2", // 辖
-	0x8f97: "nian3", // 辗
+	0x8f97: "zhan3", // 辗
 	0x8f98: "lu4", // 辘
 	0x8f99: "zhe2", // 辙
 	0x8f9a: "lin2", // 辚
@@ -22614,7 +22638,7 @@ var readings = map[rune]string{
 	0x8fd2: "hang2", // 迒
 	0x8fd3: "ya4", // 迓
 	0x8fd4: "fan3", // 返
-	0x8fd5: "wu4", // 迕
+	0x8fd5: "wu3", // 迕
 	0x8fd6: "da2", // 迖
 	0x8fd7: "e2", // 迗
 	0x8fd8: "hai2", // 还
@@ -22650,7 +22674,7 @@ var readings = map[rune]string{
 	0x8ff6: "you4", // 迶
 	0x8ff7: "mi2", // 迷
 	0x8ff8: "beng4", // 迸
-	0x8ff9: "ji1", // 迹
+	0x8ff9: "ji4", // 迹
 	0x8ffa: "nai3", // 迺
 	0x8ffb: "yi2", // 迻
 	0x8ffc: "jie2", // 迼
@@ -22748,14 +22772,14 @@ var readings = map[rune]string{
 	0x9058: "gou4", // 遘
 	0x9059: "yao2", // 遙
 	0x905a: "chou4", // 遚
-	0x905b: "liu2", // 遛
+	0x905b: "liu4", // 遛
 	0x905c: "xun4", // 遜
 	0x905d: "ta4", // 遝
 	0x905e: "di4", // 遞
 	0x905f: "chi2", // 遟
 	0x9060: "yuan3", // 遠
 	0x9061: "su4", // 遡
-	0x9062: "ta4", // 遢
+	0x9062: "ta5", // 遢
 	0x9063: "qian3", // 遣
 	0x9064: "ma3", // 遤
 	0x9065: "yao2", // 遥
@@ -22873,7 +22897,7 @@ var readings = map[rune]string{
 	0x90d5: "cheng2", // 郕
 	0x90d6: "dou4", // 郖
 	0x90d7: "xi1", // 郗
-	0x90d8: "lv2", // 郘
+	0x90d8: "lv3", // 郘
 	0x90d9: "fu3", // 郙
 	0x90da: "wu2", // 郚
 	0x90db: "fu2", // 郛
@@ -22979,7 +23003,7 @@ var readings = map[rune]string{
 	0x913f: "ji1", // 鄿
 	0x9140: "yan4", // 酀
 	0x9141: "chan2", // 酁
-	0x9142: "cuo2", // 酂
+	0x9142: "zan4", // 酂
 	0x9143: "ling2", // 酃
 	0x9144: "huan1", // 酄
 	0x9145: "xi1", // 酅
@@ -23011,11 +23035,11 @@ var readings = map[rune]string{
 	0x915f: "tian1", // 酟
 	0x9160: "qia3", // 酠
 	0x9161: "tuo2", // 酡
-	0x9162: "cu4", // 酢
+	0x9162: "zuo4", // 酢
 	0x9163: "han1", // 酣
 	0x9164: "gu1", // 酤
 	0x9165: "su1", // 酥
-	0x9166: "po4", // 酦
+	0x9166: "po1", // 酦
 	0x9167: "chou2", // 酧
 	0x9168: "zai4", // 酨
 	0x9169: "ming3", // 酩
@@ -23039,7 +23063,7 @@ var readings = map[rune]string{
 	0x917b: "zui4", // 酻
 	0x917c: "hai3", // 酼
 	0x917d: "yan4", // 酽
-	0x917e: "shai1", // 酾
+	0x917e: "shi1", // 酾
 	0x917f: "niang4", // 酿
 	0x9180: "wei2", // 醀
 	0x9181: "lu4", // 醁
@@ -23121,10 +23145,10 @@ var readings = map[rune]string{
 	0x91cd: "zhong4", // 重
 	0x91ce: "ye3", // 野
 	0x91cf: "liang4", // 量
-	0x91d0: "li2", // 釐
+	0x91d0: "xi1", // 釐
 	0x91d1: "jin1", // 金
 	0x91d2: "jin1", // 釒
-	0x91d3: "qiu2", // 釓
+	0x91d3: "ga2", // 釓
 	0x91d4: "yi3", // 釔
 	0x91d5: "liao3", // 釕
 	0x91d6: "dao1", // 釖
@@ -23177,7 +23201,7 @@ var readings = map[rune]string{
 	0x9205: "yue4", // 鈅
 	0x9206: "qian1", // 鈆
 	0x9207: "fu1", // 鈇
-	0x9208: "pi1", // 鈈
+	0x9208: "bu4", // 鈈
 	0x9209: "na4", // 鈉
 	0x920a: "xin1", // 鈊
 	0x920b: "e2", // 鈋
@@ -23259,7 +23283,7 @@ var readings = map[rune]string{
 	0x9257: "qian2", // 鉗
 	0x9258: "fu2", // 鉘
 	0x9259: "zhai3", // 鉙
-	0x925a: "liu3", // 鉚
+	0x925a: "mao3", // 鉚
 	0x925b: "qian1", // 鉛
 	0x925c: "fu2", // 鉜
 	0x925d: "li4", // 鉝
@@ -23292,7 +23316,7 @@ var readings = map[rune]string{
 	0x9278: "jiao3", // 鉸
 	0x9279: "chi3", // 鉹
 	0x927a: "er4", // 鉺
-	0x927b: "luo4", // 鉻
+	0x927b: "ge4", // 鉻
 	0x927c: "bing3", // 鉼
 	0x927d: "shi4", // 鉽
 	0x927e: "mou2", // 鉾
@@ -23401,7 +23425,7 @@ var readings = map[rune]string{
 	0x92e5: "zeng4", // 鋥
 	0x92e6: "ju1", // 鋦
 	0x92e7: "xian4", // 鋧
-	0x92e8: "tie3", // 鋨
+	0x92e8: "e2", // 鋨
 	0x92e9: "mang2", // 鋩
 	0x92ea: "pu4", // 鋪
 	0x92eb: "li2", // 鋫
@@ -23443,7 +23467,7 @@ var readings = map[rune]string{
 	0x930f: "ya1", // 錏
 	0x9310: "zhui1", // 錐
 	0x9311: "lei4", // 錑
-	0x9312: "ke1", // 錒
+	0x9312: "a1", // 錒
 	0x9313: "kong1", // 錓
 	0x9314: "ta4", // 錔
 	0x9315: "kun1", // 錕
@@ -23547,7 +23571,7 @@ var readings = map[rune]string{
 	0x9377: "kui2", // 鍷
 	0x9378: "hu2", // 鍸
 	0x9379: "xuan1", // 鍹
-	0x937a: "duo3", // 鍺
+	0x937a: "zhe3", // 鍺
 	0x937b: "jie2", // 鍻
 	0x937c: "zhen1", // 鍼
 	0x937d: "bian1", // 鍽
@@ -23854,7 +23878,7 @@ var readings = map[rune]string{
 	0x94aa: "kang4", // 钪
 	0x94ab: "fang1", // 钫
 	0x94ac: "huo3", // 钬
-	0x94ad: "tou3", // 钭
+	0x94ad: "dou3", // 钭
 	0x94ae: "niu3", // 钮
 	0x94af: "ba3", // 钯
 	0x94b0: "yu4", // 钰
@@ -23886,7 +23910,7 @@ var readings = map[rune]string{
 	0x94ca: "ta1", // 铊
 	0x94cb: "bi4", // 铋
 	0x94cc: "ni2", // 铌
-	0x94cd: "pi1", // 铍
+	0x94cd: "pi2", // 铍
 	0x94ce: "duo2", // 铎
 	0x94cf: "xing2", // 铏
 	0x94d0: "kao4", // 铐
@@ -23909,7 +23933,7 @@ var readings = map[rune]string{
 	0x94e1: "zha2", // 铡
 	0x94e2: "zhu1", // 铢
 	0x94e3: "xi3", // 铣
-	0x94e4: "ding4", // 铤
+	0x94e4: "ting3", // 铤
 	0x94e5: "diu1", // 铥
 	0x94e6: "xian1", // 铦
 	0x94e7: "hua2", // 铧
@@ -24039,7 +24063,7 @@ var readings = map[rune]string{
 	0x9563: "liao4", // 镣
 	0x9564: "pu2", // 镤
 	0x9565: "lu3", // 镥
-	0x9566: "dui4", // 镦
+	0x9566: "dun1", // 镦
 	0x9567: "lan2", // 镧
 	0x9568: "pu3", // 镨
 	0x9569: "cuan1", // 镩
@@ -24183,7 +24207,7 @@ var readings = map[rune]string{
 	0x95f3: "hong2", // 闳
 	0x95f4: "jian1", // 间
 	0x95f5: "min3", // 闵
-	0x95f6: "kang1", // 闶
+	0x95f6: "kang4", // 闶
 	0x95f7: "men4", // 闷
 	0x95f8: "zha2", // 闸
 	0x95f9: "nao4", // 闹
@@ -24199,7 +24223,7 @@ var readings = map[rune]string{
 	0x9603: "kun3", // 阃
 	0x9604: "jiu1", // 阄
 	0x9605: "yue4", // 阅
-	0x9606: "lang2", // 阆
+	0x9606: "lang4", // 阆
 	0x9607: "du1", // 阇
 	0x9608: "yu4", // 阈
 	0x9609: "yan1", // 阉
@@ -24208,7 +24232,7 @@ var readings = map[rune]string{
 	0x960c: "wen2", // 阌
 	0x960d: "hun1", // 阍
 	0x960e: "yan2", // 阎
-	0x960f: "e4", // 阏
+	0x960f: "yan1", // 阏
 	0x9610: "chan3", // 阐
 	0x9611: "lan2", // 阑
 	0x9612: "qu4", // 阒
@@ -24217,9 +24241,9 @@ var readings = map[rune]string{
 	0x9615: "que4", // 阕
 	0x9616: "he2", // 阖
 	0x9617: "tian2", // 阗
-	0x9618: "da2", // 阘
+	0x9618: "ta4", // 阘
 	0x9619: "que1", // 阙
-	0x961a: "han3", // 阚
+	0x961a: "kan4", // 阚
 	0x961b: "huan2", // 阛
 	0x961c: "fu4", // 阜
 	0x961d: "fu4", // 阝
@@ -24259,7 +24283,7 @@ var readings = map[rune]string{
 	0x963f: "a1", // 阿
 	0x9640: "tuo2", // 陀
 	0x9641: "tuo2", // 陁
-	0x9642: "bei1", // 陂
+	0x9642: "pi2", // 陂
 	0x9643: "bing3", // 陃
 	0x9644: "fu4", // 附
 	0x9645: "ji4", // 际
@@ -24344,7 +24368,7 @@ var readings = map[rune]string{
 	0x9694: "ge2", // 隔
 	0x9695: "yun3", // 隕
 	0x9696: "wu4", // 隖
-	0x9697: "kui2", // 隗
+	0x9697: "wei3", // 隗
 	0x9698: "ai4", // 隘
 	0x9699: "xi4", // 隙
 	0x969a: "tang2", // 隚
@@ -24379,7 +24403,7 @@ var readings = map[rune]string{
 	0x96b7: "li4", // 隷
 	0x96b8: "li4", // 隸
 	0x96b9: "zhui1", // 隹
-	0x96ba: "hu2", // 隺
+	0x96ba: "he4", // 隺
 	0x96bb: "zhi1", // 隻
 	0x96bc: "sun3", // 隼
 	0x96bd: "juan4", // 隽
@@ -24497,7 +24521,7 @@ var readings = map[rune]string{
 	0x972d: "ai3", // 霭
 	0x972e: "dan4", // 霮
 	0x972f: "teng4", // 霯
-	0x9730: "san3", // 霰
+	0x9730: "xian4", // 霰
 	0x9731: "yu4", // 霱
 	0x9732: "lu4", // 露
 	0x9733: "long2", // 霳
@@ -24840,7 +24864,7 @@ var readings = map[rune]string{
 	0x9884: "yu4", // 预
 	0x9885: "lu2", // 颅
 	0x9886: "ling3", // 领
-	0x9887: "po3", // 颇
+	0x9887: "po1", // 颇
 	0x9888: "jing3", // 颈
 	0x9889: "jie2", // 颉
 	0x988a: "jia2", // 颊
@@ -25064,7 +25088,7 @@ var readings = map[rune]string{
 	0x9964: "ding4", // 饤
 	0x9965: "ji1", // 饥
 	0x9966: "tuo1", // 饦
-	0x9967: "tang2", // 饧
+	0x9967: "xing2", // 饧
 	0x9968: "tun2", // 饨
 	0x9969: "xi4", // 饩
 	0x996a: "ren4", // 饪
@@ -25328,7 +25352,7 @@ var readings = map[rune]string{
 	0x9a6c: "ma3", // 马
 	0x9a6d: "yu4", // 驭
 	0x9a6e: "tuo2", // 驮
-	0x9a6f: "xun2", // 驯
+	0x9a6f: "xun4", // 驯
 	0x9a70: "chi2", // 驰
 	0x9a71: "qu1", // 驱
 	0x9a72: "ri4", // 驲
@@ -25869,7 +25893,7 @@ var readings = map[rune]string{
 	0x9c89: "you2", // 鲉
 	0x9c8a: "zha3", // 鲊
 	0x9c8b: "fu4", // 鲋
-	0x9c8c: "ba4", // 鲌
+	0x9c8c: "bo2", // 鲌
 	0x9c8d: "bao4", // 鲍
 	0x9c8e: "hou4", // 鲎
 	0x9c8f: "pi2", // 鲏
@@ -26021,7 +26045,7 @@ var readings = map[rune]string{
 	0x9d21: "ju1", // 鴡
 	0x9d22: "yao3", // 鴢
 	0x9d23: "gu1", // 鴣
-	0x9d24: "dong1", // 鴤
+	0x9d24: "zhong1", // 鴤
 	0x9d25: "yu4", // 鴥
 	0x9d26: "yang1", // 鴦
 	0x9d27: "yu4", // 鴧
@@ -26241,7 +26265,7 @@ var readings = map[rune]string{
 	0x9dfd: "xue2", // 鷽
 	0x9dfe: "yi4", // 鷾
 	0x9dff: "pi4", // 鷿
-	0x9e00: "chu3", // 鸀
+	0x9e00: "shu3", // 鸀
 	0x9e01: "luo2", // 鸁
 	0x9e02: "xi1", // 鸂
 	0x9e03: "yi2", // 鸃
@@ -26495,7 +26519,7 @@ var readings = map[rune]string{
 	0x9efb: "fu2", // 黻
 	0x9efc: "fu3", // 黼
 	0x9efd: "mian3", // 黽
-	0x9efe: "mian3", // 黾
+	0x9efe: "min3", // 黾
 	0x9eff: "yuan2", // 黿
 	0x9f00: "cu4", // 鼀
 	0x9f01: "qu4", // 鼁
@@ -26633,7 +26657,7 @@ var readings = map[rune]string{
 	0x9f85: "bao1", // 龅
 	0x9f86: "tiao2", // 龆
 	0x9f87: "zi1", // 龇
-	0x9f88: "ken3", // 龈
+	0x9f88: "yin2", // 龈
 	0x9f89: "yu3", // 龉
 	0x9f8a: "chuo4", // 龊
 	0x9f8b: "qu3", // 龋
@@ -26663,12 +26687,39 @@ var readings = map[rune]string{
 	0x9fa3: "jue2", // 龣
 	0x9fa4: "xie2", // 龤
 	0x9fa5: "yu4", // 龥
+	0x9faa: "zhan1", // 龪
+	0x9fac: "wang3", // 龬
+	0x9fb0: "zou3", // 龰
+	0x9fb5: "shou3", // 龵
+	0x9fbb: "luan2", // 龻
 	0x9fc3: "shan3", // 鿃
+	0x9fc4: "liang2", // 鿄
+	0x9fc7: "zheng1", // 鿇
+	0x9fcc: "liang2", // 鿌
 	0x9fcd: "gang4", // 鿍
 	0x9fce: "ta3", // 鿎
 	0x9fcf: "mai4", // 鿏
 	0x9fd4: "ge1", // 鿔
 	0x9fd5: "dan1", // 鿕
+	0x9feb: "ao4", // 鿫
+	0x9fec: "tian2", // 鿬
+	0x9fed: "ni3", // 鿭
+	0x9ff0: "han2", // 鿰
+	0x9ff1: "ba1", // 鿱
+	0x9ff2: "lao2", // 鿲
+	0x9ff3: "tuo4", // 鿳
+	0x9ff4: "dong1", // 鿴
+	0x9ff5: "zhi4", // 鿵
+	0x9ff6: "lang2", // 鿶
+	0x9ff7: "an4", // 鿷
+	0x9ff8: "tuo4", // 鿸
+	0x9ff9: "mi4", // 鿹
+	0x9ffa: "mai4", // 鿺
+	0x9ffb: "bu4", // 鿻
+	0x9ffc: "jia1", // 鿼
+	0x9ffe: "lang4", // 鿾
+	0x9fff: "xing4", // 鿿
+	0xfa18: "li3", // 礼
 	0x20000: "he1", // 𠀀
 	0x20001: "qi1", // 𠀁
 	0x20003: "qie3", // 𠀃
@@ -26688,6 +26739,7 @@ var readings = map[rune]string{
 	0x20039: "jun1", // 𠀹
 	0x2003c: "qian2", // 𠀼
 	0x2003d: "lu4", // 𠀽
+	0x20041: "dou4", // 𠁁
 	0x20049: "chu1", // 𠁉
 	0x20057: "shi4", // 𠁗
 	0x20060: "qie4", // 𠁠
@@ -26700,6 +26752,7 @@ var readings = map[rune]string{
 	0x20088: "jie2", // 𠂈
 	0x20091: "zou1", // 𠂑
 	0x20094: "zi3", // 𠂔
+	0x2009d: "za1", // 𠂝
 	0x2009f: "jin1", // 𠂟
 	0x200a2: "pai4", // 𠂢
 	0x200a4: "dui1", // 𠂤
@@ -26708,6 +26761,7 @@ var readings = map[rune]string{
 	0x200b8: "huang2", // 𠂸
 	0x200ca: "yin3", // 𠃊
 	0x200cc: "gun3", // 𠃌
+	0x200d3: "yang2", // 𠃓
 	0x200d6: "jiu1", // 𠃖
 	0x200eb: "shen1", // 𠃫
 	0x200fa: "jiu4", // 𠃺
@@ -26728,6 +26782,7 @@ var readings = map[rune]string{
 	0x2014c: "yi2", // 𠅌
 	0x20157: "die4", // 𠅗
 	0x2015a: "qi2", // 𠅚
+	0x20164: "xi2", // 𠅤
 	0x2016c: "bao1", // 𠅬
 	0x20171: "xie4", // 𠅱
 	0x20179: "zhang4", // 𠅹
@@ -26745,6 +26800,7 @@ var readings = map[rune]string{
 	0x201b6: "dan4", // 𠆶
 	0x201cb: "dan3", // 𠇋
 	0x201cf: "tao1", // 𠇏
+	0x201d0: "yu2", // 𠇐
 	0x201d2: "gong1", // 𠇒
 	0x201d7: "kua1", // 𠇗
 	0x201d8: "chu4", // 𠇘
@@ -26753,6 +26809,7 @@ var readings = map[rune]string{
 	0x201f3: "shi1", // 𠇳
 	0x201f5: "gan3", // 𠇵
 	0x201f7: "sheng1", // 𠇷
+	0x201f9: "jing4", // 𠇹
 	0x20201: "tuo1", // 𠈁
 	0x20205: "shou1", // 𠈅
 	0x2020a: "nie3", // 𠈊
@@ -27223,6 +27280,7 @@ var readings = map[rune]string{
 	0x2085c: "ke4", // 𠡜
 	0x2085d: "yi4", // 𠡝
 	0x2085e: "mo4", // 𠡞
+	0x20860: "chi4", // 𠡠
 	0x20861: "can2", // 𠡡
 	0x20863: "geng3", // 𠡣
 	0x20864: "ke4", // 𠡤
@@ -27270,7 +27328,6 @@ var readings = map[rune]string{
 	0x208d6: "xuan2", // 𠣖
 	0x208d8: "zhou1", // 𠣘
 	0x208e0: "kui4", // 𠣠
-	0x208e1: "feng4", // 𠣡
 	0x208ea: "qu2", // 𠣪
 	0x208eb: "shao4", // 𠣫
 	0x208ec: "sun3", // 𠣬
@@ -27436,6 +27493,7 @@ var readings = map[rune]string{
 	0x20b1d: "fu2", // 𠬝
 	0x20b22: "tao1", // 𠬢
 	0x20b23: "bang4", // 𠬣
+	0x20b24: "yi4", // 𠬤
 	0x20b2a: "biao4", // 𠬪
 	0x20b2c: "xi1", // 𠬬
 	0x20b2e: "jie2", // 𠬮
@@ -27519,6 +27577,7 @@ var readings = map[rune]string{
 	0x20c1b: "hu4", // 𠰛
 	0x20c1c: "e4", // 𠰜
 	0x20c34: "shi2", // 𠰴
+	0x20c37: "lu2", // 𠰷
 	0x20c39: "tuo1", // 𠰹
 	0x20c3a: "dai4", // 𠰺
 	0x20c3b: "wai4", // 𠰻
@@ -27584,6 +27643,7 @@ var readings = map[rune]string{
 	0x20ccc: "qia4", // 𠳌
 	0x20cce: "si4", // 𠳎
 	0x20cd0: "bang1", // 𠳐
+	0x20cde: "que4", // 𠳞
 	0x20cec: "jing1", // 𠳬
 	0x20ced: "ke4", // 𠳭
 	0x20cf3: "ai1", // 𠳳
@@ -27993,6 +28053,7 @@ var readings = map[rune]string{
 	0x21213: "yuan4", // 𡈓
 	0x21217: "mo4", // 𡈗
 	0x21219: "you2", // 𡈙
+	0x2121b: "yuan1", // 𡈛
 	0x2121e: "wu3", // 𡈞
 	0x21220: "zhang1", // 𡈠
 	0x21223: "xuan1", // 𡈣
@@ -28032,6 +28093,7 @@ var readings = map[rune]string{
 	0x21285: "fen4", // 𡊅
 	0x21289: "mo4", // 𡊉
 	0x2128d: "shu4", // 𡊍
+	0x21291: "xi3", // 𡊑
 	0x2129b: "ao2", // 𡊛
 	0x2129d: "pi3", // 𡊝
 	0x2129e: "ping2", // 𡊞
@@ -28050,6 +28112,7 @@ var readings = map[rune]string{
 	0x212d9: "hui2", // 𡋙
 	0x212da: "ji4", // 𡋚
 	0x212df: "gao4", // 𡋟
+	0x212e4: "jin4", // 𡋤
 	0x212e7: "you2", // 𡋧
 	0x212e8: "cha1", // 𡋨
 	0x212e9: "de2", // 𡋩
@@ -28336,6 +28399,7 @@ var readings = map[rune]string{
 	0x21767: "xi4", // 𡝧
 	0x21769: "yao1", // 𡝩
 	0x2176b: "chan1", // 𡝫
+	0x2178b: "can1", // 𡞋
 	0x21798: "xie4", // 𡞘
 	0x21799: "mie4", // 𡞙
 	0x2179a: "keng3", // 𡞚
@@ -28383,6 +28447,7 @@ var readings = map[rune]string{
 	0x2181a: "bi4", // 𡠚
 	0x2181c: "mo2", // 𡠜
 	0x2181e: "fu2", // 𡠞
+	0x2181f: "zhu2", // 𡠟
 	0x21825: "qiang2", // 𡠥
 	0x21839: "zhi4", // 𡠹
 	0x2183c: "sou1", // 𡠼
@@ -28451,6 +28516,7 @@ var readings = map[rune]string{
 	0x2194e: "ci2", // 𡥎
 	0x2195e: "ji4", // 𡥞
 	0x21966: "ni3", // 𡥦
+	0x21967: "jin4", // 𡥧
 	0x21968: "ni3", // 𡥨
 	0x21969: "ti3", // 𡥩
 	0x21976: "ju4", // 𡥶
@@ -28720,6 +28786,7 @@ var readings = map[rune]string{
 	0x21d5a: "jie4", // 𡵚
 	0x21d5b: "fu4", // 𡵛
 	0x21d5c: "yong4", // 𡵜
+	0x21d5d: "zong1", // 𡵝
 	0x21d5e: "feng1", // 𡵞
 	0x21d6c: "mu4", // 𡵬
 	0x21d76: "se4", // 𡵶
@@ -28826,6 +28893,7 @@ var readings = map[rune]string{
 	0x21e79: "hu2", // 𡹹
 	0x21e7c: "an4", // 𡹼
 	0x21e7e: "bing3", // 𡹾
+	0x21e83: "qiang1", // 𡺃
 	0x21e87: "duo3", // 𡺇
 	0x21e90: "zhu3", // 𡺐
 	0x21e91: "die2", // 𡺑
@@ -28905,6 +28973,7 @@ var readings = map[rune]string{
 	0x21f49: "ji4", // 𡽉
 	0x21f4a: "cheng1", // 𡽊
 	0x21f56: "xie4", // 𡽖
+	0x21f57: "xian3", // 𡽗
 	0x21f5b: "zui3", // 𡽛
 	0x21f5c: "an2", // 𡽜
 	0x21f5d: "hao1", // 𡽝
@@ -29508,6 +29577,7 @@ var readings = map[rune]string{
 	0x225c9: "ne4", // 𢗉
 	0x225ca: "xie4", // 𢗊
 	0x225ce: "yi4", // 𢗎
+	0x225d3: "yu3", // 𢗓
 	0x225eb: "fu3", // 𢗫
 	0x225ed: "she4", // 𢗭
 	0x225ef: "yuan2", // 𢗯
@@ -29529,6 +29599,7 @@ var readings = map[rune]string{
 	0x2260b: "te4", // 𢘋
 	0x2260c: "hong2", // 𢘌
 	0x2260d: "bi4", // 𢘍
+	0x22619: "long3", // 𢘙
 	0x2261d: "ni3", // 𢘝
 	0x2261f: "qiao2", // 𢘟
 	0x22627: "ruan3", // 𢘧
@@ -29542,6 +29613,8 @@ var readings = map[rune]string{
 	0x22645: "xi2", // 𢙅
 	0x22647: "yi3", // 𢙇
 	0x22650: "nao2", // 𢙐
+	0x22651: "mai2", // 𢙑
+	0x22652: "xiao1", // 𢙒
 	0x22653: "wei4", // 𢙓
 	0x2266e: "kan4", // 𢙮
 	0x22671: "long4", // 𢙱
@@ -29630,7 +29703,7 @@ var readings = map[rune]string{
 	0x22774: "wu4", // 𢝴
 	0x22778: "guo4", // 𢝸
 	0x22779: "ti4", // 𢝹
-	0x2277b: "hong1", // 𢝻
+	0x2277b: "hu1", // 𢝻
 	0x22787: "re3", // 𢞇
 	0x22789: "yi2", // 𢞉
 	0x2278b: "tun3", // 𢞋
@@ -29667,6 +29740,7 @@ var readings = map[rune]string{
 	0x227f3: "lv4", // 𢟳
 	0x227f4: "tui2", // 𢟴
 	0x227f5: "bi1", // 𢟵
+	0x227fc: "meng2", // 𢟼
 	0x227fe: "hui4", // 𢟾
 	0x227ff: "huan2", // 𢟿
 	0x2281b: "kuo4", // 𢠛
@@ -29728,6 +29802,7 @@ var readings = map[rune]string{
 	0x228de: "bo2", // 𢣞
 	0x228e0: "liu4", // 𢣠
 	0x228f3: "rui4", // 𢣳
+	0x228f5: "chu2", // 𢣵
 	0x228fb: "lv2", // 𢣻
 	0x228fc: "cha2", // 𢣼
 	0x228ff: "chu4", // 𢣿
@@ -29786,6 +29861,7 @@ var readings = map[rune]string{
 	0x229c7: "shu2", // 𢧇
 	0x229c8: "zhuo2", // 𢧈
 	0x229cf: "shi1", // 𢧏
+	0x229d0: "zhan4", // 𢧐
 	0x229d1: "ti4", // 𢧑
 	0x229d6: "zha2", // 𢧖
 	0x229d7: "zhan1", // 𢧗
@@ -29862,6 +29938,7 @@ var readings = map[rune]string{
 	0x22a8d: "jie2", // 𢪍
 	0x22a8e: "xue1", // 𢪎
 	0x22a8f: "hu2", // 𢪏
+	0x22a93: "yu2", // 𢪓
 	0x22aa5: "you3", // 𢪥
 	0x22aa6: "nu3", // 𢪦
 	0x22aa7: "ye4", // 𢪧
@@ -29874,6 +29951,7 @@ var readings = map[rune]string{
 	0x22ad0: "jie2", // 𢫐
 	0x22ad3: "nu3", // 𢫓
 	0x22ad4: "shan4", // 𢫔
+	0x22ad8: "lu2", // 𢫘
 	0x22ae2: "jia2", // 𢫢
 	0x22ae7: "zhou3", // 𢫧
 	0x22ae8: "rong3", // 𢫨
@@ -29890,6 +29968,7 @@ var readings = map[rune]string{
 	0x22afb: "nie2", // 𢫻
 	0x22aff: "xian1", // 𢫿
 	0x22b00: "hong2", // 𢬀
+	0x22b0d: "ye4", // 𢬍
 	0x22b2b: "ting4", // 𢬫
 	0x22b2c: "jin3", // 𢬬
 	0x22b31: "jie2", // 𢬱
@@ -30026,6 +30105,7 @@ var readings = map[rune]string{
 	0x22d47: "yang4", // 𢵇
 	0x22d48: "jian3", // 𢵈
 	0x22d65: "zao4", // 𢵥
+	0x22d6e: "lu1", // 𢵮
 	0x22d80: "zhuai4", // 𢶀
 	0x22d83: "fan2", // 𢶃
 	0x22d85: "she2", // 𢶅
@@ -30287,6 +30367,7 @@ var readings = map[rune]string{
 	0x230b5: "zhuan4", // 𣂵
 	0x230bb: "ou1", // 𣂻
 	0x230bd: "wo4", // 𣂽
+	0x230c1: "zhu2", // 𣃁
 	0x230c4: "xin1", // 𣃄
 	0x230c5: "ruan3", // 𣃅
 	0x230c8: "zhuo2", // 𣃈
@@ -30378,6 +30459,7 @@ var readings = map[rune]string{
 	0x2320e: "wei4", // 𣈎
 	0x23220: "bian4", // 𣈠
 	0x23221: "ti3", // 𣈡
+	0x23223: "ying4", // 𣈣
 	0x23225: "tu2", // 𣈥
 	0x23236: "geng4", // 𣈶
 	0x23244: "chi2", // 𣉄
@@ -30397,6 +30479,7 @@ var readings = map[rune]string{
 	0x23269: "ya4", // 𣉩
 	0x2326a: "huang3", // 𣉪
 	0x2326e: "bin1", // 𣉮
+	0x2327c: "ai4", // 𣉼
 	0x2327e: "ou4", // 𣉾
 	0x2327f: "cao2", // 𣉿
 	0x23281: "ao2", // 𣊁
@@ -30482,6 +30565,7 @@ var readings = map[rune]string{
 	0x233df: "pai4", // 𣏟
 	0x233e0: "xiao2", // 𣏠
 	0x233e1: "ji2", // 𣏡
+	0x233e2: "tuan2", // 𣏢
 	0x233f6: "qi1", // 𣏶
 	0x233f7: "he2", // 𣏷
 	0x233fa: "kong3", // 𣏺
@@ -30493,6 +30577,7 @@ var readings = map[rune]string{
 	0x2340f: "nian3", // 𣐏
 	0x23411: "ci2", // 𣐑
 	0x23413: "yi2", // 𣐓
+	0x23415: "jing4", // 𣐕
 	0x23424: "jiu5", // 𣐤
 	0x2342b: "yang1", // 𣐫
 	0x2342c: "li2", // 𣐬
@@ -30504,6 +30589,7 @@ var readings = map[rune]string{
 	0x23441: "chong4", // 𣑁
 	0x23442: "hu4", // 𣑂
 	0x23443: "zhua3", // 𣑃
+	0x2345d: "tuan2", // 𣑝
 	0x23466: "qiong2", // 𣑦
 	0x23467: "duo4", // 𣑧
 	0x23478: "tong2", // 𣑸
@@ -30515,6 +30601,8 @@ var readings = map[rune]string{
 	0x23485: "zhen4", // 𣒅
 	0x23486: "qiao4", // 𣒆
 	0x23487: "tu1", // 𣒇
+	0x2348c: "guo1", // 𣒌
+	0x23497: "que4", // 𣒗
 	0x234b7: "han4", // 𣒷
 	0x234b8: "kuang4", // 𣒸
 	0x234b9: "suo1", // 𣒹
@@ -30537,6 +30625,7 @@ var readings = map[rune]string{
 	0x234d7: "hu1", // 𣓗
 	0x234db: "you4", // 𣓛
 	0x234dd: "meng3", // 𣓝
+	0x234ff: "lao4", // 𣓿
 	0x23510: "zhi3", // 𣔐
 	0x23513: "bi3", // 𣔓
 	0x23517: "shen1", // 𣔗
@@ -30557,6 +30646,7 @@ var readings = map[rune]string{
 	0x23539: "hou2", // 𣔹
 	0x2353a: "mao4", // 𣔺
 	0x2353b: "tu2", // 𣔻
+	0x2353c: "gan1", // 𣔼
 	0x2353d: "ji4", // 𣔽
 	0x23541: "yi2", // 𣕁
 	0x23543: "yu4", // 𣕃
@@ -30568,6 +30658,7 @@ var readings = map[rune]string{
 	0x2354d: "sun3", // 𣕍
 	0x2354e: "xian3", // 𣕎
 	0x2354f: "zhuan3", // 𣕏
+	0x23572: "heng2", // 𣕲
 	0x2357e: "chou2", // 𣕾
 	0x23584: "qiao1", // 𣖄
 	0x23585: "ti2", // 𣖅
@@ -30597,6 +30688,7 @@ var readings = map[rune]string{
 	0x235be: "bei4", // 𣖾
 	0x235bf: "zhi2", // 𣖿
 	0x235c1: "dun4", // 𣗁
+	0x235ca: "man2", // 𣗊
 	0x235cb: "dang3", // 𣗋
 	0x235d0: "reng2", // 𣗐
 	0x235f2: "gan1", // 𣗲
@@ -30606,6 +30698,7 @@ var readings = map[rune]string{
 	0x235f9: "yang4", // 𣗹
 	0x235fa: "ku1", // 𣗺
 	0x235fb: "zhi4", // 𣗻
+	0x23610: "ji2", // 𣘐
 	0x23616: "jian1", // 𣘖
 	0x23617: "ni4", // 𣘗
 	0x23618: "shen1", // 𣘘
@@ -30662,6 +30755,7 @@ var readings = map[rune]string{
 	0x23696: "an1", // 𣚖
 	0x23698: "yi4", // 𣚘
 	0x23699: "jian1", // 𣚙
+	0x2369a: "zhu2", // 𣚚
 	0x2369c: "song1", // 𣚜
 	0x2369d: "wo3", // 𣚝
 	0x2369f: "se4", // 𣚟
@@ -30998,6 +31092,7 @@ var readings = map[rune]string{
 	0x23a36: "hui4", // 𣨶
 	0x23a3a: "gu3", // 𣨺
 	0x23a3b: "kao3", // 𣨻
+	0x23a3c: "ti4", // 𣨼
 	0x23a3e: "xing1", // 𣨾
 	0x23a3f: "hun2", // 𣨿
 	0x23a40: "bian1", // 𣩀
@@ -31150,6 +31245,7 @@ var readings = map[rune]string{
 	0x23bd0: "rong2", // 𣯐
 	0x23bda: "ta4", // 𣯚
 	0x23bdc: "sou1", // 𣯜
+	0x23be3: "men2", // 𣯣
 	0x23be4: "li2", // 𣯤
 	0x23be7: "cui3", // 𣯧
 	0x23be8: "zong1", // 𣯨
@@ -31161,6 +31257,7 @@ var readings = map[rune]string{
 	0x23bf1: "pei2", // 𣯱
 	0x23bf4: "bi4", // 𣯴
 	0x23bf5: "di4", // 𣯵
+	0x23bf6: "san1", // 𣯶
 	0x23bf8: "qu2", // 𣯸
 	0x23bf9: "qiao2", // 𣯹
 	0x23bfb: "fen1", // 𣯻
@@ -31198,6 +31295,7 @@ var readings = map[rune]string{
 	0x23c53: "xiao4", // 𣱓
 	0x23c57: "ji4", // 𣱗
 	0x23c5c: "yin1", // 𣱜
+	0x23c5d: "dong1", // 𣱝
 	0x23c66: "fen1", // 𣱦
 	0x23c67: "zhong4", // 𣱧
 	0x23c6b: "gu3", // 𣱫
@@ -31233,6 +31331,7 @@ var readings = map[rune]string{
 	0x23cbe: "guai4", // 𣲾
 	0x23cc0: "zhi2", // 𣳀
 	0x23cc3: "ji2", // 𣳃
+	0x23cc6: "ping2", // 𣳆
 	0x23cdc: "fan4", // 𣳜
 	0x23cdf: "jie2", // 𣳟
 	0x23ce0: "hai3", // 𣳠
@@ -31389,6 +31488,7 @@ var readings = map[rune]string{
 	0x23f73: "ruan2", // 𣽳
 	0x23f74: "wei4", // 𣽴
 	0x23f77: "si4", // 𣽷
+	0x23f8d: "lian2", // 𣾍
 	0x23fa4: "qi4", // 𣾤
 	0x23fa6: "zhang3", // 𣾦
 	0x23fc5: "dong3", // 𣿅
@@ -31511,6 +31611,7 @@ var readings = map[rune]string{
 	0x2419e: "xu4", // 𤆞
 	0x2419f: "si1", // 𤆟
 	0x241a1: "wu3", // 𤆡
+	0x241a2: "lun2", // 𤆢
 	0x241ae: "fu1", // 𤆮
 	0x241b0: "shi4", // 𤆰
 	0x241b3: "hui4", // 𤆳
@@ -31523,6 +31624,7 @@ var readings = map[rune]string{
 	0x241dc: "min2", // 𤇜
 	0x241de: "ge1", // 𤇞
 	0x241e0: "hu1", // 𤇠
+	0x241ed: "long2", // 𤇭
 	0x241ef: "en1", // 𤇯
 	0x241f0: "fa2", // 𤇰
 	0x241f3: "xu4", // 𤇳
@@ -31586,6 +31688,7 @@ var readings = map[rune]string{
 	0x24355: "you3", // 𤍕
 	0x24356: "jian1", // 𤍖
 	0x2435c: "zao4", // 𤍜
+	0x24360: "re4", // 𤍠
 	0x24364: "zhang1", // 𤍤
 	0x2437d: "ruo4", // 𤍽
 	0x24384: "yan1", // 𤎄
@@ -31600,6 +31703,7 @@ var readings = map[rune]string{
 	0x243af: "zeng1", // 𤎯
 	0x243b1: "juan3", // 𤎱
 	0x243b2: "hu1", // 𤎲
+	0x243bb: "xiao1", // 𤎻
 	0x243d7: "shen3", // 𤏗
 	0x243d8: "huo4", // 𤏘
 	0x243dc: "kui4", // 𤏜
@@ -31651,6 +31755,7 @@ var readings = map[rune]string{
 	0x24500: "na2", // 𤔀
 	0x24509: "pao2", // 𤔉
 	0x2450b: "ju4", // 𤔋
+	0x24514: "luan4", // 𤔔
 	0x24516: "luo3", // 𤔖
 	0x24519: "shua3", // 𤔙
 	0x2451a: "shang4", // 𤔚
@@ -31787,6 +31892,7 @@ var readings = map[rune]string{
 	0x24664: "fu1", // 𤙤
 	0x24669: "jie4", // 𤙩
 	0x2466d: "fu3", // 𤙭
+	0x2466f: "lao2", // 𤙯
 	0x24670: "te4", // 𤙰
 	0x24671: "she4", // 𤙱
 	0x24674: "chao1", // 𤙴
@@ -31903,6 +32009,7 @@ var readings = map[rune]string{
 	0x2475b: "tuo2", // 𤝛
 	0x2475e: "chu4", // 𤝞
 	0x2475f: "fu2", // 𤝟
+	0x24762: "ze2", // 𤝢
 	0x24767: "bao4", // 𤝧
 	0x2476c: "di3", // 𤝬
 	0x2476d: "cai3", // 𤝭
@@ -31918,6 +32025,7 @@ var readings = map[rune]string{
 	0x2477d: "lv4", // 𤝽
 	0x2477f: "kuang1", // 𤝿
 	0x24782: "zhi4", // 𤞂
+	0x24783: "hui4", // 𤞃
 	0x24787: "wa2", // 𤞇
 	0x24788: "di1", // 𤞈
 	0x24789: "shu4", // 𤞉
@@ -32388,6 +32496,7 @@ var readings = map[rune]string{
 	0x24d80: "jiao3", // 𤶀
 	0x24d81: "lao3", // 𤶁
 	0x24d88: "xi1", // 𤶈
+	0x24d8a: "gui4", // 𤶊
 	0x24d8b: "bo2", // 𤶋
 	0x24d93: "zhi3", // 𤶓
 	0x24d95: "tun4", // 𤶕
@@ -32497,6 +32606,7 @@ var readings = map[rune]string{
 	0x24e75: "dui1", // 𤹵
 	0x24e77: "dao3", // 𤹷
 	0x24e78: "qi2", // 𤹸
+	0x24e7a: "e4", // 𤹺
 	0x24e80: "shuai1", // 𤺀
 	0x24e83: "xiao1", // 𤺃
 	0x24e84: "zhong3", // 𤺄
@@ -32526,6 +32636,7 @@ var readings = map[rune]string{
 	0x24ec5: "wei4", // 𤻅
 	0x24ec6: "wan2", // 𤻆
 	0x24ec7: "chu3", // 𤻇
+	0x24eca: "tui2", // 𤻊
 	0x24ecc: "wo4", // 𤻌
 	0x24ed6: "bi4", // 𤻖
 	0x24ed8: "yin3", // 𤻘
@@ -32629,6 +32740,7 @@ var readings = map[rune]string{
 	0x24fe9: "que4", // 𤿩
 	0x24feb: "chuo4", // 𤿫
 	0x24fed: "fu3", // 𤿭
+	0x24ff2: "fu1", // 𤿲
 	0x24ff3: "qin3", // 𤿳
 	0x24ff4: "lu4", // 𤿴
 	0x24ff5: "que4", // 𤿵
@@ -32687,6 +32799,7 @@ var readings = map[rune]string{
 	0x25075: "chong1", // 𥁵
 	0x25078: "quan1", // 𥁸
 	0x25079: "she4", // 𥁹
+	0x25081: "yan2", // 𥂁
 	0x25082: "meng3", // 𥂂
 	0x25083: "ju4", // 𥂃
 	0x2508b: "tu2", // 𥂋
@@ -33022,6 +33135,7 @@ var readings = map[rune]string{
 	0x25398: "ruan3", // 𥎘
 	0x2539b: "gui4", // 𥎛
 	0x2539c: "rong3", // 𥎜
+	0x2539d: "zuan3", // 𥎝
 	0x2539f: "mao2", // 𥎟
 	0x253a1: "qin2", // 𥎡
 	0x253a2: "cuan4", // 𥎢
@@ -33183,6 +33297,7 @@ var readings = map[rune]string{
 	0x25559: "hei1", // 𥕙
 	0x25562: "cao2", // 𥕢
 	0x25563: "zhe2", // 𥕣
+	0x25564: "ke1", // 𥕤
 	0x25566: "gun3", // 𥕦
 	0x25570: "xu1", // 𥕰
 	0x25571: "peng2", // 𥕱
@@ -33233,6 +33348,7 @@ var readings = map[rune]string{
 	0x255f5: "xiang4", // 𥗵
 	0x255f6: "lei4", // 𥗶
 	0x255fa: "lan4", // 𥗺
+	0x255fd: "lan2", // 𥗽
 	0x255ff: "la3", // 𥗿
 	0x25601: "la3", // 𥘁
 	0x25604: "yu4", // 𥘄
@@ -33317,6 +33433,7 @@ var readings = map[rune]string{
 	0x25744: "wan4", // 𥝄
 	0x2574a: "fei4", // 𥝊
 	0x2574b: "fei4", // 𥝋
+	0x2574c: "ji1", // 𥝌
 	0x2574d: "yu4", // 𥝍
 	0x25751: "zhi1", // 𥝑
 	0x25752: "gua4", // 𥝒
@@ -33349,6 +33466,7 @@ var readings = map[rune]string{
 	0x2579a: "ru2", // 𥞚
 	0x2579b: "duo4", // 𥞛
 	0x2579c: "jiang4", // 𥞜
+	0x257a6: "jia2", // 𥞦
 	0x257a7: "heng2", // 𥞧
 	0x257a9: "beng1", // 𥞩
 	0x257aa: "mo4", // 𥞪
@@ -33358,6 +33476,7 @@ var readings = map[rune]string{
 	0x257b5: "jia2", // 𥞵
 	0x257ba: "zhuo1", // 𥞺
 	0x257bc: "xiu1", // 𥞼
+	0x257c2: "lai2", // 𥟂
 	0x257c3: "he2", // 𥟃
 	0x257c5: "qiao1", // 𥟅
 	0x257cd: "fei3", // 𥟍
@@ -33425,7 +33544,6 @@ var readings = map[rune]string{
 	0x25891: "gao3", // 𥢑
 	0x25892: "lao2", // 𥢒
 	0x25894: "zhuo2", // 𥢔
-	0x2589f: "hu4", // 𥢟
 	0x258a2: "tui2", // 𥢢
 	0x258a6: "bi4", // 𥢦
 	0x258a7: "ju2", // 𥢧
@@ -33456,7 +33574,6 @@ var readings = map[rune]string{
 	0x258ef: "you1", // 𥣯
 	0x258f0: "bian3", // 𥣰
 	0x258f8: "mu4", // 𥣸
-	0x258f9: "ran4", // 𥣹
 	0x258fa: "ran4", // 𥣺
 	0x25902: "niao3", // 𥤂
 	0x2590a: "quan2", // 𥤊
@@ -33579,6 +33696,7 @@ var readings = map[rune]string{
 	0x25a64: "hai4", // 𥩤
 	0x25a71: "fa2", // 𥩱
 	0x25a72: "hai4", // 𥩲
+	0x25a7a: "lie4", // 𥩺
 	0x25a80: "bu1", // 𥪀
 	0x25a81: "ping1", // 𥪁
 	0x25a82: "lie4", // 𥪂
@@ -33726,7 +33844,7 @@ var readings = map[rune]string{
 	0x25c1c: "tao2", // 𥰜
 	0x25c1d: "xi1", // 𥰝
 	0x25c1e: "chou1", // 𥰞
-	0x25c1f: "gan3", // 𥰟
+	0x25c1f: "yuan2", // 𥰟
 	0x25c20: "lv2", // 𥰠
 	0x25c21: "ce4", // 𥰡
 	0x25c22: "shan4", // 𥰢
@@ -34367,6 +34485,7 @@ var readings = map[rune]string{
 	0x26352: "ta4", // 𦍒
 	0x26353: "tun2", // 𦍓
 	0x26355: "yang2", // 𦍕
+	0x26360: "li4", // 𦍠
 	0x26366: "duo1", // 𦍦
 	0x26367: "ci1", // 𦍧
 	0x26369: "gu3", // 𦍩
@@ -34669,6 +34788,7 @@ var readings = map[rune]string{
 	0x26671: "san1", // 𦙱
 	0x26674: "zhu4", // 𦙴
 	0x26675: "wan4", // 𦙵
+	0x26676: "gu3", // 𦙶
 	0x26678: "san1", // 𦙸
 	0x26679: "ban4", // 𦙹
 	0x2667a: "jia4", // 𦙺
@@ -34711,7 +34831,7 @@ var readings = map[rune]string{
 	0x266e3: "yan2", // 𦛣
 	0x266e4: "guan3", // 𦛤
 	0x266e7: "zhi4", // 𦛧
-	0x266e8: "lao5", // 𦛨
+	0x266e8: "lao2", // 𦛨
 	0x266ef: "du3", // 𦛯
 	0x266f0: "qi4", // 𦛰
 	0x266f1: "qu1", // 𦛱
@@ -35192,6 +35312,7 @@ var readings = map[rune]string{
 	0x26c18: "zhi3", // 𦰘
 	0x26c19: "bi4", // 𦰙
 	0x26c1b: "fen2", // 𦰛
+	0x26c21: "na4", // 𦰡
 	0x26c25: "bang1", // 𦰥
 	0x26c2a: "qiu2", // 𦰪
 	0x26c2b: "ni3", // 𦰫
@@ -35277,6 +35398,7 @@ var readings = map[rune]string{
 	0x26cfe: "ru2", // 𦳾
 	0x26cff: "cou4", // 𦳿
 	0x26d00: "zhi1", // 𦴀
+	0x26d07: "qiong2", // 𦴇
 	0x26d09: "hu2", // 𦴉
 	0x26d0a: "yang1", // 𦴊
 	0x26d0c: "jun4", // 𦴌
@@ -35416,6 +35538,7 @@ var readings = map[rune]string{
 	0x26ec1: "dan4", // 𦻁
 	0x26ec3: "huan2", // 𦻃
 	0x26ec5: "sa4", // 𦻅
+	0x26ed5: "yin3", // 𦻕
 	0x26f06: "rui2", // 𦼆
 	0x26f07: "wu1", // 𦼇
 	0x26f08: "ju4", // 𦼈
@@ -35541,6 +35664,7 @@ var readings = map[rune]string{
 	0x27034: "fu1", // 𧀴
 	0x27035: "jian4", // 𧀵
 	0x27036: "di4", // 𧀶
+	0x27039: "zhe4", // 𧀹
 	0x2703a: "xie2", // 𧀺
 	0x2703b: "dan1", // 𧀻
 	0x2703f: "zhi2", // 𧀿
@@ -35717,6 +35841,7 @@ var readings = map[rune]string{
 	0x2724a: "fu3", // 𧉊
 	0x2724d: "ji2", // 𧉍
 	0x2724e: "xuan2", // 𧉎
+	0x27250: "shuang1", // 𧉐
 	0x27251: "tai4", // 𧉑
 	0x27253: "du4", // 𧉓
 	0x27257: "yuan2", // 𧉗
@@ -35773,7 +35898,7 @@ var readings = map[rune]string{
 	0x272d2: "tong2", // 𧋒
 	0x272d3: "kao4", // 𧋓
 	0x272d4: "hong4", // 𧋔
-	0x272d5: "kun3", // 𧋕
+	0x272d5: "kun4", // 𧋕
 	0x272d6: "nie4", // 𧋖
 	0x272d7: "chi2", // 𧋗
 	0x272d8: "ti2", // 𧋘
@@ -35883,6 +36008,8 @@ var readings = map[rune]string{
 	0x273cb: "qiu1", // 𧏋
 	0x273d1: "ping2", // 𧏑
 	0x273d3: "liu2", // 𧏓
+	0x273d6: "pin2", // 𧏖
+	0x273d7: "ci1", // 𧏗
 	0x273e5: "jie2", // 𧏥
 	0x273e7: "hui4", // 𧏧
 	0x273eb: "sha4", // 𧏫
@@ -35929,6 +36056,7 @@ var readings = map[rune]string{
 	0x2744c: "yi4", // 𧑌
 	0x2744d: "hua2", // 𧑍
 	0x2744e: "cui4", // 𧑎
+	0x2744f: "zhu2", // 𧑏
 	0x27450: "yu4", // 𧑐
 	0x27451: "beng3", // 𧑑
 	0x27452: "tun1", // 𧑒
@@ -36043,7 +36171,7 @@ var readings = map[rune]string{
 	0x27574: "nan2", // 𧕴
 	0x27575: "mi4", // 𧕵
 	0x27578: "huang2", // 𧕸
-	0x2757a: "shuang4", // 𧕺
+	0x2757a: "shuang1", // 𧕺
 	0x2757c: "xu3", // 𧕼
 	0x2757f: "fei3", // 𧕿
 	0x27581: "xie4", // 𧖁
@@ -36188,6 +36316,7 @@ var readings = map[rune]string{
 	0x27724: "yi1", // 𧜤
 	0x27726: "su4", // 𧜦
 	0x27727: "chuang1", // 𧜧
+	0x2772d: "shu3", // 𧜭
 	0x27731: "cui4", // 𧜱
 	0x27732: "tuo4", // 𧜲
 	0x27735: "xie4", // 𧜵
@@ -36208,6 +36337,7 @@ var readings = map[rune]string{
 	0x27757: "dun1", // 𧝗
 	0x27758: "bao4", // 𧝘
 	0x2775c: "liao2", // 𧝜
+	0x2775d: "lai3", // 𧝝
 	0x27764: "si1", // 𧝤
 	0x2776a: "biao3", // 𧝪
 	0x2776b: "xie4", // 𧝫
@@ -36223,6 +36353,7 @@ var readings = map[rune]string{
 	0x27790: "zhuo2", // 𧞐
 	0x27791: "meng2", // 𧞑
 	0x27792: "hu2", // 𧞒
+	0x27794: "jie4", // 𧞔
 	0x27795: "lie4", // 𧞕
 	0x2779d: "jie1", // 𧞝
 	0x2779e: "xiong2", // 𧞞
@@ -36379,6 +36510,7 @@ var readings = map[rune]string{
 	0x27920: "zhe2", // 𧤠
 	0x27921: "zhi4", // 𧤡
 	0x27923: "na2", // 𧤣
+	0x27924: "xi1", // 𧤤
 	0x27928: "jian1", // 𧤨
 	0x2792e: "yao2", // 𧤮
 	0x2792f: "guo2", // 𧤯
@@ -36388,6 +36520,7 @@ var readings = map[rune]string{
 	0x2793c: "jue2", // 𧤼
 	0x2793d: "yue4", // 𧤽
 	0x27944: "ji2", // 𧥄
+	0x27945: "xi1", // 𧥅
 	0x27946: "su4", // 𧥆
 	0x27948: "jian1", // 𧥈
 	0x2794a: "kun1", // 𧥊
@@ -36398,7 +36531,7 @@ var readings = map[rune]string{
 	0x27951: "bi4", // 𧥑
 	0x27953: "chan2", // 𧥓
 	0x27955: "zi1", // 𧥕
-	0x27956: "li4", // 𧥖
+	0x27956: "li2", // 𧥖
 	0x2795a: "fo2", // 𧥚
 	0x2795b: "qian3", // 𧥛
 	0x2795c: "yan3", // 𧥜
@@ -36656,6 +36789,7 @@ var readings = map[rune]string{
 	0x27c07: "yu2", // 𧰇
 	0x27c08: "wu4", // 𧰈
 	0x27c0a: "tian2", // 𧰊
+	0x27c0e: "lao2", // 𧰎
 	0x27c12: "guo2", // 𧰒
 	0x27c18: "tan2", // 𧰘
 	0x27c19: "qi2", // 𧰙
@@ -36836,6 +36970,7 @@ var readings = map[rune]string{
 	0x27da1: "mi4", // 𧶡
 	0x27db2: "duan3", // 𧶲
 	0x27db5: "cha4", // 𧶵
+	0x27db6: "fan4", // 𧶶
 	0x27db7: "ze2", // 𧶷
 	0x27db8: "cheng4", // 𧶸
 	0x27dba: "ting2", // 𧶺
@@ -36879,7 +37014,9 @@ var readings = map[rune]string{
 	0x27e4c: "zi1", // 𧹌
 	0x27e50: "luo4", // 𧹐
 	0x27e51: "gui4", // 𧹑
+	0x27e52: "mai3", // 𧹒
 	0x27e53: "cheng2", // 𧹓
+	0x27e54: "zhang4", // 𧹔
 	0x27e55: "ju1", // 𧹕
 	0x27e56: "tian3", // 𧹖
 	0x27e57: "wan4", // 𧹗
@@ -37012,6 +37149,7 @@ var readings = map[rune]string{
 	0x27f69: "qiang1", // 𧽩
 	0x27f6b: "lian4", // 𧽫
 	0x27f72: "li4", // 𧽲
+	0x27f75: "zong1", // 𧽵
 	0x27f76: "e2", // 𧽶
 	0x27f77: "su4", // 𧽷
 	0x27f78: "jue2", // 𧽸
@@ -37070,6 +37208,7 @@ var readings = map[rune]string{
 	0x27fd8: "sheng1", // 𧿘
 	0x27fd9: "wan2", // 𧿙
 	0x27fda: "fen1", // 𧿚
+	0x27fdb: "zong1", // 𧿛
 	0x27fdd: "xi1", // 𧿝
 	0x27fde: "zi1", // 𧿞
 	0x27fe0: "hu4", // 𧿠
@@ -37090,6 +37229,7 @@ var readings = map[rune]string{
 	0x27ffc: "gua1", // 𧿼
 	0x27ffd: "po3", // 𧿽
 	0x28000: "ni3", // 𨀀
+	0x28001: "long2", // 𨀁
 	0x28004: "wa3", // 𨀄
 	0x28005: "yan3", // 𨀅
 	0x28014: "chou3", // 𨀔
@@ -37159,7 +37299,7 @@ var readings = map[rune]string{
 	0x2809f: "kang1", // 𨂟
 	0x280a0: "xu1", // 𨂠
 	0x280a1: "zou4", // 𨂡
-	0x280a2: "ji4", // 𨂢
+	0x280a2: "ji2", // 𨂢
 	0x280a3: "wu4", // 𨂣
 	0x280a6: "chuan4", // 𨂦
 	0x280a9: "po4", // 𨂩
@@ -37227,6 +37367,7 @@ var readings = map[rune]string{
 	0x28154: "can2", // 𨅔
 	0x28157: "bi3", // 𨅗
 	0x28158: "peng4", // 𨅘
+	0x2815b: "zhu2", // 𨅛
 	0x2815d: "cheng2", // 𨅝
 	0x28163: "qiao2", // 𨅣
 	0x28164: "ji1", // 𨅤
@@ -37302,7 +37443,7 @@ var readings = map[rune]string{
 	0x28241: "huang4", // 𨉁
 	0x28243: "ren4", // 𨉃
 	0x28245: "ye4", // 𨉅
-	0x2824b: "tuo2", // 𨉋
+	0x2824b: "tuo1", // 𨉋
 	0x28256: "zuan1", // 𨉖
 	0x28257: "yu4", // 𨉗
 	0x2825a: "a1", // 𨉚
@@ -37556,7 +37697,7 @@ var readings = map[rune]string{
 	0x284a4: "ci3", // 𨒤
 	0x284a6: "yin3", // 𨒦
 	0x284a7: "shi4", // 𨒧
-	0x284a8: "nai4", // 𨒨
+	0x284a8: "hai4", // 𨒨
 	0x284a9: "ruan3", // 𨒩
 	0x284ab: "yang2", // 𨒫
 	0x284ac: "chi1", // 𨒬
@@ -37775,6 +37916,7 @@ var readings = map[rune]string{
 	0x28750: "shen1", // 𨝐
 	0x28751: "guan4", // 𨝑
 	0x28753: "piao2", // 𨝓
+	0x28755: "gai4", // 𨝕
 	0x28756: "li2", // 𨝖
 	0x28758: "hu3", // 𨝘
 	0x2875b: "tu2", // 𨝛
@@ -37811,10 +37953,9 @@ var readings = map[rune]string{
 	0x287a3: "xu1", // 𨞣
 	0x287a8: "gai4", // 𨞨
 	0x287a9: "que4", // 𨞩
-	0x287aa: "chou2", // 𨞪
+	0x287aa: "shou4", // 𨞪
 	0x287ab: "meng2", // 𨞫
 	0x287b2: "shen1", // 𨞲
-	0x287b3: "qu2", // 𨞳
 	0x287b6: "qiao1", // 𨞶
 	0x287b7: "can2", // 𨞷
 	0x287ba: "li4", // 𨞺
@@ -37859,6 +38000,7 @@ var readings = map[rune]string{
 	0x28824: "song1", // 𨠤
 	0x28825: "wei2", // 𨠥
 	0x28826: "xiao2", // 𨠦
+	0x28828: "ji4", // 𨠨
 	0x2882c: "hao4", // 𨠬
 	0x2882d: "yan3", // 𨠭
 	0x28836: "yi2", // 𨠶
@@ -37878,6 +38020,7 @@ var readings = map[rune]string{
 	0x28851: "chou1", // 𨡑
 	0x28852: "tao2", // 𨡒
 	0x28857: "zha4", // 𨡗
+	0x28859: "dan1", // 𨡙
 	0x2885e: "mian3", // 𨡞
 	0x28861: "wu3", // 𨡡
 	0x28862: "yin3", // 𨡢
@@ -37892,6 +38035,7 @@ var readings = map[rune]string{
 	0x28872: "chou1", // 𨡲
 	0x28874: "you3", // 𨡴
 	0x28878: "zhuo2", // 𨡸
+	0x2887a: "kui4", // 𨡺
 	0x2887b: "sou1", // 𨡻
 	0x28882: "yin4", // 𨢂
 	0x28885: "zui4", // 𨢅
@@ -38001,6 +38145,7 @@ var readings = map[rune]string{
 	0x289b0: "liu2", // 𨦰
 	0x289b1: "cong1", // 𨦱
 	0x289b3: "nan3", // 𨦳
+	0x289c0: "du4", // 𨧀
 	0x289d0: "tun1", // 𨧐
 	0x289d1: "xiang4", // 𨧑
 	0x289d5: "bian4", // 𨧕
@@ -38014,10 +38159,12 @@ var readings = map[rune]string{
 	0x289ea: "sao4", // 𨧪
 	0x289eb: "zi4", // 𨧫
 	0x289ed: "zheng4", // 𨧭
+	0x289ee: "mi2", // 𨧮
 	0x289f0: "zu2", // 𨧰
 	0x289f1: "qu1", // 𨧱
 	0x289f3: "chi4", // 𨧳
 	0x289f5: "zhi4", // 𨧵
+	0x28a0f: "bo1", // 𨨏
 	0x28a17: "quan4", // 𨨗
 	0x28a18: "qian1", // 𨨘
 	0x28a19: "ya1", // 𨨙
@@ -38098,6 +38245,7 @@ var readings = map[rune]string{
 	0x28b45: "zhu4", // 𨭅
 	0x28b46: "hei1", // 𨭆
 	0x28b49: "ban1", // 𨭉
+	0x28b4e: "xi3", // 𨭎
 	0x28b53: "die2", // 𨭓
 	0x28b56: "zhan3", // 𨭖
 	0x28b57: "guo2", // 𨭗
@@ -38348,7 +38496,7 @@ var readings = map[rune]string{
 	0x28de6: "li4", // 𨷦
 	0x28de9: "tou2", // 𨷩
 	0x28dec: "mi3", // 𨷬
-	0x28ded: "chan3", // 𨷭
+	0x28ded: "chan2", // 𨷭
 	0x28dee: "huo1", // 𨷮
 	0x28df1: "zhuan3", // 𨷱
 	0x28df2: "yue4", // 𨷲
@@ -38386,7 +38534,7 @@ var readings = map[rune]string{
 	0x28e2d: "po1", // 𨸭
 	0x28e2e: "yan2", // 𨸮
 	0x28e2f: "gu1", // 𨸯
-	0x28e30: "ju4", // 𨸰
+	0x28e30: "ju2", // 𨸰
 	0x28e31: "tian4", // 𨸱
 	0x28e37: "e4", // 𨸷
 	0x28e3a: "ya1", // 𨸺
@@ -38987,7 +39135,7 @@ var readings = map[rune]string{
 	0x293c7: "duan4", // 𩏇
 	0x293c8: "ruan3", // 𩏈
 	0x293c9: "wei2", // 𩏉
-	0x293cf: "wei3", // 𩏏
+	0x293cf: "wei2", // 𩏏
 	0x293d0: "gui4", // 𩏐
 	0x293d2: "da2", // 𩏒
 	0x293d3: "xia2", // 𩏓
@@ -39275,6 +39423,7 @@ var readings = map[rune]string{
 	0x295dc: "wei4", // 𩗜
 	0x295dd: "hui3", // 𩗝
 	0x295de: "sa4", // 𩗞
+	0x295e1: "chou2", // 𩗡
 	0x295e2: "hong4", // 𩗢
 	0x295e3: "sou1", // 𩗣
 	0x295e4: "han4", // 𩗤
@@ -39288,7 +39437,7 @@ var readings = map[rune]string{
 	0x295f1: "xi1", // 𩗱
 	0x295f2: "zheng1", // 𩗲
 	0x295f4: "beng4", // 𩗴
-	0x295f5: "zheng3", // 𩗵
+	0x295f5: "zheng1", // 𩗵
 	0x295f6: "sui4", // 𩗶
 	0x295f7: "yan3", // 𩗷
 	0x295fc: "qing1", // 𩗼
@@ -39564,6 +39713,7 @@ var readings = map[rune]string{
 	0x29853: "weng3", // 𩡓
 	0x29854: "hai4", // 𩡔
 	0x29855: "peng2", // 𩡕
+	0x29856: "yi3", // 𩡖
 	0x2985d: "tan2", // 𩡝
 	0x2985f: "bie2", // 𩡟
 	0x29860: "xiang1", // 𩡠
@@ -39742,7 +39892,9 @@ var readings = map[rune]string{
 	0x299f3: "zhou1", // 𩧳
 	0x299f4: "quan1", // 𩧴
 	0x299f5: "jie2", // 𩧵
+	0x299f8: "li4", // 𩧸
 	0x299fa: "ju2", // 𩧺
+	0x299fb: "wan3", // 𩧻
 	0x299fc: "ben1", // 𩧼
 	0x299ff: "bi1", // 𩧿
 	0x29a00: "ge2", // 𩨀
@@ -39793,6 +39945,7 @@ var readings = map[rune]string{
 	0x29a40: "nao3", // 𩩀
 	0x29a44: "yan2", // 𩩄
 	0x29a45: "tong2", // 𩩅
+	0x29a48: "kuai4", // 𩩈
 	0x29a4b: "xing2", // 𩩋
 	0x29a4c: "gun3", // 𩩌
 	0x29a4d: "ping1", // 𩩍
@@ -39901,6 +40054,7 @@ var readings = map[rune]string{
 	0x29b3b: "duo3", // 𩬻
 	0x29b3c: "cong1", // 𩬼
 	0x29b3d: "bao3", // 𩬽
+	0x29b3e: "ya1", // 𩬾
 	0x29b47: "li2", // 𩭇
 	0x29b4a: "ju2", // 𩭊
 	0x29b4b: "wen2", // 𩭋
@@ -39911,7 +40065,7 @@ var readings = map[rune]string{
 	0x29b52: "mang2", // 𩭒
 	0x29b53: "jiu1", // 𩭓
 	0x29b58: "xiu1", // 𩭘
-	0x29b5d: "wo1", // 𩭝
+	0x29b5d: "wo3", // 𩭝
 	0x29b5f: "dao4", // 𩭟
 	0x29b61: "xi1", // 𩭡
 	0x29b62: "an4", // 𩭢
@@ -39926,6 +40080,7 @@ var readings = map[rune]string{
 	0x29b72: "di2", // 𩭲
 	0x29b73: "huo1", // 𩭳
 	0x29b77: "min2", // 𩭷
+	0x29b79: "san1", // 𩭹
 	0x29b7a: "fu4", // 𩭺
 	0x29b7c: "bao3", // 𩭼
 	0x29b7d: "ke4", // 𩭽
@@ -40004,6 +40159,7 @@ var readings = map[rune]string{
 	0x29c2c: "guo1", // 𩰬
 	0x29c2d: "guo1", // 𩰭
 	0x29c2f: "hu2", // 𩰯
+	0x29c30: "jing4", // 𩰰
 	0x29c32: "li4", // 𩰲
 	0x29c33: "xie2", // 𩰳
 	0x29c34: "er2", // 𩰴
@@ -40110,6 +40266,7 @@ var readings = map[rune]string{
 	0x29d07: "shai4", // 𩴇
 	0x29d08: "mei4", // 𩴈
 	0x29d09: "yun4", // 𩴉
+	0x29d0c: "gan1", // 𩴌
 	0x29d0d: "shou4", // 𩴍
 	0x29d10: "lv4", // 𩴐
 	0x29d11: "you4", // 𩴑
@@ -40344,6 +40501,7 @@ var readings = map[rune]string{
 	0x29f8a: "xu1", // 𩾊
 	0x29f8b: "zhong4", // 𩾋
 	0x29f8c: "kang1", // 𩾌
+	0x29f8e: "you1", // 𩾎
 	0x29f92: "xiao1", // 𩾒
 	0x29f93: "xiao1", // 𩾓
 	0x29f94: "ci4", // 𩾔
@@ -40397,7 +40555,6 @@ var readings = map[rune]string{
 	0x29ffd: "tuo2", // 𩿽
 	0x29fff: "chu2", // 𩿿
 	0x2a001: "ge1", // 𪀁
-	0x2a008: "yuan1", // 𪀈
 	0x2a009: "ge1", // 𪀉
 	0x2a00a: "qu2", // 𪀊
 	0x2a00f: "ju4", // 𪀏
@@ -40793,6 +40950,7 @@ var readings = map[rune]string{
 	0x2a389: "xian4", // 𪎉
 	0x2a38a: "chao3", // 𪎊
 	0x2a38b: "tie4", // 𪎋
+	0x2a38c: "lai2", // 𪎌
 	0x2a392: "shuo4", // 𪎒
 	0x2a394: "mi3", // 𪎔
 	0x2a397: "mi2", // 𪎗
@@ -40889,6 +41047,7 @@ var readings = map[rune]string{
 	0x2a442: "cha4", // 𪑂
 	0x2a443: "shan1", // 𪑃
 	0x2a444: "lu2", // 𪑄
+	0x2a445: "hui4", // 𪑅
 	0x2a446: "yu4", // 𪑆
 	0x2a448: "yan4", // 𪑈
 	0x2a449: "wan3", // 𪑉
@@ -41177,60 +41336,3027 @@ var readings = map[rune]string{
 	0x2a6ca: "yin2", // 𪛊
 	0x2a6ce: "pi4", // 𪛎
 	0x2a6d2: "lian2", // 𪛒
+	0x2a70e: "qiao4", // 𪜎
 	0x2a79d: "duo2", // 𪞝
+	0x2a7ce: "jian1", // 𪟎
+	0x2a7dd: "ji4", // 𪟝
+	0x2a800: "ku1", // 𪠀
+	0x2a80f: "yan3", // 𪠏
+	0x2a81f: "zhen3", // 𪠟
+	0x2a821: "sa1", // 𪠡
+	0x2a833: "che1", // 𪠳
+	0x2a835: "lun2", // 𪠵
+	0x2a838: "hu4", // 𪠸
+	0x2a83d: "dang1", // 𪠽
+	0x2a840: "qiao2", // 𪡀
+	0x2a843: "mai3", // 𪡃
 	0x2a848: "bai2", // 𪡈
+	0x2a84b: "yan3", // 𪡋
 	0x2a84f: "zhan1", // 𪡏
+	0x2a85b: "he2", // 𪡛
+	0x2a85e: "kui4", // 𪡞
+	0x2a87a: "lai4", // 𪡺
+	0x2a88c: "lan2", // 𪢌
+	0x2a892: "shu4", // 𪢒
+	0x2a895: "chuo4", // 𪢕
+	0x2a8a0: "lan2", // 𪢠
 	0x2a8ae: "luan2", // 𪢮
+	0x2a8c6: "dong1", // 𪣆
+	0x2a8d2: "huan2", // 𪣒
+	0x2a8fb: "lou2", // 𪣻
+	0x2a917: "liao4", // 𪤗
+	0x2a91a: "lin2", // 𪤚
+	0x2a960: "reng2", // 𪥠
+	0x2a96b: "shuang1", // 𪥫
+	0x2a970: "ning2", // 𪥰
+	0x2a97f: "du2", // 𪥿
+	0x2a9c0: "ying1", // 𪧀
+	0x2a9d8: "ju4", // 𪧘
+	0x2aa07: "tui2", // 𪨇
 	0x2aa0a: "song2", // 𪨊
 	0x2aa17: "jue1", // 𪨗
+	0x2aa27: "lun2", // 𪨧
+	0x2aa29: "ya4", // 𪨩
+	0x2aa30: "qu1", // 𪨰
+	0x2aa36: "she1", // 𪨶
+	0x2aa37: "yan2", // 𪨷
+	0x2aa39: "tuo2", // 𪨹
+	0x2aa47: "lou3", // 𪩇
+	0x2aa4e: "ying3", // 𪩎
+	0x2aa58: "yan3", // 𪩘
+	0x2aa5b: "nie4", // 𪩛
+	0x2aa78: "fen2", // 𪩸
+	0x2aa91: "qiao4", // 𪪑
 	0x2aa9d: "yong1", // 𪪝
+	0x2aa9e: "qiang2", // 𪪞
+	0x2aab4: "ze2", // 𪪴
+	0x2aacc: "long4", // 𪫌
+	0x2aae1: "li4", // 𪫡
+	0x2aaf7: "chou2", // 𪫷
+	0x2aaf8: "que4", // 𪫸
+	0x2aafa: "xian1", // 𪫺
+	0x2ab1a: "pin1", // 𪬚
+	0x2ab5d: "wei3", // 𪭝
+	0x2ab62: "chuang1", // 𪭢
+	0x2ab67: "er2", // 𪭧
+	0x2ab6f: "guai4", // 𪭯
+	0x2ab75: "liang3", // 𪭵
+	0x2ab7e: "xian4", // 𪭾
+	0x2ab83: "can2", // 𪮃
+	0x2ab8b: "xiao1", // 𪮋
+	0x2ab96: "jue1", // 𪮖
+	0x2abb6: "la4", // 𪮶
+	0x2abcb: "shan3", // 𪯋
+	0x2ac36: "fei4", // 𪰶
+	0x2ac65: "fen4", // 𪱥
+	0x2ac77: "bei4", // 𪱷
+	0x2ac8e: "ji1", // 𪲎
+	0x2ac94: "li4", // 𪲔
+	0x2ac9b: "ji4", // 𪲛
+	0x2acae: "fei4", // 𪲮
+	0x2accd: "she4", // 𪳍
+	0x2ad19: "cuan2", // 𪴙
+	0x2ad2f: "e1", // 𪴯
+	0x2ad51: "xiao1", // 𪵑
+	0x2ad63: "xi4", // 𪵣
+	0x2ad71: "li4", // 𪵱
+	0x2ad84: "shi2", // 𪶄
+	0x2ad92: "luo2", // 𪶒
+	0x2adcd: "qing4", // 𪷍
+	0x2adfd: "zan4", // 𪷽
+	0x2ae15: "xi4", // 𪸕
+	0x2ae29: "hui1", // 𪸩
+	0x2ae40: "yi4", // 𪹀
+	0x2ae73: "zhu2", // 𪹳
+	0x2ae79: "ta4", // 𪹹
+	0x2aea3: "dao4", // 𪺣
+	0x2aead: "qiao2", // 𪺭
+	0x2aeb7: "cang1", // 𪺷
 	0x2aeb9: "nu3", // 𪺹
+	0x2aebb: "nong2", // 𪺻
+	0x2aebd: "yin4", // 𪺽
 	0x2aed0: "cong1", // 𪻐
+	0x2aee8: "du2", // 𪻨
+	0x2aef2: "kun1", // 𪻲
+	0x2aefa: "gui1", // 𪻺
+	0x2af0b: "bi3", // 𪼋
+	0x2af6a: "zhang4", // 𪽪
+	0x2af6d: "jian4", // 𪽭
+	0x2af6e: "lu2", // 𪽮
+	0x2af74: "she4", // 𪽴
+	0x2af77: "yi4", // 𪽷
+	0x2af94: "xu3", // 𪾔
 	0x2afa2: "xian4", // 𪾢
+	0x2afa6: "lu2", // 𪾦
+	0x2afb8: "pin2", // 𪾸
+	0x2afca: "ya4", // 𪿊
+	0x2afeb: "pao4", // 𪿫
+	0x2b00c: "shi1", // 𫀌
+	0x2b013: "min3", // 𫀓
+	0x2b028: "jian3", // 𫀨
+	0x2b02c: "chu2", // 𫀬
+	0x2b02e: "dang3", // 𫀮
+	0x2b042: "ba4", // 𫁂
+	0x2b05f: "zhuan3", // 𫁟
 	0x2b061: "li4", // 𫁡
+	0x2b072: "wu2", // 𫁲
+	0x2b073: "wei3", // 𫁳
+	0x2b077: "shuang1", // 𫁷
+	0x2b083: "min3", // 𫂃
+	0x2b086: "gui4", // 𫂆
 	0x2b088: "fei4", // 𫂈
+	0x2b096: "ai4", // 𫂖
 	0x2b099: "su4", // 𫂙
+	0x2b0bf: "sa4", // 𫂿
+	0x2b0d7: "jiu1", // 𫃗
 	0x2b0dc: "kou4", // 𫃜
+	0x2b119: "jiu1", // 𫄙
+	0x2b11a: "hu4", // 𫄚
+	0x2b11b: "jin1", // 𫄛
+	0x2b11c: "mao4", // 𫄜
+	0x2b11d: "diao4", // 𫄝
+	0x2b11e: "bi4", // 𫄞
+	0x2b11f: "shi1", // 𫄟
+	0x2b120: "huan2", // 𫄠
+	0x2b121: "dong4", // 𫄡
+	0x2b122: "fu2", // 𫄢
+	0x2b123: "nong3", // 𫄣
+	0x2b124: "da5", // 𫄤
+	0x2b125: "li2", // 𫄥
+	0x2b126: "jie2", // 𫄦
+	0x2b127: "yan2", // 𫄧
 	0x2b128: "chi1", // 𫄨
+	0x2b129: "fan2", // 𫄩
+	0x2b12a: "sang1", // 𫄪
+	0x2b12b: "li4", // 𫄫
+	0x2b12c: "xie4", // 𫄬
+	0x2b12d: "fu4", // 𫄭
+	0x2b12e: "ting1", // 𫄮
+	0x2b130: "bang1", // 𫄰
+	0x2b131: "se4", // 𫄱
+	0x2b132: "mu4", // 𫄲
+	0x2b133: "xi3", // 𫄳
+	0x2b134: "lv4", // 𫄴
+	0x2b135: "beng1", // 𫄵
+	0x2b136: "qiang3", // 𫄶
+	0x2b137: "yi4", // 𫄷
 	0x2b138: "xun1", // 𫄸
+	0x2b139: "zui1", // 𫄹
+	0x2b145: "ji3", // 𫅅
+	0x2b157: "fen2", // 𫅗
+	0x2b16d: "pin1", // 𫅭
+	0x2b17c: "lian2", // 𫅼
+	0x2b18f: "ni3", // 𫆏
+	0x2b1e6: "ying4", // 𫇦
+	0x2b1ea: "gang1", // 𫇪
+	0x2b1ed: "wei3", // 𫇭
+	0x2b1f4: "chu2", // 𫇴
+	0x2b1fd: "nong2", // 𫇽
+	0x2b209: "jian1", // 𫈉
+	0x2b20e: "qing2", // 𫈎
+	0x2b21f: "chen2", // 𫈟
 	0x2b230: "qia4", // 𫈰
+	0x2b235: "jue2", // 𫈵
+	0x2b241: "ai4", // 𫉁
+	0x2b244: "shu3", // 𫉄
+	0x2b2aa: "chang2", // 𫊪
+	0x2b2ae: "lu2", // 𫊮
+	0x2b2b1: "jian3", // 𫊱
+	0x2b2b8: "jiao3", // 𫊸
+	0x2b2bb: "xun2", // 𫊻
+	0x2b2c7: "xiao1", // 𫋇
+	0x2b2cc: "te4", // 𫋌
 	0x2b2d0: "gong3", // 𫋐
+	0x2b2f2: "ou1", // 𫋲
+	0x2b2f7: "ze2", // 𫋷
+	0x2b2f9: "rao2", // 𫋹
+	0x2b2fb: "gui4", // 𫋻
 	0x2b300: "ji1", // 𫌀
+	0x2b307: "zhe3", // 𫌇
+	0x2b30b: "shu4", // 𫌋
 	0x2b328: "luo2", // 𫌨
+	0x2b32a: "mi4", // 𫌪
+	0x2b32b: "lian4", // 𫌫
+	0x2b32d: "wei2", // 𫌭
+	0x2b32f: "jiao4", // 𫌯
+	0x2b350: "pin2", // 𫍐
 	0x2b359: "yi4", // 𫍙
+	0x2b35a: "yao1", // 𫍚
+	0x2b35b: "fen1", // 𫍛
+	0x2b35c: "qu3", // 𫍜
+	0x2b35e: "hu1", // 𫍞
 	0x2b35f: "yi2", // 𫍟
+	0x2b360: "yuan3", // 𫍠
+	0x2b361: "tuo2", // 𫍡
 	0x2b362: "nao2", // 𫍢
+	0x2b363: "tong2", // 𫍣
+	0x2b364: "jiao3", // 𫍤
+	0x2b365: "tiao3", // 𫍥
+	0x2b366: "nong2", // 𫍦
+	0x2b367: "chi1", // 𫍧
+	0x2b368: "zhen4", // 𫍨
+	0x2b369: "hua4", // 𫍩
+	0x2b36a: "ji4", // 𫍪
+	0x2b36b: "yan4", // 𫍫
+	0x2b36c: "wang3", // 𫍬
+	0x2b36e: "qu1", // 𫍮
+	0x2b36f: "xian2", // 𫍯
 	0x2b370: "xi3", // 𫍰
+	0x2b371: "zhuan1", // 𫍱
 	0x2b372: "xiao3", // 𫍲
+	0x2b373: "zhong4", // 𫍳
+	0x2b374: "lou2", // 𫍴
+	0x2b375: "ao2", // 𫍵
+	0x2b376: "zhi3", // 𫍶
+	0x2b377: "kui4", // 𫍷
+	0x2b378: "shan4", // 𫍸
+	0x2b379: "jie1", // 𫍹
+	0x2b37a: "sha3", // 𫍺
+	0x2b37b: "xi1", // 𫍻
+	0x2b37c: "zhong4", // 𫍼
+	0x2b37d: "xuan1", // 𫍽
+	0x2b37e: "ning2", // 𫍾
+	0x2b37f: "jian3", // 𫍿
+	0x2b386: "zong1", // 𫎆
+	0x2b38c: "ju4", // 𫎌
+	0x2b3a6: "long4", // 𫎦
+	0x2b3a7: "gou4", // 𫎧
+	0x2b3a8: "lian4", // 𫎨
+	0x2b3a9: "chen1", // 𫎩
+	0x2b3aa: "chen4", // 𫎪
+	0x2b3ab: "dan4", // 𫎫
+	0x2b3ac: "gan4", // 𫎬
+	0x2b3ad: "cheng1", // 𫎭
+	0x2b3b1: "li4", // 𫎱
+	0x2b3b3: "bi4", // 𫎳
+	0x2b3ba: "can1", // 𫎺
+	0x2b3c3: "chang2", // 𫏃
+	0x2b3c6: "bo1", // 𫏆
 	0x2b3cb: "jue1", // 𫏋
+	0x2b3cc: "lai2", // 𫏌
+	0x2b3d0: "zan4", // 𫏐
+	0x2b3d1: "luo4", // 𫏑
+	0x2b3d5: "qing1", // 𫏕
+	0x2b3e8: "xian1", // 𫏨
 	0x2b404: "yue4", // 𫐄
+	0x2b405: "shan1", // 𫐅
 	0x2b406: "kuai4", // 𫐆
+	0x2b407: "na4", // 𫐇
+	0x2b408: "ba2", // 𫐈
 	0x2b409: "ling2", // 𫐉
+	0x2b40a: "fan4", // 𫐊
+	0x2b40b: "zhi4", // 𫐋
+	0x2b40c: "ping2", // 𫐌
+	0x2b40d: "tian2", // 𫐍
+	0x2b40e: "yi3", // 𫐎
+	0x2b40f: "zhou1", // 𫐏
 	0x2b410: "ni2", // 𫐐
-	0x2b413: "bu4", // 𫐓
+	0x2b411: "guan3", // 𫐑
+	0x2b412: "hong1", // 𫐒
+	0x2b413: "rou2", // 𫐓
+	0x2b414: "ke1", // 𫐔
+	0x2b415: "wei4", // 𫐕
+	0x2b416: "jiao1", // 𫐖
+	0x2b417: "bu2", // 𫐗
+	0x2b418: "kan3", // 𫐘
+	0x2b419: "lei2", // 𫐙
+	0x2b437: "lou2", // 𫐷
+	0x2b458: "zhuan1", // 𫑘
+	0x2b461: "meng2", // 𫑡
+	0x2b477: "yan4", // 𫑷
 	0x2b4b6: "han2", // 𫒶
+	0x2b4e5: "ba1", // 𫓥
+	0x2b4e6: "zi3", // 𫓦
 	0x2b4e7: "fu1", // 𫓧
+	0x2b4e8: "guo1", // 𫓨
 	0x2b4e9: "cong1", // 𫓩
+	0x2b4ea: "qian1", // 𫓪
+	0x2b4ec: "za1", // 𫓬
+	0x2b4ed: "yang1", // 𫓭
+	0x2b4ee: "liu2", // 𫓮
+	0x2b4ef: "ji1", // 𫓯
+	0x2b4f0: "xu4", // 𫓰
+	0x2b4f1: "qiao2", // 𫓱
+	0x2b4f2: "jun1", // 𫓲
+	0x2b4f4: "mao2", // 𫓴
+	0x2b4f5: "shen4", // 𫓵
+	0x2b4f6: "xuan1", // 𫓶
+	0x2b4f8: "wan4", // 𫓸
+	0x2b4f9: "ji1", // 𫓹
+	0x2b4fa: "lu3", // 𫓺
+	0x2b4fb: "nie4", // 𫓻
+	0x2b4fc: "he2", // 𫓼
+	0x2b4fd: "cong2", // 𫓽
+	0x2b4fe: "yu4", // 𫓾
+	0x2b500: "lian4", // 𫔀
+	0x2b501: "fen2", // 𫔁
+	0x2b502: "di1", // 𫔂
+	0x2b504: "rou2", // 𫔄
+	0x2b505: "suo3", // 𫔅
+	0x2b506: "ba4", // 𫔆
+	0x2b507: "bi1", // 𫔇
+	0x2b508: "shuo4", // 𫔈
+	0x2b50a: "xiu4", // 𫔊
+	0x2b50b: "kuan3", // 𫔋
+	0x2b50c: "san3", // 𫔌
+	0x2b50d: "fan2", // 𫔍
 	0x2b50e: "jue2", // 𫔎
+	0x2b50f: "chan2", // 𫔏
+	0x2b511: "zhan3", // 𫔑
+	0x2b514: "xi1", // 𫔔
+	0x2b516: "nong2", // 𫔖
+	0x2b52d: "kai1", // 𫔭
+	0x2b52f: "dou4", // 𫔯
+	0x2b530: "bian4", // 𫔰
+	0x2b531: "lan2", // 𫔱
+	0x2b532: "xiao1", // 𫔲
+	0x2b534: "lin4", // 𫔴
+	0x2b535: "zhi4", // 𫔵
+	0x2b536: "nie4", // 𫔶
+	0x2b565: "yun3", // 𫕥
+	0x2b583: "hui4", // 𫖃
+	0x2b585: "long2", // 𫖅
+	0x2b587: "xue1", // 𫖇
+	0x2b591: "qin2", // 𫖑
+	0x2b592: "bi4", // 𫖒
+	0x2b593: "bing3", // 𫖓
+	0x2b594: "bai4", // 𫖔
+	0x2b595: "gou1", // 𫖕
+	0x2b596: "zheng4", // 𫖖
+	0x2b5aa: "ku1", // 𫖪
+	0x2b5ab: "zhen3", // 𫖫
+	0x2b5ac: "zhen3", // 𫖬
+	0x2b5ae: "yi3", // 𫖮
+	0x2b5af: "fu3", // 𫖯
+	0x2b5b0: "duo3", // 𫖰
+	0x2b5b1: "gen3", // 𫖱
+	0x2b5b2: "hun4", // 𫖲
+	0x2b5b3: "yun1", // 𫖳
+	0x2b5b4: "ze2", // 𫖴
+	0x2b5b5: "yue4", // 𫖵
+	0x2b5b6: "qian1", // 𫖶
+	0x2b5b8: "yuan4", // 𫖸
+	0x2b5b9: "cu4", // 𫖹
+	0x2b5ba: "fan2", // 𫖺
+	0x2b5c7: "yu4", // 𫗇
+	0x2b5c8: "bo2", // 𫗈
+	0x2b5c9: "beng4", // 𫗉
+	0x2b5ca: "an4", // 𫗊
+	0x2b5cb: "se4", // 𫗋
+	0x2b5da: "jian3", // 𫗚
+	0x2b5de: "zhan1", // 𫗞
+	0x2b5df: "yuan2", // 𫗟
 	0x2b5e0: "zhang1", // 𫗠
+	0x2b5e2: "zuo4", // 𫗢
+	0x2b5e3: "bi4", // 𫗣
+	0x2b5e4: "shi4", // 𫗤
+	0x2b5e5: "yun4", // 𫗥
 	0x2b5e6: "bu4", // 𫗦
 	0x2b5e7: "su4", // 𫗧
+	0x2b5e8: "lang2", // 𫗨
+	0x2b5e9: "luo2", // 𫗩
+	0x2b5ea: "wei4", // 𫗪
+	0x2b5eb: "hu2", // 𫗫
+	0x2b5ec: "nuan3", // 𫗬
+	0x2b5ed: "wei4", // 𫗭
 	0x2b5ee: "huang2", // 𫗮
+	0x2b5ef: "hou2", // 𫗯
+	0x2b5f0: "dui1", // 𫗰
+	0x2b5f1: "lian2", // 𫗱
+	0x2b5f3: "qiang3", // 𫗳
 	0x2b5f4: "zhan1", // 𫗴
+	0x2b5f5: "xiang3", // 𫗵
+	0x2b61b: "han4", // 𫘛
+	0x2b61c: "wen2", // 𫘜
 	0x2b61d: "jue2", // 𫘝
+	0x2b61e: "tuo2", // 𫘞
+	0x2b61f: "po3", // 𫘟
+	0x2b620: "zhi4", // 𫘠
+	0x2b621: "jiong1", // 𫘡
 	0x2b623: "han4", // 𫘣
 	0x2b624: "ai2", // 𫘤
+	0x2b625: "kun1", // 𫘥
+	0x2b626: "tao2", // 𫘦
+	0x2b627: "lu4", // 𫘧
 	0x2b628: "ti2", // 𫘨
+	0x2b629: "huang2", // 𫘩
+	0x2b62a: "yuan2", // 𫘪
+	0x2b62b: "yan4", // 𫘫
+	0x2b62c: "xi2", // 𫘬
+	0x2b62d: "shuang1", // 𫘭
+	0x2b62e: "zhe2", // 𫘮
+	0x2b62f: "ceng2", // 𫘯
+	0x2b630: "zhan1", // 𫘰
+	0x2b631: "xi2", // 𫘱
+	0x2b63d: "kuo4", // 𫘽
 	0x2b688: "xu4", // 𫚈
 	0x2b689: "hong2", // 𫚉
+	0x2b68a: "yang2", // 𫚊
+	0x2b68b: "zhuan1", // 𫚋
+	0x2b68c: "sha1", // 𫚌
+	0x2b68d: "fen2", // 𫚍
+	0x2b68e: "bing3", // 𫚎
+	0x2b68f: "qiao2", // 𫚏
+	0x2b690: "yang1", // 𫚐
+	0x2b691: "bi4", // 𫚑
 	0x2b692: "fu2", // 𫚒
+	0x2b693: "lie4", // 𫚓
 	0x2b694: "hui2", // 𫚔
 	0x2b695: "shi1", // 𫚕
+	0x2b696: "ci3", // 𫚖
+	0x2b697: "ge2", // 𫚗
 	0x2b699: "pu1", // 𫚙
+	0x2b69a: "zhe2", // 𫚚
+	0x2b69b: "tuo1", // 𫚛
+	0x2b69c: "gui1", // 𫚜
+	0x2b69d: "hua4", // 𫚝
+	0x2b69e: "li2", // 𫚞
+	0x2b6a1: "zhou3", // 𫚡
+	0x2b6a2: "yan3", // 𫚢
+	0x2b6a3: "bian1", // 𫚣
+	0x2b6a4: "zi1", // 𫚤
+	0x2b6a5: "xia1", // 𫚥
+	0x2b6a6: "yong2", // 𫚦
+	0x2b6a7: "qiu2", // 𫚧
+	0x2b6a8: "bu4", // 𫚨
+	0x2b6aa: "yu4", // 𫚪
+	0x2b6ab: "sao1", // 𫚫
+	0x2b6ad: "lie4", // 𫚭
+	0x2b6da: "jian1", // 𫛚
 	0x2b6db: "zhi1", // 𫛛
+	0x2b6dc: "fou3", // 𫛜
+	0x2b6dd: "huan1", // 𫛝
 	0x2b6de: "jue2", // 𫛞
+	0x2b6df: "long2", // 𫛟
+	0x2b6e0: "zha2", // 𫛠
+	0x2b6e1: "fu2", // 𫛡
 	0x2b6e2: "ning2", // 𫛢
+	0x2b6e3: "yu4", // 𫛣
+	0x2b6e4: "jia1", // 𫛤
+	0x2b6e5: "jia2", // 𫛥
+	0x2b6e6: "wu1", // 𫛦
+	0x2b6e8: "pi2", // 𫛨
+	0x2b6e9: "yan4", // 𫛩
+	0x2b6ea: "ru2", // 𫛪
+	0x2b6eb: "yuan2", // 𫛫
+	0x2b6ec: "tu2", // 𫛬
+	0x2b6ed: "kuang2", // 𫛭
+	0x2b6ee: "bie1", // 𫛮
+	0x2b6ef: "fang3", // 𫛯
+	0x2b6f0: "qi2", // 𫛰
+	0x2b6f1: "zhuo2", // 𫛱
+	0x2b6f2: "diao1", // 𫛲
+	0x2b6f3: "fu2", // 𫛳
+	0x2b6f4: "ti2", // 𫛴
+	0x2b6f5: "qu1", // 𫛵
 	0x2b6f6: "chi4", // 𫛶
+	0x2b6f7: "hu2", // 𫛷
 	0x2b6f8: "ti2", // 𫛸
+	0x2b6fa: "hou2", // 𫛺
+	0x2b6fb: "duo2", // 𫛻
+	0x2b6fc: "kui2", // 𫛼
+	0x2b6fd: "li4", // 𫛽
+	0x2b6fe: "chu2", // 𫛾
+	0x2b700: "chen2", // 𫜀
+	0x2b701: "bi4", // 𫜁
+	0x2b702: "zhang1", // 𫜂
+	0x2b703: "yin2", // 𫜃
+	0x2b704: "zun1", // 𫜄
+	0x2b705: "huan2", // 𫜅
+	0x2b70a: "wen1", // 𫜊
+	0x2b711: "feng1", // 𫜑
+	0x2b712: "tuo1", // 𫜒
+	0x2b714: "pi2", // 𫜔
+	0x2b715: "ku1", // 𫜕
+	0x2b719: "ying4", // 𫜙
+	0x2b71f: "cu4", // 𫜟
+	0x2b728: "ba1", // 𫜨
+	0x2b729: "nie4", // 𫜩
+	0x2b72a: "yao3", // 𫜪
+	0x2b72c: "ze2", // 𫜬
+	0x2b72d: "chu3", // 𫜭
+	0x2b72e: "yan3", // 𫜮
+	0x2b72f: "jie4", // 𫜯
+	0x2b730: "ya4", // 𫜰
+	0x2b732: "long2", // 𫜲
+	0x2b733: "ran2", // 𫜳
+	0x2b737: "shou4", // 𫜷
+	0x2b738: "hua4", // 𫜸
+	0x2b748: "hun2", // 𫝈
+	0x2b74b: "shu4", // 𫝋
+	0x2b75c: "za3", // 𫝜
+	0x2b766: "bei4", // 𫝦
+	0x2b767: "shu4", // 𫝧
+	0x2b768: "hui1", // 𫝨
+	0x2b769: "chou2", // 𫝩
+	0x2b76a: "gong4", // 𫝪
+	0x2b76b: "lai2", // 𫝫
+	0x2b76c: "kui4", // 𫝬
+	0x2b76d: "ying1", // 𫝭
+	0x2b76e: "lan3", // 𫝮
+	0x2b775: "dao3", // 𫝵
+	0x2b785: "xun2", // 𫞅
+	0x2b797: "min3", // 𫞗
+	0x2b79a: "zi1", // 𫞚
+	0x2b79b: "zhu1", // 𫞛
+	0x2b79d: "jue2", // 𫞝
+	0x2b7a0: "ling2", // 𫞠
+	0x2b7a1: "rong2", // 𫞡
+	0x2b7a2: "zhi4", // 𫞢
+	0x2b7a3: "chan3", // 𫞣
+	0x2b7a5: "bei4", // 𫞥
+	0x2b7a6: "ji4", // 𫞦
+	0x2b7a7: "lao2", // 𫞧
+	0x2b7a8: "lan2", // 𫞨
+	0x2b7a9: "men2", // 𫞩
+	0x2b7b7: "kuai4", // 𫞷
+	0x2b7c3: "ren4", // 𫟃
+	0x2b7c4: "hong2", // 𫟄
+	0x2b7c5: "liang2", // 𫟅
+	0x2b7c6: "chong2", // 𫟆
+	0x2b7d1: "ling2", // 𫟑
+	0x2b7d5: "ji1", // 𫟕
+	0x2b7de: "zhi3", // 𫟞
+	0x2b7df: "pan4", // 𫟟
+	0x2b7e0: "chan3", // 𫟠
+	0x2b7e1: "cong2", // 𫟡
+	0x2b7e2: "tan2", // 𫟢
+	0x2b7e4: "tuo2", // 𫟤
+	0x2b7e5: "keng1", // 𫟥
+	0x2b7e6: "sui4", // 𫟦
+	0x2b7eb: "li4", // 𫟫
+	0x2b7ec: "zhi4", // 𫟬
+	0x2b7f2: "qiu2", // 𫟲
+	0x2b7f3: "si4", // 𫟳
+	0x2b7f4: "fen1", // 𫟴
+	0x2b7f5: "yun3", // 𫟵
+	0x2b7f6: "shan4", // 𫟶
+	0x2b7f7: "li4", // 𫟷
+	0x2b7f8: "shi4", // 𫟸
+	0x2b7f9: "hong2", // 𫟹
+	0x2b7fa: "kai1", // 𫟺
+	0x2b7fb: "zhou1", // 𫟻
+	0x2b7fc: "da2", // 𫟼
+	0x2b7fd: "zu2", // 𫟽
+	0x2b7fe: "zu2", // 𫟾
+	0x2b7ff: "cha1", // 𫟿
+	0x2b800: "cu4", // 𫠀
+	0x2b801: "he2", // 𫠁
+	0x2b802: "ling2", // 𫠂
+	0x2b805: "ge2", // 𫠅
+	0x2b806: "kui3", // 𫠆
+	0x2b807: "xin2", // 𫠇
+	0x2b808: "bi1", // 𫠈
+	0x2b80a: "xuan2", // 𫠊
+	0x2b80b: "lu4", // 𫠋
+	0x2b80c: "bang4", // 𫠌
+	0x2b80f: "mu4", // 𫠏
+	0x2b810: "han1", // 𫠐
+	0x2b811: "sou1", // 𫠑
+	0x2b812: "zhang1", // 𫠒
+	0x2b81c: "ni2", // 𫠜
+	0x2b825: "lou4", // 𫠥
 	0x2b851: "yin1", // 𫡑
+	0x2b86c: "wo1", // 𫡬
+	0x2b876: "dan4", // 𫡶
+	0x2b892: "long3", // 𫢒
+	0x2b894: "gui4", // 𫢔
+	0x2b898: "dui4", // 𫢘
+	0x2b899: "dong4", // 𫢙
+	0x2b8aa: "lian4", // 𫢪
+	0x2b8ac: "lao2", // 𫢬
+	0x2b8ad: "wei3", // 𫢭
+	0x2b8b8: "dan4", // 𫢸
+	0x2b8b9: "chong4", // 𫢹
+	0x2b8ba: "can1", // 𫢺
+	0x2b8c9: "lan2", // 𫣉
+	0x2b8ca: "ai4", // 𫣊
+	0x2b8db: "qian1", // 𫣛
+	0x2b8eb: "su2", // 𫣫
+	0x2b938: "mao4", // 𫤸
+	0x2b93d: "gan3", // 𫤽
+	0x2b94d: "yan2", // 𫥍
+	0x2b973: "li4", // 𫥳
+	0x2b975: "li4", // 𫥵
+	0x2b97a: "ye4", // 𫥺
+	0x2b97c: "ya1", // 𫥼
+	0x2b981: "suo3", // 𫦁
+	0x2b985: "xiao4", // 𫦅
+	0x2b989: "lou2", // 𫦉
+	0x2b98c: "jue2", // 𫦌
+	0x2b9a9: "liang3", // 𫦩
+	0x2b9b3: "jue2", // 𫦳
+	0x2b9ef: "xie4", // 𫧯
+	0x2b9ff: "du2", // 𫧿
+	0x2ba06: "xia2", // 𫨆
+	0x2ba55: "hong1", // 𫩕
+	0x2ba5a: "gang1", // 𫩚
+	0x2ba5b: "cong2", // 𫩛
+	0x2ba64: "ye4", // 𫩤
+	0x2ba65: "huo4", // 𫩥
+	0x2ba69: "chu1", // 𫩩
+	0x2ba6b: "ye4", // 𫩫
+	0x2ba6f: "hai2", // 𫩯
+	0x2ba7a: "jin4", // 𫩺
+	0x2ba80: "guo1", // 𫪀
+	0x2ba81: "lai4", // 𫪁
+	0x2ba82: "yan2", // 𫪂
+	0x2ba83: "li4", // 𫪃
+	0x2ba84: "jian1", // 𫪄
+	0x2ba98: "ou1", // 𫪘
+	0x2ba9a: "zan4", // 𫪚
+	0x2baa7: "jiao1", // 𫪧
+	0x2baaa: "zhi4", // 𫪪
+	0x2baba: "ti4", // 𫪺
+	0x2babd: "jin4", // 𫪽
+	0x2bac7: "e4", // 𫫇
+	0x2bae6: "dan4", // 𫫦
+	0x2baf5: "lv4", // 𫫵
+	0x2bafe: "pin2", // 𫫾
+	0x2bb10: "sai3", // 𫬐
+	0x2bb19: "gun4", // 𫬙
+	0x2bb1f: "die2", // 𫬟
+	0x2bb5e: "zhuan1", // 𫭞
+	0x2bb5f: "ou1", // 𫭟
+	0x2bb62: "lun3", // 𫭢
+	0x2bb68: "fa2", // 𫭨
+	0x2bb6a: "qiao1", // 𫭪
+	0x2bb6e: "ce4", // 𫭮
+	0x2bb6f: "xun2", // 𫭯
+	0x2bb72: "yan2", // 𫭲
+	0x2bb7c: "lao2", // 𫭼
+	0x2bb83: "shan4", // 𫮃
+	0x2bb85: "chen3", // 𫮅
+	0x2bb9c: "yin2", // 𫮜
+	0x2bbac: "jiang4", // 𫮬
+	0x2bbd2: "nong2", // 𫯒
+	0x2bbe5: "huo4", // 𫯥
+	0x2bbf6: "yun1", // 𫯶
+	0x2bc02: "duo3", // 𫰂
+	0x2bc0d: "wei2", // 𫰍
+	0x2bc1b: "xing2", // 𫰛
+	0x2bc21: "hua4", // 𫰡
+	0x2bc22: "hui4", // 𫰢
+	0x2bc28: "mai2", // 𫰨
+	0x2bc30: "xian1", // 𫰰
+	0x2bc39: "gui1", // 𫰹
+	0x2bc55: "lan4", // 𫱕
+	0x2bc7f: "qia1", // 𫱿
+	0x2bc97: "zan4", // 𫲗
+	0x2bcb8: "feng1", // 𫲸
+	0x2bcc3: "ya1", // 𫳃
+	0x2bd75: "yang2", // 𫵵
+	0x2bd77: "li4", // 𫵷
+	0x2bd78: "keng1", // 𫵸
+	0x2bd87: "die2", // 𫶇
+	0x2bd8a: "lan3", // 𫶊
+	0x2bd95: "ying2", // 𫶕
+	0x2bdb2: "keng1", // 𫶲
+	0x2bdc5: "kun1", // 𫷅
+	0x2bdc8: "xu1", // 𫷈
+	0x2bdc9: "xian3", // 𫷉
+	0x2bdcc: "lan2", // 𫷌
+	0x2bdec: "lai2", // 𫷬
+	0x2bdee: "yin4", // 𫷮
+	0x2bdf7: "xin1", // 𫷷
+	0x2bdf9: "lou2", // 𫷹
+	0x2bdfe: "ying3", // 𫷾
+	0x2be29: "kou1", // 𫸩
+	0x2be6e: "yu3", // 𫹮
+	0x2be74: "wei3", // 𫹴
+	0x2be7c: "dong1", // 𫹼
+	0x2be7d: "shang1", // 𫹽
+	0x2be81: "qie4", // 𫺁
+	0x2be82: "qie4", // 𫺂
+	0x2be86: "hua2", // 𫺆
+	0x2be8a: "qi2", // 𫺊
+	0x2be8c: "gong1", // 𫺌
+	0x2be93: "men4", // 𫺓
+	0x2be98: "lao4", // 𫺘
+	0x2beaa: "yang3", // 𫺪
+	0x2beb7: "nan2", // 𫺷
+	0x2bec1: "xi4", // 𫻁
+	0x2bf1b: "diao4", // 𫼛
+	0x2bf1d: "chou1", // 𫼝
+	0x2bf23: "pie1", // 𫼣
+	0x2bf24: "ze4", // 𫼤
+	0x2bf25: "hai1", // 𫼥
+	0x2bf27: "hua2", // 𫼧
+	0x2bf2b: "bi4", // 𫼫
+	0x2bf2e: "nang3", // 𫼮
+	0x2bf31: "gang1", // 𫼱
+	0x2bf35: "lu3", // 𫼵
+	0x2bf36: "suo3", // 𫼶
+	0x2bf40: "na4", // 𫽀
+	0x2bf41: "lian3", // 𫽁
+	0x2bf47: "huo4", // 𫽇
+	0x2bf4a: "jiao3", // 𫽊
+	0x2bf4b: "luo2", // 𫽋
+	0x2bf50: "jian1", // 𫽐
+	0x2bf59: "kang2", // 𫽙
+	0x2bf63: "jiang1", // 𫽣
+	0x2bf65: "qian1", // 𫽥
+	0x2bf67: "fei4", // 𫽧
+	0x2bf6e: "dang3", // 𫽮
+	0x2bf72: "niao3", // 𫽲
+	0x2bf73: "bi4", // 𫽳
+	0x2bf81: "yan3", // 𫾁
+	0x2bf83: "su4", // 𫾃
+	0x2bfb2: "li3", // 𫾲
+	0x2bfd7: "shu3", // 𫿗
+	0x2c025: "huo4", // 𬀥
+	0x2c029: "wei3", // 𬀩
+	0x2c02a: "xian4", // 𬀪
+	0x2c02e: "dui4", // 𬀮
+	0x2c031: "kai3", // 𬀱
+	0x2c037: "shang1", // 𬀷
+	0x2c075: "ou1", // 𬁵
+	0x2c07a: "ya4", // 𬁺
+	0x2c07d: "sun3", // 𬁽
+	0x2c080: "run4", // 𬂀
+	0x2c082: "luo2", // 𬂂
+	0x2c085: "dan1", // 𬂅
+	0x2c089: "sheng4", // 𬂉
+	0x2c0a0: "mo2", // 𬂠
+	0x2c0a9: "jia1", // 𬂩
+	0x2c0ae: "sha1", // 𬂮
+	0x2c0b0: "nong2", // 𬂰
+	0x2c0c0: "gui1", // 𬃀
+	0x2c0ca: "zhi4", // 𬃊
+	0x2c0d8: "er4", // 𬃘
+	0x2c0e6: "jian1", // 𬃦
+	0x2c0eb: "xian3", // 𬃫
+	0x2c0ee: "fei4", // 𬃮
+	0x2c0f2: "lin2", // 𬃲
+	0x2c0f3: "yan2", // 𬃳
+	0x2c129: "yin3", // 𬄩
+	0x2c162: "xia4", // 𬅢
+	0x2c165: "gua1", // 𬅥
+	0x2c16b: "pen1", // 𬅫
+	0x2c19b: "nao3", // 𬆛
+	0x2c1a6: "ji1", // 𬆦
+	0x2c1ae: "kou4", // 𬆮
+	0x2c1be: "mao4", // 𬆾
+	0x2c1c3: "jian4", // 𬇃
+	0x2c1c4: "bin1", // 𬇄
+	0x2c1c7: "die2", // 𬇇
+	0x2c1d5: "wan4", // 𬇕
+	0x2c1d8: "tuan2", // 𬇘
+	0x2c1d9: "bei4", // 𬇙
+	0x2c1f0: "men4", // 𬇰
+	0x2c1f9: "guo2", // 𬇹
+	0x2c201: "tan1", // 𬈁
+	0x2c215: "fei4", // 𬈕
+	0x2c21c: "ying2", // 𬈜
+	0x2c227: "se4", // 𬈧
+	0x2c231: "po1", // 𬈱
+	0x2c23e: "hua2", // 𬈾
+	0x2c242: "fen4", // 𬉂
+	0x2c247: "sha4", // 𬉇
+	0x2c24b: "wei3", // 𬉋
+	0x2c260: "lan2", // 𬉠
+	0x2c267: "han2", // 𬉧
+	0x2c27c: "ou3", // 𬉼
+	0x2c282: "chao3", // 𬊂
+	0x2c288: "xun2", // 𬊈
+	0x2c289: "da2", // 𬊉
+	0x2c28d: "chou2", // 𬊍
+	0x2c28e: "gong4", // 𬊎
+	0x2c296: "mei3", // 𬊖
+	0x2c297: "jian1", // 𬊗
+	0x2c2a4: "chan3", // 𬊤
+	0x2c2a6: "shan3", // 𬊦
+	0x2c2b5: "tang3", // 𬊵
+	0x2c2b6: "lan4", // 𬊶
+	0x2c2ba: "wei1", // 𬊺
+	0x2c2be: "ran2", // 𬊾
+	0x2c2c3: "lian4", // 𬋃
+	0x2c2cd: "lai4", // 𬋍
+	0x2c317: "he2", // 𬌗
+	0x2c31d: "chu2", // 𬌝
+	0x2c32e: "yao4", // 𬌮
+	0x2c337: "shan1", // 𬌷
+	0x2c359: "zhan3", // 𬍙
+	0x2c35b: "li4", // 𬍛
+	0x2c361: "dang4", // 𬍡
+	0x2c364: "xun2", // 𬍤
+	0x2c386: "ying2", // 𬎆
+	0x2c391: "lan4", // 𬎑
+	0x2c3a7: "cong2", // 𬎧
+	0x2c3dc: "ma4", // 𬏜
+	0x2c3df: "ji4", // 𬏟
+	0x2c3e6: "fei4", // 𬏦
+	0x2c3eb: "wen2", // 𬏫
+	0x2c3ee: "guo1", // 𬏮
+	0x2c3f7: "fen4", // 𬏷
+	0x2c41a: "hai3", // 𬐚
+	0x2c420: "yang2", // 𬐠
+	0x2c446: "gun4", // 𬑆
+	0x2c447: "chang4", // 𬑇
+	0x2c44d: "chou3", // 𬑍
+	0x2c44f: "ying3", // 𬑏
+	0x2c452: "kou1", // 𬑒
+	0x2c453: "ye4", // 𬑓
+	0x2c454: "zhong4", // 𬑔
+	0x2c455: "hun4", // 𬑕
+	0x2c457: "xian2", // 𬑗
+	0x2c459: "mai4", // 𬑙
+	0x2c461: "chou3", // 𬑡
+	0x2c467: "mian2", // 𬑧
+	0x2c486: "ye4", // 𬒆
+	0x2c487: "lan4", // 𬒇
+	0x2c488: "que4", // 𬒈
+	0x2c48d: "yun3", // 𬒍
+	0x2c48e: "keng1", // 𬒎
+	0x2c494: "geng3", // 𬒔
+	0x2c495: "su4", // 𬒕
+	0x2c497: "lan2", // 𬒗
+	0x2c498: "xin4", // 𬒘
+	0x2c4e0: "ji3", // 𬓠
+	0x2c4eb: "qiu1", // 𬓫
+	0x2c4f1: "ben4", // 𬓱
+	0x2c4f8: "shai4", // 𬓸
+	0x2c4fc: "tui2", // 𬓼
+	0x2c52f: "ou1", // 𬔯
+	0x2c542: "long3", // 𬕂
+	0x2c544: "shi1", // 𬕄
+	0x2c54a: "jian4", // 𬕊
+	0x2c55b: "ku1", // 𬕛
+	0x2c566: "ou1", // 𬕦
+	0x2c56c: "ling3", // 𬕬
+	0x2c583: "zuan3", // 𬖃
+	0x2c591: "xian4", // 𬖑
+	0x2c596: "chou1", // 𬖖
+	0x2c598: "shi4", // 𬖘
+	0x2c5a0: "lou3", // 𬖠
+	0x2c5ae: "xian4", // 𬖮
+	0x2c613: "xun2", // 𬘓
+	0x2c614: "mie4", // 𬘔
+	0x2c615: "qiu2", // 𬘕
+	0x2c616: "jian3", // 𬘖
+	0x2c618: "dan3", // 𬘘
+	0x2c619: "yue4", // 𬘙
+	0x2c61a: "wa4", // 𬘚
+	0x2c61b: "qu1", // 𬘛
+	0x2c61c: "zhan4", // 𬘜
+	0x2c61d: "zhen3", // 𬘝
+	0x2c61e: "diao3", // 𬘞
+	0x2c61f: "xian4", // 𬘟
+	0x2c620: "gai3", // 𬘠
+	0x2c621: "yin1", // 𬘡
+	0x2c622: "kuang4", // 𬘢
+	0x2c624: "lv3", // 𬘤
+	0x2c625: "quan2", // 𬘥
+	0x2c626: "pai4", // 𬘦
+	0x2c627: "ji4", // 𬘧
+	0x2c628: "zhi1", // 𬘨
+	0x2c629: "ting1", // 𬘩
+	0x2c62a: "lian3", // 𬘪
+	0x2c62b: "huan2", // 𬘫
+	0x2c62c: "qian4", // 𬘬
+	0x2c62d: "chen1", // 𬘭
+	0x2c62e: "mi4", // 𬘮
+	0x2c62f: "zhun3", // 𬘯
+	0x2c630: "ruan3", // 𬘰
+	0x2c631: "yao1", // 𬘱
+	0x2c632: "zha3", // 𬘲
+	0x2c633: "xu1", // 𬘳
+	0x2c635: "geng1", // 𬘵
+	0x2c636: "qiu1", // 𬘶
+	0x2c637: "cuo1", // 𬘷
+	0x2c638: "ni4", // 𬘸
+	0x2c63a: "tao4", // 𬘺
+	0x2c63b: "xia2", // 𬘻
+	0x2c63c: "sui4", // 𬘼
+	0x2c63d: "zhi4", // 𬘽
+	0x2c63e: "shuang4", // 𬘾
+	0x2c641: "yan3", // 𬙁
+	0x2c642: "yan3", // 𬙂
+	0x2c643: "qian3", // 𬙃
+	0x2c645: "zhu3", // 𬙅
+	0x2c646: "fan1", // 𬙆
+	0x2c647: "ran2", // 𬙇
+	0x2c648: "lin2", // 𬙈
+	0x2c649: "dan4", // 𬙉
+	0x2c64a: "mo4", // 𬙊
+	0x2c64b: "xiang1", // 𬙋
+	0x2c64e: "lu2", // 𬙎
+	0x2c65d: "bi4", // 𬙝
+	0x2c66d: "wei3", // 𬙭
+	0x2c684: "su4", // 𬚄
+	0x2c6f8: "nie1", // 𬛸
+	0x2c6f9: "dang4", // 𬛹
+	0x2c6fc: "yu2", // 𬛼
+	0x2c714: "da2", // 𬜔
+	0x2c725: "lan2", // 𬜥
+	0x2c727: "fa4", // 𬜧
+	0x2c728: "hui4", // 𬜨
+	0x2c72c: "man4", // 𬜬
+	0x2c72f: "liang3", // 𬜯
+	0x2c738: "huai2", // 𬜸
+	0x2c73e: "xian2", // 𬜾
+	0x2c73f: "guo2", // 𬜿
+	0x2c741: "yu2", // 𬝁
+	0x2c743: "lao2", // 𬝃
+	0x2c74a: "si1", // 𬝊
+	0x2c74b: "jie2", // 𬝋
+	0x2c760: "zei2", // 𬝠
+	0x2c76f: "pin2", // 𬝯
+	0x2c774: "ran2", // 𬝴
+	0x2c78b: "jian4", // 𬞋
+	0x2c795: "lan2", // 𬞕
+	0x2c798: "tui1", // 𬞘
+	0x2c79f: "pin2", // 𬞟
+	0x2c7a3: "sen1", // 𬞣
+	0x2c7ab: "lan4", // 𬞫
+	0x2c7c1: "yi4", // 𬟁
+	0x2c7ea: "xi4", // 𬟪
+	0x2c7fa: "cong2", // 𬟺
+	0x2c7fd: "dong1", // 𬟽
+	0x2c803: "bi4", // 𬠃
+	0x2c805: "dang1", // 𬠅
+	0x2c808: "gong4", // 𬠈
+	0x2c810: "si3", // 𬠐
+	0x2c820: "zei2", // 𬠠
+	0x2c837: "tuo2", // 𬠷
+	0x2c847: "niao3", // 𬡇
+	0x2c84d: "diao1", // 𬡍
+	0x2c84e: "zhou4", // 𬡎
+	0x2c852: "jia2", // 𬡒
+	0x2c853: "die1", // 𬡓
+	0x2c854: "shi1", // 𬡔
+	0x2c855: "sha1", // 𬡕
+	0x2c860: "luo4", // 𬡠
+	0x2c877: "zan4", // 𬡷
+	0x2c87b: "chan3", // 𬡻
+	0x2c887: "ha1", // 𬢇
+	0x2c888: "dong4", // 𬢈
+	0x2c889: "ci1", // 𬢉
+	0x2c88a: "si4", // 𬢊
+	0x2c88b: "tiao4", // 𬢋
+	0x2c88c: "zhi4", // 𬢌
+	0x2c88e: "du3", // 𬢎
+	0x2c88f: "dan1", // 𬢏
+	0x2c890: "qi4", // 𬢐
+	0x2c891: "ying3", // 𬢑
+	0x2c892: "ming2", // 𬢒
+	0x2c894: "deng1", // 𬢔
+	0x2c8aa: "zhou1", // 𬢪
+	0x2c8af: "ying1", // 𬢯
+	0x2c8b3: "can1", // 𬢳
+	0x2c8c0: "wei4", // 𬣀
+	0x2c8d9: "xu1", // 𬣙
+	0x2c8da: "kou3", // 𬣚
+	0x2c8db: "zhi4", // 𬣛
+	0x2c8dc: "hao4", // 𬣜
+	0x2c8dd: "jun4", // 𬣝
+	0x2c8de: "zhu3", // 𬣞
+	0x2c8df: "tou3", // 𬣟
+	0x2c8e0: "gan4", // 𬣠
+	0x2c8e1: "jian4", // 𬣡
+	0x2c8e2: "ta1", // 𬣢
+	0x2c8e3: "zhu4", // 𬣣
+	0x2c8e4: "juan3", // 𬣤
+	0x2c8e5: "tao1", // 𬣥
+	0x2c8e6: "ao4", // 𬣦
+	0x2c8e7: "fei4", // 𬣧
+	0x2c8e8: "ya3", // 𬣨
+	0x2c8e9: "wei1", // 𬣩
+	0x2c8ea: "hui4", // 𬣪
+	0x2c8ec: "hui4", // 𬣬
+	0x2c8ed: "dang3", // 𬣭
+	0x2c8ee: "ming2", // 𬣮
+	0x2c8ef: "ren2", // 𬣯
+	0x2c8f0: "hui4", // 𬣰
+	0x2c8f1: "chou2", // 𬣱
+	0x2c8f2: "bing4", // 𬣲
+	0x2c8f3: "hen3", // 𬣳
+	0x2c8f6: "zha4", // 𬣶
+	0x2c8f7: "su4", // 𬣷
+	0x2c8f8: "han4", // 𬣸
+	0x2c8f9: "cu4", // 𬣹
+	0x2c8fb: "ting4", // 𬣻
+	0x2c8fc: "lang3", // 𬣼
+	0x2c8fd: "lian2", // 𬣽
+	0x2c8fe: "zha1", // 𬣾
+	0x2c8ff: "lao2", // 𬣿
+	0x2c900: "xia4", // 𬤀
+	0x2c901: "tao2", // 𬤁
+	0x2c902: "tan4", // 𬤂
+	0x2c904: "can4", // 𬤄
+	0x2c905: "ji2", // 𬤅
+	0x2c906: "gun4", // 𬤆
+	0x2c907: "yin1", // 𬤇
+	0x2c909: "hui4", // 𬤉
+	0x2c90a: "shi4", // 𬤊
+	0x2c90b: "cong4", // 𬤋
+	0x2c90c: "cha1", // 𬤌
+	0x2c90d: "huang2", // 𬤍
+	0x2c90e: "xuan1", // 𬤎
+	0x2c90f: "duo2", // 𬤏
+	0x2c910: "ge1", // 𬤐
+	0x2c911: "ge2", // 𬤑
+	0x2c912: "ge2", // 𬤒
+	0x2c913: "chi1", // 𬤓
+	0x2c915: "ta4", // 𬤕
+	0x2c916: "gun4", // 𬤖
+	0x2c918: "chi4", // 𬤘
+	0x2c919: "hu1", // 𬤙
+	0x2c91a: "ying1", // 𬤚
+	0x2c91b: "chan3", // 𬤛
+	0x2c91c: "zha1", // 𬤜
+	0x2c91d: "hui4", // 𬤝
+	0x2c91e: "yi4", // 𬤞
+	0x2c91f: "liao2", // 𬤟
+	0x2c920: "yan2", // 𬤠
+	0x2c921: "ao4", // 𬤡
+	0x2c922: "zun3", // 𬤢
+	0x2c923: "dui4", // 𬤣
+	0x2c924: "zeng1", // 𬤤
+	0x2c925: "zhuan4", // 𬤥
+	0x2c926: "yi2", // 𬤦
+	0x2c928: "zao4", // 𬤨
+	0x2c929: "ai4", // 𬤩
+	0x2c92a: "ta4", // 𬤪
+	0x2c92b: "hao2", // 𬤫
+	0x2c92c: "tuan1", // 𬤬
+	0x2c92d: "hui4", // 𬤭
+	0x2c92e: "zan4", // 𬤮
+	0x2c92f: "jian3", // 𬤯
+	0x2c930: "huan1", // 𬤰
+	0x2c931: "tui2", // 𬤱
+	0x2c944: "zhe2", // 𬥄
+	0x2c948: "mao4", // 𬥈
+	0x2c973: "chuang4", // 𬥳
+	0x2c974: "han1", // 𬥴
+	0x2c975: "yi4", // 𬥵
+	0x2c976: "bi4", // 𬥶
+	0x2c977: "zheng4", // 𬥷
+	0x2c978: "chuan4", // 𬥸
+	0x2c97a: "yan3", // 𬥺
+	0x2c97b: "ruan3", // 𬥻
+	0x2c97c: "zhuan4", // 𬥼
+	0x2c97d: "hou4", // 𬥽
+	0x2c97e: "lan4", // 𬥾
+	0x2c97f: "zhan4", // 𬥿
+	0x2c985: "tang4", // 𬦅
+	0x2c986: "tuan2", // 𬦆
+	0x2c9a3: "li4", // 𬦣
+	0x2c9a5: "bei4", // 𬦥
+	0x2c9a7: "lun2", // 𬦧
+	0x2c9a9: "zou3", // 𬦩
+	0x2c9ab: "duo4", // 𬦫
+	0x2c9af: "xie2", // 𬦯
+	0x2c9b4: "bing4", // 𬦴
+	0x2c9b5: "zhang1", // 𬦵
+	0x2c9bb: "guan4", // 𬦻
+	0x2c9c0: "qiang1", // 𬧀
+	0x2c9c3: "teng2", // 𬧃
+	0x2c9d1: "nian3", // 𬧑
+	0x2c9da: "dian1", // 𬧚
+	0x2c9e2: "long3", // 𬧢
+	0x2c9e4: "lao4", // 𬧤
+	0x2c9e9: "guo2", // 𬧩
+	0x2ca01: "mao2", // 𬨁
+	0x2ca02: "qi2", // 𬨂
+	0x2ca04: "yang3", // 𬨄
+	0x2ca05: "nian3", // 𬨅
+	0x2ca06: "gong3", // 𬨆
+	0x2ca07: "kai3", // 𬨇
+	0x2ca08: "wan3", // 𬨈
+	0x2ca09: "tian2", // 𬨉
+	0x2ca0b: "zang4", // 𬨋
+	0x2ca0c: "pi4", // 𬨌
+	0x2ca0d: "ge2", // 𬨍
+	0x2ca0e: "you2", // 𬨎
+	0x2ca0f: "xu3", // 𬨏
+	0x2ca10: "hui4", // 𬨐
+	0x2ca11: "sang3", // 𬨑
+	0x2ca12: "guang1", // 𬨒
+	0x2ca13: "chao2", // 𬨓
+	0x2ca14: "pi4", // 𬨔
+	0x2ca4e: "huo4", // 𬩎
+	0x2ca7d: "xun2", // 𬩽
+	0x2ca7e: "lai2", // 𬩾
+	0x2ca8d: "mao4", // 𬪍
+	0x2caa7: "yu4", // 𬪧
+	0x2caa8: "zhan3", // 𬪨
+	0x2caa9: "nong2", // 𬪩
+	0x2caba: "guang4", // 𬪺
+	0x2cb07: "zhe1", // 𬬇
+	0x2cb27: "han4", // 𬬧
+	0x2cb28: "hua2", // 𬬨
+	0x2cb29: "yi4", // 𬬩
+	0x2cb2a: "kou4", // 𬬪
+	0x2cb2b: "pi1", // 𬬫
+	0x2cb2c: "wei2", // 𬬬
+	0x2cb2d: "lun2", // 𬬭
+	0x2cb2e: "chang3", // 𬬮
+	0x2cb2f: "ren2", // 𬬯
+	0x2cb30: "qiang1", // 𬬰
+	0x2cb31: "jin1", // 𬬱
+	0x2cb32: "zhao1", // 𬬲
+	0x2cb33: "qi2", // 𬬳
+	0x2cb35: "chen2", // 𬬵
+	0x2cb37: "shi2", // 𬬷
+	0x2cb38: "shu4", // 𬬸
+	0x2cb39: "shen2", // 𬬹
+	0x2cb3a: "chu2", // 𬬺
+	0x2cb3b: "lu2", // 𬬻
+	0x2cb3d: "zuo2", // 𬬽
+	0x2cb3e: "ning2", // 𬬾
+	0x2cb3f: "zhao1", // 𬬿
+	0x2cb40: "si4", // 𬭀
+	0x2cb41: "mu3", // 𬭁
+	0x2cb42: "hong2", // 𬭂
+	0x2cb43: "pi1", // 𬭃
+	0x2cb45: "xiang4", // 𬭅
+	0x2cb46: "duo3", // 𬭆
+	0x2cb47: "guo2", // 𬭇
+	0x2cb48: "cha2", // 𬭈
+	0x2cb49: "ji1", // 𬭉
+	0x2cb4a: "du4", // 𬭊
+	0x2cb4c: "hua2", // 𬭌
+	0x2cb4d: "han4", // 𬭍
+	0x2cb4e: "hong2", // 𬭎
+	0x2cb4f: "yang2", // 𬭏
+	0x2cb51: "zi4", // 𬭑
+	0x2cb53: "tian3", // 𬭓
+	0x2cb54: "chuo4", // 𬭔
+	0x2cb55: "diao1", // 𬭕
+	0x2cb56: "peng2", // 𬭖
+	0x2cb57: "nei4", // 𬭗
+	0x2cb5a: "chun2", // 𬭚
+	0x2cb5b: "bo1", // 𬭛
+	0x2cb5c: "lei4", // 𬭜
+	0x2cb5d: "san3", // 𬭝
+	0x2cb5e: "da1", // 𬭞
+	0x2cb5f: "cou4", // 𬭟
+	0x2cb60: "cha3", // 𬭠
+	0x2cb61: "zhao1", // 𬭡
+	0x2cb62: "gui4", // 𬭢
+	0x2cb63: "xian4", // 𬭣
+	0x2cb64: "hou2", // 𬭤
+	0x2cb65: "zong3", // 𬭥
+	0x2cb66: "nou4", // 𬭦
+	0x2cb68: "chui2", // 𬭨
+	0x2cb69: "weng1", // 𬭩
+	0x2cb6a: "xia2", // 𬭪
+	0x2cb6b: "zhan3", // 𬭫
+	0x2cb6c: "hui4", // 𬭬
+	0x2cb6d: "qi1", // 𬭭
+	0x2cb6f: "pie3", // 𬭯
+	0x2cb70: "yi2", // 𬭰
+	0x2cb72: "suo3", // 𬭲
+	0x2cb73: "xi3", // 𬭳
+	0x2cb74: "jie2", // 𬭴
+	0x2cb76: "hei1", // 𬭶
+	0x2cb77: "cheng1", // 𬭷
+	0x2cb78: "lin2", // 𬭸
+	0x2cb7a: "biao1", // 𬭺
+	0x2cb7b: "jiao3", // 𬭻
+	0x2cb7c: "sui4", // 𬭼
+	0x2cb7d: "bi4", // 𬭽
+	0x2cb7f: "ji1", // 𬭿
+	0x2cb81: "bo2", // 𬮁
+	0x2cb83: "zuan3", // 𬮃
+	0x2cb84: "jiao4", // 𬮄
+	0x2cb98: "huo4", // 𬮘
+	0x2cb9f: "lin4", // 𬮟
+	0x2cba0: "xia3", // 𬮠
+	0x2cba1: "ma3", // 𬮡
+	0x2cba2: "hong4", // 𬮢
+	0x2cba3: "kuang1", // 𬮣
+	0x2cba4: "ge2", // 𬮤
+	0x2cba5: "chu4", // 𬮥
+	0x2cba8: "huo4", // 𬮨
+	0x2cba9: "qi4", // 𬮩
+	0x2cbaa: "sha1", // 𬮪
+	0x2cbad: "kui1", // 𬮭
+	0x2cbaf: "que4", // 𬮯
+	0x2cbb0: "e1", // 𬮰
+	0x2cbb1: "yin1", // 𬮱
+	0x2cbb2: "yao3", // 𬮲
+	0x2cbb3: "ban3", // 𬮳
+	0x2cbb4: "an4", // 𬮴
+	0x2cbb5: "xian4", // 𬮵
+	0x2cbb9: "deng1", // 𬮹
+	0x2cbba: "ma4", // 𬮺
+	0x2cbbb: "wu4", // 𬮻
+	0x2cbbf: "gai4", // 𬮿
+	0x2cbc0: "ji1", // 𬯀
+	0x2cbc5: "xia2", // 𬯅
+	0x2cbce: "tui2", // 𬯎
+	0x2cc03: "mu4", // 𬰃
+	0x2cc21: "luo3", // 𬰡
+	0x2cc23: "jian3", // 𬰣
+	0x2cc24: "zhou4", // 𬰤
+	0x2cc25: "liang3", // 𬰥
+	0x2cc31: "jian1", // 𬰱
+	0x2cc33: "die2", // 𬰳
+	0x2cc36: "sui4", // 𬰶
+	0x2cc37: "chan1", // 𬰷
+	0x2cc38: "yu4", // 𬰸
+	0x2cc3a: "ye4", // 𬰺
+	0x2cc53: "qiu2", // 𬱓
+	0x2cc54: "you4", // 𬱔
+	0x2cc55: "mo4", // 𬱕
+	0x2cc56: "di2", // 𬱖
+	0x2cc57: "dan1", // 𬱗
+	0x2cc59: "pan4", // 𬱙
+	0x2cc5b: "zhuan4", // 𬱛
+	0x2cc5c: "lei4", // 𬱜
+	0x2cc5d: "gen3", // 𬱝
+	0x2cc5f: "wei3", // 𬱟
+	0x2cc60: "gua1", // 𬱠
+	0x2cc62: "wen4", // 𬱢
+	0x2cc63: "cen2", // 𬱣
+	0x2cc65: "hong1", // 𬱥
+	0x2cc66: "qi1", // 𬱦
+	0x2cc6a: "yi2", // 𬱪
+	0x2cc6b: "ding4", // 𬱫
+	0x2cc6c: "san3", // 𬱬
+	0x2cc6d: "po4", // 𬱭
+	0x2cc6e: "ao1", // 𬱮
+	0x2cc6f: "shou3", // 𬱯
+	0x2cc70: "pi1", // 𬱰
+	0x2cc71: "zhan3", // 𬱱
+	0x2cc73: "yu4", // 𬱳
+	0x2cc75: "wei3", // 𬱵
+	0x2cc77: "xue4", // 𬱷
+	0x2cc78: "xue4", // 𬱸
+	0x2cc7c: "kai3", // 𬱼
+	0x2cc7d: "xuan4", // 𬱽
+	0x2cc7f: "guo2", // 𬱿
+	0x2cc80: "hu1", // 𬲀
+	0x2cc85: "liao2", // 𬲅
+	0x2cc86: "yu4", // 𬲆
+	0x2cc95: "jian3", // 𬲕
+	0x2cc9c: "cheng1", // 𬲜
+	0x2cca6: "si4", // 𬲦
+	0x2ccaa: "song1", // 𬲪
+	0x2ccab: "nian3", // 𬲫
+	0x2ccad: "jie3", // 𬲭
+	0x2ccae: "di1", // 𬲮
+	0x2ccaf: "gou1", // 𬲯
+	0x2ccb0: "shang1", // 𬲰
+	0x2ccb2: "ning2", // 𬲲
+	0x2ccb3: "yi4", // 𬲳
+	0x2ccb4: "man3", // 𬲴
+	0x2ccb6: "ci2", // 𬲶
+	0x2ccb7: "en4", // 𬲷
+	0x2ccb8: "guo4", // 𬲸
+	0x2ccb9: "mang1", // 𬲹
+	0x2ccba: "bao3", // 𬲺
+	0x2ccbb: "ti2", // 𬲻
+	0x2ccbc: "ye4", // 𬲼
+	0x2ccbe: "hu2", // 𬲾
+	0x2ccc0: "yi4", // 𬳀
+	0x2ccc1: "yao2", // 𬳁
+	0x2ccc2: "zhui4", // 𬳂
+	0x2ccc3: "bi4", // 𬳃
+	0x2ccc5: "sui3", // 𬳅
+	0x2ccc6: "jian1", // 𬳆
+	0x2ccc9: "da1", // 𬳉
+	0x2ccca: "tao2", // 𬳊
+	0x2cccb: "xi1", // 𬳋
+	0x2cccc: "qiu3", // 𬳌
+	0x2cccd: "tang2", // 𬳍
+	0x2ccd0: "chong2", // 𬳐
+	0x2ccd1: "ying3", // 𬳑
+	0x2ccd2: "deng4", // 𬳒
+	0x2ccd3: "yong1", // 𬳓
+	0x2ccd4: "mo2", // 𬳔
+	0x2ccdf: "fen2", // 𬳟
+	0x2ccf2: "chan3", // 𬳲
+	0x2ccf3: "fan1", // 𬳳
+	0x2ccf4: "peng1", // 𬳴
+	0x2ccf5: "pi1", // 𬳵
+	0x2ccf6: "jiong1", // 𬳶
+	0x2ccf7: "gua1", // 𬳷
+	0x2ccf8: "wo4", // 𬳸
+	0x2ccfb: "kuang1", // 𬳻
+	0x2ccfd: "shen1", // 𬳽
+	0x2ccfe: "chi2", // 𬳾
+	0x2ccff: "tu2", // 𬳿
+	0x2cd00: "liang2", // 𬴀
+	0x2cd01: "an4", // 𬴁
+	0x2cd02: "fei1", // 𬴂
+	0x2cd03: "huo1", // 𬴃
+	0x2cd05: "peng2", // 𬴅
+	0x2cd06: "qi2", // 𬴆
+	0x2cd07: "chi4", // 𬴇
+	0x2cd0a: "lin2", // 𬴊
+	0x2cd0b: "tie3", // 𬴋
+	0x2cd0c: "meng2", // 𬴌
+	0x2cd0d: "biao1", // 𬴍
+	0x2cd0e: "tuo2", // 𬴎
+	0x2cd0f: "jian3", // 𬴏
+	0x2cd10: "huan1", // 𬴐
+	0x2cd28: "nao4", // 𬴨
+	0x2cd29: "nong2", // 𬴩
+	0x2cd68: "mi4", // 𬵨
+	0x2cd80: "jie1", // 𬶀
+	0x2cd81: "ren2", // 𬶁
+	0x2cd82: "du4", // 𬶂
+	0x2cd84: "diao4", // 𬶄
+	0x2cd86: "bang4", // 𬶆
+	0x2cd87: "jie4", // 𬶇
+	0x2cd89: "wu3", // 𬶉
+	0x2cd8a: "geng4", // 𬶊
+	0x2cd8b: "ju1", // 𬶋
+	0x2cd8c: "dai4", // 𬶌
+	0x2cd8d: "tuo2", // 𬶍
+	0x2cd8e: "jie2", // 𬶎
+	0x2cd8f: "wei2", // 𬶏
+	0x2cd90: "zhao4", // 𬶐
+	0x2cd93: "ting2", // 𬶓
+	0x2cd94: "kao4", // 𬶔
+	0x2cd95: "ti2", // 𬶕
+	0x2cd97: "lao2", // 𬶗
+	0x2cd9b: "shan4", // 𬶛
+	0x2cd9e: "hu2", // 𬶞
+	0x2cd9f: "la4", // 𬶟
+	0x2cda0: "lian4", // 𬶠
+	0x2cda2: "xing1", // 𬶢
+	0x2cda3: "zha3", // 𬶣
+	0x2cda4: "ti2", // 𬶤
+	0x2cda6: "you2", // 𬶦
+	0x2cda7: "rou2", // 𬶧
+	0x2cda8: "ji4", // 𬶨
+	0x2cdaa: "ni4", // 𬶪
+	0x2cdab: "huang2", // 𬶫
+	0x2cdac: "qu1", // 𬶬
+	0x2cdad: "ji4", // 𬶭
+	0x2cdae: "xi3", // 𬶮
+	0x2cdaf: "guo3", // 𬶯
+	0x2cdb1: "jing3", // 𬶱
+	0x2cdb2: "xiang4", // 𬶲
+	0x2cdb4: "pu1", // 𬶴
+	0x2cdb5: "guan1", // 𬶵
+	0x2cdba: "guan4", // 𬶺
+	0x2cdbb: "ba4", // 𬶻
+	0x2cdd5: "bu3", // 𬷕
+	0x2cdfc: "yi4", // 𬷼
+	0x2cdfd: "xiao1", // 𬷽
+	0x2cdfe: "hong2", // 𬷾
+	0x2ce00: "wen2", // 𬸀
+	0x2ce01: "ou3", // 𬸁
+	0x2ce02: "ge1", // 𬸂
+	0x2ce05: "chu2", // 𬸅
+	0x2ce06: "sheng1", // 𬸆
+	0x2ce08: "chi1", // 𬸈
+	0x2ce09: "qiong2", // 𬸉
+	0x2ce0a: "ren2", // 𬸊
+	0x2ce0c: "sha1", // 𬸌
+	0x2ce0d: "chou2", // 𬸍
+	0x2ce0e: "li2", // 𬸎
+	0x2ce0f: "lang2", // 𬸏
+	0x2ce10: "chuang2", // 𬸐
+	0x2ce11: "yue4", // 𬸑
+	0x2ce12: "qi2", // 𬸒
+	0x2ce15: "ying1", // 𬸕
+	0x2ce16: "yan2", // 𬸖
+	0x2ce18: "yan3", // 𬸘
+	0x2ce19: "miao2", // 𬸙
+	0x2ce1a: "yue4", // 𬸚
+	0x2ce1b: "huang2", // 𬸛
+	0x2ce1c: "pian1", // 𬸜
+	0x2ce1d: "an1", // 𬸝
+	0x2ce1e: "lv2", // 𬸞
+	0x2ce20: "ge1", // 𬸠
+	0x2ce21: "lan2", // 𬸡
+	0x2ce22: "gao1", // 𬸢
+	0x2ce23: "xian1", // 𬸣
+	0x2ce24: "piao1", // 𬸤
+	0x2ce25: "chong1", // 𬸥
+	0x2ce26: "zhuo2", // 𬸦
+	0x2ce27: "yan4", // 𬸧
+	0x2ce28: "qi1", // 𬸨
+	0x2ce29: "ao3", // 𬸩
+	0x2ce2a: "fan2", // 𬸪
+	0x2ce2c: "kou4", // 𬸬
+	0x2ce2d: "ya4", // 𬸭
+	0x2ce2e: "kui2", // 𬸮
+	0x2ce2f: "pi4", // 𬸯
+	0x2ce30: "he4", // 𬸰
+	0x2ce31: "qu2", // 𬸱
+	0x2ce35: "zhan4", // 𬸵
+	0x2ce36: "chang1", // 𬸶
+	0x2ce37: "cou4", // 𬸷
+	0x2ce38: "bian4", // 𬸸
+	0x2ce39: "gan4", // 𬸹
+	0x2ce3e: "qi2", // 𬸾
+	0x2ce45: "cai2", // 𬹅
+	0x2ce47: "bo2", // 𬹇
+	0x2ce49: "hun2", // 𬹉
+	0x2ce4b: "hun2", // 𬹋
+	0x2ce4c: "nie2", // 𬹌
+	0x2ce4d: "mo4", // 𬹍
+	0x2ce4e: "shan4", // 𬹎
+	0x2ce55: "zhen3", // 𬹕
+	0x2ce56: "nong2", // 𬹖
+	0x2ce57: "lai2", // 𬹗
+	0x2ce58: "teng2", // 𬹘
+	0x2ce63: "zhu1", // 𬹣
+	0x2ce7a: "ya2", // 𬹺
+	0x2ce7b: "na4", // 𬹻
+	0x2ce7c: "xie4", // 𬹼
+	0x2ce7d: "hang2", // 𬹽
+	0x2ce80: "zha1", // 𬺀
+	0x2ce81: "zhi4", // 𬺁
+	0x2ce82: "nie4", // 𬺂
+	0x2ce83: "ai2", // 𬺃
+	0x2ce84: "kuo4", // 𬺄
+	0x2ce85: "chan3", // 𬺅
+	0x2ce87: "cuo2", // 𬺇
+	0x2ce88: "yi3", // 𬺈
+	0x2ce89: "ze2", // 𬺉
+	0x2ce8a: "yun3", // 𬺊
+	0x2ce8b: "zu2", // 𬺋
+	0x2ce8c: "ya2", // 𬺌
+	0x2ce8d: "jian1", // 𬺍
+	0x2ce8e: "ci1", // 𬺎
+	0x2ce8f: "bo2", // 𬺏
+	0x2ce92: "yin3", // 𬺒
+	0x2ce93: "chu3", // 𬺓
+	0x2ce94: "jin4", // 𬺔
+	0x2ce95: "cha4", // 𬺕
+	0x2ce96: "jue2", // 𬺖
+	0x2ce9c: "long2", // 𬺜
+	0x2ce9f: "yao4", // 𬺟
+	0x2d016: "li2", // 𭀖
+	0x2d11b: "zuan1", // 𭄛
+	0x2d1dc: "po1", // 𭇜
+	0x2d1ef: "liu2", // 𭇯
+	0x2d208: "mu3", // 𭈈
+	0x2d209: "ying4", // 𭈉
+	0x2d22e: "huan2", // 𭈮
+	0x2d268: "zui3", // 𭉨
+	0x2d2b8: "la4", // 𭊸
+	0x2d382: "zong1", // 𭎂
+	0x2d39c: "dao3", // 𭎜
+	0x2d3e6: "ai4", // 𭏦
+	0x2d3f8: "wei3", // 𭏸
+	0x2d546: "suo3", // 𭕆
+	0x2d5e1: "ke1", // 𭗡
+	0x2d613: "hu1", // 𭘓
+	0x2d6a6: "guo1", // 𭚦
+	0x2d74b: "ling2", // 𭝋
+	0x2d784: "ai4", // 𭞄
+	0x2d819: "pu1", // 𭠙
+	0x2d85c: "shen3", // 𭡜
+	0x2d8c7: "dian1", // 𭣇
+	0x2d8e7: "yi4", // 𭣧
+	0x2d90e: "li2", // 𭤎
+	0x2d930: "yu2", // 𭤰
+	0x2d9cb: "tang3", // 𭧋
+	0x2da5a: "yi3", // 𭩚
+	0x2da5b: "men1", // 𭩛
+	0x2da70: "fa2", // 𭩰
+	0x2da86: "zhua1", // 𭪆
+	0x2dac0: "kui4", // 𭫀
+	0x2dad9: "di2", // 𭫙
+	0x2db48: "ya4", // 𭭈
+	0x2dc0e: "dang1", // 𭰎
+	0x2dc12: "sha1", // 𭰒
+	0x2dc4a: "hong4", // 𭱊
+	0x2dcab: "zhu2", // 𭲫
+	0x2dd0a: "mo2", // 𭴊
+	0x2de5c: "luo2", // 𭹜
+	0x2ded4: "lai2", // 𭻔
+	0x2e024: "lao2", // 𮀤
+	0x2e032: "geng4", // 𮀲
+	0x2e18f: "lan2", // 𮆏
+	0x2e1e4: "ling2", // 𮇤
+	0x2e260: "qiu2", // 𮉠
+	0x2e261: "lu2", // 𮉡
+	0x2e262: "zhi4", // 𮉢
+	0x2e263: "zuo2", // 𮉣
+	0x2e264: "gua4", // 𮉤
+	0x2e267: "liang3", // 𮉧
+	0x2e268: "gua1", // 𮉨
+	0x2e26a: "zou1", // 𮉪
+	0x2e26b: "rui2", // 𮉫
+	0x2e26c: "cui4", // 𮉬
+	0x2e26e: "sui4", // 𮉮
+	0x2e26f: "cai4", // 𮉯
+	0x2e3fa: "du2", // 𮏺
+	0x2e41a: "fan2", // 𮐚
+	0x2e428: "ying1", // 𮐨
+	0x2e502: "jie2", // 𮔂
+	0x2e505: "fu4", // 𮔅
+	0x2e50a: "liang3", // 𮔊
+	0x2e581: "liang3", // 𮖁
+	0x2e5b1: "xie2", // 𮖱
+	0x2e64a: "yin3", // 𮙊
+	0x2e64b: "du2", // 𮙋
+	0x2e6d7: "tang2", // 𮛗
+	0x2e736: "dao4", // 𮜶
+	0x2e774: "gu1", // 𮝴
+	0x2e775: "er2", // 𮝵
+	0x2e777: "fen2", // 𮝷
+	0x2e778: "chun1", // 𮝸
+	0x2e779: "huan4", // 𮝹
+	0x2e77a: "ge2", // 𮝺
+	0x2e81e: "qiang1", // 𮠞
+	0x2e833: "chen3", // 𮠳
+	0x2e848: "ke1", // 𮡈
+	0x2e8f2: "gang1", // 𮣲
+	0x2e8f3: "hong2", // 𮣳
+	0x2e8f4: "chan2", // 𮣴
+	0x2e8f5: "zhui4", // 𮣵
+	0x2e8f6: "lv4", // 𮣶
+	0x2e92b: "men2", // 𮤫
+	0x2e92c: "chu4", // 𮤬
+	0x2e92f: "rui4", // 𮤯
+	0x2e932: "bi4", // 𮤲
+	0x2e938: "e2", // 𮤸
+	0x2e9f4: "chang4", // 𮧴
+	0x2e9f5: "wei3", // 𮧵
+	0x2ea34: "feng1", // 𮨴
+	0x2ea35: "liu4", // 𮨵
+	0x2ea5b: "bi4", // 𮩛
+	0x2ea5c: "hai4", // 𮩜
+	0x2ea5d: "ai4", // 𮩝
+	0x2ea5e: "yi4", // 𮩞
+	0x2eaa1: "mang2", // 𮪡
+	0x2eaa2: "hai4", // 𮪢
+	0x2eaa3: "zong1", // 𮪣
+	0x2eaa4: "cao3", // 𮪤
+	0x2eaa5: "dun1", // 𮪥
+	0x2eac2: "ning2", // 𮫂
+	0x2eb1b: "xu4", // 𮬛
+	0x2eb1c: "yi4", // 𮬜
+	0x2eb1d: "gui4", // 𮬝
+	0x2eb1e: "can1", // 𮬞
+	0x2eb1f: "huo4", // 𮬟
+	0x2eb20: "lu4", // 𮬠
+	0x2eb21: "hua2", // 𮬡
+	0x2eb22: "weng1", // 𮬢
+	0x2eb23: "xian2", // 𮬣
+	0x2eb24: "zhen1", // 𮬤
+	0x2eb61: "jie4", // 𮭡
+	0x2eb62: "yao1", // 𮭢
+	0x2eb64: "mie4", // 𮭤
+	0x2eb65: "gong1", // 𮭥
+	0x2eb66: "chen2", // 𮭦
+	0x2eb68: "yan4", // 𮭨
+	0x2eb6a: "shuang1", // 𮭪
+	0x2eb70: "gang3", // 𮭰
+	0x2eb87: "mou2", // 𮮇
+	0x2ebd9: "ke4", // 𮯙
+	0x2ebf4: "ni2", // 𮯴
+	0x2ebf8: "li4", // 𮯸
+	0x2ec04: "chong3", // 𮰄
+	0x2ec09: "ping2", // 𮰉
+	0x2ec14: "wei2", // 𮰔
+	0x2ec38: "yi3", // 𮰸
+	0x2ec3d: "lan3", // 𮰽
+	0x2ec3e: "qie4", // 𮰾
+	0x2ec3f: "xing2", // 𮰿
+	0x2ec41: "yu3", // 𮱁
+	0x2ec47: "lian2", // 𮱇
+	0x2ec4a: "luo2", // 𮱊
+	0x2ec50: "wan1", // 𮱐
+	0x2ec52: "yan4", // 𮱒
+	0x2ec60: "jun4", // 𮱠
+	0x2ec63: "tui2", // 𮱣
+	0x2ec69: "yun4", // 𮱩
+	0x2ec6f: "dan1", // 𮱯
+	0x2ec75: "qiao1", // 𮱵
+	0x2ec81: "qian4", // 𮲁
+	0x2ec83: "le4", // 𮲃
+	0x2ec84: "tong4", // 𮲄
+	0x2ec87: "guo2", // 𮲇
+	0x2ec9a: "wan4", // 𮲚
+	0x2ec9d: "yao1", // 𮲝
+	0x2ec9f: "xu3", // 𮲟
+	0x2ecae: "shuang1", // 𮲮
+	0x2ecb0: "bi4", // 𮲰
+	0x2ecb2: "qing4", // 𮲲
+	0x2ecb6: "jian4", // 𮲶
+	0x2ecc6: "he2", // 𮳆
+	0x2ecce: "lan2", // 𮳎
+	0x2eccf: "xian4", // 𮳏
+	0x2ecd6: "yan4", // 𮳖
+	0x2ecd7: "shu1", // 𮳗
+	0x2ecdc: "yi4", // 𮳜
+	0x2ece0: "feng4", // 𮳠
+	0x2ece2: "zhu3", // 𮳢
+	0x2ece7: "qiao1", // 𮳧
+	0x2ecf3: "zong3", // 𮳳
+	0x2ecf4: "ye4", // 𮳴
+	0x2ed14: "ye4", // 𮴔
+	0x2ed15: "qing4", // 𮴕
+	0x2ed28: "cong1", // 𮴨
+	0x2ed3c: "yan3", // 𮴼
+	0x2ed3f: "tian2", // 𮴿
+	0x2ed45: "xi1", // 𮵅
+	0x2ed51: "nao3", // 𮵑
+	0x2ed60: "yi1", // 𮵠
+	0x2ed6e: "diao3", // 𮵮
+	0x2ed71: "lai2", // 𮵱
+	0x2ed7f: "cha4", // 𮵿
+	0x2ed81: "guan1", // 𮶁
+	0x2ed82: "feng2", // 𮶂
+	0x2ed83: "tao1", // 𮶃
+	0x2ed94: "wei4", // 𮶔
+	0x2ed99: "jian4", // 𮶙
+	0x2edac: "jian4", // 𮶬
+	0x2edc5: "dong3", // 𮷅
+	0x2edc7: "luo4", // 𮷇
+	0x2edc8: "ji1", // 𮷈
+	0x2edca: "bo4", // 𮷊
+	0x2edcd: "zhu4", // 𮷍
+	0x2edd7: "dai4", // 𮷗
+	0x2edda: "zang4", // 𮷚
+	0x2eddb: "hong1", // 𮷛
+	0x2eddd: "tao1", // 𮷝
+	0x2ede3: "yuan3", // 𮷣
+	0x2ede8: "li4", // 𮷨
+	0x2edf8: "yuan2", // 𮷸
+	0x2edfb: "liu2", // 𮷻
+	0x2ee00: "lian4", // 𮸀
+	0x2ee08: "jun1", // 𮸈
+	0x2ee0a: "chan1", // 𮸊
+	0x2ee0c: "shi4", // 𮸌
+	0x2ee0f: "cuan1", // 𮸏
+	0x2ee10: "fang1", // 𮸐
+	0x2ee15: "fu4", // 𮸕
+	0x2ee17: "xian3", // 𮸗
+	0x2ee1b: "kai3", // 𮸛
+	0x2ee1e: "qi1", // 𮸞
+	0x2ee1f: "chang2", // 𮸟
+	0x2ee20: "xian4", // 𮸠
+	0x2ee25: "xie2", // 𮸥
+	0x2ee26: "fu4", // 𮸦
+	0x2ee27: "que4", // 𮸧
+	0x2ee2e: "xie2", // 𮸮
+	0x2ee39: "gu4", // 𮸹
+	0x2ee3c: "biao1", // 𮸼
+	0x2ee3d: "fei1", // 𮸽
+	0x2ee40: "pin1", // 𮹀
+	0x2ee42: "fei1", // 𮹂
+	0x2ee45: "mo4", // 𮹅
+	0x2ee4b: "zhou1", // 𮹋
+	0x2ee4c: "wen1", // 𮹌
+	0x2ee58: "ying1", // 𮹘
+	0x2ee59: "he4", // 𮹙
+	0x2ee5c: "yan4", // 𮹜
+	0x2ee5d: "ta4", // 𮹝
+	0x2f835: "hui1", // 灰
+	0x30021: "qian1", // 𰀡
+	0x30022: "jian1", // 𰀢
+	0x3005c: "luan2", // 𰁜
+	0x30067: "song3", // 𰁧
+	0x30078: "dang4", // 𰁸
+	0x3007e: "fu4", // 𰁾
+	0x3008b: "xian4", // 𰂋
+	0x3008e: "xian4", // 𰂎
+	0x3008f: "yu4", // 𰂏
+	0x30097: "di4", // 𰂗
+	0x3009c: "tui3", // 𰂜
+	0x300a6: "lv3", // 𰂦
+	0x300ad: "si4", // 𰂭
+	0x300c6: "zan3", // 𰃆
+	0x300ee: "xue2", // 𰃮
+	0x300f7: "cang1", // 𰃷
+	0x300fb: "bi4", // 𰃻
+	0x300ff: "du2", // 𰃿
+	0x30101: "shen4", // 𰄁
+	0x3011e: "tuan2", // 𰄞
+	0x30154: "lv4", // 𰅔
+	0x30165: "du2", // 𰅥
+	0x30166: "dan1", // 𰅦
+	0x3017b: "xia2", // 𰅻
+	0x30195: "wei1", // 𰆕
+	0x3019a: "lan2", // 𰆚
+	0x301c0: "gai4", // 𰇀
+	0x301ce: "dong3", // 𰇎
+	0x301d5: "jia2", // 𰇕
+	0x301d6: "hong2", // 𰇖
+	0x301d8: "ji1", // 𰇘
+	0x301e1: "he2", // 𰇡
+	0x301e3: "xi1", // 𰇣
+	0x301f2: "tan3", // 𰇲
+	0x301fc: "shan1", // 𰇼
+	0x30206: "lan3", // 𰈆
+	0x30207: "chang2", // 𰈇
+	0x3020a: "dian3", // 𰈊
+	0x3020d: "chen4", // 𰈍
+	0x30213: "lan4", // 𰈓
+	0x3022f: "za2", // 𰈯
+	0x30236: "mo2", // 𰈶
+	0x30241: "yan2", // 𰉁
+	0x30244: "za2", // 𰉄
+	0x30258: "wei3", // 𰉘
+	0x30259: "gang1", // 𰉙
+	0x3025a: "xian4", // 𰉚
+	0x30263: "yi4", // 𰉣
+	0x30265: "jia1", // 𰉥
+	0x30269: "que4", // 𰉩
+	0x3026a: "ye4", // 𰉪
+	0x30271: "jian3", // 𰉱
+	0x3027d: "xue2", // 𰉽
+	0x30282: "zhi4", // 𰊂
+	0x30285: "zhan4", // 𰊅
+	0x30288: "qiang3", // 𰊈
+	0x30291: "xian4", // 𰊑
+	0x3029b: "kui2", // 𰊛
+	0x3029f: "man2", // 𰊟
+	0x302a1: "yan2", // 𰊡
+	0x302a2: "qian4", // 𰊢
+	0x302d6: "lou3", // 𰋖
+	0x302f8: "dang4", // 𰋸
+	0x302f9: "zhuan1", // 𰋹
+	0x302fd: "yan1", // 𰋽
+	0x302fe: "bi4", // 𰋾
+	0x30300: "ying1", // 𰌀
+	0x30302: "zheng1", // 𰌂
+	0x30306: "qian4", // 𰌆
+	0x30307: "ze2", // 𰌇
+	0x30309: "yun4", // 𰌉
+	0x30319: "lan3", // 𰌙
+	0x30326: "ya1", // 𰌦
+	0x30337: "wei3", // 𰌷
+	0x3038c: "song3", // 𰎌
+	0x3038e: "long2", // 𰎎
+	0x3038f: "dong1", // 𰎏
+	0x30390: "lu2", // 𰎐
+	0x30391: "ye4", // 𰎑
+	0x30394: "yao2", // 𰎔
+	0x30396: "ze4", // 𰎖
+	0x3039b: "kuai4", // 𰎛
+	0x3039e: "nao2", // 𰎞
+	0x303a0: "yan2", // 𰎠
+	0x303a2: "wei2", // 𰎢
+	0x303ab: "yue4", // 𰎫
+	0x303b9: "yan3", // 𰎹
+	0x303c1: "cuan2", // 𰏁
+	0x303d3: "wu4", // 𰏓
+	0x303d5: "san4", // 𰏕
+	0x303dc: "lou2", // 𰏜
+	0x303df: "lan2", // 𰏟
+	0x303f2: "ma4", // 𰏲
+	0x303f6: "kuai4", // 𰏶
+	0x303fc: "dai4", // 𰏼
+	0x3043e: "kuang3", // 𰐾
+	0x30441: "tuan2", // 𰑁
+	0x30444: "lun2", // 𰑄
+	0x30454: "zhi2", // 𰑔
+	0x30455: "yan1", // 𰑕
+	0x30459: "liu2", // 𰑙
+	0x3045f: "gong1", // 𰑟
+	0x30465: "xian2", // 𰑥
+	0x30467: "can2", // 𰑧
+	0x3046a: "sheng2", // 𰑪
+	0x3046b: "luo3", // 𰑫
+	0x3046c: "zhi4", // 𰑬
+	0x30475: "di4", // 𰑵
+	0x30478: "yi4", // 𰑸
+	0x3047f: "tang3", // 𰑿
+	0x30486: "man2", // 𰒆
+	0x30492: "chi4", // 𰒒
+	0x30496: "miao3", // 𰒖
+	0x304c4: "cheng2", // 𰓄
+	0x304c6: "wu3", // 𰓆
+	0x304d4: "shan3", // 𰓔
+	0x304d9: "ye4", // 𰓙
+	0x304dc: "zhi4", // 𰓜
+	0x304df: "za2", // 𰓟
+	0x304e7: "sun1", // 𰓧
+	0x304ec: "li4", // 𰓬
+	0x304f1: "keng1", // 𰓱
+	0x304f7: "ruan2", // 𰓷
+	0x304fb: "gui1", // 𰓻
+	0x304fc: "chan4", // 𰓼
+	0x30507: "di4", // 𰔇
+	0x3050b: "gui4", // 𰔋
+	0x30532: "qian1", // 𰔲
+	0x30536: "yu2", // 𰔶
+	0x30541: "xun2", // 𰕁
+	0x30545: "qu1", // 𰕅
+	0x30548: "jiao3", // 𰕈
+	0x30550: "xie2", // 𰕐
+	0x3056d: "kuai4", // 𰕭
+	0x30588: "yan3", // 𰖈
+	0x305a0: "nan4", // 𰖠
+	0x305a9: "li2", // 𰖩
+	0x305c6: "hui4", // 𰗆
+	0x305d3: "huang3", // 𰗓
+	0x305d6: "lun2", // 𰗖
+	0x305d9: "chou1", // 𰗙
+	0x305da: "xie3", // 𰗚
+	0x305db: "zhai2", // 𰗛
+	0x305dc: "yan3", // 𰗜
+	0x305e1: "chan3", // 𰗡
+	0x305e2: "hui1", // 𰗢
+	0x305e6: "jin3", // 𰗦
+	0x305e8: "shi2", // 𰗨
+	0x305ec: "qian1", // 𰗬
+	0x305f5: "shen3", // 𰗵
+	0x305f9: "su4", // 𰗹
+	0x305fa: "fen2", // 𰗺
+	0x30600: "dai4", // 𰘀
+	0x30608: "ju2", // 𰘈
+	0x30613: "qing3", // 𰘓
+	0x30620: "yan2", // 𰘠
+	0x30623: "mian2", // 𰘣
+	0x30629: "xiao1", // 𰘩
+	0x30633: "lai4", // 𰘳
+	0x30636: "su1", // 𰘶
+	0x30638: "sou3", // 𰘸
+	0x3064b: "wu1", // 𰙋
+	0x3064e: "han1", // 𰙎
+	0x30651: "xiao4", // 𰙑
+	0x30655: "lou4", // 𰙕
+	0x30694: "ning2", // 𰚔
+	0x306a6: "lv2", // 𰚦
+	0x306aa: "ran2", // 𰚪
+	0x306b1: "ye4", // 𰚱
+	0x306ca: "ma3", // 𰛊
+	0x306cf: "cong2", // 𰛏
+	0x306d2: "dong1", // 𰛒
+	0x306db: "shan3", // 𰛛
+	0x306e1: "bi4", // 𰛡
+	0x306e3: "zhi2", // 𰛣
+	0x306e4: "zhi4", // 𰛤
+	0x306e5: "ai2", // 𰛥
+	0x306e6: "hui4", // 𰛦
+	0x306e9: "shan3", // 𰛩
+	0x306ea: "luan2", // 𰛪
+	0x306ee: "lu3", // 𰛮
+	0x306f2: "lian4", // 𰛲
+	0x306f5: "xian2", // 𰛵
+	0x306fd: "ding3", // 𰛽
+	0x30710: "lan3", // 𰜐
+	0x3071c: "qin4", // 𰜜
+	0x3071d: "yang4", // 𰜝
+	0x30722: "he4", // 𰜢
+	0x30728: "jian4", // 𰜨
+	0x30733: "ying2", // 𰜳
+	0x30745: "ying2", // 𰝅
+	0x3074b: "yin1", // 𰝋
+	0x3074d: "hui1", // 𰝍
+	0x30757: "jian3", // 𰝗
+	0x3075f: "xian3", // 𰝟
+	0x30764: "xian3", // 𰝤
+	0x3077e: "chui3", // 𰝾
+	0x30787: "yi4", // 𰞇
+	0x3078d: "jie2", // 𰞍
+	0x307a4: "jian1", // 𰞤
+	0x307b2: "bi4", // 𰞲
+	0x307b7: "zao4", // 𰞷
+	0x307bb: "fen2", // 𰞻
+	0x307d8: "yan4", // 𰟘
+	0x3081b: "jian1", // 𰠛
+	0x3082b: "gang1", // 𰠫
+	0x30832: "keng1", // 𰠲
+	0x30834: "yao3", // 𰠴
+	0x30839: "pai2", // 𰠹
+	0x30844: "lu2", // 𰡄
+	0x3084a: "xiao1", // 𰡊
+	0x3084b: "hui1", // 𰡋
+	0x3084e: "lai2", // 𰡎
+	0x3084f: "wo1", // 𰡏
+	0x30854: "chan2", // 𰡔
+	0x3085e: "ben4", // 𰡞
+	0x30862: "ying1", // 𰡢
+	0x30869: "qi2", // 𰡩
+	0x30870: "che1", // 𰡰
+	0x30875: "lu2", // 𰡵
+	0x3087b: "nao3", // 𰡻
+	0x3087d: "shu2", // 𰡽
+	0x30884: "su4", // 𰢄
+	0x308a2: "wu3", // 𰢢
+	0x308a4: "ying1", // 𰢤
+	0x308a6: "lou3", // 𰢦
+	0x308e6: "wei3", // 𰣦
+	0x308e9: "ning2", // 𰣩
+	0x308ec: "ji4", // 𰣬
+	0x308ef: "xian2", // 𰣯
+	0x308f6: "tui2", // 𰣶
+	0x308fc: "ji1", // 𰣼
+	0x308fd: "luan2", // 𰣽
+	0x30913: "tang3", // 𰤓
+	0x30915: "li4", // 𰤕
+	0x30928: "ta4", // 𰤨
+	0x3092b: "du2", // 𰤫
+	0x3092c: "du2", // 𰤬
+	0x3094a: "kan4", // 𰥊
+	0x30952: "cong1", // 𰥒
+	0x3095b: "fen4", // 𰥛
+	0x3095e: "ying2", // 𰥞
+	0x30960: "man3", // 𰥠
+	0x30962: "xi3", // 𰥢
+	0x30963: "keng1", // 𰥣
+	0x30968: "xian2", // 𰥨
+	0x3096a: "gui1", // 𰥪
+	0x3096d: "meng3", // 𰥭
+	0x30979: "tang3", // 𰥹
+	0x3099c: "ba4", // 𰦜
+	0x309a6: "li4", // 𰦦
+	0x309a8: "hui3", // 𰦨
+	0x309ad: "long2", // 𰦭
+	0x309b0: "ze2", // 𰦰
+	0x309b4: "ya1", // 𰦴
+	0x309b7: "lao2", // 𰦷
+	0x309be: "yan2", // 𰦾
+	0x309bf: "tuo2", // 𰦿
+	0x309c3: "jian4", // 𰧃
+	0x309c7: "xian2", // 𰧇
+	0x309c9: "zhi4", // 𰧉
+	0x309ce: "qin1", // 𰧎
+	0x309d4: "jian1", // 𰧔
+	0x309d8: "zhu1", // 𰧘
+	0x309f0: "yang2", // 𰧰
+	0x309fb: "gui4", // 𰧻
+	0x309fe: "nong2", // 𰧾
+	0x30a16: "ti2", // 𰨖
+	0x30a1c: "kuang4", // 𰨜
+	0x30a26: "ji4", // 𰨦
+	0x30a33: "zi1", // 𰨳
+	0x30a45: "long3", // 𰩅
+	0x30a4f: "tiao3", // 𰩏
+	0x30a53: "cheng1", // 𰩓
+	0x30a67: "xu1", // 𰩧
+	0x30a6e: "tuan2", // 𰩮
+	0x30a72: "lu2", // 𰩲
+	0x30a78: "jiao1", // 𰩸
+	0x30a79: "dang4", // 𰩹
+	0x30a7a: "yue1", // 𰩺
+	0x30a7b: "zhua1", // 𰩻
+	0x30a8a: "zhong1", // 𰪊
+	0x30a8f: "lu4", // 𰪏
+	0x30aa3: "ying2", // 𰪣
+	0x30aab: "tuan2", // 𰪫
+	0x30aad: "zhang1", // 𰪭
+	0x30ab6: "tuan2", // 𰪶
+	0x30acb: "men2", // 𰫋
+	0x30ad6: "lan4", // 𰫖
+	0x30afc: "zheng3", // 𰫼
+	0x30afd: "fou2", // 𰫽
+	0x30b00: "ji4", // 𰬀
+	0x30b03: "lie4", // 𰬃
+	0x30b05: "fu1", // 𰬅
+	0x30b06: "qu2", // 𰬆
+	0x30b07: "zhu4", // 𰬇
+	0x30b08: "xian2", // 𰬈
+	0x30b09: "tuo2", // 𰬉
+	0x30b0b: "hong2", // 𰬋
+	0x30b0c: "geng1", // 𰬌
+	0x30b0d: "xie2", // 𰬍
+	0x30b0e: "bi4", // 𰬎
+	0x30b0f: "zhu1", // 𰬏
+	0x30b10: "qiao1", // 𰬐
+	0x30b11: "zheng1", // 𰬑
+	0x30b12: "ci4", // 𰬒
+	0x30b13: "gai1", // 𰬓
+	0x30b14: "beng1", // 𰬔
+	0x30b16: "cheng2", // 𰬖
+	0x30b17: "qiu2", // 𰬗
+	0x30b18: "fu2", // 𰬘
+	0x30b19: "chen1", // 𰬙
+	0x30b1a: "yun2", // 𰬚
+	0x30b1b: "zhen4", // 𰬛
+	0x30b1c: "mian3", // 𰬜
+	0x30b1e: "qin1", // 𰬞
+	0x30b1f: "yu4", // 𰬟
+	0x30b20: "hua4", // 𰬠
+	0x30b21: "qie4", // 𰬡
+	0x30b22: "qi1", // 𰬢
+	0x30b23: "xi1", // 𰬣
+	0x30b24: "bi4", // 𰬤
+	0x30b25: "zong3", // 𰬥
+	0x30b26: "hu1", // 𰬦
+	0x30b27: "tian2", // 𰬧
+	0x30b29: "xiu4", // 𰬩
+	0x30b2a: "shan1", // 𰬪
+	0x30b2b: "zhi4", // 𰬫
+	0x30b2c: "miao2", // 𰬬
+	0x30b2d: "beng3", // 𰬭
+	0x30b2e: "qian4", // 𰬮
+	0x30b2f: "zong1", // 𰬯
+	0x30b30: "zong3", // 𰬰
+	0x30b31: "suo3", // 𰬱
+	0x30b32: "quan2", // 𰬲
+	0x30b33: "ni4", // 𰬳
+	0x30b34: "zai4", // 𰬴
+	0x30b35: "xuan4", // 𰬵
+	0x30b36: "qie4", // 𰬶
+	0x30b37: "san3", // 𰬷
+	0x30b38: "sui4", // 𰬸
+	0x30b39: "zuan3", // 𰬹
+	0x30b3a: "zun1", // 𰬺
+	0x30b3b: "yu4", // 𰬻
+	0x30b3c: "la4", // 𰬼
+	0x30b3d: "xie4", // 𰬽
+	0x30b3e: "lian2", // 𰬾
+	0x30b3f: "pu2", // 𰬿
+	0x30b40: "you1", // 𰭀
+	0x30b41: "cong1", // 𰭁
+	0x30b44: "guan4", // 𰭄
+	0x30b54: "juan4", // 𰭔
+	0x30b5a: "lou2", // 𰭚
+	0x30b62: "sha4", // 𰭢
+	0x30b63: "dao4", // 𰭣
+	0x30b79: "long2", // 𰭹
+	0x30b85: "xiang1", // 𰮅
+	0x30b87: "hu1", // 𰮇
+	0x30b99: "zhu4", // 𰮙
+	0x30b9d: "xiao1", // 𰮝
+	0x30bb2: "sou1", // 𰮲
+	0x30bcb: "ni2", // 𰯋
+	0x30bce: "man2", // 𰯎
+	0x30bf2: "jian1", // 𰯲
+	0x30c06: "tan1", // 𰰆
+	0x30c0b: "shuang1", // 𰰋
+	0x30c0c: "zhou1", // 𰰌
+	0x30c0f: "dai4", // 𰰏
+	0x30c11: "lou2", // 𰰑
+	0x30c20: "xu4", // 𰰠
+	0x30c22: "tang1", // 𰰢
+	0x30c24: "qiu1", // 𰰤
+	0x30c28: "lun2", // 𰰨
+	0x30c2e: "kui1", // 𰰮
+	0x30c31: "dui4", // 𰰱
+	0x30c33: "shi1", // 𰰳
+	0x30c34: "qi3", // 𰰴
+	0x30c35: "sha1", // 𰰵
+	0x30c36: "za2", // 𰰶
+	0x30c37: "fu4", // 𰰷
+	0x30c39: "liu2", // 𰰹
+	0x30c3a: "she4", // 𰰺
+	0x30c3e: "ke1", // 𰰾
+	0x30c40: "gong4", // 𰱀
+	0x30c47: "jian1", // 𰱇
+	0x30c48: "yong3", // 𰱈
+	0x30c49: "meng2", // 𰱉
+	0x30c4c: "na4", // 𰱌
+	0x30c4d: "fen2", // 𰱍
+	0x30c50: "xu4", // 𰱐
+	0x30c51: "jian4", // 𰱑
+	0x30c5b: "zhong1", // 𰱛
+	0x30c5d: "xiang4", // 𰱝
+	0x30c5f: "fen2", // 𰱟
+	0x30c66: "fu4", // 𰱦
+	0x30c69: "lv2", // 𰱩
+	0x30c6e: "lv2", // 𰱮
+	0x30c6f: "bei1", // 𰱯
+	0x30c71: "ci2", // 𰱱
+	0x30c72: "zhi1", // 𰱲
+	0x30c7e: "lai4", // 𰱾
+	0x30c81: "tui2", // 𰲁
+	0x30c82: "teng2", // 𰲂
+	0x30c92: "lei4", // 𰲒
+	0x30c9f: "wu1", // 𰲟
+	0x30ca0: "zhan4", // 𰲠
+	0x30cab: "wu2", // 𰲫
+	0x30cac: "che1", // 𰲬
+	0x30cae: "qian3", // 𰲮
+	0x30caf: "zong1", // 𰲯
+	0x30cb0: "lun2", // 𰲰
+	0x30cb2: "gui3", // 𰲲
+	0x30cb3: "zhan4", // 𰲳
+	0x30cb4: "long2", // 𰲴
+	0x30cb5: "ze2", // 𰲵
+	0x30cb6: "xing1", // 𰲶
+	0x30cb8: "e4", // 𰲸
+	0x30cb9: "yi3", // 𰲹
+	0x30cba: "guo4", // 𰲺
+	0x30cbb: "da2", // 𰲻
+	0x30cc1: "ji1", // 𰳁
+	0x30cc2: "jian4", // 𰳂
+	0x30cc4: "chen2", // 𰳄
+	0x30cca: "fei2", // 𰳊
+	0x30cd7: "ying1", // 𰳗
+	0x30cda: "wei4", // 𰳚
+	0x30cf2: "long2", // 𰳲
+	0x30cf5: "yi4", // 𰳵
+	0x30cf8: "dui4", // 𰳸
+	0x30cf9: "yan3", // 𰳹
+	0x30cfa: "nong2", // 𰳺
+	0x30cfc: "shi1", // 𰳼
+	0x30d02: "sen1", // 𰴂
+	0x30d15: "mie4", // 𰴕
+	0x30d16: "shao4", // 𰴖
+	0x30d17: "li4", // 𰴗
+	0x30d18: "jian4", // 𰴘
+	0x30d19: "jun1", // 𰴙
+	0x30d1a: "lou2", // 𰴚
+	0x30d1b: "dou1", // 𰴛
+	0x30d1c: "qu1", // 𰴜
+	0x30d1d: "luo2", // 𰴝
+	0x30d1e: "qu1", // 𰴞
+	0x30d22: "li4", // 𰴢
+	0x30d23: "xue2", // 𰴣
+	0x30d24: "dai3", // 𰴤
+	0x30d2f: "ying2", // 𰴯
+	0x30d4a: "jiao4", // 𰵊
+	0x30d4c: "yang2", // 𰵌
+	0x30d4d: "zhun4", // 𰵍
+	0x30d4e: "you2", // 𰵎
+	0x30d4f: "chao1", // 𰵏
+	0x30d50: "fan3", // 𰵐
+	0x30d51: "e2", // 𰵑
+	0x30d52: "chen2", // 𰵒
+	0x30d53: "xu4", // 𰵓
+	0x30d54: "yi4", // 𰵔
+	0x30d56: "yi4", // 𰵖
+	0x30d57: "yang4", // 𰵗
+	0x30d59: "die2", // 𰵙
+	0x30d5a: "ling2", // 𰵚
+	0x30d5b: "gou4", // 𰵛
+	0x30d5c: "tao2", // 𰵜
+	0x30d5d: "he2", // 𰵝
+	0x30d5e: "yong3", // 𰵞
+	0x30d60: "nao2", // 𰵠
+	0x30d61: "keng1", // 𰵡
+	0x30d62: "jia2", // 𰵢
+	0x30d63: "he2", // 𰵣
+	0x30d64: "e4", // 𰵤
+	0x30d65: "yi2", // 𰵥
+	0x30d66: "xiao4", // 𰵦
+	0x30d67: "zhi4", // 𰵧
+	0x30d68: "zhan1", // 𰵨
+	0x30d69: "bu1", // 𰵩
+	0x30d6b: "dou4", // 𰵫
+	0x30d6c: "bie2", // 𰵬
+	0x30d6d: "chan2", // 𰵭
+	0x30d6e: "e2", // 𰵮
+	0x30d6f: "shua4", // 𰵯
+	0x30d70: "xing4", // 𰵰
+	0x30d71: "chen1", // 𰵱
+	0x30d72: "qi1", // 𰵲
+	0x30d73: "zhuo2", // 𰵳
+	0x30d74: "chu4", // 𰵴
+	0x30d75: "ni4", // 𰵵
+	0x30d76: "zhui4", // 𰵶
+	0x30d77: "zhuo2", // 𰵷
+	0x30d78: "ta4", // 𰵸
+	0x30d79: "nie4", // 𰵹
+	0x30d7a: "yuan2", // 𰵺
+	0x30d7b: "hua2", // 𰵻
+	0x30d7c: "huo4", // 𰵼
+	0x30d7d: "tao1", // 𰵽
+	0x30d7e: "xi3", // 𰵾
+	0x30d7f: "he4", // 𰵿
+	0x30d80: "yu2", // 𰶀
+	0x30d81: "yi2", // 𰶁
+	0x30d82: "cong4", // 𰶂
+	0x30d83: "xi2", // 𰶃
+	0x30d84: "zha1", // 𰶄
+	0x30d85: "hao4", // 𰶅
+	0x30d86: "han4", // 𰶆
+	0x30d87: "tuo1", // 𰶇
+	0x30d88: "chi2", // 𰶈
+	0x30d89: "tan2", // 𰶉
+	0x30d8a: "yi1", // 𰶊
+	0x30d8c: "nou4", // 𰶌
+	0x30d8d: "juan4", // 𰶍
+	0x30d8e: "se4", // 𰶎
+	0x30d8f: "yao4", // 𰶏
+	0x30d91: "long2", // 𰶑
+	0x30d94: "du2", // 𰶔
+	0x30da8: "mi4", // 𰶨
+	0x30dac: "lou2", // 𰶬
+	0x30dde: "te4", // 𰷞
+	0x30de0: "yi4", // 𰷠
+	0x30de1: "wan2", // 𰷡
+	0x30de2: "chi2", // 𰷢
+	0x30de4: "sui4", // 𰷤
+	0x30de5: "cong2", // 𰷥
+	0x30de6: "fei4", // 𰷦
+	0x30de7: "jin4", // 𰷧
+	0x30de8: "kui4", // 𰷨
+	0x30de9: "sheng4", // 𰷩
+	0x30dea: "yi4", // 𰷪
+	0x30deb: "biao1", // 𰷫
+	0x30dec: "zhuan4", // 𰷬
+	0x30ded: "zang1", // 𰷭
+	0x30dee: "xuan4", // 𰷮
+	0x30df4: "li4", // 𰷴
+	0x30df5: "qiao1", // 𰷵
+	0x30df6: "qiao2", // 𰷶
+	0x30df8: "du2", // 𰷸
+	0x30e07: "shuang1", // 𰸇
+	0x30e08: "die2", // 𰸈
+	0x30e0a: "gui4", // 𰸊
+	0x30e0e: "chan3", // 𰸎
+	0x30e10: "xi3", // 𰸐
+	0x30e14: "lian2", // 𰸔
+	0x30e1a: "dai4", // 𰸚
+	0x30e1b: "chi4", // 𰸛
+	0x30e1e: "tui2", // 𰸞
+	0x30e40: "duo3", // 𰹀
+	0x30e72: "wei4", // 𰹲
+	0x30e73: "chun1", // 𰹳
+	0x30e74: "fan4", // 𰹴
+	0x30e75: "yi3", // 𰹵
+	0x30e76: "kuang2", // 𰹶
+	0x30e77: "yue4", // 𰹷
+	0x30e78: "tun2", // 𰹸
+	0x30e7a: "fan3", // 𰹺
+	0x30e7b: "ba1", // 𰹻
+	0x30e7c: "zhan4", // 𰹼
+	0x30e7d: "peng1", // 𰹽
+	0x30e7e: "xian4", // 𰹾
+	0x30e7f: "rong3", // 𰹿
+	0x30e80: "di3", // 𰺀
+	0x30e81: "qu2", // 𰺁
+	0x30e82: "pao2", // 𰺂
+	0x30e83: "dui4", // 𰺃
+	0x30e84: "gong3", // 𰺄
+	0x30e85: "ju2", // 𰺅
+	0x30e86: "hong1", // 𰺆
+	0x30e87: "wan4", // 𰺇
+	0x30e88: "yin3", // 𰺈
+	0x30e89: "qian4", // 𰺉
+	0x30e8a: "ling2", // 𰺊
+	0x30e8b: "zhe2", // 𰺋
+	0x30e8c: "lu4", // 𰺌
+	0x30e8d: "guo3", // 𰺍
+	0x30e8e: "pai2", // 𰺎
+	0x30e8f: "peng2", // 𰺏
+	0x30e90: "kan3", // 𰺐
+	0x30e91: "yuan1", // 𰺑
+	0x30e92: "chuan2", // 𰺒
+	0x30e93: "fu4", // 𰺓
+	0x30e94: "zong3", // 𰺔
+	0x30e95: "duo2", // 𰺕
+	0x30e96: "zhen1", // 𰺖
+	0x30e97: "jian4", // 𰺗
+	0x30e98: "keng1", // 𰺘
+	0x30e99: "se4", // 𰺙
+	0x30e9a: "er2", // 𰺚
+	0x30e9b: "lao3", // 𰺛
+	0x30e9c: "fan1", // 𰺜
+	0x30e9d: "chong1", // 𰺝
+	0x30e9e: "zhan4", // 𰺞
+	0x30e9f: "ji2", // 𰺟
+	0x30ea0: "nie4", // 𰺠
+	0x30ea1: "xia2", // 𰺡
+	0x30ea2: "luo4", // 𰺢
+	0x30ea3: "lin4", // 𰺣
+	0x30ea4: "min2", // 𰺤
+	0x30ea8: "huo4", // 𰺨
+	0x30ead: "chen2", // 𰺭
+	0x30eb2: "dang4", // 𰺲
+	0x30eb7: "rao4", // 𰺷
+	0x30ec6: "di4", // 𰻆
+	0x30edd: "biang2", // 𰻝
+	0x30ede: "biang2", // 𰻞
+	0x30ee1: "xu3", // 𰻡
+	0x30ee6: "wei2", // 𰻦
+	0x30eee: "qiao1", // 𰻮
+	0x30ef3: "bi4", // 𰻳
+	0x30f05: "yi4", // 𰼅
+	0x30f0b: "lao2", // 𰼋
+	0x30f0f: "lan4", // 𰼏
+	0x30f11: "mi2", // 𰼑
+	0x30f3b: "qing1", // 𰼻
+	0x30f55: "ji1", // 𰽕
+	0x30f56: "ba1", // 𰽖
+	0x30f57: "hua2", // 𰽗
+	0x30f58: "di4", // 𰽘
+	0x30f5a: "kuang4", // 𰽚
+	0x30f5b: "qiao3", // 𰽛
+	0x30f5c: "ou1", // 𰽜
+	0x30f5d: "li4", // 𰽝
+	0x30f5e: "e4", // 𰽞
+	0x30f60: "zhi3", // 𰽠
+	0x30f61: "ri4", // 𰽡
+	0x30f62: "xian4", // 𰽢
+	0x30f63: "yin3", // 𰽣
+	0x30f65: "bing3", // 𰽥
+	0x30f66: "long2", // 𰽦
+	0x30f67: "pi1", // 𰽧
+	0x30f68: "zhai3", // 𰽨
+	0x30f69: "ka3", // 𰽩
+	0x30f6b: "sheng1", // 𰽫
+	0x30f6c: "he2", // 𰽬
+	0x30f6d: "gou1", // 𰽭
+	0x30f6e: "fu2", // 𰽮
+	0x30f6f: "zhu4", // 𰽯
+	0x30f70: "ban4", // 𰽰
+	0x30f71: "fu2", // 𰽱
+	0x30f72: "ji2", // 𰽲
+	0x30f73: "qin1", // 𰽳
+	0x30f74: "kua3", // 𰽴
+	0x30f75: "guang1", // 𰽵
+	0x30f76: "tong2", // 𰽶
+	0x30f77: "hui4", // 𰽷
+	0x30f78: "pi1", // 𰽸
+	0x30f79: "chi3", // 𰽹
+	0x30f7a: "gui3", // 𰽺
+	0x30f7b: "ren2", // 𰽻
+	0x30f7c: "bing3", // 𰽼
+	0x30f7d: "rong2", // 𰽽
+	0x30f7e: "guo3", // 𰽾
+	0x30f7f: "zhe2", // 𰽿
+	0x30f80: "bo2", // 𰾀
+	0x30f81: "hong4", // 𰾁
+	0x30f83: "zhuo2", // 𰾃
+	0x30f84: "mei2", // 𰾄
+	0x30f85: "han2", // 𰾅
+	0x30f86: "yu4", // 𰾆
+	0x30f87: "tun1", // 𰾇
+	0x30f88: "sha1", // 𰾈
+	0x30f8a: "cong1", // 𰾊
+	0x30f8c: "jian4", // 𰾌
+	0x30f8d: "biao3", // 𰾍
+	0x30f8e: "pi1", // 𰾎
+	0x30f8f: "tao2", // 𰾏
+	0x30f90: "fei4", // 𰾐
+	0x30f91: "qian1", // 𰾑
+	0x30f92: "guan3", // 𰾒
+	0x30f93: "ta4", // 𰾓
+	0x30f95: "ye4", // 𰾕
+	0x30f96: "duo4", // 𰾖
+	0x30f97: "zhen1", // 𰾗
+	0x30f98: "chen3", // 𰾘
+	0x30f99: "yu2", // 𰾙
+	0x30f9a: "wei3", // 𰾚
+	0x30f9b: "jie4", // 𰾛
+	0x30f9c: "duan1", // 𰾜
+	0x30f9d: "sheng1", // 𰾝
+	0x30f9e: "zong1", // 𰾞
+	0x30f9f: "fu4", // 𰾟
+	0x30fa1: "hong1", // 𰾡
+	0x30fa2: "shi1", // 𰾢
+	0x30fa4: "xia2", // 𰾤
+	0x30fa5: "kui2", // 𰾥
+	0x30fa6: "zuan3", // 𰾦
+	0x30fa9: "ye4", // 𰾩
+	0x30faa: "ya1", // 𰾪
+	0x30fab: "jian4", // 𰾫
+	0x30fac: "da2", // 𰾬
+	0x30fad: "ai4", // 𰾭
+	0x30fae: "lian2", // 𰾮
+	0x30faf: "tang2", // 𰾯
+	0x30fb0: "cui1", // 𰾰
+	0x30fb1: "zong3", // 𰾱
+	0x30fb2: "lu4", // 𰾲
+	0x30fb3: "lan2", // 𰾳
+	0x30fb4: "si1", // 𰾴
+	0x30fb6: "hui4", // 𰾶
+	0x30fb7: "zan1", // 𰾷
+	0x30fb8: "ding3", // 𰾸
+	0x30fb9: "juan1", // 𰾹
+	0x30fbb: "tian2", // 𰾻
+	0x30fbc: "quan1", // 𰾼
+	0x30fbd: "zhu2", // 𰾽
+	0x30fbe: "nie4", // 𰾾
+	0x30fbf: "la4", // 𰾿
+	0x30fc1: "ao2", // 𰿁
+	0x30fc2: "xu1", // 𰿂
+	0x30fc3: "mie4", // 𰿃
+	0x30fc4: "lei2", // 𰿄
+	0x30fc6: "zuan1", // 𰿆
+	0x30fc7: "zha2", // 𰿇
+	0x30fc8: "jian1", // 𰿈
+	0x30fc9: "lei3", // 𰿉
+	0x30fca: "luo2", // 𰿊
+	0x30fe6: "zhen4", // 𰿦
+	0x30fe8: "guan3", // 𰿨
+	0x30fe9: "xia1", // 𰿩
+	0x30fea: "xie4", // 𰿪
+	0x30feb: "wei3", // 𰿫
+	0x30fec: "peng1", // 𰿬
+	0x30ff0: "zuan1", // 𰿰
+	0x30ff3: "sha1", // 𰿳
+	0x30ff4: "ya4", // 𰿴
+	0x30ff5: "yu2", // 𰿵
+	0x30ff9: "guang1", // 𰿹
+	0x30ffa: "tang2", // 𰿺
+	0x30ffb: "xi4", // 𰿻
+	0x30ffe: "pi4", // 𰿾
+	0x31011: "zhi4", // 𱀑
+	0x31021: "fen2", // 𱀡
+	0x31052: "dui4", // 𱁒
+	0x3105e: "wan1", // 𱁞
+	0x31071: "yang2", // 𱁱
+	0x31073: "duo2", // 𱁳
+	0x31074: "bi4", // 𱁴
+	0x31076: "qian1", // 𱁶
+	0x31077: "du2", // 𱁷
+	0x31079: "gui4", // 𱁹
+	0x3107a: "lou2", // 𱁺
+	0x3107d: "lan2", // 𱁽
+	0x3107e: "lan2", // 𱁾
+	0x31083: "sa3", // 𱂃
+	0x31084: "mei4", // 𱂄
+	0x31085: "bi4", // 𱂅
+	0x31086: "ge2", // 𱂆
+	0x31087: "quan4", // 𱂇
+	0x31088: "yun4", // 𱂈
+	0x31089: "qiao4", // 𱂉
+	0x3108a: "she4", // 𱂊
+	0x3108b: "du2", // 𱂋
+	0x3108c: "hu4", // 𱂌
+	0x3108d: "dui4", // 𱂍
+	0x3108e: "xie4", // 𱂎
+	0x31090: "yun4", // 𱂐
+	0x310a0: "duo2", // 𱂠
+	0x310a1: "ku1", // 𱂡
+	0x310a2: "zhuo1", // 𱂢
+	0x310a3: "yao2", // 𱂣
+	0x310a4: "hui4", // 𱂤
+	0x310a5: "e2", // 𱂥
+	0x310a6: "ping1", // 𱂦
+	0x310a7: "lei4", // 𱂧
+	0x310a8: "e4", // 𱂨
+	0x310a9: "fu4", // 𱂩
+	0x310ab: "yan3", // 𱂫
+	0x310ac: "kui2", // 𱂬
+	0x310ad: "chui2", // 𱂭
+	0x310ae: "pi3", // 𱂮
+	0x310af: "cui4", // 𱂯
+	0x310b0: "han4", // 𱂰
+	0x310b1: "kan3", // 𱂱
+	0x310b2: "sai1", // 𱂲
+	0x310b3: "gao3", // 𱂳
+	0x310b4: "jiang3", // 𱂴
+	0x310b5: "kui1", // 𱂵
+	0x310b6: "xin4", // 𱂶
+	0x310b7: "zhan1", // 𱂷
+	0x310b8: "bin1", // 𱂸
+	0x310ba: "piao3", // 𱂺
+	0x310bb: "qiao2", // 𱂻
+	0x310d4: "biao1", // 𱃔
+	0x310d5: "xia1", // 𱃕
+	0x310d6: "you3", // 𱃖
+	0x310d7: "tai2", // 𱃗
+	0x310d8: "lie4", // 𱃘
+	0x310d9: "liu2", // 𱃙
+	0x310da: "li4", // 𱃚
+	0x310dc: "rui2", // 𱃜
+	0x310dd: "xiu1", // 𱃝
+	0x310de: "yu2", // 𱃞
+	0x310df: "xi2", // 𱃟
+	0x310e0: "biao1", // 𱃠
+	0x310f1: "xi4", // 𱃱
+	0x310f2: "yu4", // 𱃲
+	0x310f3: "bo2", // 𱃳
+	0x310f4: "fan4", // 𱃴
+	0x310f5: "ying3", // 𱃵
+	0x310f7: "ban3", // 𱃷
+	0x310f8: "zhi4", // 𱃸
+	0x310f9: "en4", // 𱃹
+	0x310fa: "tian3", // 𱃺
+	0x310fc: "fen1", // 𱃼
+	0x310fd: "e4", // 𱃽
+	0x310fe: "bu4", // 𱃾
+	0x310ff: "tan2", // 𱃿
+	0x31100: "fen1", // 𱄀
+	0x31101: "tou3", // 𱄁
+	0x31103: "jian4", // 𱄃
+	0x31104: "hui4", // 𱄄
+	0x31106: "xi1", // 𱄆
+	0x31107: "shang3", // 𱄇
+	0x31108: "meng2", // 𱄈
+	0x31109: "en4", // 𱄉
+	0x3110a: "zan4", // 𱄊
+	0x3113c: "zhu4", // 𱄼
+	0x3113d: "zhe2", // 𱄽
+	0x3113e: "guang1", // 𱄾
+	0x3113f: "du2", // 𱄿
+	0x31140: "bao3", // 𱅀
+	0x31141: "zhi2", // 𱅁
+	0x31142: "sa4", // 𱅂
+	0x31143: "ju4", // 𱅃
+	0x31144: "ba2", // 𱅄
+	0x31145: "long2", // 𱅅
+	0x31147: "zhen3", // 𱅇
+	0x31148: "bi4", // 𱅈
+	0x31149: "rong2", // 𱅉
+	0x3114a: "zhi4", // 𱅊
+	0x3114b: "er3", // 𱅋
+	0x3114d: "xu4", // 𱅍
+	0x3114e: "fu2", // 𱅎
+	0x3114f: "tao2", // 𱅏
+	0x31150: "bo2", // 𱅐
+	0x31153: "bo2", // 𱅓
+	0x31154: "song3", // 𱅔
+	0x31155: "lai2", // 𱅕
+	0x31156: "xuan1", // 𱅖
+	0x31157: "e3", // 𱅗
+	0x31159: "tui4", // 𱅙
+	0x3115a: "she4", // 𱅚
+	0x3115b: "tuo2", // 𱅛
+	0x3115c: "yao3", // 𱅜
+	0x3115d: "pian4", // 𱅝
+	0x3115e: "xia2", // 𱅞
+	0x3115f: "rou2", // 𱅟
+	0x31160: "han4", // 𱅠
+	0x31161: "gui1", // 𱅡
+	0x31162: "cheng2", // 𱅢
+	0x31163: "tao1", // 𱅣
+	0x31164: "pin1", // 𱅤
+	0x31166: "huang2", // 𱅦
+	0x31167: "xu1", // 𱅧
+	0x31169: "xi2", // 𱅩
+	0x3116a: "dian4", // 𱅪
+	0x3116b: "yu4", // 𱅫
+	0x3116c: "yan4", // 𱅬
+	0x3116e: "xiao1", // 𱅮
+	0x31180: "qian1", // 𱆀
+	0x31181: "qian1", // 𱆁
+	0x31183: "kui4", // 𱆃
+	0x31184: "fei4", // 𱆄
+	0x31185: "lan2", // 𱆅
+	0x31186: "man2", // 𱆆
+	0x31188: "zuan3", // 𱆈
+	0x3118c: "shang1", // 𱆌
+	0x3118d: "chao3", // 𱆍
+	0x31199: "chao1", // 𱆙
+	0x3119a: "kui3", // 𱆚
+	0x3119b: "chou3", // 𱆛
+	0x311a5: "dan1", // 𱆥
+	0x311cd: "ya4", // 𱇍
+	0x311cf: "tuo1", // 𱇏
+	0x311d0: "yuan2", // 𱇐
+	0x311d1: "bei4", // 𱇑
+	0x311d2: "pi2", // 𱇒
+	0x311d3: "hu2", // 𱇓
+	0x311d4: "na4", // 𱇔
+	0x311d5: "yu2", // 𱇕
+	0x311d6: "ban3", // 𱇖
+	0x311d7: "lun2", // 𱇗
+	0x311d8: "hang2", // 𱇘
+	0x311d9: "shen3", // 𱇙
+	0x311da: "mo4", // 𱇚
+	0x311db: "wei4", // 𱇛
+	0x311dc: "qu1", // 𱇜
+	0x311dd: "pi1", // 𱇝
+	0x311de: "shan4", // 𱇞
+	0x311df: "xia2", // 𱇟
+	0x311e0: "qiu2", // 𱇠
+	0x311e1: "xing1", // 𱇡
+	0x311e2: "gun3", // 𱇢
+	0x311e3: "bo1", // 𱇣
+	0x311e4: "you3", // 𱇤
+	0x311e5: "geng4", // 𱇥
+	0x311e6: "ku1", // 𱇦
+	0x311e7: "yi2", // 𱇧
+	0x311e8: "shu1", // 𱇨
+	0x311e9: "jiao3", // 𱇩
+	0x311ea: "luo4", // 𱇪
+	0x311eb: "ru2", // 𱇫
+	0x311ec: "yi2", // 𱇬
+	0x311ed: "lai2", // 𱇭
+	0x311ee: "mang2", // 𱇮
+	0x311ef: "shao1", // 𱇯
+	0x311f0: "ye4", // 𱇰
+	0x311f1: "tiao2", // 𱇱
+	0x311f2: "fu1", // 𱇲
+	0x311f3: "suo1", // 𱇳
+	0x311f4: "na4", // 𱇴
+	0x311f5: "ji4", // 𱇵
+	0x311f6: "lu4", // 𱇶
+	0x311f7: "cuo4", // 𱇷
+	0x311f8: "ying4", // 𱇸
+	0x311f9: "zhi4", // 𱇹
+	0x311fa: "ji4", // 𱇺
+	0x311fb: "xian4", // 𱇻
+	0x311fc: "jiu4", // 𱇼
+	0x311fd: "ju2", // 𱇽
+	0x311fe: "zong1", // 𱇾
+	0x311ff: "su4", // 𱇿
+	0x31200: "ju4", // 𱈀
+	0x31201: "shan1", // 𱈁
+	0x31202: "yu2", // 𱈂
+	0x31203: "wei4", // 𱈃
+	0x31204: "hou2", // 𱈄
+	0x31205: "zong1", // 𱈅
+	0x31206: "lou2", // 𱈆
+	0x31207: "geng4", // 𱈇
+	0x31208: "geng4", // 𱈈
+	0x31209: "qian2", // 𱈉
+	0x3120a: "liu2", // 𱈊
+	0x3120b: "hao4", // 𱈋
+	0x3120c: "xiu1", // 𱈌
+	0x3120d: "ruo4", // 𱈍
+	0x3120e: "sang3", // 𱈎
+	0x3120f: "zhu2", // 𱈏
+	0x31210: "zhuan1", // 𱈐
+	0x31211: "hui1", // 𱈑
+	0x31212: "si1", // 𱈒
+	0x31213: "xun2", // 𱈓
+	0x31214: "cen2", // 𱈔
+	0x31215: "fan1", // 𱈕
+	0x31216: "lai4", // 𱈖
+	0x31217: "ru2", // 𱈗
+	0x31218: "chang2", // 𱈘
+	0x31219: "mie4", // 𱈙
+	0x3121a: "e4", // 𱈚
+	0x3121b: "meng2", // 𱈛
+	0x3121c: "xian1", // 𱈜
+	0x31247: "yi3", // 𱉇
+	0x31248: "diao1", // 𱉈
+	0x3124a: "gan1", // 𱉊
+	0x3124b: "han4", // 𱉋
+	0x3124c: "yi2", // 𱉌
+	0x3124d: "yu4", // 𱉍
+	0x3124e: "fu1", // 𱉎
+	0x3124f: "tuan2", // 𱉏
+	0x31250: "ju2", // 𱉐
+	0x31251: "ban1", // 𱉑
+	0x31252: "huan1", // 𱉒
+	0x31253: "hu4", // 𱉓
+	0x31254: "jue2", // 𱉔
+	0x31255: "ge1", // 𱉕
+	0x31256: "pi2", // 𱉖
+	0x31257: "dan4", // 𱉗
+	0x31258: "ju1", // 𱉘
+	0x31259: "zhi3", // 𱉙
+	0x3125a: "die2", // 𱉚
+	0x3125b: "zhi4", // 𱉛
+	0x3125c: "fu1", // 𱉜
+	0x3125d: "bi1", // 𱉝
+	0x3125e: "wu3", // 𱉞
+	0x3125f: "ze2", // 𱉟
+	0x31260: "jing1", // 𱉠
+	0x31261: "bian3", // 𱉡
+	0x31262: "yao3", // 𱉢
+	0x31263: "song1", // 𱉣
+	0x31264: "gui4", // 𱉤
+	0x31265: "jia2", // 𱉥
+	0x31266: "lao3", // 𱉦
+	0x31267: "yuan1", // 𱉧
+	0x31268: "ya1", // 𱉨
+	0x31269: "ti2", // 𱉩
+	0x3126a: "ai4", // 𱉪
+	0x3126b: "zhu1", // 𱉫
+	0x3126c: "jiao1", // 𱉬
+	0x3126d: "gui3", // 𱉭
+	0x3126e: "luo4", // 𱉮
+	0x3126f: "yang2", // 𱉯
+	0x31270: "yu4", // 𱉰
+	0x31271: "kun1", // 𱉱
+	0x31272: "mou2", // 𱉲
+	0x31273: "mai3", // 𱉳
+	0x31274: "yang2", // 𱉴
+	0x31275: "lai2", // 𱉵
+	0x31276: "han4", // 𱉶
+	0x31277: "yi4", // 𱉷
+	0x31278: "tu2", // 𱉸
+	0x31279: "xi1", // 𱉹
+	0x3127a: "fu2", // 𱉺
+	0x3127b: "tuo3", // 𱉻
+	0x3127c: "ji2", // 𱉼
+	0x3127d: "ji4", // 𱉽
+	0x3127e: "jun4", // 𱉾
+	0x3127f: "jun4", // 𱉿
+	0x31280: "lu4", // 𱊀
+	0x31281: "qi2", // 𱊁
+	0x31282: "ming2", // 𱊂
+	0x31283: "li2", // 𱊃
+	0x31284: "yi4", // 𱊄
+	0x31285: "zhui1", // 𱊅
+	0x31286: "tu4", // 𱊆
+	0x31287: "ju2", // 𱊇
+	0x31288: "yi4", // 𱊈
+	0x3128a: "kong1", // 𱊊
+	0x3128b: "jian1", // 𱊋
+	0x3128c: "ju1", // 𱊌
+	0x3128d: "duo4", // 𱊍
+	0x3128e: "zi1", // 𱊎
+	0x3128f: "fu2", // 𱊏
+	0x31290: "jie1", // 𱊐
+	0x31291: "chun1", // 𱊑
+	0x31292: "yuan2", // 𱊒
+	0x31293: "mo4", // 𱊓
+	0x31295: "ti2", // 𱊕
+	0x31296: "tu2", // 𱊖
+	0x31297: "rou2", // 𱊗
+	0x31298: "chuan4", // 𱊘
+	0x31299: "zhen4", // 𱊙
+	0x3129a: "tian2", // 𱊚
+	0x3129b: "sun3", // 𱊛
+	0x3129c: "niao3", // 𱊜
+	0x3129d: "tang2", // 𱊝
+	0x3129f: "xia2", // 𱊟
+	0x312a0: "tu2", // 𱊠
+	0x312a1: "yao3", // 𱊡
+	0x312a2: "ji2", // 𱊢
+	0x312a3: "an1", // 𱊣
+	0x312a4: "yong1", // 𱊤
+	0x312a5: "shang1", // 𱊥
+	0x312a6: "yi4", // 𱊦
+	0x312a7: "jue2", // 𱊧
+	0x312a9: "tu2", // 𱊩
+	0x312aa: "ling2", // 𱊪
+	0x312ab: "yu2", // 𱊫
+	0x312ac: "chu3", // 𱊬
+	0x312ad: "yu4", // 𱊭
+	0x312ae: "luo2", // 𱊮
+	0x312af: "ji1", // 𱊯
+	0x312b0: "yi4", // 𱊰
+	0x312b1: "di2", // 𱊱
+	0x312b2: "bu3", // 𱊲
+	0x312b3: "lei3", // 𱊳
+	0x312b5: "yue4", // 𱊵
+	0x312ba: "lu3", // 𱊺
+	0x312bb: "lu3", // 𱊻
+	0x312bc: "chuai4", // 𱊼
+	0x312bd: "huai2", // 𱊽
+	0x312c6: "shan4", // 𱋆
+	0x312c7: "he2", // 𱋇
+	0x312c8: "kuang4", // 𱋈
+	0x312ca: "mo4", // 𱋊
+	0x312cb: "qu4", // 𱋋
+	0x312cd: "tou3", // 𱋍
+	0x312ce: "hua2", // 𱋎
+	0x312d0: "qu1", // 𱋐
+	0x312d3: "ge2", // 𱋓
+	0x312d4: "bing3", // 𱋔
+	0x312d5: "chao3", // 𱋕
+	0x312d6: "fu1", // 𱋖
+	0x312d7: "fu1", // 𱋗
+	0x312d8: "sha1", // 𱋘
+	0x312d9: "guo3", // 𱋙
+	0x312dc: "chao3", // 𱋜
+	0x312dd: "bu4", // 𱋝
+	0x312e1: "lou3", // 𱋡
+	0x312e2: "chao3", // 𱋢
+	0x312ea: "zhi2", // 𱋪
+	0x312eb: "kuang4", // 𱋫
+	0x312ec: "lian2", // 𱋬
+	0x312ee: "meng2", // 𱋮
+	0x312f1: "fen2", // 𱋱
+	0x312f4: "chan3", // 𱋴
+	0x312f6: "lu2", // 𱋶
+	0x312fe: "cu4", // 𱋾
+	0x312ff: "qu4", // 𱋿
+	0x31300: "yang1", // 𱌀
+	0x31301: "qu2", // 𱌁
+	0x31303: "wa1", // 𱌃
+	0x31304: "zhi1", // 𱌄
+	0x31305: "mi2", // 𱌅
+	0x31306: "meng3", // 𱌆
+	0x31307: "bie1", // 𱌇
+	0x31308: "ma2", // 𱌈
+	0x31309: "bi4", // 𱌉
+	0x3130a: "chang1", // 𱌊
+	0x3130f: "hun2", // 𱌏
+	0x31316: "nong4", // 𱌖
+	0x31317: "ji4", // 𱌗
+	0x31318: "zi1", // 𱌘
+	0x31319: "zi1", // 𱌙
+	0x3132b: "yan3", // 𱌫
+	0x3132c: "ze2", // 𱌬
+	0x3132d: "zou1", // 𱌭
+	0x3132e: "chu1", // 𱌮
+	0x3132f: "chi1", // 𱌯
+	0x31330: "yao3", // 𱌰
+	0x31331: "xie4", // 𱌱
+	0x31332: "quan2", // 𱌲
+	0x31333: "yun3", // 𱌳
+	0x31334: "zhai1", // 𱌴
+	0x31335: "zhan1", // 𱌵
+	0x31336: "zou1", // 𱌶
+	0x31337: "yi2", // 𱌷
+	0x31338: "ji4", // 𱌸
+	0x31339: "ou2", // 𱌹
+	0x3133a: "dian1", // 𱌺
+	0x3133d: "yi4", // 𱌽
+	0x31341: "gong1", // 𱍁
+	0x31342: "da2", // 𱍂
+	0x31344: "ran2", // 𱍄
+	0x31345: "gou1", // 𱍅
+	0x31346: "jiao1", // 𱍆
+	0x31347: "tong2", // 𱍇
+	0x31348: "bie1", // 𱍈
+	0x31350: "qi2", // 𱍐
+	0x31355: "pa1", // 𱍕
+	0x3135b: "ao2", // 𱍛
+	0x313a0: "si3", // 𱎠
+	0x313b6: "kua3", // 𱎶
+	0x313bc: "ge3", // 𱎼
+	0x313c5: "ji2", // 𱏅
+	0x313cb: "an1", // 𱏋
+	0x313e4: "lu1", // 𱏤
+	0x313f1: "lao3", // 𱏱
+	0x3140f: "gu4", // 𱐏
+	0x31419: "chan3", // 𱐙
+	0x3141b: "tuo3", // 𱐛
+	0x3143f: "wai4", // 𱐿
+	0x31456: "guan1", // 𱑖
+	0x314f0: "ri4", // 𱓰
+	0x3152f: "zhan4", // 𱔯
+	0x31570: "lei2", // 𱕰
+	0x31580: "hong1", // 𱖀
+	0x31585: "bian3", // 𱖅
+	0x31587: "gan1", // 𱖇
+	0x3158e: "ao4", // 𱖎
+	0x31591: "ju4", // 𱖑
+	0x31592: "shan4", // 𱖒
+	0x31595: "zhuai3", // 𱖕
+	0x31596: "tu1", // 𱖖
+	0x31599: "hen4", // 𱖙
+	0x3159d: "zai4", // 𱖝
+	0x3159e: "zai4", // 𱖞
+	0x3159f: "kuang1", // 𱖟
+	0x315a7: "chong1", // 𱖧
+	0x315ab: "wu2", // 𱖫
+	0x315ad: "gong4", // 𱖭
+	0x315b0: "tuo2", // 𱖰
+	0x315b2: "jian4", // 𱖲
+	0x315b7: "cheng2", // 𱖷
+	0x315bc: "pai2", // 𱖼
+	0x315bd: "zhong1", // 𱖽
+	0x315c2: "sa3", // 𱗂
+	0x315c3: "hun1", // 𱗃
+	0x315c5: "niao4", // 𱗅
+	0x315c9: "wa1", // 𱗉
+	0x315cb: "ge2", // 𱗋
+	0x315cc: "la4", // 𱗌
+	0x315ce: "you1", // 𱗎
+	0x315d5: "qiu1", // 𱗕
+	0x315d6: "zhong3", // 𱗖
+	0x315da: "yong3", // 𱗚
+	0x315de: "ku1", // 𱗞
+	0x315df: "ling2", // 𱗟
+	0x315e2: "huang3", // 𱗢
+	0x315e4: "gao1", // 𱗤
+	0x31606: "hai3", // 𱘆
+	0x31609: "lian2", // 𱘉
+	0x3162d: "nang3", // 𱘭
+	0x3162e: "fen1", // 𱘮
+	0x31632: "tuo1", // 𱘲
+	0x31667: "xu1", // 𱙧
+	0x3169d: "zha3", // 𱚝
+	0x316a6: "mao1", // 𱚦
+	0x316af: "mo4", // 𱚯
+	0x316b1: "a1", // 𱚱
+	0x316c6: "niao5", // 𱛆
+	0x316cd: "lun2", // 𱛍
+	0x316d2: "hong2", // 𱛒
+	0x316d3: "long2", // 𱛓
+	0x316d4: "le4", // 𱛔
+	0x316e7: "hao1", // 𱛧
+	0x316e8: "hong4", // 𱛨
+	0x316ec: "shi2", // 𱛬
+	0x316f9: "ye1", // 𱛹
+	0x316fd: "duan4", // 𱛽
+	0x31700: "nang4", // 𱜀
+	0x31712: "xie4", // 𱜒
+	0x3172c: "liang4", // 𱜬
+	0x31743: "shua3", // 𱝃
+	0x31744: "sao1", // 𱝄
+	0x31749: "tong4", // 𱝉
+	0x31774: "hu2", // 𱝴
+	0x3178c: "hua1", // 𱞌
+	0x3179d: "qie4", // 𱞝
+	0x317eb: "chan4", // 𱟫
+	0x3180f: "kang1", // 𱠏
+	0x31838: "yuan2", // 𱠸
+	0x318a1: "huan2", // 𱢡
+	0x318c2: "wu1", // 𱣂
+	0x318c4: "hui2", // 𱣄
+	0x318d1: "rou4", // 𱣑
+	0x318d5: "qi3", // 𱣕
+	0x318f9: "zang4", // 𱣹
+	0x318fb: "he4", // 𱣻
+	0x31911: "gui1", // 𱤑
+	0x31917: "ge2", // 𱤗
+	0x31926: "luan3", // 𱤦
+	0x3192d: "peng4", // 𱤭
+	0x3193a: "beng1", // 𱤺
+	0x3195f: "yue4", // 𱥟
+	0x31963: "ruo4", // 𱥣
+	0x31970: "ya1", // 𱥰
+	0x31977: "na4", // 𱥷
+	0x31988: "gui3", // 𱦈
+	0x319da: "lian3", // 𱧚
+	0x319f4: "mai4", // 𱧴
+	0x31a19: "zha1", // 𱨙
+	0x31a38: "kuo4", // 𱨸
+	0x31a42: "ying1", // 𱩂
+	0x31a49: "wu4", // 𱩉
+	0x31a7d: "e4", // 𱩽
+	0x31abf: "xun1", // 𱪿
+	0x31b0f: "lian4", // 𱬏
+	0x31b70: "weng3", // 𱭰
+	0x31b92: "sang1", // 𱮒
+	0x31b9c: "tan1", // 𱮜
+	0x31bb4: "gang1", // 𱮴
+	0x31bb7: "cang4", // 𱮷
+	0x31bbf: "bang1", // 𱮿
+	0x31be7: "fu4", // 𱯧
+	0x31c0e: "sheng1", // 𱰎
+	0x31c17: "che2", // 𱰗
+	0x31c24: "qin2", // 𱰤
+	0x31c25: "lei1", // 𱰥
+	0x31c2d: "zi1", // 𱰭
+	0x31c2e: "ling3", // 𱰮
+	0x31c5a: "xi1", // 𱱚
+	0x31c6d: "yan1", // 𱱭
+	0x31c71: "jue2", // 𱱱
+	0x31c86: "ce4", // 𱲆
+	0x31c8e: "ying4", // 𱲎
+	0x31ccb: "chu4", // 𱳋
+	0x31cde: "zi1", // 𱳞
+	0x31ce2: "hui1", // 𱳢
+	0x31ce9: "hen2", // 𱳩
+	0x31cea: "dai4", // 𱳪
+	0x31cf3: "wu4", // 𱳳
+	0x31d02: "la4", // 𱴂
+	0x31d07: "cheng2", // 𱴇
+	0x31d10: "chang3", // 𱴐
+	0x31d18: "jiang3", // 𱴘
+	0x31d1e: "hou2", // 𱴞
+	0x31d28: "en4", // 𱴨
+	0x31d3e: "gua3", // 𱴾
+	0x31d41: "shen3", // 𱵁
+	0x31da1: "gan4", // 𱶡
+	0x31dbb: "tuo2", // 𱶻
+	0x31e02: "ou1", // 𱸂
+	0x31e03: "xi1", // 𱸃
+	0x31e07: "lao2", // 𱸇
+	0x31e16: "yang2", // 𱸖
+	0x31e1b: "ben3", // 𱸛
+	0x31e1c: "gan3", // 𱸜
+	0x31e21: "hao2", // 𱸡
+	0x31e25: "tiao4", // 𱸥
+	0x31e27: "lu1", // 𱸧
+	0x31e41: "qi2", // 𱹁
+	0x31e7c: "zi1", // 𱹼
+	0x31ea8: "mian3", // 𱺨
+	0x31eae: "hao2", // 𱺮
+	0x31ef4: "zha2", // 𱻴
+	0x31f1e: "han4", // 𱼞
+	0x31f37: "zhi3", // 𱼷
+	0x31f4e: "bei4", // 𱽎
+	0x31f55: "dao1", // 𱽕
+	0x31f56: "shen1", // 𱽖
+	0x31f7f: "jiang4", // 𱽿
+	0x31f83: "hua1", // 𱾃
+	0x31f86: "guan4", // 𱾆
+	0x31f8e: "xie2", // 𱾎
+	0x31f9d: "zhui1", // 𱾝
+	0x31fbe: "pu1", // 𱾾
+	0x31fc5: "bong4", // 𱿅
+	0x31fd7: "biang2", // 𱿗
+	0x31fe3: "ke4", // 𱿣
+	0x31feb: "tang4", // 𱿫
+	0x31fef: "wai1", // 𱿯
+	0x32003: "bang1", // 𲀃
+	0x32004: "xu1", // 𲀄
+	0x3201f: "hang2", // 𲀟
+	0x3202f: "xie2", // 𲀯
+	0x32049: "zhen1", // 𲁉
+	0x32053: "biang4", // 𲁓
+	0x32086: "xia2", // 𲂆
+	0x32093: "zao1", // 𲂓
+	0x32094: "zhuo2", // 𲂔
+	0x320bb: "ying1", // 𲂻
+	0x32100: "mi2", // 𲄀
+	0x32117: "kuai3", // 𲄗
+	0x3211a: "lao4", // 𲄚
+	0x32128: "qian2", // 𲄨
+	0x32142: "rou2", // 𲅂
+	0x321a6: "xi1", // 𲆦
+	0x321a9: "song1", // 𲆩
+	0x321ab: "xun1", // 𲆫
+	0x321b0: "xi1", // 𲆰
+	0x321b3: "pin3", // 𲆳
+	0x321b5: "rong3", // 𲆵
+	0x321ca: "xi1", // 𲇊
+	0x321d9: "xiu4", // 𲇙
+	0x321f0: "ri4", // 𲇰
+	0x3220d: "ye2", // 𲈍
+	0x32216: "ga2", // 𲈖
+	0x3223c: "chu3", // 𲈼
+	0x32245: "tang2", // 𲉅
+	0x32249: "lun2", // 𲉉
+	0x32268: "kuang4", // 𲉨
+	0x322b9: "chai1", // 𲊹
+	0x322bd: "ci2", // 𲊽
+	0x322c1: "xing4", // 𲋁
+	0x322cf: "pao1", // 𲋏
+	0x322f6: "mai4", // 𲋶
+	0x32309: "ju4", // 𲌉
+	0x3231e: "qian2", // 𲌞
+	0x32321: "qiang2", // 𲌡
+	0x32330: "mao4", // 𲌰
+	0x32347: "yi2", // 𲍇
+	0x32349: "yuan2", // 𲍉
+	0x3234f: "xian3", // 𲍏
+	0x32350: "mi3", // 𲍐
+	0x32357: "huan4", // 𲍗
+	0x3236d: "zhun1", // 𲍭
+	0x3236e: "fang1", // 𲍮
+	0x3236f: "jian1", // 𲍯
+	0x32370: "mi2", // 𲍰
+	0x32373: "you3", // 𲍳
+	0x32379: "bao3", // 𲍹
+	0x3237e: "zhui1", // 𲍾
+	0x3237f: "ye4", // 𲍿
+	0x32385: "chi4", // 𲎅
+	0x32386: "tong2", // 𲎆
+	0x32388: "meng2", // 𲎈
+	0x32389: "mo4", // 𲎉
 }
