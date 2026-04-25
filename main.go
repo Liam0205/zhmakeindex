@@ -36,7 +36,9 @@ func main() {
 	option := NewOptions()
 	option.parse()
 
-	setupLog(option)
+	if flog := setupLog(option); flog != nil {
+		defer flog.Close()
+	}
 
 	log.Printf("zhmakeindex 版本：%s-%s\t作者：%s\n", Version, Revision, ProgramAuthor)
 
@@ -194,20 +196,21 @@ func checkEncoding(encodingName string) encoding.Encoding {
 	return encoding
 }
 
-func setupLog(option *Options) {
+func setupLog(option *Options) *os.File {
 	var stderr io.Writer = os.Stderr
 	if option.quiet {
 		stderr = io.Discard
 	}
 	if option.log == "" {
-		// 只使用标准错误流
-		return
+		log.SetOutput(stderr)
+		return nil
 	}
 	flog, err := os.Create(option.log)
 	if err != nil {
 		log.Fatalln(err)
 	}
 	log.SetOutput(io.MultiWriter(stderr, flog))
+	return flog
 }
 
 // 删除文件后缀名
