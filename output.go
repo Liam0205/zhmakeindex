@@ -27,18 +27,18 @@ func NewOutputIndex(input *index.InputIndex, option *OutputOptions, style *style
 }
 
 func (o *OutputIndex) Output(option *OutputOptions) {
-	var writer io.WriteCloser
+	var dest io.Writer
 	if o.option.output == "" {
-		writer = os.Stdout
+		dest = writeNopCloser{os.Stdout}
 	} else {
-		var err error
-		writer, err = os.Create(o.option.output)
+		f, err := os.Create(o.option.output)
 		if err != nil {
 			log.Fatalln(err)
 		}
-		defer writer.Close()
+		dest = f
 	}
-	writer = transform.NewWriter(writer, option.encoder)
+	writer := transform.NewWriter(dest, option.encoder)
+	defer writer.Close()
 
 	fmt.Fprint(writer, o.style.Preamble)
 	first_group := true
@@ -121,3 +121,9 @@ func writePage(out io.Writer, level int, pageranges []index.PageRange, st *style
 		fmt.Fprint(out, st.DelimT)
 	}
 }
+
+type writeNopCloser struct {
+	io.Writer
+}
+
+func (writeNopCloser) Close() error { return nil }

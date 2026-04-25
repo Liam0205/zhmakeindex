@@ -6,6 +6,7 @@ import (
 	"testing"
 
 	"golang.org/x/text/encoding"
+	"golang.org/x/text/encoding/simplifiedchinese"
 
 	"github.com/leo-liu/zhmakeindex/internal/index"
 	"github.com/leo-liu/zhmakeindex/internal/page"
@@ -103,5 +104,51 @@ func TestOutputFirstItemSubsubentry(t *testing.T) {
 	}
 	if !strings.Contains(string(data), "orphan-subsub") {
 		t.Fatalf("output missing subsubentry text, got: %s", data)
+	}
+}
+
+func TestOutputGBKEncoding(t *testing.T) {
+	tmpfile, err := os.CreateTemp("", "output_gbk_*.ind")
+	if err != nil {
+		t.Fatal(err)
+	}
+	name := tmpfile.Name()
+	tmpfile.Close()
+	defer os.Remove(name)
+
+	outstyle := style.NewOutputStyle()
+	option := &OutputOptions{
+		output:  name,
+		encoder: simplifiedchinese.GBK.NewEncoder(),
+	}
+
+	out := &OutputIndex{
+		groups: []index.IndexGroup{
+			{
+				Name: "A",
+				Items: []index.IndexItem{
+					{Level: 0, Text: "测试"},
+				},
+			},
+		},
+		style:  outstyle,
+		option: option,
+	}
+
+	out.Output(option)
+
+	data, err := os.ReadFile(name)
+	if err != nil {
+		t.Fatal(err)
+	}
+	decoded, err := simplifiedchinese.GBK.NewDecoder().Bytes(data)
+	if err != nil {
+		t.Fatalf("failed to decode GBK output: %v", err)
+	}
+	if !strings.Contains(string(decoded), "测试") {
+		t.Fatalf("decoded output missing expected text, got: %s", decoded)
+	}
+	if !strings.HasSuffix(string(decoded), outstyle.Postamble) {
+		t.Fatalf("output missing postamble (possibly truncated)")
 	}
 }
