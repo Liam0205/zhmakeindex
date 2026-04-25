@@ -118,7 +118,8 @@ func (sorter *PageSorter) Merge(pages []PageRange) []PageRange {
 		prev := out[len(out)-1]
 		if sorter.disable_range &&
 			(r.Begin.Rangetype == page.PAGE_NORMAL || prev.Begin.Rangetype == page.PAGE_NORMAL) {
-			if prev.Begin == r.Begin {
+			if prev.Begin.Encap == r.Begin.Encap &&
+					prev.Begin.Cmp(r.Begin, sorter.precedence) == 0 {
 				continue
 			} else {
 				out = append(out, r)
